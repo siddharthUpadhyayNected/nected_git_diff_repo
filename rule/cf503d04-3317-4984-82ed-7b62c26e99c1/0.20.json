@@ -1,0 +1,477 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "live": true,
+ "data": {
+  "createdAt": "2025-06-04T06:36:54.815Z",
+  "updatedAt": "2025-07-28T08:03:30.93Z",
+  "isDeleted": false,
+  "testedAt": "2025-07-28T08:03:06.548Z",
+  "publishedAt": "2025-07-28T08:03:30.928Z",
+  "entityId": "cf503d04-3317-4984-82ed-7b62c26e99c1",
+  "version": "0.20",
+  "name": "finalPriceAndDiscountRule",
+  "commitId": "commit-ff38d144-e600-4c00-867a-1cf69b8a71ab",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Forked from 0.10",
+   "description": "v2",
+   "timeStamp": "2025-07-28T08:03:30.926Z"
+  },
+  "customInput": {
+   "discountValue": {
+ "name": "discountValue",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 5,
+ "config": null,
+ "value": null,
+ "next": "totalCartValue",
+ "previous": "type",
+ "schemaId": ""
+},
+   "totalCartValue": {
+ "name": "totalCartValue",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 1000,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "discountValue",
+ "schemaId": ""
+},
+   "type": {
+ "name": "type",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "percent",
+ "config": null,
+ "value": null,
+ "next": "discountValue",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_mbhkuq2cju2v8yv621",
+ "prevId": "",
+ "firstOutputData": "output_mbhktxcww7sis5g9gj",
+ "isEnabled": true
+},
+    "rule_mbhkuq2cju2v8yv621": {
+ "nextId": "rule_mbhkuvw7zjsf0huicp",
+ "prevId": "rule_01",
+ "firstOutputData": "output_mbhkuq2cvxyfvcleunr",
+ "isEnabled": true
+},
+    "rule_mbhkuvw7zjsf0huicp": {
+ "nextId": "",
+ "prevId": "rule_mbhkuq2cju2v8yv621",
+ "firstOutputData": "output_mbhkuvw7msaipsfao4b",
+ "isEnabled": true
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_mbhktxcwiq3ndnlzgak": {
+ "nextId": "result_mbhkuhwnxg9ggnwhgr",
+ "prevId": "",
+ "dataType": "numeric",
+ "keyName": "finalPrice",
+ "schemaId": ""
+},
+    "result_mbhkuhwnxg9ggnwhgr": {
+ "nextId": "",
+ "prevId": "result_mbhktxcwiq3ndnlzgak",
+ "dataType": "excelFormula",
+ "keyName": "discount",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_mbhktxcwiq3ndnlzgak",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_mbhktxcww7sis5g9gj": {
+ "name": "finalPrice",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.totalCartValue}} - {{.customInput.totalCartValue}}*{{.customInput.discountValue}}/100;",
+ "next": "output_mbhkuhwn3ufthudj3va",
+ "executedValue": 950,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_mbhkuhwn3ufthudj3va": {
+ "name": "discount",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.totalCartValue}}*{{.customInput.discountValue}}/100",
+ "next": "",
+ "executedValue": 50,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_mbhkuq2cvhyhy65r8j": {
+ "name": "discount",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.discountValue}}",
+ "next": "",
+ "executedValue": 5,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_mbhkuq2cvxyfvcleunr": {
+ "name": "finalPrice",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.totalCartValue}}- {{.customInput.discountValue}}",
+ "next": "output_mbhkuq2cvhyhy65r8j",
+ "executedValue": 995,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_mbhkuvw7by7lufryjj": {
+ "name": "discount",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.discountValue}}",
+ "next": "",
+ "executedValue": 5,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_mbhkuvw7msaipsfao4b": {
+ "name": "finalPrice",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.totalCartValue}} - {{.customInput.discountValue}}",
+ "next": "output_mbhkuvw7by7lufryjj",
+ "executedValue": 995,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_mbhktcnoky1ttbg6y1h"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "type",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbhktcnoky1ttbg6y1h": {
+ "value": "percent",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbhkthau4z95r2q7xof": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbhkthau5du33ulkvo",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_mbhkthaug4gdczbcox8"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbhkthau5du33ulkvo": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_mbhkthau4z95r2q7xof"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbhkthaug4gdczbcox8": {
+ "value": "percent",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbhkthau4z95r2q7xof",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbhkuq2c70dkh17kjjo": {
+ "value": "fixed",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbhkuq2ceu620pws3wl",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbhkuq2ceu620pws3wl": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbhkuq2cju2v8yv621",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_mbhkuq2c70dkh17kjjo"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbhkuq2cju2v8yv621": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_mbhkuq2ceu620pws3wl"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbhkuvw70769w090f72s": {
+ "value": "cashback",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbhkuvw7zx94od11yma",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbhkuvw7zjsf0huicp": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_mbhkuvw7zx94od11yma"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbhkuvw7zx94od11yma": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbhkuvw7zjsf0huicp",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_mbhkuvw70769w090f72s"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "type",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "Returning the final price and the discount value of the cart on the basis of the type of the coupon tried to be applied.",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}
