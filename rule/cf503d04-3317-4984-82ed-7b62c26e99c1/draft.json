@@ -3,21 +3,20 @@
  "category": "decisionTable",
  "data": {
   "createdAt": "2025-06-04T06:36:54.815Z",
-  "updatedAt": "2025-07-28T08:03:30.940472Z",
+  "updatedAt": "2026-01-07T12:11:37.422871Z",
   "isDeleted": false,
-  "testedAt": "2025-07-28T08:03:06.548Z",
+  "testedAt": "2026-01-07T12:11:37.421Z",
   "publishedAt": "2025-07-28T08:03:30.928Z",
   "entityId": "cf503d04-3317-4984-82ed-7b62c26e99c1",
-  "version": "0.20",
+  "version": "draft",
   "name": "finalPriceAndDiscountRule",
-  "commitId": "commit-d487044b-a470-47a4-9b88-b075271844f3",
-  "status": "published",
-  "lastVersion": "draft",
-  "isLive": true,
+  "commitId": "commit-c14c446b-665d-4af2-bf8a-793874b34510",
+  "status": "tested",
+  "lastVersion": "0.20",
+  "isLive": false,
   "commitInfo": {
-   "title": "Forked from 0.10",
-   "description": "v2",
-   "timeStamp": "2025-07-28T08:03:30.926Z"
+   "title": "Forked from 0.20",
+   "timeStamp": "2026-01-07T12:10:30.62778662Z"
   },
   "customInput": {
    "discountValue": {
@@ -29,7 +28,9 @@
  "attribute": "",
  "sourceType": "",
  "executedValue": 5,
- "config": null,
+ "config": {
+  
+ },
  "value": null,
  "next": "totalCartValue",
  "previous": "type",
@@ -44,7 +45,9 @@
  "attribute": "",
  "sourceType": "",
  "executedValue": 1000,
- "config": null,
+ "config": {
+  
+ },
  "value": null,
  "next": "",
  "previous": "discountValue",
@@ -59,7 +62,9 @@
  "attribute": "",
  "sourceType": "",
  "executedValue": "percent",
- "config": null,
+ "config": {
+  
+ },
  "value": null,
  "next": "discountValue",
  "previous": "",
@@ -69,6 +74,12 @@
   "ruleChain": null,
   "decisionTable": {
    "rows": {
+    "g_FvL5G9": {
+ "nextId": "",
+ "prevId": "rule_mbhkuvw7zjsf0huicp",
+ "firstOutputData": "output_krYjb8",
+ "isEnabled": true
+},
     "rule_01": {
  "nextId": "rule_mbhkuq2cju2v8yv621",
  "prevId": "",
@@ -82,7 +93,7 @@
  "isEnabled": true
 },
     "rule_mbhkuvw7zjsf0huicp": {
- "nextId": "",
+ "nextId": "g_FvL5G9",
  "prevId": "rule_mbhkuq2cju2v8yv621",
  "firstOutputData": "output_mbhkuvw7msaipsfao4b",
  "isEnabled": true
@@ -119,6 +130,28 @@
   "action": {
    "then": {
     "outputData": {
+     "output_Fowf8L": {
+ "name": "discount",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "100",
+ "next": "",
+ "executedValue": 100,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_krYjb8": {
+ "name": "finalPrice",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.totalCartValue}}",
+ "next": "output_Fowf8L",
+ "executedValue": 1000,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
      "output_mbhktxcww7sis5g9gj": {
  "name": "finalPrice",
  "dataType": "excelFormula",
@@ -201,6 +234,60 @@
   },
   "conditions": {
    "nodes": {
+    "c_fpd5MB": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_FvL5G9",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_QBXCoV"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_FvL5G9": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_fpd5MB"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_QBXCoV": {
+ "value": "giftCard",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_fpd5MB",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
     "rule_01": {
  "value": null,
  "sourceType": "",
@@ -265,60 +352,6 @@
  "attribute": "",
  "query": "",
  "parent": "rule_02",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rule_mbhkthau4z95r2q7xof": {
- "value": "",
- "sourceType": "",
- "name": "",
- "operator": "eq",
- "dataType": "string",
- "nodeType": "condition",
- "attribute": "",
- "query": "",
- "parent": "rule_mbhkthau5du33ulkvo",
- "children": null,
- "leftNode": [
-  "rule_03"
- ],
- "rightNode": [
-  "rule_mbhkthaug4gdczbcox8"
- ],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rule_mbhkthau5du33ulkvo": {
- "value": null,
- "sourceType": "",
- "name": "",
- "operator": "and",
- "dataType": "",
- "nodeType": "group",
- "attribute": "",
- "query": "",
- "parent": "",
- "children": [
-  "rule_mbhkthau4z95r2q7xof"
- ],
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rule_mbhkthaug4gdczbcox8": {
- "value": "percent",
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "string",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "rule_mbhkthau4z95r2q7xof",
  "children": null,
  "leftNode": null,
  "rightNode": null,
@@ -459,7 +492,7 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": ""
+     "Unit": "d"
     },
     "CacheKeys": ""
    },
