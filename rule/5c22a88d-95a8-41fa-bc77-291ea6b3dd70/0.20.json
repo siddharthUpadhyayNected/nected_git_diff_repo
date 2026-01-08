@@ -4,21 +4,21 @@
  "live": true,
  "data": {
   "createdAt": "2026-01-08T10:47:45.715Z",
-  "updatedAt": "2026-01-08T10:49:15.622Z",
+  "updatedAt": "2026-01-08T11:44:13.225Z",
   "isDeleted": false,
-  "testedAt": "2026-01-08T10:49:08.291Z",
-  "publishedAt": "2026-01-08T10:49:15.615Z",
+  "testedAt": "2026-01-08T11:40:16.386Z",
+  "publishedAt": "2026-01-08T11:44:13.22Z",
   "entityId": "5c22a88d-95a8-41fa-bc77-291ea6b3dd70",
-  "version": "0.10",
+  "version": "0.20",
   "name": "Git Demo",
-  "commitId": "commit-18da26d1-9f63-4f40-bf4e-e1f1dc0b74a8",
+  "commitId": "commit-44e0cc31-a677-4f7b-8305-7da5cb11d0b2",
   "status": "published",
   "lastVersion": "draft",
-  "isLive": false,
+  "isLive": true,
   "commitInfo": {
-   "title": "Created at 2026-01-08 10:47:45",
-   "description": "v1",
-   "timeStamp": "2026-01-08T10:49:15.614Z"
+   "title": "Forked from 0.10",
+   "description": "v2",
+   "timeStamp": "2026-01-08T11:44:13.219Z"
   },
   "customInput": {
    "employeeID": {
@@ -47,7 +47,9 @@
  "attribute": "",
  "sourceType": "",
  "executedValue": "nected",
- "config": null,
+ "config": {
+  
+ },
  "value": "",
  "next": "",
  "previous": "employeeID",
@@ -57,8 +59,14 @@
   "ruleChain": null,
   "decisionTable": {
    "rows": {
-    "rule_01": {
+    "g_aKkPxG": {
  "nextId": "",
+ "prevId": "rule_01",
+ "firstOutputData": "output_Uqh8Ks",
+ "isEnabled": true
+},
+    "rule_01": {
+ "nextId": "g_aKkPxG",
  "prevId": "",
  "firstOutputData": "output_eVY0Qq",
  "isEnabled": true
@@ -93,6 +101,17 @@
   "action": {
    "then": {
     "outputData": {
+     "output_Uqh8Ks": {
+ "name": "giveIncentive",
+ "dataType": "boolean",
+ "returnType": "",
+ "value": false,
+ "next": "",
+ "executedValue": false,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
      "output_eVY0Qq": {
  "name": "giveIncentive",
  "dataType": "boolean",
@@ -120,6 +139,46 @@
   },
   "conditions": {
    "nodes": {
+    "c_PlXH4L": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_aKkPxG",
+ "children": null,
+ "leftNode": [
+  "param_0Fx5wf"
+ ],
+ "rightNode": [
+  "rhs_a0kffs"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_Ptlphx": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_aKkPxG",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_k23brX"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
     "c_xmyejQ": {
  "value": "",
  "sourceType": "",
@@ -137,6 +196,25 @@
  "rightNode": [
   "rhs_4ubeIX"
  ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_aKkPxG": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_Ptlphx",
+  "c_PlXH4L"
+ ],
+ "leftNode": null,
+ "rightNode": null,
  "siblingIndex": 1,
  "returnType": ""
 },
@@ -182,6 +260,38 @@
  "attribute": "",
  "query": "",
  "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_a0kffs": {
+ "value": "nected",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_PlXH4L",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_k23brX": {
+ "value": 2,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_Ptlphx",
  "children": null,
  "leftNode": null,
  "rightNode": null,
@@ -269,7 +379,7 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": ""
+     "Unit": "d"
     },
     "CacheKeys": ""
    },
