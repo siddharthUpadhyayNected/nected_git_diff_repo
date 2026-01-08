@@ -3,21 +3,21 @@
  "category": "decisionTable",
  "data": {
   "createdAt": "2026-01-08T10:47:45.715Z",
-  "updatedAt": "2026-01-08T11:49:56.565216Z",
+  "updatedAt": "2026-01-08T12:28:11.951282Z",
   "isDeleted": false,
-  "testedAt": "2026-01-08T11:49:45.44Z",
-  "publishedAt": "2026-01-08T11:49:56.552Z",
+  "testedAt": "2026-01-08T12:28:04.99Z",
+  "publishedAt": "2026-01-08T12:28:11.942Z",
   "entityId": "5c22a88d-95a8-41fa-bc77-291ea6b3dd70",
-  "version": "0.30",
+  "version": "0.40",
   "name": "Git Demo",
-  "commitId": "commit-1f153c02-1b9c-4161-8895-2b505195d37d",
+  "commitId": "commit-4285424d-8358-4e61-b937-653cb715a2b9",
   "status": "published",
   "lastVersion": "draft",
   "isLive": true,
   "commitInfo": {
-   "title": "Forked from 0.20",
-   "description": "v3",
-   "timeStamp": "2026-01-08T11:49:56.549Z"
+   "title": "Forked from 0.30",
+   "description": "v4",
+   "timeStamp": "2026-01-08T12:28:11.941Z"
   },
   "customInput": {
    "employeeID": {
@@ -59,7 +59,7 @@
   "decisionTable": {
    "rows": {
     "g_K2eJtM": {
- "nextId": "",
+ "nextId": "g_zMUsiz",
  "prevId": "g_aKkPxG",
  "firstOutputData": "output_xNTdTZ",
  "isEnabled": true
@@ -68,6 +68,12 @@
  "nextId": "g_K2eJtM",
  "prevId": "rule_01",
  "firstOutputData": "output_Uqh8Ks",
+ "isEnabled": true
+},
+    "g_zMUsiz": {
+ "nextId": "",
+ "prevId": "g_K2eJtM",
+ "firstOutputData": "output_wOxsoP",
  "isEnabled": true
 },
     "rule_01": {
@@ -128,6 +134,17 @@
  "source": "",
  "schemaId": ""
 },
+     "output_wOxsoP": {
+ "name": "giveIncentive",
+ "dataType": "boolean",
+ "returnType": "",
+ "value": true,
+ "next": "",
+ "executedValue": true,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
      "output_xNTdTZ": {
  "name": "giveIncentive",
  "dataType": "boolean",
@@ -155,6 +172,26 @@
   },
   "conditions": {
    "nodes": {
+    "c_5pqZnz": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_zMUsiz",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_ylgqdb"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
     "c_F9vhpL": {
  "value": "",
  "sourceType": "",
@@ -171,6 +208,26 @@
  ],
  "rightNode": [
   "rhs_FgIKuz"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_FEbbps": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_zMUsiz",
+ "children": null,
+ "leftNode": [
+  "param_0Fx5wf"
+ ],
+ "rightNode": [
+  "rhs_GI7bKx"
  ],
  "siblingIndex": 1,
  "returnType": ""
@@ -293,6 +350,25 @@
  "siblingIndex": 1,
  "returnType": ""
 },
+    "g_zMUsiz": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_5pqZnz",
+  "c_FEbbps"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
     "param_0Fx5wf": {
  "value": null,
  "sourceType": "customInput",
@@ -335,6 +411,22 @@
  "attribute": "",
  "query": "",
  "parent": "c_F9vhpL",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_GI7bKx": {
+ "value": "nected",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_FEbbps",
  "children": null,
  "leftNode": null,
  "rightNode": null,
@@ -399,6 +491,22 @@
  "attribute": "",
  "query": "",
  "parent": "c_wUGkuW",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_ylgqdb": {
+ "value": 4,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_5pqZnz",
  "children": null,
  "leftNode": null,
  "rightNode": null,
