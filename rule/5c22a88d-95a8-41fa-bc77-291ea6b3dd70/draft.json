@@ -3,21 +3,20 @@
  "category": "decisionTable",
  "data": {
   "createdAt": "2026-01-08T10:47:45.715Z",
-  "updatedAt": "2026-01-08T10:49:15.627623Z",
+  "updatedAt": "2026-01-08T11:40:16.387375Z",
   "isDeleted": false,
-  "testedAt": "2026-01-08T10:49:08.291Z",
+  "testedAt": "2026-01-08T11:40:16.386Z",
   "publishedAt": "2026-01-08T10:49:15.615Z",
   "entityId": "5c22a88d-95a8-41fa-bc77-291ea6b3dd70",
-  "version": "0.10",
+  "version": "draft",
   "name": "Git Demo",
-  "commitId": "commit-03d51ee6-ec44-4a58-b8f0-05a969762ba8",
-  "status": "published",
-  "lastVersion": "draft",
-  "isLive": true,
+  "commitId": "commit-44e0cc31-a677-4f7b-8305-7da5cb11d0b2",
+  "status": "tested",
+  "lastVersion": "0.10",
+  "isLive": false,
   "commitInfo": {
-   "title": "Created at 2026-01-08 10:47:45",
-   "description": "v1",
-   "timeStamp": "2026-01-08T10:49:15.614Z"
+   "title": "Forked from 0.10",
+   "timeStamp": "2026-01-08T11:40:01.060525067Z"
   },
   "customInput": {
    "employeeID": {
@@ -46,7 +45,9 @@
  "attribute": "",
  "sourceType": "",
  "executedValue": "nected",
- "config": null,
+ "config": {
+  
+ },
  "value": "",
  "next": "",
  "previous": "employeeID",
@@ -56,8 +57,14 @@
   "ruleChain": null,
   "decisionTable": {
    "rows": {
-    "rule_01": {
+    "g_aKkPxG": {
  "nextId": "",
+ "prevId": "rule_01",
+ "firstOutputData": "output_Uqh8Ks",
+ "isEnabled": true
+},
+    "rule_01": {
+ "nextId": "g_aKkPxG",
  "prevId": "",
  "firstOutputData": "output_eVY0Qq",
  "isEnabled": true
@@ -92,6 +99,17 @@
   "action": {
    "then": {
     "outputData": {
+     "output_Uqh8Ks": {
+ "name": "giveIncentive",
+ "dataType": "boolean",
+ "returnType": "",
+ "value": false,
+ "next": "",
+ "executedValue": false,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
      "output_eVY0Qq": {
  "name": "giveIncentive",
  "dataType": "boolean",
@@ -119,6 +137,46 @@
   },
   "conditions": {
    "nodes": {
+    "c_PlXH4L": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_aKkPxG",
+ "children": null,
+ "leftNode": [
+  "param_0Fx5wf"
+ ],
+ "rightNode": [
+  "rhs_a0kffs"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_Ptlphx": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_aKkPxG",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_k23brX"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
     "c_xmyejQ": {
  "value": "",
  "sourceType": "",
@@ -136,6 +194,25 @@
  "rightNode": [
   "rhs_4ubeIX"
  ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_aKkPxG": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_Ptlphx",
+  "c_PlXH4L"
+ ],
+ "leftNode": null,
+ "rightNode": null,
  "siblingIndex": 1,
  "returnType": ""
 },
@@ -181,6 +258,38 @@
  "attribute": "",
  "query": "",
  "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_a0kffs": {
+ "value": "nected",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_PlXH4L",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_k23brX": {
+ "value": 2,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_Ptlphx",
  "children": null,
  "leftNode": null,
  "rightNode": null,
@@ -268,7 +377,7 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": ""
+     "Unit": "d"
     },
     "CacheKeys": ""
    },
