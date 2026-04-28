@@ -1,0 +1,16 @@
+{
+ "entityType": "connector",
+ "category": "restAPI",
+ "data": {
+  "createdAt": "2025-06-05T06:35:01.269Z",
+  "updatedAt": "2025-06-05T06:35:01.269Z",
+  "isDeleted": false,
+  "entityId": "ab041c64-4243-4c4c-9a50-90d1db8a92b1",
+  "name": "CreditbureauAPI",
+  "isDemo": false,
+  "category": "api",
+  "isSource": false,
+  "isAction": true,
+  "isTrigger": true
+ }
+}

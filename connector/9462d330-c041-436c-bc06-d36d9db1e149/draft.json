@@ -1,0 +1,16 @@
+{
+ "entityType": "connector",
+ "category": "restAPI",
+ "data": {
+  "createdAt": "2025-02-21T12:32:38.764Z",
+  "updatedAt": "2025-02-21T12:32:40.590171Z",
+  "isDeleted": false,
+  "entityId": "9462d330-c041-436c-bc06-d36d9db1e149",
+  "name": "Coup",
+  "isDemo": false,
+  "category": "api",
+  "isSource": false,
+  "isAction": true,
+  "isTrigger": true
+ }
+}

@@ -1,0 +1,803 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-18T11:47:51.675Z",
+  "updatedAt": "2025-03-24T13:12:20.929595Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-18T12:02:15.741Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "6b3e91ba-1b73-40e7-a93f-d42456d80092",
+  "version": "draft",
+  "name": "productRecommendation",
+  "commitId": "commit-f0f96d30-c4e0-4174-851a-7bb5a6050b4a",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-18 11:47:51",
+   "timeStamp": "2025-03-18T11:47:51.67522089Z"
+  },
+  "customInput": {
+   "browsingHistory": {
+ "name": "browsingHistory",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "purchaseHistory",
+ "previous": "customerSegment",
+ "schemaId": ""
+},
+   "customerSegment": {
+ "name": "customerSegment",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "browsingHistory",
+ "previous": "",
+ "schemaId": ""
+},
+   "purchaseHistory": {
+ "name": "purchaseHistory",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "",
+ "previous": "browsingHistory",
+ "schemaId": ""
+}
+  },
+  "ruleChain": {
+   
+  },
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_lsx1ib8z7u2qsx340yr",
+ "prevId": "",
+ "firstOutputData": "output_lsx1h7i4hqkr5ruebdn",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_lsx1ib8z7u2qsx340yr": {
+ "nextId": "rule_lsx1ibo4jc618koyxj9",
+ "prevId": "rule_01",
+ "firstOutputData": "output_lsx1ib90r0jf4cwalk",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_lsx1ibo4jc618koyxj9": {
+ "nextId": "rule_lsx1ic4s8e3oro2nhnj",
+ "prevId": "rule_lsx1ib8z7u2qsx340yr",
+ "firstOutputData": "output_lsx1ibo5hc5n5xmgfli",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_lsx1ic4s8e3oro2nhnj": {
+ "nextId": "",
+ "prevId": "rule_lsx1ibo4jc618koyxj9",
+ "firstOutputData": "output_lsx1ic4trq1fywsk6r",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "rule_lsx1gnsdfvmcg8v7urg",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_lsx1gnsdfvmcg8v7urg": {
+ "nextId": "rule_lsx1god0a7dfbt1ry4",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_lsx1god0a7dfbt1ry4": {
+ "nextId": "",
+ "prevId": "rule_lsx1gnsdfvmcg8v7urg",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_lsx1h7i3unhpoq7w6w": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "recommendation",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_lsx1h7i3unhpoq7w6w",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_lsx1h7i4hqkr5ruebdn": {
+ "name": "recommendation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Recommend premium electronics and accessories",
+ "next": "",
+ "executedValue": "Recommend premium electronics and accessories",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lsx1ib90r0jf4cwalk": {
+ "name": "recommendation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Suggest fashion-forward outfits and accessories",
+ "next": "",
+ "executedValue": "Suggest fashion-forward outfits and accessories",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lsx1ibo5hc5n5xmgfli": {
+ "name": "recommendation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Offer outdoor adventure essentials and gear",
+ "next": "",
+ "executedValue": "Offer outdoor adventure essentials and gear",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lsx1ic4trq1fywsk6r": {
+ "name": "recommendation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Provide home decor inspiration and DIY guides",
+ "next": "",
+ "executedValue": "Provide home decor inspiration and DIY guides",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "rule_lsx1gnsd88md496bk9t",
+  "rule_lsx1god09pcrb0kc4r"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_lsx1gn0ce5may322crp"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "customerSegment",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1gn0ce5may322crp": {
+ "value": "VIP customers",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1gnsd88md496bk9t": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_lsx1gnsdfvmcg8v7urg"
+ ],
+ "rightNode": [
+  "rule_lsx1gv3bf307exe7pf"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1gnsdfvmcg8v7urg": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "browsingHistory",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1god09pcrb0kc4r": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_lsx1god0a7dfbt1ry4"
+ ],
+ "rightNode": [
+  "rule_lsx1gzq9rb0ock32s7a"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1god0a7dfbt1ry4": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "purchaseHistory",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1gv3bf307exe7pf": {
+ "value": "High end electronics",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1gnsd88md496bk9t",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1gzq9rb0ock32s7a": {
+ "value": "Recent tech gadgets",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1god09pcrb0kc4r",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ib8z13quf32eztx": {
+ "value": "Fashion enthusiasts",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ib8zo5q6fluubb8",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ib8z7u2qsx340yr": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_lsx1ib8zo5q6fluubb8",
+  "rule_lsx1ib90657nnpvzieb",
+  "rule_lsx1ib90u8uw6w6pn3e"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ib8zo5q6fluubb8": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ib8z7u2qsx340yr",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_lsx1ib8z13quf32eztx"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ib903w9hlae185l": {
+ "value": "Trendy clothing items",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ib90u8uw6w6pn3e",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ib904baqn66f6eb": {
+ "value": "Apparel and accessories",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ib90657nnpvzieb",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ib90657nnpvzieb": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ib8z7u2qsx340yr",
+ "children": null,
+ "leftNode": [
+  "rule_lsx1gnsdfvmcg8v7urg"
+ ],
+ "rightNode": [
+  "rule_lsx1ib904baqn66f6eb"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ib90u8uw6w6pn3e": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ib8z7u2qsx340yr",
+ "children": null,
+ "leftNode": [
+  "rule_lsx1god0a7dfbt1ry4"
+ ],
+ "rightNode": [
+  "rule_lsx1ib903w9hlae185l"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ibo40ss2ms7yh8c": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ibo4jc618koyxj9",
+ "children": null,
+ "leftNode": [
+  "rule_lsx1gnsdfvmcg8v7urg"
+ ],
+ "rightNode": [
+  "rule_lsx1ibo45y6ldan9qsn"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ibo45y6ldan9qsn": {
+ "value": "Camping and hiking gear",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ibo40ss2ms7yh8c",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ibo48zbxyt202s7": {
+ "value": "Outdoor equipment",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ibo4mtmwiph2crf",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ibo4cqcd8x0tf8": {
+ "value": "Outdoor Adventurers",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ibo4jwojqic9pbl",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ibo4jc618koyxj9": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_lsx1ibo4jwojqic9pbl",
+  "rule_lsx1ibo40ss2ms7yh8c",
+  "rule_lsx1ibo4mtmwiph2crf"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ibo4jwojqic9pbl": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ibo4jc618koyxj9",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_lsx1ibo4cqcd8x0tf8"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ibo4mtmwiph2crf": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ibo4jc618koyxj9",
+ "children": null,
+ "leftNode": [
+  "rule_lsx1god0a7dfbt1ry4"
+ ],
+ "rightNode": [
+  "rule_lsx1ibo48zbxyt202s7"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ic4s0tagpeym2j8b": {
+ "value": "Home decor and furnishings",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ic4sr3ud2256t2c",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ic4s8e3oro2nhnj": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_lsx1ic4s9i5dpw0j515",
+  "rule_lsx1ic4sr3ud2256t2c",
+  "rule_lsx1ic4t89pekbt9m03"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ic4s9i5dpw0j515": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ic4s8e3oro2nhnj",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_lsx1ic4soyjx74xl5o"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ic4soyjx74xl5o": {
+ "value": "Home decor enthusiasts",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ic4s9i5dpw0j515",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ic4sr3ud2256t2c": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ic4s8e3oro2nhnj",
+ "children": null,
+ "leftNode": [
+  "rule_lsx1gnsdfvmcg8v7urg"
+ ],
+ "rightNode": [
+  "rule_lsx1ic4s0tagpeym2j8b"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ic4t89pekbt9m03": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ic4s8e3oro2nhnj",
+ "children": null,
+ "leftNode": [
+  "rule_lsx1god0a7dfbt1ry4"
+ ],
+ "rightNode": [
+  "rule_lsx1ic4tmuupwsv9aa"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lsx1ic4tmuupwsv9aa": {
+ "value": "Home renovation tools",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lsx1ic4t89pekbt9m03",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "customerSegment",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "collect",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": [],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": false
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

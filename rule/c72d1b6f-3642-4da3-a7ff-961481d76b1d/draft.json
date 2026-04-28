@@ -1,0 +1,622 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-20T06:57:51.958Z",
+  "updatedAt": "2025-03-24T13:27:45.198145Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-20T07:19:13.238Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "c72d1b6f-3642-4da3-a7ff-961481d76b1d",
+  "version": "draft",
+  "name": "subscriptionExpiryReminders",
+  "commitId": "commit-685603af-a1e8-4403-bfea-e0df8420673e",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-20 06:57:51",
+   "timeStamp": "2025-03-20T06:57:51.958437203Z"
+  },
+  "customInput": {
+   "expiryDate": {
+ "name": "expiryDate",
+ "dataType": "date",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m8h0940rb1dragf27ww",
+ "prevId": "",
+ "firstOutputData": "output_m8h0cvx5dzi9m7uksz6",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h0940rb1dragf27ww": {
+ "nextId": "rule_m8h09srasbz3m8ehejf",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m8h0cvx5wr4xtuixft",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h09srasbz3m8ehejf": {
+ "nextId": "rule_m8h0bgylalodzp3ffz9",
+ "prevId": "rule_m8h0940rb1dragf27ww",
+ "firstOutputData": "output_m8h0cvx5c9nwd50ar4d",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h0bgylalodzp3ffz9": {
+ "nextId": "rule_m8h0bvuf350sps0l62f",
+ "prevId": "rule_m8h09srasbz3m8ehejf",
+ "firstOutputData": "output_m8h0cvx51ytbnfgls2m",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h0bvuf350sps0l62f": {
+ "nextId": "rule_m8h0cbtj0y8pfp9vyisq",
+ "prevId": "rule_m8h0bgylalodzp3ffz9",
+ "firstOutputData": "output_m8h0cvx5w863lowrypk",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h0cbtj0y8pfp9vyisq": {
+ "nextId": "",
+ "prevId": "rule_m8h0bvuf350sps0l62f",
+ "firstOutputData": "output_m8h0cvx5209alo5elos",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m8h0cvx5slpuste7ms": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "Reminder",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m8h0cvx5slpuste7ms",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m8h0cvx51ytbnfgls2m": {
+ "name": "Reminder",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Send urgent SMS, email reminders and push notifications",
+ "next": "",
+ "executedValue": "Send urgent SMS, email reminders and push notifications",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h0cvx5209alo5elos": {
+ "name": "Reminder",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Deny access",
+ "next": "",
+ "executedValue": "Deny access",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h0cvx5c9nwd50ar4d": {
+ "name": "Reminder",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Send SMS and email reminders",
+ "next": "",
+ "executedValue": "Send SMS and email reminders",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h0cvx5dzi9m7uksz6": {
+ "name": "Reminder",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Send no reminders",
+ "next": "",
+ "executedValue": "Send no reminders",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h0cvx5w863lowrypk": {
+ "name": "Reminder",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Send final reminder",
+ "next": "",
+ "executedValue": "Send final reminder",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h0cvx5wr4xtuixft": {
+ "name": "Reminder",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Send email reminders",
+ "next": "",
+ "executedValue": "Send email reminders",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h08e4td7m3o2oh3tg"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "expiryDate",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h08e4td7m3o2oh3tg": {
+ "value": "2025-04-20",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h0940rb1dragf27ww": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h0940swkjnk7b7d4"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h0940swkjnk7b7d4": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "bet",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h0940rb1dragf27ww",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h099h54mj3503dgd5",
+  "rule_m8h099h5eqh09xzudpq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h099h54mj3503dgd5": {
+ "value": "2025-04-04",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h0940swkjnk7b7d4",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h099h5eqh09xzudpq": {
+ "value": "2025-04-20",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h0940swkjnk7b7d4",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h09sradb3hj9lbnfl": {
+ "value": "2025-03-30",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h09sraz78lo8e353q",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h09sraiklauc128pn": {
+ "value": "2025-03-27",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h09sraz78lo8e353q",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h09srasbz3m8ehejf": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h09sraz78lo8e353q"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h09sraz78lo8e353q": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "bet",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h09srasbz3m8ehejf",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h09sraiklauc128pn",
+  "rule_m8h09sradb3hj9lbnfl"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h0bgyl2y5a8qovr88": {
+ "value": "2025-03-20",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h0bgyl77osc3kwvqp",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h0bgyl77osc3kwvqp": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "bet",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h0bgylalodzp3ffz9",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h0bgyl2y5a8qovr88",
+  "rule_m8h0bgylwwrxkxe424l"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h0bgylalodzp3ffz9": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h0bgyl77osc3kwvqp"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h0bgylwwrxkxe424l": {
+ "value": "2025-03-27",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h0bgyl77osc3kwvqp",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h0bvuf350sps0l62f": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h0bvufpc5x05sqwtd"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h0bvufpc5x05sqwtd": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h0bvuf350sps0l62f",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h0c6fpx6dg9ime8dr"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h0c6fpx6dg9ime8dr": {
+ "value": "2025-03-20",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h0bvufpc5x05sqwtd",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h0cbtj0y8pfp9vyisq": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h0cbtj1wr75scu6dp"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h0cbtj1wr75scu6dp": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lt",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h0cbtj0y8pfp9vyisq",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h0cg6en0kxlsviiv8"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h0cg6en0kxlsviiv8": {
+ "value": "2025-03-20",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h0cbtj1wr75scu6dp",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "expiryDate",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "Subscription-based businesses need to notify customers before their subscription expires to encourage timely renewal. This rule ensures that customers receive multiple reminders at different intervals before the subscription end date.\n\n30 Days Before Expiry: Send the first reminder via email.\n15 Days Before Expiry: Send a follow-up reminder via SMS & email.\n7 Days Before Expiry: Mark as \"Urgent\" and send an SMS, email, and push notification.\nOn Expiry Date: Send a final notification and suspend service if not renewed.",
+  "policy": "order",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

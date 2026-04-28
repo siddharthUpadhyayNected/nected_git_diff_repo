@@ -1,0 +1,2177 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2025-04-29T12:08:32.194Z",
+  "updatedAt": "2025-04-29T17:53:47.132578Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-29T17:53:47.131Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "e1ff98d5-8bba-44e9-a66e-551d977c29ce",
+  "version": "draft",
+  "name": "invoiceAllocation",
+  "commitId": "commit-abbfd0e8-9667-40fd-a1fb-9a8fb0f4444f",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-04-29 12:08:32",
+   "timeStamp": "2025-04-29T12:08:32.194587357Z"
+  },
+  "startNode": "node_ma2p928yhyagoq3r4ze",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "categoryName": {
+ "value": null,
+ "executedValue": "sale",
+ "name": "categoryName",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "invoiceAmount": {
+ "value": null,
+ "executedValue": 1000,
+ "name": "invoiceAmount",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "invoiceID": {
+ "value": null,
+ "executedValue": "7",
+ "name": "invoiceID",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "itemType": {
+ "value": null,
+ "executedValue": "clothing",
+ "name": "itemType",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "supplierName": {
+ "value": null,
+ "executedValue": "qwe",
+ "name": "supplierName",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "categoryName": "sale",
+      "invoiceAmount": 1000,
+      "invoiceID": "7",
+      "itemType": "clothing",
+      "supplierName": "qwe"
+     },
+     "settings": {
+      "authType": "private",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2grbvbml3wtrbpme",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2p928yhyagoq3r4ze",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "accountApprovalStatus": {
+ "value": false,
+ "executedValue": false,
+ "name": "accountApprovalStatus",
+ "dataType": "boolean",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+},
+      "accountApproverId": {
+ "value": "0",
+ "executedValue": "0",
+ "name": "accountApproverId",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 2,
+ "schemaId": ""
+},
+      "saleApprovalStatus": {
+ "value": false,
+ "executedValue": false,
+ "name": "saleApprovalStatus",
+ "dataType": "boolean",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "saleApproverId": {
+ "value": "0",
+ "executedValue": "0",
+ "name": "saleApproverId",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 3,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "accountApprovalStatus": false,
+ "accountApproverId": "0",
+ "saleApprovalStatus": false,
+ "saleApproverId": "0"
+},
+      "resetOutput": {
+ 
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "node_ma2p928yhyagoq3r4ze",
+     "pluginName": "",
+     "status": "success",
+     "name": "initializingVariables",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "testedAt": "2025-04-29T17:53:47.131Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2p928ywdhz9ol9gtg",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2parb1fneamzh561e",
+    "type": "rule",
+    "data": {
+     "input": {
+      "categoryType": {
+ "value": "",
+ "executedValue": null,
+ "name": "categoryType",
+ "dataType": "string",
+ "source": "Trigger",
+ "attribute": "categoryName",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "output": [
+ {
+  "accountApprovalStatus": false,
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 2,
+  "saleApprovalStatus": false,
+  "team": "finance"
+ }
+],
+      "ruleId": "5d31e2b6-0907-457d-911e-7d159518765d",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "5d31e2b6-0907-457d-911e-7d159518765d",
+     "pluginName": "",
+     "status": "success",
+     "name": "neededApprovals",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "2025-04-29T17:53:47.131Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 540
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2parb1vhuxrjesyl",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2pbkb6468h2lb5rcx",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "attributes.0": {
+ "value": null,
+ "executedValue": false,
+ "name": "attributes.0",
+ "dataType": "boolean",
+ "source": "neededApprovals",
+ "attribute": "output[0].saleApprovalStatus",
+ "keySource": "initializingVariables",
+ "keyAttribute": "output.saleApprovalStatus",
+ "mapping": true,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "attributes.1": {
+ "value": null,
+ "executedValue": false,
+ "name": "attributes.1",
+ "dataType": "boolean",
+ "source": "neededApprovals",
+ "attribute": "output[0].accountApprovalStatus",
+ "keySource": "initializingVariables",
+ "keyAttribute": "output.accountApprovalStatus",
+ "mapping": true,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ 
+},
+      "resetOutput": {
+ "initializingVariables.output.accountApprovalStatus": false,
+ "initializingVariables.output.saleApprovalStatus": false
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "node_ma2pbkb6468h2lb5rcx",
+     "pluginName": "",
+     "status": "success",
+     "name": "SetVariable1",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "testedAt": "2025-04-29T17:53:47.131Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2pbkb6d9xd6vssh3l",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2pd5o91kb6h2tctd4",
+    "type": "switchNode",
+    "data": {
+     "input": {
+      "defaultPath": {
+ "value": true,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "path": "refundApproval"
+}
+     },
+     "settings": {
+      "timeout": 30
+     },
+     "nodeType": "switchNode",
+     "entity": "switch",
+     "entityId": "node_ma2pd5o91kb6h2tctd4",
+     "pluginName": "",
+     "status": "success",
+     "name": "SwitchBlock",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": [
+      {
+       "name": "saleApproval",
+       "pathId": "group_ma2pd5o9r15lwnizul"
+      },
+      {
+       "name": "refundApproval",
+       "pathId": "group_ma2pipzf2y2ueuv6j8w"
+      }
+     ],
+     "conditions": {
+      "nodes": {
+ "condition_ma2pd5o9ky85je9el4l": {
+ "dataType": "boolean",
+ "leftNode": [
+ "lhs_ma2pd5o98po7dw8yeu2"
+],
+ "nodeType": "condition",
+ "operator": "t",
+ "parent": "group_ma2pd5o9r15lwnizul",
+ "rightNode": []
+},
+ "condition_ma2pipzfjzrod6ifxec": {
+ "dataType": "boolean",
+ "leftNode": [
+ "lhs_ma2pipzfmrjj70njf4"
+],
+ "nodeType": "condition",
+ "operator": "f",
+ "parent": "group_ma2pipzf2y2ueuv6j8w",
+ "rightNode": []
+},
+ "group_ma2pd5o9r15lwnizul": {
+ "children": [
+ "condition_ma2pd5o9ky85je9el4l"
+],
+ "name": "saleApproval",
+ "nodeType": "group",
+ "operator": ""
+},
+ "group_ma2pipzf2y2ueuv6j8w": {
+ "children": [
+ "condition_ma2pipzfjzrod6ifxec"
+],
+ "name": "refundApproval",
+ "nodeType": "group",
+ "operator": ""
+},
+ "lhs_ma2pd5o98po7dw8yeu2": {
+ "attribute": "output[0].saleApprovalStatus",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "parent": "condition_ma2pd5o9ky85je9el4l",
+ "sourceType": "neededApprovals",
+ "value": null
+},
+ "lhs_ma2pipzfmrjj70njf4": {
+ "attribute": "output.saleApprovalStatus",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "parent": "condition_ma2pipzfjzrod6ifxec",
+ "sourceType": "initializingVariables",
+ "value": null
+}
+}
+     },
+     "blockName": "switchBlock",
+     "testedAt": "2025-04-29T17:53:47.131Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 379.60003662109375,
+     "y": 1155
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2pd5o9hhr8fmih29c",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 1565
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2pd5o9tdvq9kxa4dq",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 1640
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2pd5o90vy6fnk3laci",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 839.6000366210938,
+     "y": 950
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2pjqdtihm56sbivi",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 379.60003662109375,
+     "y": 1230
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2pq127s3otvn5seho",
+    "type": "rule",
+    "data": {
+     "input": {
+      "invoiceAmount": {
+ "value": null,
+ "executedValue": null,
+ "name": "invoiceAmount",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "invoiceAmount",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "team": {
+ "value": "",
+ "executedValue": null,
+ "name": "team",
+ "dataType": "string",
+ "source": "neededApprovals",
+ "attribute": "output[0].team",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "output": [
+ {
+  "accountApproverId": "6",
+  "defaultOutputData": true,
+  "managerID": 22,
+  "rowError": null,
+  "rowId": 2
+ }
+],
+      "ruleId": "8ed59d8f-32bd-4b6d-9c8a-d47e50ddc3a5",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "8ed59d8f-32bd-4b6d-9c8a-d47e50ddc3a5",
+     "pluginName": "",
+     "status": "success",
+     "name": "invoiceAllocation",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 379.60003662109375,
+     "y": 1360
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2pq1272jqc3msepks",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 379.60003662109375,
+     "y": 1435
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2pylwlstgqnjmd5da",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "attributes.0": {
+ "value": null,
+ "executedValue": "Value",
+ "name": "attributes.0",
+ "dataType": "string",
+ "source": "invoiceAllocation",
+ "attribute": "output[0].accountApproverId",
+ "keySource": "initializingVariables",
+ "keyAttribute": "output.accountApproverId",
+ "mapping": true,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ 
+},
+      "resetOutput": {
+ "initializingVariables.output.accountApproverId": "6"
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "node_ma2pylwlstgqnjmd5da",
+     "pluginName": "",
+     "status": "success",
+     "name": "allocatingIDs",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 379.60003662109375,
+     "y": 1565
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2pylwleejvvnqf81u",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 839.6000366210938,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2q54ujh3qvsyloo7h",
+    "type": "rule",
+    "data": {
+     "input": {
+      "invoiceAmount": {
+ "value": null,
+ "executedValue": null,
+ "name": "invoiceAmount",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "invoiceAmount",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "team": {
+ "value": "",
+ "executedValue": null,
+ "name": "team",
+ "dataType": "string",
+ "source": "neededApprovals",
+ "attribute": "output[0].team",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "output": [
+ {
+  "accountApproverId": "6",
+  "defaultOutputData": true,
+  "managerID": 22,
+  "rowError": null,
+  "rowId": 2
+ }
+],
+      "ruleId": "8ed59d8f-32bd-4b6d-9c8a-d47e50ddc3a5",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "8ed59d8f-32bd-4b6d-9c8a-d47e50ddc3a5",
+     "pluginName": "",
+     "status": "success",
+     "name": "invoiceAllocation1",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "2025-04-29T17:53:47.131Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 839.6000366210938,
+     "y": 1155
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2q54ujxt0wgrc2g19",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 839.6000366210938,
+     "y": 1230
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2reb8b95kav2khkc",
+    "type": "rule",
+    "data": {
+     "input": {
+      "invoiceAmount": {
+ "value": null,
+ "executedValue": null,
+ "name": "invoiceAmount",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "invoiceAmount",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "team": {
+ "value": "",
+ "executedValue": null,
+ "name": "team",
+ "dataType": "string",
+ "source": "neededApprovals",
+ "attribute": "output[0].team",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "output": [
+ {
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 2,
+  "saleApproverId": "22"
+ }
+],
+      "ruleId": "06a86df3-ff0d-48ed-b0e2-12cfd9435b41",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "06a86df3-ff0d-48ed-b0e2-12cfd9435b41",
+     "pluginName": "",
+     "status": "success",
+     "name": "invoiceSaleAllocation",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "2025-04-29T17:53:47.131Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 839.6000366210938,
+     "y": 1360
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2reb8bqvrln8wafqo",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 839.6000366210938,
+     "y": 1435
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2rfsu4lepozh7vtz",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "attributes.0": {
+ "value": null,
+ "executedValue": "Value",
+ "name": "attributes.0",
+ "dataType": "string",
+ "source": "invoiceAllocation1",
+ "attribute": "output[0].accountApproverId",
+ "keySource": "initializingVariables",
+ "keyAttribute": "output.accountApproverId",
+ "mapping": true,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "attributes.1": {
+ "value": null,
+ "executedValue": "Value",
+ "name": "attributes.1",
+ "dataType": "string",
+ "source": "invoiceSaleAllocation",
+ "attribute": "output[0].saleApproverId",
+ "keySource": "initializingVariables",
+ "keyAttribute": "output.saleApproverId",
+ "mapping": true,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ 
+},
+      "resetOutput": {
+ "initializingVariables.output.accountApproverId": "6",
+ "initializingVariables.output.saleApproverId": "22"
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "node_ma2rfsu4lepozh7vtz",
+     "pluginName": "",
+     "status": "success",
+     "name": "allocatingID",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "testedAt": "2025-04-29T17:53:47.131Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 839.6000366210938,
+     "y": 1565
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2rfsu4fvc63ienh4j",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_ma2pd5o91kb6h2tctd4",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 1715
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2rkzqq65hnnytupeq",
+    "type": "dbNode",
+    "data": {
+     "input": {
+      "action": {
+ "value": 1,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "query": {
+ "value": "INSERT INTO invoice (\r\n  \"invoiceID\",\r\n  \"invoiceAmount\",\r\n  \"supplierName\",\r\n  \"categoryName\",\r\n  \"itemType\",\r\n  \"saleApproverId\",\r\n  \"accountApproverId\"\r\n)\r\nVALUES(\r\n'{{.Trigger.invoiceID}}',\r\n'{{.Trigger.invoiceAmount}}',\r\n'{{.Trigger.supplierName}}',\r\n'{{.Trigger.categoryName}}',\r\n'{{.Trigger.itemType}}',\r\n'{{.initializingVariables.output.saleApproverId}}',\r\n'{{.initializingVariables.output.accountApproverId}}'\r\n);",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "result": []
+}
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "durationUnit": "m",
+      "durationValue": 5,
+      "errorContinue": false,
+      "rowLimit": 1000,
+      "timeout": 30
+     },
+     "nodeType": "dbNode",
+     "entity": "connector",
+     "entityId": "c5fa0d71-a2e7-4cbe-b327-b9104edde777",
+     "pluginName": "",
+     "status": "success",
+     "name": "postgres",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "postgres",
+     "testedAt": "2025-04-29T17:53:47.131Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 1845
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma2rkzqqqlu9u90qxso",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2grbvc4rqvm5jd3tq",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "node_ma2grbvbml3wtrbpme",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2p928zww48uigickn",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2p928yhyagoq3r4ze",
+    "target": "node_ma2p928ywdhz9ol9gtg",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2p928zzr7hmo1mn9a",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2grbvbml3wtrbpme",
+    "target": "node_ma2p928yhyagoq3r4ze",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2parb2kkbhf9wtkos",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2parb1fneamzh561e",
+    "target": "node_ma2parb1vhuxrjesyl",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2parb25r2bshiyqv3",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2p928ywdhz9ol9gtg",
+    "target": "node_ma2parb1fneamzh561e",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2pbkb69em31ld2f2k",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pbkb6468h2lb5rcx",
+    "target": "node_ma2pbkb6d9xd6vssh3l",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2pbkb6gmfv777ky3t",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2parb1vhuxrjesyl",
+    "target": "node_ma2pbkb6468h2lb5rcx",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2pd5o9d6s2zo11y9a",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pbkb6d9xd6vssh3l",
+    "target": "node_ma2pd5o91kb6h2tctd4",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2pd5o956d6gxqi1af",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pd5o91kb6h2tctd4",
+    "target": "node_ma2pd5o9hhr8fmih29c",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_ma2pd5o9r15lwnizul"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2pd5o972ec4bikzgf",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pd5o91kb6h2tctd4",
+    "target": "node_ma2pd5o9tdvq9kxa4dq",
+    "data": {
+     "edgeType": "defaultCase",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2pd5o980fvxf8i8s",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pd5o9tdvq9kxa4dq",
+    "target": "node_ma2pd5o90vy6fnk3laci",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2pjqdtz6fcn3yqow",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pd5o91kb6h2tctd4",
+    "target": "node_ma2pjqdtihm56sbivi",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_ma2pipzf2y2ueuv6j8w"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2pq1275gl6jvdexol",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pq127s3otvn5seho",
+    "target": "node_ma2pq1272jqc3msepks",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2pq127rk2qk9so95",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pd5o9hhr8fmih29c",
+    "target": "node_ma2pq127s3otvn5seho",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2pylwlnc4cs80vxn",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pylwleejvvnqf81u",
+    "target": "node_ma2pd5o90vy6fnk3laci",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2pylwlkguoi5kwdj",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pylwlstgqnjmd5da",
+    "target": "node_ma2pylwleejvvnqf81u",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2pylwly4vjs70zjw",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pq1272jqc3msepks",
+    "target": "node_ma2pylwlstgqnjmd5da",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2q54ukjxyxni4cgh",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2q54ujh3qvsyloo7h",
+    "target": "node_ma2q54ujxt0wgrc2g19",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2q54ukm5z2my8fj7d",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pjqdtihm56sbivi",
+    "target": "node_ma2q54ujh3qvsyloo7h",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2reb8be7va60yugd",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2reb8b95kav2khkc",
+    "target": "node_ma2reb8bqvrln8wafqo",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2reb8b4day40tyqpu",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2q54ujxt0wgrc2g19",
+    "target": "node_ma2reb8b95kav2khkc",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2rfsu45hyf9p3kycr",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2rfsu4fvc63ienh4j",
+    "target": "node_ma2pd5o90vy6fnk3laci",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2rfsu4t7477tr8ubo",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2rfsu4lepozh7vtz",
+    "target": "node_ma2rfsu4fvc63ienh4j",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2rfsu4ef0nrwitjbj",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2reb8bqvrln8wafqo",
+    "target": "node_ma2rfsu4lepozh7vtz",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2rkzqqi0dy72c46of",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2rkzqq65hnnytupeq",
+    "target": "node_ma2rkzqqqlu9u90qxso",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma2rkzqq3susyfydf0f",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma2pd5o90vy6fnk3laci",
+    "target": "node_ma2rkzqq65hnnytupeq",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": null,
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-04-29T16:07:39.30305Z",
+   "updatedAt": "2025-04-29T17:53:16.398453Z",
+   "entityCommitId": "commit-abbfd0e8-9667-40fd-a1fb-9a8fb0f4444f",
+   "entityType": "workflow",
+   "entityId": "e1ff98d5-8bba-44e9-a66e-551d977c29ce",
+   "entityVersion": "draft",
+   "entityNodeId": "node_ma2parb1fneamzh561e",
+   "dependencyType": "rule",
+   "dependencyId": "5d31e2b6-0907-457d-911e-7d159518765d",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-04-29T16:19:31.816104Z",
+   "updatedAt": "2025-04-29T17:53:16.396542Z",
+   "entityCommitId": "commit-abbfd0e8-9667-40fd-a1fb-9a8fb0f4444f",
+   "entityType": "workflow",
+   "entityId": "e1ff98d5-8bba-44e9-a66e-551d977c29ce",
+   "entityVersion": "draft",
+   "entityNodeId": "node_ma2pq127s3otvn5seho",
+   "dependencyType": "rule",
+   "dependencyId": "8ed59d8f-32bd-4b6d-9c8a-d47e50ddc3a5",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-04-29T16:31:16.65435Z",
+   "updatedAt": "2025-04-29T17:53:16.394516Z",
+   "entityCommitId": "commit-abbfd0e8-9667-40fd-a1fb-9a8fb0f4444f",
+   "entityType": "workflow",
+   "entityId": "e1ff98d5-8bba-44e9-a66e-551d977c29ce",
+   "entityVersion": "draft",
+   "entityNodeId": "node_ma2q54ujh3qvsyloo7h",
+   "dependencyType": "rule",
+   "dependencyId": "8ed59d8f-32bd-4b6d-9c8a-d47e50ddc3a5",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-04-29T17:06:24.443194Z",
+   "updatedAt": "2025-04-29T17:53:16.392579Z",
+   "entityCommitId": "commit-abbfd0e8-9667-40fd-a1fb-9a8fb0f4444f",
+   "entityType": "workflow",
+   "entityId": "e1ff98d5-8bba-44e9-a66e-551d977c29ce",
+   "entityVersion": "draft",
+   "entityNodeId": "node_ma2reb8b95kav2khkc",
+   "dependencyType": "rule",
+   "dependencyId": "06a86df3-ff0d-48ed-b0e2-12cfd9435b41",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-04-29T17:25:15.755015Z",
+   "updatedAt": "2025-04-29T17:53:16.390636Z",
+   "entityCommitId": "commit-abbfd0e8-9667-40fd-a1fb-9a8fb0f4444f",
+   "entityType": "workflow",
+   "entityId": "e1ff98d5-8bba-44e9-a66e-551d977c29ce",
+   "entityVersion": "draft",
+   "entityNodeId": "node_ma2rkzqq65hnnytupeq",
+   "dependencyType": "connector",
+   "dependencyId": "c5fa0d71-a2e7-4cbe-b327-b9104edde777",
+   "dependencyVersion": "live"
+  }
+ ]
+}

@@ -2,114 +2,125 @@
  "entityType": "rule",
  "category": "decisionTable",
  "data": {
-  "createdAt": "2026-01-16T08:22:21.703Z",
-  "updatedAt": "2026-03-30T09:41:23.911718Z",
+  "createdAt": "2026-04-16T10:42:05.744Z",
+  "updatedAt": "2026-04-16T10:42:05.744Z",
   "isDeleted": false,
-  "testedAt": "2026-01-16T08:25:58.417Z",
-  "publishedAt": "2026-01-16T08:26:12.028Z",
-  "entityId": "eb642c29-7bf0-481a-80aa-e9b6028ecc61",
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "30ab7d8d-4c69-452b-a87d-8e050d22083d",
   "version": "draft",
-  "name": "raisin_git_demo",
-  "commitId": "commit-bc796380-b195-4f34-847e-fb8a9839da22",
+  "name": "AB_initial Check",
+  "commitId": "commit-cf656099-27ed-4a4b-abb3-046d069b7a4c",
   "status": "draft",
-  "lastVersion": "0.10",
+  "lastVersion": "",
   "isLive": false,
   "commitInfo": {
-   "title": "Forked from 0.10",
-   "timeStamp": "2026-03-30T09:41:14.042897434Z"
+   "title": "Created at 2026-04-16 10:42:05",
+   "timeStamp": "2026-04-16T10:42:05.744696362Z"
   },
   "customInput": {
-   "salary": {
- "name": "salary",
- "dataType": "numeric",
+   "advisor_code": {
+ "name": "advisor_code",
+ "dataType": "string",
  "isOptional": false,
  "isNullable": false,
  "isCaseSensitive": false,
  "attribute": "",
  "sourceType": "",
- "executedValue": 1250000,
- "config": {
-  
- },
+ "executedValue": "L1",
+ "config": null,
+ "value": "",
+ "next": "product_code",
+ "previous": "",
+ "schemaId": "8b649a90-14a8-4446-bb8c-0497bf0f25ea"
+},
+   "product_code": {
+ "name": "product_code",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "ABC",
+ "config": null,
  "value": "",
  "next": "",
- "previous": "",
+ "previous": "advisor_code",
  "schemaId": ""
 }
   },
   "ruleChain": null,
   "decisionTable": {
    "rows": {
-    "g_PTGNvN": {
+    "g_MvRVft": {
  "nextId": "",
  "prevId": "rule_01",
- "firstOutputData": "output_dbSfE1",
+ "firstOutputData": "output_Hqr8Fs",
  "isEnabled": true,
  "annotation": ""
 },
     "rule_01": {
- "nextId": "g_PTGNvN",
+ "nextId": "g_MvRVft",
  "prevId": "",
- "firstOutputData": "output_skT2fr",
+ "firstOutputData": "output_AyeMDJ",
  "isEnabled": true,
  "annotation": ""
 }
    },
    "properties": {
-    "param_lye4R6": {
+    "param_9ZDR5U": {
  "nextId": "",
  "prevId": "rule_03",
  "type": "simpleCondition"
 },
     "rule_03": {
- "nextId": "param_lye4R6",
+ "nextId": "param_9ZDR5U",
  "prevId": "",
  "type": "simpleCondition"
 }
    },
    "results": {
-    "result_2kDNxI": {
+    "result_k5ChvS": {
  "nextId": "",
  "prevId": "",
  "dataType": "string",
- "keyName": "isTaxable",
+ "keyName": "isEligible",
  "schemaId": ""
 }
    },
    "firstRow": "rule_01",
    "firstProperty": "rule_03",
-   "firstResult": "result_2kDNxI",
+   "firstResult": "result_k5ChvS",
    "firstAggOutputData": ""
   },
   "action": {
    "then": {
     "outputData": {
-     "output_dbSfE1": {
- "name": "isTaxable",
+     "output_AyeMDJ": {
+ "name": "isEligible",
  "dataType": "string",
  "returnType": "",
- "value": "false",
+ "value": "no",
  "next": "",
- "executedValue": "false",
+ "executedValue": "no",
  "attribute": "",
  "source": "",
  "schemaId": ""
 },
-     "output_skT2fr": {
- "name": "isTaxable",
+     "output_Hqr8Fs": {
+ "name": "isEligible",
  "dataType": "string",
  "returnType": "",
- "value": "true",
+ "value": "yes",
  "next": "",
- "executedValue": "true",
+ "executedValue": "yes",
  "attribute": "",
  "source": "",
  "schemaId": ""
 }
     },
-    "actionNode": {
-     
-    },
+    "actionNode": null,
     "firstOutputData": "",
     "firstActionNode": ""
    },
@@ -122,90 +133,89 @@
   },
   "conditions": {
    "nodes": {
-    "c_BNEQ2Q": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "g_PTGNvN",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_QGolD6": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "rule_01",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_zMM6RY": {
+    "c_QvZyVq": {
  "value": "",
  "sourceType": "",
  "name": "",
- "operator": "betex",
- "dataType": "numeric",
+ "operator": "in",
+ "dataType": "string",
  "nodeType": "condition",
  "attribute": "",
  "query": "",
- "parent": "g_PTGNvN",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "param_9ZDR5U"
+ ],
+ "rightNode": [
+  "rhs_sBUZBw"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_gEHYlC": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_MvRVft",
+ "children": null,
+ "leftNode": [
+  "param_9ZDR5U"
+ ],
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_lvpWVY": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_MvRVft",
  "children": null,
  "leftNode": [
   "rule_03"
  ],
- "rightNode": [
-  "rhs_qtLf4R",
-  "rhs_DAjiy3"
- ],
+ "rightNode": null,
  "siblingIndex": 1,
  "returnType": ""
 },
-    "g_PTGNvN": {
+    "g_MvRVft": {
  "value": null,
  "sourceType": "",
  "name": "",
- "operator": "and",
+ "operator": "or",
  "dataType": "",
  "nodeType": "group",
  "attribute": "",
  "query": "",
  "parent": "",
  "children": [
-  "c_zMM6RY",
-  "c_BNEQ2Q"
+  "c_lvpWVY",
+  "c_gEHYlC"
  ],
  "leftNode": null,
  "rightNode": null,
  "siblingIndex": 1,
  "returnType": ""
 },
-    "param_lye4R6": {
+    "param_9ZDR5U": {
  "value": null,
- "sourceType": "custom",
+ "sourceType": "customInput",
  "name": "",
  "operator": "",
- "dataType": "jsCondition",
+ "dataType": "string",
  "nodeType": "params",
- "attribute": "sql",
+ "attribute": "product_code",
  "query": "",
  "parent": "",
  "children": null,
@@ -214,28 +224,12 @@
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rhs_DAjiy3": {
- "value": 1200000,
+    "rhs_4FpX2i": {
+ "value": "L1",
  "sourceType": "",
  "name": "",
  "operator": "",
- "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "c_zMM6RY",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rhs_RnLQzp": {
- "value": 1200000,
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "numeric",
+ "dataType": "string",
  "nodeType": "constant",
  "attribute": "",
  "query": "",
@@ -246,16 +240,20 @@
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rhs_qtLf4R": {
- "value": 600000,
+    "rhs_sBUZBw": {
+ "value": [
+  "ABC",
+  "DEF",
+  "GHI"
+ ],
  "sourceType": "",
  "name": "",
  "operator": "",
- "dataType": "numeric",
+ "dataType": "list",
  "nodeType": "constant",
  "attribute": "",
  "query": "",
- "parent": "c_zMM6RY",
+ "parent": "c_QvZyVq",
  "children": null,
  "leftNode": null,
  "rightNode": null,
@@ -266,7 +264,7 @@
  "value": null,
  "sourceType": "",
  "name": "",
- "operator": "and",
+ "operator": "or",
  "dataType": "",
  "nodeType": "group",
  "attribute": "",
@@ -274,7 +272,7 @@
  "parent": "",
  "children": [
   "rule_02",
-  "c_QGolD6"
+  "c_QvZyVq"
  ],
  "leftNode": null,
  "rightNode": null,
@@ -285,8 +283,8 @@
  "value": "",
  "sourceType": "",
  "name": "",
- "operator": "gt",
- "dataType": "numeric",
+ "operator": "eq",
+ "dataType": "string",
  "nodeType": "condition",
  "attribute": "",
  "query": "",
@@ -296,7 +294,7 @@
   "rule_03"
  ],
  "rightNode": [
-  "rhs_RnLQzp"
+  "rhs_4FpX2i"
  ],
  "siblingIndex": 1,
  "returnType": ""
@@ -306,9 +304,9 @@
  "sourceType": "customInput",
  "name": "",
  "operator": "",
- "dataType": "numeric",
+ "dataType": "string",
  "nodeType": "params",
- "attribute": "salary",
+ "attribute": "advisor_code",
  "query": "",
  "parent": "",
  "children": null,
@@ -320,7 +318,7 @@
    },
    "startNode": ""
   },
-  "firstCustomInput": "salary",
+  "firstCustomInput": "advisor_code",
   "firstRuleChain": "",
   "ruleSetPolicy": "",
   "description": "",
@@ -328,7 +326,7 @@
   "comment": "",
   "type": "decisionTable",
   "dataSetId": "",
-  "ruleSet": null,
+  "ruleSet": [],
   "settings": {
    "startAt": "0001-01-01T00:00:00Z",
    "endAt": "0001-01-01T00:00:00Z",
@@ -343,11 +341,11 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": "d"
+     "Unit": ""
     },
     "CacheKeys": ""
    },
-   "timezone": "",
+   "timezone": "Asia/Kolkata",
    "dateFormat": "in",
    "timeout": 0,
    "timeoutAsync": 0,

@@ -1,0 +1,3804 @@
+{
+ "entityType": "workflow",
+ "live": true,
+ "data": {
+  "createdAt": "2025-03-05T05:54:10.981Z",
+  "updatedAt": "2025-03-07T10:52:43.685Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-07T10:51:30.462Z",
+  "publishedAt": "2025-03-07T10:52:43.682Z",
+  "entityId": "a62af8e3-87a6-4686-84e6-32b02e43159d",
+  "version": "0.20",
+  "name": "COUPON_HANDLING",
+  "commitId": "commit-7ac7472c-6ce7-4443-9f5f-f0b91dd54ca5",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Forked from 0.10",
+   "description": "This workflow handles the lifecycle processes of a coupon like get, validate and apply.",
+   "timeStamp": "2025-03-07T10:52:43.67Z"
+  },
+  "startNode": "node_m7ydycb2ggofh8mc48w",
+  "description": "we are handling all the coupon use cases ",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 635.8500366210938,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "cart": {
+ "value": null,
+ "executedValue": [
+  {
+   "MRP": 500,
+   "category": "Furniture",
+   "name": "Men's T-Shirt",
+   "quantity": 2,
+   "sku": "SKU56789"
+  },
+  {
+   "MRP": 1500,
+   "category": "Electronics",
+   "name": "Wireless Headphones",
+   "quantity": 1,
+   "sku": "SKU4567"
+  },
+  {
+   "MRP": 1200,
+   "category": "Fashion",
+   "name": "Women's Dress",
+   "quantity": 1,
+   "sku": "SKUv1234"
+  },
+  {
+   "MRP": 1200,
+   "category": "Fashion",
+   "name": "Women's Dress",
+   "quantity": 1,
+   "sku": "SKUv134"
+  }
+ ],
+ "name": "cart",
+ "dataType": "list",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "coupon_code": {
+ "value": null,
+ "executedValue": "COUPON1111",
+ "name": "coupon_code",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "method": {
+ "value": null,
+ "executedValue": "Get",
+ "name": "method",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "order_id": {
+ "value": null,
+ "executedValue": "ORDER12345",
+ "name": "order_id",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "payment_gateway": {
+ "value": null,
+ "executedValue": "debit_card",
+ "name": "payment_gateway",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "transaction_no": {
+ "value": null,
+ "executedValue": "TRANS123456789",
+ "name": "transaction_no",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "cart": [
+ {
+  "MRP": 500,
+  "category": "Furniture",
+  "name": "Men's T-Shirt",
+  "quantity": 2,
+  "sku": "SKU56789"
+ },
+ {
+  "MRP": 1500,
+  "category": "Electronics",
+  "name": "Wireless Headphones",
+  "quantity": 1,
+  "sku": "SKU4567"
+ },
+ {
+  "MRP": 1200,
+  "category": "Fashion",
+  "name": "Women's Dress",
+  "quantity": 1,
+  "sku": "SKUv1234"
+ },
+ {
+  "MRP": 1200,
+  "category": "Fashion",
+  "name": "Women's Dress",
+  "quantity": 1,
+  "sku": "SKUv134"
+ }
+],
+      "coupon_code": "COUPON1111",
+      "method": "Get",
+      "order_id": "ORDER12345",
+      "payment_gateway": "debit_card",
+      "transaction_no": "TRANS123456789"
+     },
+     "settings": {
+      "authType": "private",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 635.8500366210938,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7u26dy8y8m6m8n5o7",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 635.8500366210938,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7u79l1450zjxpir828",
+    "type": "switchNode",
+    "data": {
+     "input": {
+      "defaultPath": {
+ "value": true,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "path": "Validate Coupon"
+}
+     },
+     "settings": {
+      "timeout": 30
+     },
+     "nodeType": "switchNode",
+     "entity": "switch",
+     "entityId": "node_m7u79l1450zjxpir828",
+     "pluginName": "",
+     "status": "success",
+     "name": "method_switch_block",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": [
+      {
+       "name": "Get All Coupons",
+       "pathId": "group_m7u79l149n7z0l42csm"
+      },
+      {
+       "name": "Validate Coupon",
+       "pathId": "group_m7u7av9qge4p2bhdpnr"
+      },
+      {
+       "name": "Complete Coupon",
+       "pathId": "group_m7u9j9auo7fjxmnrz6"
+      }
+     ],
+     "conditions": {
+      "nodes": {
+ "condition_m7u79l14gnvfz0n0tx4": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_m7u79l14z9th345ovq"
+],
+ "nodeType": "condition",
+ "operator": "eq",
+ "parent": "group_m7u79l149n7z0l42csm",
+ "rightNode": [
+ "rhs_m7u7aqzb7ke5vb71smo"
+]
+},
+ "condition_m7u7av9ql6tqss6wter": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_m7u7av9qin36fg1e3k"
+],
+ "nodeType": "condition",
+ "operator": "eq",
+ "parent": "group_m7u7av9qge4p2bhdpnr",
+ "rightNode": [
+ "rhs_m7u7b5mriqym05o12b"
+]
+},
+ "condition_m7u9j9aucylgdmrl0e": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_m7u9j9au79bucetxiya"
+],
+ "nodeType": "condition",
+ "operator": "eq",
+ "parent": "group_m7u9j9auo7fjxmnrz6",
+ "rightNode": [
+ "rhs_m7u9jwmlcg30pe2enle"
+]
+},
+ "group_m7u79l149n7z0l42csm": {
+ "children": [
+ "condition_m7u79l14gnvfz0n0tx4"
+],
+ "name": "Get All Coupons",
+ "nodeType": "group",
+ "operator": ""
+},
+ "group_m7u7av9qge4p2bhdpnr": {
+ "children": [
+ "condition_m7u7av9ql6tqss6wter"
+],
+ "name": "Validate Coupon",
+ "nodeType": "group",
+ "operator": ""
+},
+ "group_m7u9j9auo7fjxmnrz6": {
+ "children": [
+ "condition_m7u9j9aucylgdmrl0e"
+],
+ "name": "Complete Coupon",
+ "nodeType": "group",
+ "operator": ""
+},
+ "lhs_m7u79l14z9th345ovq": {
+ "attribute": "method",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "condition_m7u79l14gnvfz0n0tx4",
+ "sourceType": "Trigger",
+ "value": null
+},
+ "lhs_m7u7av9qin36fg1e3k": {
+ "attribute": "method",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "condition_m7u7av9ql6tqss6wter",
+ "sourceType": "Trigger",
+ "value": null
+},
+ "lhs_m7u9j9au79bucetxiya": {
+ "attribute": "method",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "condition_m7u9j9aucylgdmrl0e",
+ "sourceType": "Trigger",
+ "value": null
+},
+ "rhs_m7u7aqzb7ke5vb71smo": {
+ "attribute": null,
+ "dataType": "string",
+ "executedValue": "Get",
+ "nodeType": "constant",
+ "otherFields": {
+ 
+},
+ "parent": "condition_m7u79l14gnvfz0n0tx4",
+ "source": null,
+ "sourceType": null,
+ "value": "Get"
+},
+ "rhs_m7u7b5mriqym05o12b": {
+ "attribute": null,
+ "dataType": "string",
+ "executedValue": "Validate",
+ "nodeType": "constant",
+ "otherFields": {
+ 
+},
+ "parent": "condition_m7u7av9ql6tqss6wter",
+ "source": null,
+ "sourceType": null,
+ "value": "Validate"
+},
+ "rhs_m7u9jwmlcg30pe2enle": {
+ "attribute": null,
+ "dataType": "string",
+ "executedValue": "Complete",
+ "nodeType": "constant",
+ "otherFields": {
+ 
+},
+ "parent": "condition_m7u9j9aucylgdmrl0e",
+ "source": null,
+ "sourceType": null,
+ "value": "Complete"
+}
+}
+     },
+     "blockName": "switchBlock",
+     "testedAt": "2025-03-07T10:51:30.462Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 520.8500366210938,
+     "y": 1052.5
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7u79l14bx1zibn3lrf",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 750.8500366210938,
+     "y": 1545
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7u79l14ox33nfvsojd",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 635.8500366210938,
+     "y": 1825
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7u79l14npd08qssc9",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 175.85003662109375,
+     "y": 540
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7u9k67u8h9ecy6cvxd",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1043.3500366210938,
+     "y": 540
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7u9k67uyqa5as5nej",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 175.85003662109375,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7ufhi87usbrfokh82b",
+    "type": "switchNode",
+    "data": {
+     "input": {
+      "defaultPath": {
+ "value": true,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "path": "ValidCoupon"
+}
+     },
+     "settings": {
+      "timeout": 30
+     },
+     "nodeType": "switchNode",
+     "entity": "switch",
+     "entityId": "node_m7ufhi87usbrfokh82b",
+     "pluginName": "",
+     "status": "success",
+     "name": "query_execution",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": [
+      {
+       "name": "ValidCoupon",
+       "pathId": "group_m7ufhi872mast81dis6"
+      }
+     ],
+     "conditions": {
+      "nodes": {
+ "condition_m7ufhi87haohudkqknw": {
+ "dataType": "boolean",
+ "leftNode": [
+ "lhs_m7ufhi87w64pdrjypci"
+],
+ "nodeType": "condition",
+ "operator": "t",
+ "parent": "group_m7ufhi872mast81dis6",
+ "rightNode": []
+},
+ "group_m7ufhi872mast81dis6": {
+ "children": [
+ "condition_m7ufhi87haohudkqknw"
+],
+ "name": "ValidCoupon",
+ "nodeType": "group",
+ "operator": ""
+},
+ "lhs_m7ufhi87w64pdrjypci": {
+ "attribute": "output.is_valid",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "parent": "condition_m7ufhi87haohudkqknw",
+ "sourceType": "Validate_Coupon_SubWorkflow",
+ "value": null
+}
+}
+     },
+     "blockName": "switchBlock",
+     "testedAt": "2025-03-07T10:51:30.462Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 290.85003662109375,
+     "y": 950
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7ufhi8728f0o7755zm",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7ufhi87usbrfokh82b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 60.85003662109375,
+     "y": 1442.5
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7ufhi87w81sijvdjhl",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7ufhi87usbrfokh82b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 175.85003662109375,
+     "y": 1545
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7ufhi876c7i4use9o",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7ufhi87usbrfokh82b",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 290.85003662109375,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7ufldwjrq1s89b37eq",
+    "type": "dbNode",
+    "data": {
+     "input": {
+      "action": {
+ "value": 1,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "query": {
+ "value": "INSERT INTO coupon_usage (\r\n    order_number, \r\n    transaction_number, \r\n    coupon_code, \r\n    applied_on, \r\n    status, \r\n    created_at, \r\n    order_value, \r\n    discount_value, \r\n    rules\r\n) VALUES (\r\n    '{{.Extracting_the_required_inputs.output.orderId}}', \r\n    '{{.Extracting_the_required_inputs.output.txn_no}}', \r\n    '{{.Extracting_the_required_inputs.output.coupon_code}}', \r\n    NOW(), \r\n    'applied', \r\n    NOW(), \r\n    {{.Validate_Coupon_SubWorkflow.output.cart_value}},\r\n    {{.Validate_Coupon_SubWorkflow.output.cart_value}} - {{.Validate_Coupon_SubWorkflow.output.discounted_price}},  \r\n    'Discount provided after validation'\r\n) ON CONFLICT (order_number)\r\nDO UPDATE SET\r\n    status = 'applied',\r\n    applied_on = NOW(); \r\n",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "result": []
+}
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "durationUnit": "m",
+      "durationValue": 5,
+      "errorContinue": false,
+      "rowLimit": 1000,
+      "timeout": 30
+     },
+     "nodeType": "dbNode",
+     "entity": "connector",
+     "entityId": "0b5ede46-75c1-413d-bff6-0912b1a77dc0",
+     "pluginName": "",
+     "status": "success",
+     "name": "coupon_apply_query",
+     "rootId": "node_m7ufhi87usbrfokh82b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "postgres",
+     "testedAt": "2025-03-07T10:51:30.462Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 290.85003662109375,
+     "y": 1182.5
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7ufldwjqrpawm5181c",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7ufhi87usbrfokh82b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 290.85003662109375,
+     "y": 1285
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7ug3ejjow0c3tfgilq",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "Coupon_Valid": {
+ "value": true,
+ "executedValue": true,
+ "name": "Coupon_Valid",
+ "dataType": "boolean",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "Coupon_Valid": true
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_m7ug3ejjow0c3tfgilq",
+     "pluginName": "",
+     "status": "success",
+     "name": "valid_coupon_response",
+     "rootId": "node_m7ufhi87usbrfokh82b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "2025-03-07T10:51:30.462Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 290.85003662109375,
+     "y": 1442.5
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7ug3ejj5b5kgerata",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7ufhi87usbrfokh82b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 175.85003662109375,
+     "y": 1620
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7uixfzgvq394mqesf",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "Coupon_Valid": {
+ "value": false,
+ "executedValue": false,
+ "name": "Coupon_Valid",
+ "dataType": "boolean",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "Coupon_Valid": false
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_m7uixfzgvq394mqesf",
+     "pluginName": "",
+     "status": "success",
+     "name": "invalid_coupon_response",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 175.85003662109375,
+     "y": 1750
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7uixfzgvfkkvdq6ovp",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 520.8500366210938,
+     "y": 1415
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7viusgjt5ysjpzgyi",
+    "type": "codeNode",
+    "data": {
+     "input": {
+      "language": {
+ "value": "JS",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "snippet": {
+ "value": "let data = [];\r\n\r\nlet outputArray = {{.Get_All_Coupon_Code.output}};\r\nfor (let item of outputArray) {\r\n    if (item.Rewards) {\r\n        data.push(...item.Rewards);\r\n    }\r\n}\r\n\r\n\r\nlet filteredData = Object.values(\r\n    data.reduce((acc, coupon) => {\r\n        let couponCode = coupon.coupon_code;\r\n        if (\r\n            !acc[couponCode] || \r\n            (coupon.maximum_discount > acc[couponCode].maximum_discount)\r\n        ) {\r\n            acc[couponCode] = coupon; \r\n          }\r\n        return acc;\r\n    }, [])\r\n);\r\n\r\nfilteredData;\r\n",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": [
+ {
+  "coupon_code": "COUPON1111",
+  "description": "IT IS A FIXED COUPON.",
+  "maximum_discount": 75
+ },
+ {
+  "coupon_code": "COUPON2222",
+  "description": "Avail 10% discount on your orders. Max discount Rs. 100.",
+  "maximum_discount": 100
+ },
+ {
+  "coupon_code": "COUPON3333",
+  "description": "Buy furnitures get discounts!!!!",
+  "maximum_discount": 75
+ }
+]
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10
+     },
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "node_m7viusgjt5ysjpzgyi",
+     "pluginName": "",
+     "status": "success",
+     "name": "list_of_coupon_codes",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "code",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 520.8500366210938,
+     "y": 1545
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7viusgjaxlbq585llw",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 520.8500366210938,
+     "y": 1620
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vj3vvb0saopfhrtafj",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "Applicable Coupons": {
+ "value": null,
+ "executedValue": [],
+ "name": "Applicable Coupons",
+ "dataType": "list",
+ "source": "list_of_coupon_codes",
+ "attribute": "output",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "Applicable Coupons": [
+ {
+  "coupon_code": "COUPON1111",
+  "description": "IT IS A FIXED COUPON.",
+  "maximum_discount": 75
+ },
+ {
+  "coupon_code": "COUPON2222",
+  "description": "Avail 10% discount on your orders. Max discount Rs. 100.",
+  "maximum_discount": 100
+ },
+ {
+  "coupon_code": "COUPON3333",
+  "description": "Buy furnitures get discounts!!!!",
+  "maximum_discount": 75
+ }
+]
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_m7vj3vvb0saopfhrtafj",
+     "pluginName": "",
+     "status": "success",
+     "name": "applicable_coupons",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 520.8500366210938,
+     "y": 1750
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vj3vvbke93ptu7g4",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 750.8500366210938,
+     "y": 1620
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vm6k5qgp3s8em7ftv",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "Error": {
+ "value": "Please send a valid request method.",
+ "executedValue": "Please send a valid request method.",
+ "name": "Error",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "Error": "Please send a valid request method."
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_m7vm6k5qgp3s8em7ftv",
+     "pluginName": "",
+     "status": "success",
+     "name": "erroneous_method_sent_msg",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 750.8500366210938,
+     "y": 1750
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vm6k5q1hlq0yk42a5",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 175.85003662109375,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vx3nbksri89ohg7kc",
+    "type": "workflowNode",
+    "data": {
+     "input": {
+      "CatArray": {
+ "value": null,
+ "executedValue": null,
+ "name": "CatArray",
+ "dataType": "list",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.categories",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "cart": {
+ "value": null,
+ "executedValue": null,
+ "name": "cart",
+ "dataType": "list",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.cart",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "cart_value": {
+ "value": null,
+ "executedValue": null,
+ "name": "cart_value",
+ "dataType": "numeric",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.cart_value",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "coupon_code": {
+ "value": "",
+ "executedValue": null,
+ "name": "coupon_code",
+ "dataType": "string",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.coupon_code",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "order_id": {
+ "value": "",
+ "executedValue": null,
+ "name": "order_id",
+ "dataType": "string",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.orderId",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "payment_gateway": {
+ "value": "",
+ "executedValue": null,
+ "name": "payment_gateway",
+ "dataType": "string",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.payment_gateway",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "skuArray": {
+ "value": null,
+ "executedValue": null,
+ "name": "skuArray",
+ "dataType": "list",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.SKU",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "transaction_no": {
+ "value": "",
+ "executedValue": null,
+ "name": "transaction_no",
+ "dataType": "string",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.txn_no",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "cart_value": 4900,
+ "discounted_price": 4825,
+ "is_valid": true
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "workflowNode",
+     "entity": "workflow",
+     "entityId": "568a7ebb-c5fd-41c8-9469-94aceaf7d8c9",
+     "pluginName": "",
+     "status": "success",
+     "name": "Validate_Coupon_SubWorkflow",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "workflow",
+     "testedAt": "2025-03-07T10:51:30.462Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 175.85003662109375,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vx3nbkbf0uro3z91a",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1043.3500366210938,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vy0eiroa6z63fcwu",
+    "type": "workflowNode",
+    "data": {
+     "input": {
+      "CatArray": {
+ "value": null,
+ "executedValue": null,
+ "name": "CatArray",
+ "dataType": "list",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.categories",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "cart": {
+ "value": null,
+ "executedValue": null,
+ "name": "cart",
+ "dataType": "list",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.cart",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "cart_value": {
+ "value": null,
+ "executedValue": null,
+ "name": "cart_value",
+ "dataType": "numeric",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.cart_value",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "coupon_code": {
+ "value": "",
+ "executedValue": null,
+ "name": "coupon_code",
+ "dataType": "string",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.coupon_code",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "order_id": {
+ "value": "",
+ "executedValue": null,
+ "name": "order_id",
+ "dataType": "string",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.orderId",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "payment_gateway": {
+ "value": "",
+ "executedValue": null,
+ "name": "payment_gateway",
+ "dataType": "string",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.payment_gateway",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "skuArray": {
+ "value": null,
+ "executedValue": null,
+ "name": "skuArray",
+ "dataType": "list",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.SKU",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "transaction_no": {
+ "value": "",
+ "executedValue": null,
+ "name": "transaction_no",
+ "dataType": "string",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.txn_no",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "cart_value": 4900,
+ "discounted_price": 4825,
+ "is_valid": true
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "workflowNode",
+     "entity": "workflow",
+     "entityId": "568a7ebb-c5fd-41c8-9469-94aceaf7d8c9",
+     "pluginName": "",
+     "status": "success",
+     "name": "Validate_Coupon_SubWorkflow1",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "workflow",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1043.3500366210938,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vy0eirwea7k67yeam",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1043.3500366210938,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vy4ux23ogkpccj70g",
+    "type": "switchNode",
+    "data": {
+     "input": {
+      "defaultPath": {
+ "value": true,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "path": "Valid Coupon"
+}
+     },
+     "settings": {
+      "timeout": 30
+     },
+     "nodeType": "switchNode",
+     "entity": "switch",
+     "entityId": "node_m7vy4ux23ogkpccj70g",
+     "pluginName": "",
+     "status": "success",
+     "name": "query_execution1",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": [
+      {
+       "name": "Valid Coupon",
+       "pathId": "group_m7vy4ux2wrk9ci9ufn"
+      }
+     ],
+     "conditions": {
+      "nodes": {
+ "condition_m7vy4ux25besis4i9f8": {
+ "dataType": "boolean",
+ "leftNode": [
+ "lhs_m7vy4ux26hdjwrnw3ho"
+],
+ "nodeType": "condition",
+ "operator": "t",
+ "parent": "group_m7vy4ux2wrk9ci9ufn",
+ "rightNode": []
+},
+ "group_m7vy4ux2wrk9ci9ufn": {
+ "children": [
+ "condition_m7vy4ux25besis4i9f8"
+],
+ "name": "Valid Coupon",
+ "nodeType": "group",
+ "operator": ""
+},
+ "lhs_m7vy4ux26hdjwrnw3ho": {
+ "attribute": "output.is_valid",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "parent": "condition_m7vy4ux25besis4i9f8",
+ "sourceType": "Validate_Coupon_SubWorkflow1",
+ "value": null
+}
+}
+     },
+     "blockName": "switchBlock",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1158.3500366210938,
+     "y": 950
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vy4ux296rmbi4l7iq",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7vy4ux23ogkpccj70g",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 928.3500366210938,
+     "y": 1442.5
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vy4ux28rn529pzgw7",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7vy4ux23ogkpccj70g",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1043.3500366210938,
+     "y": 1545
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vy4ux2f3wbuhuze9",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7vy4ux23ogkpccj70g",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1158.3500366210938,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vy5gsmpd0fokhym5s",
+    "type": "dbNode",
+    "data": {
+     "input": {
+      "action": {
+ "value": 1,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "query": {
+ "value": "INSERT INTO coupon_usage (\r\n    order_number, \r\n    transaction_number, \r\n    coupon_code, \r\n    applied_on, \r\n    status, \r\n    created_at, \r\n    order_value, \r\n    discount_value, \r\n    rules\r\n) VALUES (\r\n    '{{.Extracting_the_required_inputs.output.orderId}}', \r\n    '{{.Extracting_the_required_inputs.output.txn_no}}', \r\n    '{{.Extracting_the_required_inputs.output.coupon_code}}', \r\n    NOW(), \r\n    'completed', \r\n    NOW(), \r\n    {{.Validate_Coupon_SubWorkflow1.output.cart_value}},\r\n    {{.Validate_Coupon_SubWorkflow1.output.cart_value}} - \r\n    {{.Validate_Coupon_SubWorkflow1.output.discounted_price}},  \r\n    'Discount provided after validation'\r\n) ON CONFLICT (order_number)\r\nDO UPDATE SET\r\n    status= 'completed',\r\n    applied_on = NOW(); \r\n",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "result": []
+}
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "durationUnit": "m",
+      "durationValue": 5,
+      "errorContinue": false,
+      "rowLimit": 1000,
+      "timeout": 30
+     },
+     "nodeType": "dbNode",
+     "entity": "connector",
+     "entityId": "0b5ede46-75c1-413d-bff6-0912b1a77dc0",
+     "pluginName": "",
+     "status": "success",
+     "name": "coupon_complete_query",
+     "rootId": "node_m7vy4ux23ogkpccj70g",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "postgres",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1158.3500366210938,
+     "y": 1182.5
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vy5gsmxpnu2rr6iw9",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7vy4ux23ogkpccj70g",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1158.3500366210938,
+     "y": 1285
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vy9mogre7ru7e69um",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "Coupon_Applied": {
+ "value": true,
+ "executedValue": true,
+ "name": "Coupon_Applied",
+ "dataType": "boolean",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "Coupon_Applied": true
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_m7vy9mogre7ru7e69um",
+     "pluginName": "",
+     "status": "success",
+     "name": "coupon_applied_response",
+     "rootId": "node_m7vy4ux23ogkpccj70g",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1158.3500366210938,
+     "y": 1442.5
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vy9mogv88m4xl7u9",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7vy4ux23ogkpccj70g",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1043.3500366210938,
+     "y": 1620
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vya7s2ob53hm76azl",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "Coupon_Applied": {
+ "value": false,
+ "executedValue": false,
+ "name": "Coupon_Applied",
+ "dataType": "boolean",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "Coupon_Applied": false
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_m7vya7s2ob53hm76azl",
+     "pluginName": "",
+     "status": "success",
+     "name": "coupon_not_applied_response",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1043.3500366210938,
+     "y": 1750
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7vya7s2pp8els0wk8f",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 520.8500366210938,
+     "y": 1155
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7wys3ulrnkxfgvgsp",
+    "type": "rule",
+    "data": {
+     "input": {
+      "Cart_Value": {
+ "value": null,
+ "executedValue": null,
+ "name": "Cart_Value",
+ "dataType": "numeric",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.cart_value",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "catArray": {
+ "value": null,
+ "executedValue": null,
+ "name": "catArray",
+ "dataType": "list",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.categories",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "payment_gateway": {
+ "value": "",
+ "executedValue": null,
+ "name": "payment_gateway",
+ "dataType": "string",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.payment_gateway",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "skuArray": {
+ "value": null,
+ "executedValue": null,
+ "name": "skuArray",
+ "dataType": "list",
+ "source": "Extracting_the_required_inputs",
+ "attribute": "output.SKU",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "output": [
+ {
+  "Rewards": [
+ {
+  "coupon_code": "COUPON1111",
+  "description": "IT IS A FIXED COUPON.",
+  "maximum_discount": 75
+ }
+],
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 2
+ },
+ {
+  "Rewards": [
+ {
+  "coupon_code": "COUPON2222",
+  "description": "Avail 10% discount on your orders. Max discount Rs. 100.",
+  "maximum_discount": 100
+ },
+ {
+  "coupon_code": "COUPON3333",
+  "description": "Buy furnitures get discounts!!!!",
+  "maximum_discount": 75
+ }
+],
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1
+ }
+],
+      "ruleId": "de746242-0ee5-43e9-82dd-e6a9dba09170",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "de746242-0ee5-43e9-82dd-e6a9dba09170",
+     "pluginName": "",
+     "status": "success",
+     "name": "Get_All_Coupon_Code",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 520.8500366210938,
+     "y": 1312.5
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7wys3ulg01u5b1o5w9",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_m7u79l1450zjxpir828",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 635.8500366210938,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7ydycb2ggofh8mc48w",
+    "type": "codeNode",
+    "data": {
+     "input": {
+      "language": {
+ "value": "JS",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "snippet": {
+ "value": "let Items = {{.Trigger.cart}}\r\nlet n = Items.length;\r\nlet code = \"{{.Trigger.coupon_code}}\" ? \"{{.Trigger.coupon_code}}\": \"\";\r\nlet orderID = \"{{.Trigger.order_id}}\" ?\"{{.Trigger.order_id}}\" : \"\";\r\nlet txn_no = \"{{.Trigger.transaction_no}}\" ? \"{{.Trigger.transaction_no}}\" : \"\";\r\nlet payment_gateway = \"{{.Trigger.payment_gateway}}\";\r\n\r\nconst skuSet = new Set();\r\nconst catSet = new Set();\r\n\r\n\r\nfor (let i = 0; i < n; i++){\r\n  Items[i].sku.split(',').map(item => skuSet.add(item.trim()));\r\n  Items[i].category.split(',').map(item => catSet.add(item.trim()));\r\n}\r\n\r\n//SET => ARRAY\r\nconst skuArray = [...skuSet];\r\nconst catArray = [...catSet];\r\n\r\n\r\nlet cart_value = Items.reduce((sum , item)=> sum + item.MRP * item.quantity,0)\r\n\r\nlet result = \r\n  {\r\n    coupon_code : code,\r\n    orderId : orderID,\r\n    categories: catArray,\r\n    SKU: skuArray,\r\n    payment_gateway: payment_gateway,\r\n    cart_value: cart_value,\r\n    txn_no : txn_no,\r\n    cart:Items,\r\n  };\r\n\r\nresult;\r\n",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "SKU": [
+ "SKU56789",
+ "SKU4567",
+ "SKUv1234",
+ "SKUv134"
+],
+ "cart": [
+ {
+  "MRP": 500,
+  "category": "Furniture",
+  "name": "Men's T-Shirt",
+  "quantity": 2,
+  "sku": "SKU56789"
+ },
+ {
+  "MRP": 1500,
+  "category": "Electronics",
+  "name": "Wireless Headphones",
+  "quantity": 1,
+  "sku": "SKU4567"
+ },
+ {
+  "MRP": 1200,
+  "category": "Fashion",
+  "name": "Women's Dress",
+  "quantity": 1,
+  "sku": "SKUv1234"
+ },
+ {
+  "MRP": 1200,
+  "category": "Fashion",
+  "name": "Women's Dress",
+  "quantity": 1,
+  "sku": "SKUv134"
+ }
+],
+ "cart_value": 4900,
+ "categories": [
+ "Furniture",
+ "Electronics",
+ "Fashion"
+],
+ "coupon_code": "COUPON1111",
+ "orderId": "ORDER12345",
+ "payment_gateway": "debit_card",
+ "txn_no": "TRANS123456789"
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10
+     },
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "node_m7ydycb2ggofh8mc48w",
+     "pluginName": "",
+     "status": "success",
+     "name": "Extracting_the_required_inputs",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "code",
+     "testedAt": "2025-03-07T10:51:30.462Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 635.8500366210938,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7ydycb2zj7qm8nbrg",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7u26dy8myr7aemlcr",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "node_m7u26dy8y8m6m8n5o7",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7u79l15ajlgzmlpxxw",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7u79l1450zjxpir828",
+    "target": "node_m7u79l14bx1zibn3lrf",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_m7u79l149n7z0l42csm"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7u79l1582lxgrbvrfu",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7u79l1450zjxpir828",
+    "target": "node_m7u79l14ox33nfvsojd",
+    "data": {
+     "edgeType": "defaultCase",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7u9k67uu0uxvl0t1q",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7u79l1450zjxpir828",
+    "target": "node_m7u9k67u8h9ecy6cvxd",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_m7u7av9qge4p2bhdpnr"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7u9k67uidq0un0wuap",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7u79l1450zjxpir828",
+    "target": "node_m7u9k67uyqa5as5nej",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_m7u9j9auo7fjxmnrz6"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7ubewsqrmduiagizxj",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7u79l14bx1zibn3lrf",
+    "target": "node_m7wys3ulrnkxfgvgsp",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7ufhi87lzpco8i4kgo",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7ufhi87usbrfokh82b",
+    "target": "node_m7ufhi8728f0o7755zm",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_m7ufhi872mast81dis6"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7ufhi87ecfrbzdm956",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7ufhi87usbrfokh82b",
+    "target": "node_m7ufhi87w81sijvdjhl",
+    "data": {
+     "edgeType": "defaultCase",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7ufhi87qpqxf2a7iwr",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7ufhi87w81sijvdjhl",
+    "target": "node_m7ufhi876c7i4use9o",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7ufldwj8uz5q04nb7t",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7ufldwjrq1s89b37eq",
+    "target": "node_m7ufldwjqrpawm5181c",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7ufldwjtj8qay8f33i",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7ufhi8728f0o7755zm",
+    "target": "node_m7ufldwjrq1s89b37eq",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7ug3ejjr42r48ojas",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7ug3ejj5b5kgerata",
+    "target": "node_m7ufhi876c7i4use9o",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7ug3ejjgb8q0wo70ic",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7ug3ejjow0c3tfgilq",
+    "target": "node_m7ug3ejj5b5kgerata",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7ug3ejjgyhajimeiwl",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7ufldwjqrpawm5181c",
+    "target": "node_m7ug3ejjow0c3tfgilq",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7uixfzgv6291zbf44p",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7uixfzgvfkkvdq6ovp",
+    "target": "node_m7u79l14npd08qssc9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7uixfzgsndli03mz",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7uixfzgvq394mqesf",
+    "target": "node_m7uixfzgvfkkvdq6ovp",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7uixfzgkr163e2sug9",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7ufhi876c7i4use9o",
+    "target": "node_m7uixfzgvq394mqesf",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7viusgjkiv6n6ng0l",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7viusgjt5ysjpzgyi",
+    "target": "node_m7viusgjaxlbq585llw",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vj3vvbteg238zvk8h",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vj3vvbke93ptu7g4",
+    "target": "node_m7u79l14npd08qssc9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vj3vvbggvp7k5z0re",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vj3vvb0saopfhrtafj",
+    "target": "node_m7vj3vvbke93ptu7g4",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vj3vvb09mcs2wv2h1x",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7viusgjaxlbq585llw",
+    "target": "node_m7vj3vvb0saopfhrtafj",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vm6k5qx0qgsfpfwp9",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vm6k5q1hlq0yk42a5",
+    "target": "node_m7u79l14npd08qssc9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vm6k5qrrqfjoj8tcl",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vm6k5qgp3s8em7ftv",
+    "target": "node_m7vm6k5q1hlq0yk42a5",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vm6k5qs14ntickt",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7u79l14ox33nfvsojd",
+    "target": "node_m7vm6k5qgp3s8em7ftv",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vx3nbk3y1mbejg0cs",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vx3nbkbf0uro3z91a",
+    "target": "node_m7ufhi87usbrfokh82b",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vx3nbklag6rls12uk",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vx3nbksri89ohg7kc",
+    "target": "node_m7vx3nbkbf0uro3z91a",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vxtggxr3tp8v32o4",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7u9k67u8h9ecy6cvxd",
+    "target": "node_m7vx3nbksri89ohg7kc",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vxyjb9hk5da6gzlzf",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7u9k67uyqa5as5nej",
+    "target": "node_m7vy0eiroa6z63fcwu",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vy0eirix3qkgp78bc",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vy0eiroa6z63fcwu",
+    "target": "node_m7vy0eirwea7k67yeam",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vy4ux2ezmnulcnto",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vy0eirwea7k67yeam",
+    "target": "node_m7vy4ux23ogkpccj70g",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vy4ux2q4ubmn5i5t",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vy4ux23ogkpccj70g",
+    "target": "node_m7vy4ux296rmbi4l7iq",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_m7vy4ux2wrk9ci9ufn"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vy4ux2x5sd8kdqj3c",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vy4ux23ogkpccj70g",
+    "target": "node_m7vy4ux28rn529pzgw7",
+    "data": {
+     "edgeType": "defaultCase",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vy4ux2uw6ud08l4l",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vy4ux28rn529pzgw7",
+    "target": "node_m7vy4ux2f3wbuhuze9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vy5gsmbhbri2dtgxg",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vy5gsmpd0fokhym5s",
+    "target": "node_m7vy5gsmxpnu2rr6iw9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vy5gsm3hdbic3q9zm",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vy4ux296rmbi4l7iq",
+    "target": "node_m7vy5gsmpd0fokhym5s",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vy9mogzhxsxg9k84e",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vy9mogv88m4xl7u9",
+    "target": "node_m7vy4ux2f3wbuhuze9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vy9mogaacqgnkn0nq",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vy9mogre7ru7e69um",
+    "target": "node_m7vy9mogv88m4xl7u9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vy9mog2bjkbsg73lo",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vy5gsmxpnu2rr6iw9",
+    "target": "node_m7vy9mogre7ru7e69um",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vya7s3hjybpuetu7m",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vya7s2pp8els0wk8f",
+    "target": "node_m7u79l14npd08qssc9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vya7s3yz9w4t0iyyc",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vya7s2ob53hm76azl",
+    "target": "node_m7vya7s2pp8els0wk8f",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7vya7s3cp509hf2sbv",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7vy4ux2f3wbuhuze9",
+    "target": "node_m7vya7s2ob53hm76azl",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7wys3ulfs9f0w5wdyn",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7wys3ulg01u5b1o5w9",
+    "target": "node_m7viusgjt5ysjpzgyi",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7wys3ul4jfkvhgcb17",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7wys3ulrnkxfgvgsp",
+    "target": "node_m7wys3ulg01u5b1o5w9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7ydycb3z2mppuklwnc",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7ydycb2zj7qm8nbrg",
+    "target": "node_m7u79l1450zjxpir828",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7ydycb373pi9vh0dlw",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7ydycb2ggofh8mc48w",
+    "target": "node_m7ydycb2zj7qm8nbrg",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7ydycb3p6iujc1o2wj",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7u26dy8y8m6m8n5o7",
+    "target": "node_m7ydycb2ggofh8mc48w",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": null,
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-03-07T10:48:47.72966Z",
+   "updatedAt": "2025-03-07T10:52:43.696407Z",
+   "entityCommitId": "commit-7ac7472c-6ce7-4443-9f5f-f0b91dd54ca5",
+   "entityType": "workflow",
+   "entityId": "a62af8e3-87a6-4686-84e6-32b02e43159d",
+   "entityVersion": "0.20",
+   "entityNodeId": "node_m7ufldwjrq1s89b37eq",
+   "dependencyType": "connector",
+   "dependencyId": "0b5ede46-75c1-413d-bff6-0912b1a77dc0",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-03-07T10:48:47.72859Z",
+   "updatedAt": "2025-03-07T10:52:43.696407Z",
+   "entityCommitId": "commit-7ac7472c-6ce7-4443-9f5f-f0b91dd54ca5",
+   "entityType": "workflow",
+   "entityId": "a62af8e3-87a6-4686-84e6-32b02e43159d",
+   "entityVersion": "0.20",
+   "entityNodeId": "node_m7vx3nbksri89ohg7kc",
+   "dependencyType": "workflow",
+   "dependencyId": "568a7ebb-c5fd-41c8-9469-94aceaf7d8c9",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-03-07T10:48:47.726348Z",
+   "updatedAt": "2025-03-07T10:52:43.696407Z",
+   "entityCommitId": "commit-7ac7472c-6ce7-4443-9f5f-f0b91dd54ca5",
+   "entityType": "workflow",
+   "entityId": "a62af8e3-87a6-4686-84e6-32b02e43159d",
+   "entityVersion": "0.20",
+   "entityNodeId": "node_m7vy0eiroa6z63fcwu",
+   "dependencyType": "workflow",
+   "dependencyId": "568a7ebb-c5fd-41c8-9469-94aceaf7d8c9",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-03-07T10:48:47.730752Z",
+   "updatedAt": "2025-03-07T10:52:43.696407Z",
+   "entityCommitId": "commit-7ac7472c-6ce7-4443-9f5f-f0b91dd54ca5",
+   "entityType": "workflow",
+   "entityId": "a62af8e3-87a6-4686-84e6-32b02e43159d",
+   "entityVersion": "0.20",
+   "entityNodeId": "node_m7vy5gsmpd0fokhym5s",
+   "dependencyType": "connector",
+   "dependencyId": "0b5ede46-75c1-413d-bff6-0912b1a77dc0",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-03-07T10:48:47.731968Z",
+   "updatedAt": "2025-03-07T10:52:43.696407Z",
+   "entityCommitId": "commit-7ac7472c-6ce7-4443-9f5f-f0b91dd54ca5",
+   "entityType": "workflow",
+   "entityId": "a62af8e3-87a6-4686-84e6-32b02e43159d",
+   "entityVersion": "0.20",
+   "entityNodeId": "node_m7wys3ulrnkxfgvgsp",
+   "dependencyType": "rule",
+   "dependencyId": "de746242-0ee5-43e9-82dd-e6a9dba09170",
+   "dependencyVersion": "live"
+  }
+ ]
+}

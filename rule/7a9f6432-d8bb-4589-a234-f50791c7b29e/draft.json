@@ -1,0 +1,1711 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-19T09:59:38.918Z",
+  "updatedAt": "2025-03-24T13:21:52.0152Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-19T10:22:47.922Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "7a9f6432-d8bb-4589-a234-f50791c7b29e",
+  "version": "draft",
+  "name": "patientTriageSystem",
+  "commitId": "commit-854e840c-d2e7-4d82-a841-d9c828c32a26",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-19 09:59:38",
+   "timeStamp": "2025-03-19T09:59:38.918393559Z"
+  },
+  "customInput": {
+   "consciousnessLevel": {
+ "name": "consciousnessLevel",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "symptomSeverity",
+ "schemaId": ""
+},
+   "medicalHistory": {
+ "name": "medicalHistory",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": null,
+ "next": "vitalSigns",
+ "previous": "",
+ "schemaId": ""
+},
+   "symptomSeverity": {
+ "name": "symptomSeverity",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": null,
+ "next": "consciousnessLevel",
+ "previous": "vitalSigns",
+ "schemaId": ""
+},
+   "vitalSigns": {
+ "name": "vitalSigns",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": null,
+ "next": "symptomSeverity",
+ "previous": "medicalHistory",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m8frgihy6vdox28cefo",
+ "prevId": "",
+ "firstOutputData": "output_m8frfw8lguxbo8xb3wv",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8frgihy6vdox28cefo": {
+ "nextId": "rule_m8frguqnyp8udaxy1ek",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m8frgihyvzrprf2866l",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8frguqnyp8udaxy1ek": {
+ "nextId": "rule_m8frnj7ijeavn01h5dm",
+ "prevId": "rule_m8frgihy6vdox28cefo",
+ "firstOutputData": "output_m8frguqolhlxl0fyhqb",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8frnh21tfudro9ona": {
+ "nextId": "rule_m8frp16f99aaylhdspq",
+ "prevId": "rule_m8frni54x7vrzlw2ivf",
+ "firstOutputData": "output_m8frnh21s9bvug8pgb",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8frni54x7vrzlw2ivf": {
+ "nextId": "rule_m8frnh21tfudro9ona",
+ "prevId": "rule_m8frnj7ijeavn01h5dm",
+ "firstOutputData": "output_m8frni546zgu2b6d9xn",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8frnj7ijeavn01h5dm": {
+ "nextId": "rule_m8frni54x7vrzlw2ivf",
+ "prevId": "rule_m8frguqnyp8udaxy1ek",
+ "firstOutputData": "output_m8frnj7ip1pym9uu1",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8frp16f99aaylhdspq": {
+ "nextId": "rule_m8frpxbuhpb9f7ynhu",
+ "prevId": "rule_m8frnh21tfudro9ona",
+ "firstOutputData": "output_m8frp16feswo54s345b",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8frpxbuhpb9f7ynhu": {
+ "nextId": "",
+ "prevId": "rule_m8frp16f99aaylhdspq",
+ "firstOutputData": "output_m8frpxbufny5rzktmsk",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "rule_m8frcthsujf1cxwrbbl",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_m8frcthsujf1cxwrbbl": {
+ "nextId": "rule_m8frcxoavp5466zzlvp",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_m8frcvsh332ii5dn2c5": {
+ "nextId": "",
+ "prevId": "rule_m8frcxoavp5466zzlvp",
+ "type": "simpleCondition"
+},
+    "rule_m8frcxoavp5466zzlvp": {
+ "nextId": "rule_m8frcvsh332ii5dn2c5",
+ "prevId": "rule_m8frcthsujf1cxwrbbl",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m8frfw8l56cmwzosild": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "Action",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m8frfw8l56cmwzosild",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m8frfw8lguxbo8xb3wv": {
+ "name": "Action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Immediate emergency care",
+ "next": "",
+ "executedValue": "Immediate emergency care",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8frgihyvzrprf2866l": {
+ "name": "Action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Immediate emergency care",
+ "next": "",
+ "executedValue": "Immediate emergency care",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8frguqolhlxl0fyhqb": {
+ "name": "Action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Urgent care",
+ "next": "",
+ "executedValue": "Urgent care",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8frnh21s9bvug8pgb": {
+ "name": "Action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Normal care",
+ "next": "",
+ "executedValue": "Normal care",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8frni546zgu2b6d9xn": {
+ "name": "Action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Normal care",
+ "next": "",
+ "executedValue": "Normal care",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8frnj7ip1pym9uu1": {
+ "name": "Action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Urgent care",
+ "next": "",
+ "executedValue": "Urgent care",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8frp16feswo54s345b": {
+ "name": "Action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Non-Urgent Outpatient Care",
+ "next": "",
+ "executedValue": "Non-Urgent Outpatient Care",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8frpxbufny5rzktmsk": {
+ "name": "Action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Home Care or outpatient care",
+ "next": "",
+ "executedValue": "Home Care or outpatient care",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "rule_m8frctht88f2dyc5r5s",
+  "rule_m8frcxoanls96cjy6o",
+  "rule_m8frcvshrq2cg2s4s7m"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8frepjl4xcqhhdauxc"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "vitalSigns",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frcthsujf1cxwrbbl": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "symptomSeverity",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frctht88f2dyc5r5s": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcthsujf1cxwrbbl"
+ ],
+ "rightNode": [
+  "rule_m8freyeit65y9nrtr5"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frcvsh332ii5dn2c5": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "consciousnessLevel",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frcvshrq2cg2s4s7m": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcvsh332ii5dn2c5"
+ ],
+ "rightNode": [
+  "rule_m8frfg7n1jn6aloqbvx"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frcxoanls96cjy6o": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcxoavp5466zzlvp"
+ ],
+ "rightNode": [
+  "rule_m8frf4ll9pw415qujvn"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frcxoavp5466zzlvp": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "medicalHistory",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frepjl4xcqhhdauxc": {
+ "value": "Critical",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8freyeit65y9nrtr5": {
+ "value": "Severe",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frctht88f2dyc5r5s",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frf4ll9pw415qujvn": {
+ "value": "High-risk condition",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frcxoanls96cjy6o",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frfg7n1jn6aloqbvx": {
+ "value": "Unconscious",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frcvshrq2cg2s4s7m",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frgihy4srewou3wmc": {
+ "value": "Severe",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frgihyz8xryxhrb5",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frgihy5so47o1bd4d": {
+ "value": "Low-risk condition",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frgihyy9rd97x15u",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frgihy6vdox28cefo": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8frgihye01ldnkuhd5",
+  "rule_m8frgihyz8xryxhrb5",
+  "rule_m8frgihyy9rd97x15u",
+  "rule_m8frgihysb2x8h32w1h"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frgihy8f536wylcvr": {
+ "value": "Critical",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frgihye01ldnkuhd5",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frgihye01ldnkuhd5": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frgihy6vdox28cefo",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8frgihy8f536wylcvr"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frgihyru8q19t7b1": {
+ "value": "Drowsy",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frgihysb2x8h32w1h",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frgihysb2x8h32w1h": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frgihy6vdox28cefo",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcvsh332ii5dn2c5"
+ ],
+ "rightNode": [
+  "rule_m8frgihyru8q19t7b1"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frgihyy9rd97x15u": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frgihy6vdox28cefo",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcxoavp5466zzlvp"
+ ],
+ "rightNode": [
+  "rule_m8frgihy5so47o1bd4d"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frgihyz8xryxhrb5": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frgihy6vdox28cefo",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcthsujf1cxwrbbl"
+ ],
+ "rightNode": [
+  "rule_m8frgihy4srewou3wmc"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frguqnbbp25p25yf4": {
+ "value": "Stable",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frguqnosrginpsll",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frguqnosrginpsll": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frguqnyp8udaxy1ek",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8frguqnbbp25p25yf4"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frguqnyp8udaxy1ek": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8frguqnosrginpsll",
+  "rule_m8frguqoslcw9xwsq8",
+  "rule_m8frguqogt7t8ngozoo",
+  "rule_m8frguqo7n8d0ym697v"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frguqo7n8d0ym697v": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frguqnyp8udaxy1ek",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcvsh332ii5dn2c5"
+ ],
+ "rightNode": [
+  "rule_m8frguqoapsu9zot2a6"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frguqoapsu9zot2a6": {
+ "value": "Normal",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frguqo7n8d0ym697v",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frguqodhud4h8tpkn": {
+ "value": "Severe",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frguqoslcw9xwsq8",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frguqogt7t8ngozoo": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frguqnyp8udaxy1ek",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcxoavp5466zzlvp"
+ ],
+ "rightNode": [
+  "rule_m8frguqot3f50vq6yx"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frguqoslcw9xwsq8": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frguqnyp8udaxy1ek",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcthsujf1cxwrbbl"
+ ],
+ "rightNode": [
+  "rule_m8frguqodhud4h8tpkn"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frguqot3f50vq6yx": {
+ "value": "High-risk condition",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frguqogt7t8ngozoo",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnh211t23j0u1fwb": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnh21tfudro9ona",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcxoavp5466zzlvp"
+ ],
+ "rightNode": [
+  "rule_m8frnh21x4ofikekt5"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnh21bdzukbgf6q6": {
+ "value": "Moderate",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnh21he3opufbam",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnh21e49p5scjs7s": {
+ "value": "Stable",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnh21qrhd5e4r3x",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnh21he3opufbam": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnh21tfudro9ona",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcthsujf1cxwrbbl"
+ ],
+ "rightNode": [
+  "rule_m8frnh21bdzukbgf6q6"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnh21qrhd5e4r3x": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnh21tfudro9ona",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8frnh21e49p5scjs7s"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnh21tfudro9ona": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8frnh21qrhd5e4r3x",
+  "rule_m8frnh21he3opufbam",
+  "rule_m8frnh211t23j0u1fwb",
+  "rule_m8frnh21tojdjxglc9"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnh21tojdjxglc9": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnh21tfudro9ona",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcvsh332ii5dn2c5"
+ ],
+ "rightNode": [
+  "rule_m8frnh21yoiq5pbaym"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnh21x4ofikekt5": {
+ "value": "Low-risk condition",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnh211t23j0u1fwb",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnh21yoiq5pbaym": {
+ "value": "Normal",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnh21tojdjxglc9",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frni54567s90duja2": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frni54x7vrzlw2ivf",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcvsh332ii5dn2c5"
+ ],
+ "rightNode": [
+  "rule_m8frni54h7w793ngpv"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frni54clz15j18826": {
+ "value": "Stable",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frni54dwa0ar9ke",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frni54dwa0ar9ke": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frni54x7vrzlw2ivf",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8frni54clz15j18826"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frni54ex22p20twul": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frni54x7vrzlw2ivf",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcthsujf1cxwrbbl"
+ ],
+ "rightNode": [
+  "rule_m8frni54iwspa6ezeml"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frni54h7w793ngpv": {
+ "value": "Normal",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frni54567s90duja2",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frni54iwspa6ezeml": {
+ "value": "Mild",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frni54ex22p20twul",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frni54kuu8tgia4hi": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frni54x7vrzlw2ivf",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcxoavp5466zzlvp"
+ ],
+ "rightNode": [
+  "rule_m8frni54yapt73nymak"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frni54x7vrzlw2ivf": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8frni54dwa0ar9ke",
+  "rule_m8frni54ex22p20twul",
+  "rule_m8frni54kuu8tgia4hi",
+  "rule_m8frni54567s90duja2"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frni54yapt73nymak": {
+ "value": "High-risk condition",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frni54kuu8tgia4hi",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnj7i20m4hjlfjng": {
+ "value": "Moderate",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnj7i8sjrqk1fa5v",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnj7i55ymlu2tz0g": {
+ "value": "Normal",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnj7i5xk0b3zxtmk",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnj7i5xk0b3zxtmk": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnj7ijeavn01h5dm",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcvsh332ii5dn2c5"
+ ],
+ "rightNode": [
+  "rule_m8frnj7i55ymlu2tz0g"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnj7i8sjrqk1fa5v": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnj7ijeavn01h5dm",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcthsujf1cxwrbbl"
+ ],
+ "rightNode": [
+  "rule_m8frnj7i20m4hjlfjng"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnj7ihrhr0yd9ma7": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnj7ijeavn01h5dm",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcxoavp5466zzlvp"
+ ],
+ "rightNode": [
+  "rule_m8frnj7iwwfgu1swjlr"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnj7ijdu9d9uzy3": {
+ "value": "Stable",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnj7ikr1no4q5ul",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnj7ijeavn01h5dm": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8frnj7ikr1no4q5ul",
+  "rule_m8frnj7i8sjrqk1fa5v",
+  "rule_m8frnj7ihrhr0yd9ma7",
+  "rule_m8frnj7i5xk0b3zxtmk"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnj7ikr1no4q5ul": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnj7ijeavn01h5dm",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8frnj7ijdu9d9uzy3"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frnj7iwwfgu1swjlr": {
+ "value": "High-risk condition",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frnj7ihrhr0yd9ma7",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frp16f39lwva1z6c5": {
+ "value": "Stable",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frp16fm924dmq58ih",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frp16f6883xo19io5": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frp16f99aaylhdspq",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcxoavp5466zzlvp"
+ ],
+ "rightNode": [
+  "rule_m8frp16f9yzrsackilr"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frp16f99aaylhdspq": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8frp16fm924dmq58ih",
+  "rule_m8frp16fjyzqs010lo",
+  "rule_m8frp16f6883xo19io5",
+  "rule_m8frp16ff7414u4gd45"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frp16f9xd659xkawe": {
+ "value": "Mild",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frp16fjyzqs010lo",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frp16f9yzrsackilr": {
+ "value": "Low-risk condition",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frp16f6883xo19io5",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frp16ff7414u4gd45": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frp16f99aaylhdspq",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcvsh332ii5dn2c5"
+ ],
+ "rightNode": [
+  "rule_m8frp16fw5glusfjof"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frp16fjyzqs010lo": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frp16f99aaylhdspq",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcthsujf1cxwrbbl"
+ ],
+ "rightNode": [
+  "rule_m8frp16f9xd659xkawe"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frp16fm924dmq58ih": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frp16f99aaylhdspq",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8frp16f39lwva1z6c5"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frp16fw5glusfjof": {
+ "value": "Normal",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frp16ff7414u4gd45",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frpxbu15fbogty4wci": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frpxbuhpb9f7ynhu",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8frpxbu5gem5nk99e"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frpxbu3gw4g362uqa": {
+ "value": "No history",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frpxbuyfoy3u4r228",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frpxbu5gem5nk99e": {
+ "value": "Normal",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frpxbu15fbogty4wci",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frpxbu864z7vwq6m6": {
+ "value": "Normal",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frpxbuh9c4jkjalaw",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frpxbuelno84mk27": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frpxbuhpb9f7ynhu",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcthsujf1cxwrbbl"
+ ],
+ "rightNode": [
+  "rule_m8frpxbum1eqq073tf"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frpxbuh9c4jkjalaw": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frpxbuhpb9f7ynhu",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcvsh332ii5dn2c5"
+ ],
+ "rightNode": [
+  "rule_m8frpxbu864z7vwq6m6"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frpxbuhpb9f7ynhu": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8frpxbu15fbogty4wci",
+  "rule_m8frpxbuelno84mk27",
+  "rule_m8frpxbuyfoy3u4r228",
+  "rule_m8frpxbuh9c4jkjalaw"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frpxbum1eqq073tf": {
+ "value": "Mild",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frpxbuelno84mk27",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8frpxbuyfoy3u4r228": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8frpxbuhpb9f7ynhu",
+ "children": null,
+ "leftNode": [
+  "rule_m8frcxoavp5466zzlvp"
+ ],
+ "rightNode": [
+  "rule_m8frpxbu3gw4g362uqa"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "medicalHistory",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "The Patient Triage System helps healthcare professionals prioritize patients based on the severity of their condition. This system ensures that critical cases receive immediate attention while less severe cases are managed accordingly.\n\nThe system evaluates four critical factors:\n\nVital Signs – Assesses parameters like heart rate, blood pressure, and oxygen levels.\nSymptoms Severity – Determines if the symptoms are mild, moderate, or severe.\nMedical History – Considers pre-existing conditions that could worsen the situation.\nConsciousness Level – Identifies if the patient is fully alert, drowsy, or unconscious.",
+  "policy": "evaluteAll",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

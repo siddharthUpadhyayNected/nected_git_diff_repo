@@ -1,0 +1,76 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2025-04-29T10:00:10.13Z",
+  "updatedAt": "2025-04-30T06:47:11.278747Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-29T11:07:47.828Z",
+  "publishedAt": "2025-04-30T06:47:11.263Z",
+  "entityId": "ee0fcbb2-2bae-4542-81e9-0730a4dc5f23",
+  "version": "0.10",
+  "name": "invoiceAllocationSource_",
+  "commitId": "commit-086be19a-9cd3-4b50-b3ae-e9076c1d32c4",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Created at 2025-04-29 10:00:10",
+   "description": "yuhjn",
+   "timeStamp": "2025-04-30T06:47:11.262Z"
+  },
+  "fields": {
+   "allocations": {
+ "ColumnName": "allocations",
+ "DataType": "numeric",
+ "Order": 5,
+ "ExecutedValue": 0
+},
+   "approvalLimit": {
+ "ColumnName": "approvalLimit",
+ "DataType": "numeric",
+ "Order": 6,
+ "ExecutedValue": 10000
+},
+   "empID": {
+ "ColumnName": "empID",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": "6"
+},
+   "empName": {
+ "ColumnName": "empName",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": "Ken Miles"
+},
+   "managerID": {
+ "ColumnName": "managerID",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": 2
+},
+   "team": {
+ "ColumnName": "team",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": "finance"
+}
+  },
+  "description": "",
+  "query": "SELECT \r\n  e.\"empID\",\r\n  e.\"empName\",\r\n  e.\"team\",\r\n  e.\"approvalLimit\",\r\n  e.\"managerID\",\r\n  COUNT(i.\"accountApproverId\") AS \"allocations\"\r\nFROM \r\n  \"employee\" e\r\nLEFT JOIN \r\n  \"invoice\" i \r\n  ON i.\"accountApproverId\" = e.\"empID\"\r\nGROUP BY \r\n  e.\"empID\", \r\n  e.\"empName\", \r\n  e.\"team\", \r\n  e.\"approvalLimit\", \r\n  e.\"managerID\"\r\nORDER BY \r\n  \"allocations\" ASC;",
+  "params": {
+   
+  },
+  "connectorId": "c5fa0d71-a2e7-4cbe-b327-b9104edde777",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ }
+}

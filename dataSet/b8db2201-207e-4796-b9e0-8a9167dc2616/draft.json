@@ -1,0 +1,76 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2024-12-26T07:10:51.416Z",
+  "updatedAt": "2024-12-26T07:14:27.160858Z",
+  "isDeleted": false,
+  "testedAt": "2024-12-26T07:13:13.436Z",
+  "publishedAt": "2024-12-26T07:14:27.135Z",
+  "entityId": "b8db2201-207e-4796-b9e0-8a9167dc2616",
+  "version": "0.10",
+  "name": "Untitled",
+  "commitId": "commit-8aea6cd3-aa46-4f11-a6d9-cb914e6cb74d",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Created at 2024-12-26 07:10:51",
+   "description": "wrote a query for comments only",
+   "timeStamp": "2024-12-26T07:14:27.133Z"
+  },
+  "fields": {
+   "_id": {
+ "ColumnName": "_id",
+ "DataType": "objectid",
+ "Order": 5,
+ "ExecutedValue": "5a9427648b0beebeb69579e7"
+},
+   "date": {
+ "ColumnName": "date",
+ "DataType": "dateTime",
+ "Order": 4,
+ "ExecutedValue": "2002-08-18T04:56:07Z"
+},
+   "email": {
+ "ColumnName": "email",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": "mercedes_tyler@fakegmail.com"
+},
+   "movie_id": {
+ "ColumnName": "movie_id",
+ "DataType": "objectid",
+ "Order": 2,
+ "ExecutedValue": "573a1390f29313caabcd4323"
+},
+   "name": {
+ "ColumnName": "name",
+ "DataType": "string",
+ "Order": 6,
+ "ExecutedValue": "Mercedes Tyler"
+},
+   "text": {
+ "ColumnName": "text",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": "Eius veritatis vero facilis quaerat fuga temporibus. Praesentium expedita sequi repellat id. Corporis minima enim ex. Provident fugit nisi dignissimos nulla nam ipsum aliquam."
+}
+  },
+  "description": "",
+  "query": "db.comments.find({})",
+  "params": {
+   
+  },
+  "connectorId": "68fb4297-8868-408f-8690-ff29c31ce404",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ }
+}

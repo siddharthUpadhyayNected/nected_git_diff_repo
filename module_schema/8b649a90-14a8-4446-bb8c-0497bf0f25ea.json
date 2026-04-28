@@ -1,0 +1,21 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-04-16T10:42:05.731Z",
+  "updatedAt": "2026-04-16T10:42:05.731Z",
+  "isDeleted": false,
+  "entityId": "8b649a90-14a8-4446-bb8c-0497bf0f25ea",
+  "name": "advisor_code",
+  "moduleId": "f25af4c8-0c82-422e-b6f2-3a6782c58e57",
+  "dataType": "string",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": "L1"
+   },
+   {
+    "value": "L2"
+   }
+  ]
+ }
+}

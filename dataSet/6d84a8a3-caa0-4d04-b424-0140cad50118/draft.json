@@ -1,0 +1,82 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2024-12-26T10:56:22.633Z",
+  "updatedAt": "2024-12-26T10:56:22.633Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "6d84a8a3-caa0-4d04-b424-0140cad50118",
+  "version": "draft",
+  "name": "Transaction_Fees_Calculation_Dataset",
+  "commitId": "commit-451676a3-1a4d-48c0-a6bf-30d63f456186",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2024-12-26 10:56:22",
+   "timeStamp": "2024-12-26T10:56:22.633586758Z"
+  },
+  "fields": {
+   "cust_type": {
+ "ColumnName": "cust_type",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 2,
+ "ExecutedValue": null
+},
+   "region": {
+ "ColumnName": "region",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": null
+},
+   "trans_amt": {
+ "ColumnName": "trans_amt",
+ "DataType": "numeric",
+ "Order": 4,
+ "ExecutedValue": null
+},
+   "trans_type": {
+ "ColumnName": "trans_type",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": null
+}
+  },
+  "description": "",
+  "query": "select * from financial_and_loans.transaction_details;",
+  "params": null,
+  "connectorId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2024-12-26T10:56:22.642787Z",
+   "updatedAt": "2024-12-26T10:56:22.642787Z",
+   "entityCommitId": "commit-451676a3-1a4d-48c0-a6bf-30d63f456186",
+   "entityType": "dataSet",
+   "entityId": "6d84a8a3-caa0-4d04-b424-0140cad50118",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+   "dependencyVersion": "live"
+  }
+ ]
+}

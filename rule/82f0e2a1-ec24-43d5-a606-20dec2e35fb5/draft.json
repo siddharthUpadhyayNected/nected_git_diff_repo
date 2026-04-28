@@ -1,0 +1,461 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-04-03T10:37:55.674Z",
+  "updatedAt": "2025-04-03T10:41:14.750335Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-03T10:41:14.749Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "82f0e2a1-ec24-43d5-a606-20dec2e35fb5",
+  "version": "draft",
+  "name": "employeePerformanceBasedAppraisal",
+  "commitId": "commit-4b3d6e3c-271e-40b9-a213-b17b161c48ee",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-04-03 10:37:55",
+   "timeStamp": "2025-04-03T10:37:55.674038559Z"
+  },
+  "customInput": {
+   "targetAchievementPercentage": {
+ "name": "targetAchievementPercentage",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m9184wjulbrly181re",
+ "prevId": "",
+ "firstOutputData": "output_m9184lsoz5ajv1ofuvn",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m9184wjulbrly181re": {
+ "nextId": "rule_m9185uy3hubwyfw0br",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m9184wju0pxy1yfovkq9",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m9185uy3hubwyfw0br": {
+ "nextId": "rule_m9186al3s3hqjj6dnmd",
+ "prevId": "rule_m9184wjulbrly181re",
+ "firstOutputData": "output_m9185uy4j6damfyf86",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m9186al3s3hqjj6dnmd": {
+ "nextId": "",
+ "prevId": "rule_m9185uy3hubwyfw0br",
+ "firstOutputData": "output_m9186al3sxrenkf3mep",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m9184lsoysi31tcbce": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "numeric",
+ "keyName": "appraisalPercentage",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m9184lsoysi31tcbce",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m9184lsoz5ajv1ofuvn": {
+ "name": "appraisalPercentage",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 30,
+ "next": "",
+ "executedValue": 30,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m9184wju0pxy1yfovkq9": {
+ "name": "appraisalPercentage",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 10,
+ "next": "",
+ "executedValue": 10,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m9185uy4j6damfyf86": {
+ "name": "appraisalPercentage",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 20,
+ "next": "",
+ "executedValue": 20,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m9186al3sxrenkf3mep": {
+ "name": "appraisalPercentage",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 0,
+ "next": "",
+ "executedValue": 0,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m9184fi3o1jybxu2rm"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "targetAchievementPercentage",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9184fi3o1jybxu2rm": {
+ "value": 125,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9184wjuazvnt7310rf": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "bet",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m9184wjulbrly181re",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m91859ip91gpvrwcfnj",
+  "rule_m91859ipozdvisuz6if"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9184wjulbrly181re": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m9184wjuazvnt7310rf"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m91859ip91gpvrwcfnj": {
+ "value": 95,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m9184wjuazvnt7310rf",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m91859ipozdvisuz6if": {
+ "value": 110,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m9184wjuazvnt7310rf",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9185uy3hubwyfw0br": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m9185uy4wtoxixus65l"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9185uy4fcxgtu5xkr": {
+ "value": 111,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m9185uy4wtoxixus65l",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9185uy4kemyggtvd7": {
+ "value": 125,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m9185uy4wtoxixus65l",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9185uy4wtoxixus65l": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "bet",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m9185uy3hubwyfw0br",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m9185uy4fcxgtu5xkr",
+  "rule_m9185uy4kemyggtvd7"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9186al38hxjvozji1e": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m9186al3s3hqjj6dnmd",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m9186de8xl410ij04un"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9186al3s3hqjj6dnmd": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m9186al38hxjvozji1e"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9186de8xl410ij04un": {
+ "value": 95,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m9186al38hxjvozji1e",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "targetAchievementPercentage",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "This rule decides the percentage of the appraisal upon evaluating the performance in the last financial year. The rule policy used here is first.\n",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

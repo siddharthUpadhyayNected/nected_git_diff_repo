@@ -1,0 +1,1037 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-05-29T07:25:27.447Z",
+  "updatedAt": "2025-06-03T07:46:21.086326Z",
+  "isDeleted": false,
+  "testedAt": "2025-06-03T07:45:39.778Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "3ac5d540-d964-43e6-b812-be3a54a8887b",
+  "version": "draft",
+  "name": "zepto_coupons_rule_with_ds",
+  "commitId": "commit-31175755-83fb-42af-a8b4-6129d51894eb",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-05-29 07:25:27",
+   "timeStamp": "2025-05-29T07:25:27.447333444Z"
+  },
+  "customInput": {
+   "amount": {
+ "name": "amount",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 10000,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "paymentGateway",
+ "previous": "category",
+ "schemaId": ""
+},
+   "brand": {
+ "name": "brand",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "brand",
+ "sourceType": "",
+ "executedValue": "Levis",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "category",
+ "previous": "",
+ "schemaId": ""
+},
+   "category": {
+ "name": "category",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "category",
+ "sourceType": "",
+ "executedValue": "Toys",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "amount",
+ "previous": "brand",
+ "schemaId": ""
+},
+   "paymentGateway": {
+ "name": "paymentGateway",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "amount",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_mb98oxldrcf553lj4u": {
+ "nextId": "rule_mbg7nozaz187swfet8",
+ "prevId": "rule_mb98p9alo3ykpn9b4q",
+ "firstOutputData": "output_mbej53swwcdz23skbsj",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_mb98p9alo3ykpn9b4q": {
+ "nextId": "rule_mb98oxldrcf553lj4u",
+ "prevId": "",
+ "firstOutputData": "output_mbej53swyxboa4gfj7",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_mbg7nozaz187swfet8": {
+ "nextId": "",
+ "prevId": "rule_mb98oxldrcf553lj4u",
+ "firstOutputData": "output_mbg7nozazflsvq8r0pk",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "rule_mb97whz9mh9k4d2san",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_mb97whz9mh9k4d2san": {
+ "nextId": "rule_mb97wz9baaqxriqua8s",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_mb97wz9baaqxriqua8s": {
+ "nextId": "rule_mbadrp6slvijc62pq7",
+ "prevId": "rule_mb97whz9mh9k4d2san",
+ "type": "simpleCondition"
+},
+    "rule_mbadrp6slvijc62pq7": {
+ "nextId": "",
+ "prevId": "rule_mb97wz9baaqxriqua8s",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_mbej53sw68sq5z1e1zm": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "coupons",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_mb98p9alo3ykpn9b4q",
+   "firstProperty": "rule_03",
+   "firstResult": "result_mbej53sw68sq5z1e1zm",
+   "firstAggOutputData": "aggData_1"
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "aggData_1": {
+ "name": "collectCoupons",
+ "dataType": "excelFormula",
+ "returnType": "array",
+ "value": "FILTER({{.outputData.output}},\"\" , \"coupons\")",
+ "next": "",
+ "executedValue": [
+  "TOYS100",
+  "TOYS100",
+  "TOYS100"
+ ],
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_mbej53swwcdz23skbsj": {
+ "name": "coupons",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": "TOYS100",
+ "attribute": "code",
+ "source": "dataSet",
+ "schemaId": ""
+},
+     "output_mbej53swyxboa4gfj7": {
+ "name": "coupons",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": "TOYS100",
+ "attribute": "code",
+ "source": "dataSet",
+ "schemaId": ""
+},
+     "output_mbg7nozazflsvq8r0pk": {
+ "name": "coupons",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": "TOYS100",
+ "attribute": "code",
+ "source": "dataSet",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "amount",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb97whz9mh9k4d2san": {
+ "value": null,
+ "sourceType": "dataSet",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "brand",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb97wz9baaqxriqua8s": {
+ "value": null,
+ "sourceType": "dataSet",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "category",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb98oxldi4ban04k7ot": {
+ "value": null,
+ "sourceType": "dataSet",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "min_order_value",
+ "query": "",
+ "parent": "rule_mb98oxldwoijh4zx4ys",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb98oxldrcf553lj4u": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_mb98oxldwoijh4zx4ys",
+  "rule_mb98oxle3pzqjtlrpcl",
+  "rule_mb98oxleo5wsivg9z8n",
+  "rule_mbadrp6tlfulpgmiqj"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb98oxldwoijh4zx4ys": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb98oxldrcf553lj4u",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_mb98oxldi4ban04k7ot"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb98oxle3pzqjtlrpcl": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb98oxldrcf553lj4u",
+ "children": null,
+ "leftNode": [
+  "rule_mb97whz9mh9k4d2san"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb98oxle7971z9gp3y4": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "category",
+ "query": "",
+ "parent": "rule_mb98oxleo5wsivg9z8n",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb98oxleo5wsivg9z8n": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb98oxldrcf553lj4u",
+ "children": null,
+ "leftNode": [
+  "rule_mb97wz9baaqxriqua8s"
+ ],
+ "rightNode": [
+  "rule_mb98oxle7971z9gp3y4"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb98p9alnfet5v00yzl": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb98p9alo3ykpn9b4q",
+ "children": null,
+ "leftNode": [
+  "rule_mb97wz9baaqxriqua8s"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb98p9alo3ykpn9b4q": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_mb98p9alpfqqmfvofuq",
+  "rule_mb98p9alv3qd9ch9b1c",
+  "rule_mb98p9alnfet5v00yzl",
+  "rule_mbadrp6trow1y8ar9f"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb98p9alpfqqmfvofuq": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb98p9alo3ykpn9b4q",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_mb98p9alz9x89f5q4fr"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb98p9alv3qd9ch9b1c": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb98p9alo3ykpn9b4q",
+ "children": null,
+ "leftNode": [
+  "rule_mb97whz9mh9k4d2san"
+ ],
+ "rightNode": [
+  "rule_mb98p9alw71jcvz7j9f"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb98p9alw71jcvz7j9f": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "brand",
+ "query": "",
+ "parent": "rule_mb98p9alv3qd9ch9b1c",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb98p9alz9x89f5q4fr": {
+ "value": null,
+ "sourceType": "dataSet",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "min_order_value",
+ "query": "",
+ "parent": "rule_mb98p9alpfqqmfvofuq",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb992eesu70m6ceqx8o": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_mb992eetmrmmfxc536n",
+  "rule_mb992eetzb90crq2wl",
+  "rule_mb992eet97360nkn3o"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb992eet97360nkn3o": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb992eesu70m6ceqx8o",
+ "children": null,
+ "leftNode": [
+  "rule_mb97wz9baaqxriqua8s"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb992eetmrmmfxc536n": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb992eesu70m6ceqx8o",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_mb992eetyavk5oprve"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb992eetyavk5oprve": {
+ "value": null,
+ "sourceType": "dataSet",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "min_order_value",
+ "query": "",
+ "parent": "rule_mb992eetmrmmfxc536n",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb992eetzb90crq2wl": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb992eesu70m6ceqx8o",
+ "children": null,
+ "leftNode": [
+  "rule_mb97whz9mh9k4d2san"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb9dyy5cagzdc89297d": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb9dyy5ce7g3zjnesvl",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_mb9dyy5ci08k31mdq3s"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb9dyy5ce7g3zjnesvl": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_mb9dyy5cagzdc89297d",
+  "rule_mb9dyy5ce9ndjw5u6w",
+  "rule_mb9dyy5cla7t38ud4hd"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb9dyy5ce9ndjw5u6w": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb9dyy5ce7g3zjnesvl",
+ "children": null,
+ "leftNode": [
+  "rule_mb97whz9mh9k4d2san"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb9dyy5ci08k31mdq3s": {
+ "value": null,
+ "sourceType": "dataSet",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "min_order_value",
+ "query": "",
+ "parent": "rule_mb9dyy5cagzdc89297d",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb9dyy5cla7t38ud4hd": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb9dyy5ce7g3zjnesvl",
+ "children": null,
+ "leftNode": [
+  "rule_mb97wz9baaqxriqua8s"
+ ],
+ "rightNode": [
+  "rule_mb9dyy5cshpby00z6be"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mb9dyy5cshpby00z6be": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "category",
+ "query": "",
+ "parent": "rule_mb9dyy5cla7t38ud4hd",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbadrp6slvijc62pq7": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "paymentGateway",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbadrp6tlfulpgmiqj": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb98oxldrcf553lj4u",
+ "children": null,
+ "leftNode": [
+  "rule_mbadrp6slvijc62pq7"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbadrp6trow1y8ar9f": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mb98p9alo3ykpn9b4q",
+ "children": null,
+ "leftNode": [
+  "rule_mbadrp6slvijc62pq7"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7noza3adz2uvh4ym": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbg7nozaz187swfet8",
+ "children": null,
+ "leftNode": [
+  "rule_mb97wz9baaqxriqua8s"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7noza3bybnrsw3mm": {
+ "value": null,
+ "sourceType": "dataSet",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "payment_gateway",
+ "query": "",
+ "parent": "rule_mbg7nozalnx0hzl2ls",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7nozalnx0hzl2ls": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbg7nozaz187swfet8",
+ "children": null,
+ "leftNode": [
+  "rule_mbadrp6slvijc62pq7"
+ ],
+ "rightNode": [
+  "rule_mbg7noza3bybnrsw3mm"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7nozatackiv3czga": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbg7nozaz187swfet8",
+ "children": null,
+ "leftNode": [
+  "rule_mb97whz9mh9k4d2san"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7nozaw77kfmkddb": {
+ "value": null,
+ "sourceType": "dataSet",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "min_order_value",
+ "query": "",
+ "parent": "rule_mbg7nozayppsr6zcu0s",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7nozayppsr6zcu0s": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbg7nozaz187swfet8",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_mbg7nozaw77kfmkddb"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7nozaz187swfet8": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_mbg7nozayppsr6zcu0s",
+  "rule_mbg7nozatackiv3czga",
+  "rule_mbg7noza3adz2uvh4ym",
+  "rule_mbg7nozalnx0hzl2ls"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7rgila6pn2lbnfuu": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_mbg7rgim5dbiu5zb1s3",
+  "rule_mbg7rgimui4x7u9uwm9",
+  "rule_mbg7rgim1cvjnzpr85x",
+  "rule_mbg7rgim4f2xhtbaw2c"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7rgim1cvjnzpr85x": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbg7rgila6pn2lbnfuu",
+ "children": null,
+ "leftNode": [
+  "rule_mb97wz9baaqxriqua8s"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7rgim4f2xhtbaw2c": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "isNull",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbg7rgila6pn2lbnfuu",
+ "children": null,
+ "leftNode": [
+  "rule_mbadrp6slvijc62pq7"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7rgim5dbiu5zb1s3": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbg7rgila6pn2lbnfuu",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_mbg7rgimsx42jw64po"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7rgimsx42jw64po": {
+ "value": null,
+ "sourceType": "dataSet",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "min_order_value",
+ "query": "",
+ "parent": "rule_mbg7rgim5dbiu5zb1s3",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_mbg7rgimui4x7u9uwm9": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_mbg7rgila6pn2lbnfuu",
+ "children": null,
+ "leftNode": [
+  "rule_mb97whz9mh9k4d2san"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "brand",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "We pick the coupons on the basis of the input directly from the database table by attaching the DS.",
+  "policy": "collect",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "4e74f801-2fa7-4ecc-b5cc-51b9ea521e1c",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": false
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": "d"
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-05-29T10:13:58.112967Z",
+   "updatedAt": "2025-06-03T07:46:21.094686Z",
+   "entityCommitId": "commit-31175755-83fb-42af-a8b4-6129d51894eb",
+   "entityType": "rule",
+   "entityId": "3ac5d540-d964-43e6-b812-be3a54a8887b",
+   "entityVersion": "draft",
+   "entityNodeId": "dataSet",
+   "dependencyType": "dataSet",
+   "dependencyId": "4e74f801-2fa7-4ecc-b5cc-51b9ea521e1c",
+   "dependencyVersion": "draft"
+  }
+ ]
+}

@@ -1,0 +1,950 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-26T11:55:41.174Z",
+  "updatedAt": "2025-03-26T13:14:16.465881Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-26T12:14:04.456Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "fe83fe6c-0deb-4ea9-b0be-d3211926e50d",
+  "version": "draft",
+  "name": "financialFraudRiskAssessment",
+  "commitId": "commit-923262e7-41d1-4c9d-8516-b46232b132f1",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-26 11:55:41",
+   "timeStamp": "2025-03-26T11:55:41.174902604Z"
+  },
+  "customInput": {
+   "accountAge": {
+ "name": "accountAge",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "",
+ "previous": "userReputationScore",
+ "schemaId": ""
+},
+   "transactionData": {
+ "name": "transactionData",
+ "dataType": "json",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": {
+  "amount": 1000,
+  "frequency": 3,
+  "locationMismatch": 1,
+  "suspiciousActivityScore": 1
+ },
+ "config": {
+  
+ },
+ "value": null,
+ "next": "userReputationScore",
+ "previous": "",
+ "schemaId": ""
+},
+   "userReputationScore": {
+ "name": "userReputationScore",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "accountAge",
+ "previous": "transactionData",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m8pvijx887ipp0mevmf",
+ "prevId": "",
+ "firstOutputData": "output_m8pvhtzg7oy40kenf1",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pvijx887ipp0mevmf": {
+ "nextId": "rule_m8pvjeaooit6tepd4ni",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m8pvijx85t9ckczplj8",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pvjeaooit6tepd4ni": {
+ "nextId": "rule_m8pvkwa6qnsgk6uomfh",
+ "prevId": "rule_m8pvijx887ipp0mevmf",
+ "firstOutputData": "output_m8pvjeaoplxm7re2tt9",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pvkwa6qnsgk6uomfh": {
+ "nextId": "rule_m8pvldndz71pp5elfz",
+ "prevId": "rule_m8pvjeaooit6tepd4ni",
+ "firstOutputData": "output_m8pvkwa6rzxunlf5mq",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pvldndz71pp5elfz": {
+ "nextId": "",
+ "prevId": "rule_m8pvkwa6qnsgk6uomfh",
+ "firstOutputData": "output_m8pvldndac2z4sf7h",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "rule_m8pvgz0r0dd8au756zfi",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_m8pvgz0r0dd8au756zfi": {
+ "nextId": "rule_m8pvh8bcyrrqz7tw2un",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_m8pvh8bcyrrqz7tw2un": {
+ "nextId": "",
+ "prevId": "rule_m8pvgz0r0dd8au756zfi",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m8pvhtzgx822wf5mf6b": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "transactionDecision",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m8pvhtzgx822wf5mf6b",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m8pvhtzg7oy40kenf1": {
+ "name": "transactionDecision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Approved",
+ "next": "",
+ "executedValue": "Approved",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pvijx85t9ckczplj8": {
+ "name": "transactionDecision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Approved",
+ "next": "",
+ "executedValue": "Approved",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pvjeaoplxm7re2tt9": {
+ "name": "transactionDecision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Block",
+ "next": "",
+ "executedValue": "Block",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pvkwa6rzxunlf5mq": {
+ "name": "transactionDecision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Block",
+ "next": "",
+ "executedValue": "Block",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pvldndac2z4sf7h": {
+ "name": "transactionDecision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Flag for review",
+ "next": "",
+ "executedValue": "Flag for review",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "rule_m8pvgz0r1jo8lbd95bd",
+  "rule_m8pvh8bcn24apejroo"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "JS Code",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "let totalRiskScore = {{.customInput.transactionData.amount}} / 1000 \r\n                   + {{.customInput.transactionData.frequency}}  \r\n                   + {{.customInput.transactionData.locationMismatch}} * 3 \r\n                   + {{.customInput.transactionData.suspiciousActivityScore}};\r\n                   \r\nlet result = false;\r\nif(totalRiskScore<5){\r\n  result = true;\r\n}\r\n\r\nresult",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "custom",
+ "name": "",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "params",
+ "attribute": "sql",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvgz0r0dd8au756zfi": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "userReputationScore",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvgz0r1jo8lbd95bd": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8pvgz0r0dd8au756zfi"
+ ],
+ "rightNode": [
+  "rule_m8pvh4d6skd4c4zlwmq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvh4d6skd4c4zlwmq": {
+ "value": 80,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvgz0r1jo8lbd95bd",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvh8bcn24apejroo": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8pvh8bcyrrqz7tw2un"
+ ],
+ "rightNode": [
+  "rule_m8pvhk9tck4fy5syvqp"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvh8bcyrrqz7tw2un": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "accountAge",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvhk9tck4fy5syvqp": {
+ "value": 7,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvh8bcn24apejroo",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvijx881auj8tmynp": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvijx887ipp0mevmf",
+ "children": null,
+ "leftNode": [
+  "rule_m8pvgz0r0dd8au756zfi"
+ ],
+ "rightNode": [
+  "rule_m8pvijx8c5uvsd9azd4"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvijx887ipp0mevmf": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pvijx8uh4643yn29d",
+  "rule_m8pvijx881auj8tmynp",
+  "rule_m8pvijx8yagf5tu1qog"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvijx8c5uvsd9azd4": {
+ "value": 90,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvijx881auj8tmynp",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvijx8n4lzb06a5d": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvijx8uh4643yn29d",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8pvijx8pq8i4cok2gj": {
+ "value": 12,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvijx8yagf5tu1qog",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvijx8uh4643yn29d": {
+ "value": "",
+ "sourceType": "",
+ "name": "JS Code",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "let totalRiskScore = {{.customInput.transactionData.amount}} / 1000 \r\n                   + {{.customInput.transactionData.frequency}}  \r\n                   + {{.customInput.transactionData.locationMismatch}} * 3 \r\n                   + {{.customInput.transactionData.suspiciousActivityScore}};\r\n                   \r\nlet result = false;\r\nif(totalRiskScore<8){\r\n  result = true;\r\n}\r\n\r\nresult",
+ "parent": "rule_m8pvijx887ipp0mevmf",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pvijx8n4lzb06a5d"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvijx8yagf5tu1qog": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvijx887ipp0mevmf",
+ "children": null,
+ "leftNode": [
+  "rule_m8pvh8bcyrrqz7tw2un"
+ ],
+ "rightNode": [
+  "rule_m8pvijx8pq8i4cok2gj"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvjeao0tbserd6ht9j": {
+ "value": "",
+ "sourceType": "",
+ "name": "JS Code",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "let totalRiskScore = {{.customInput.transactionData.amount}} / 1000 \r\n                   + {{.customInput.transactionData.frequency}}  \r\n                   + {{.customInput.transactionData.locationMismatch}} * 3 \r\n                   + {{.customInput.transactionData.suspiciousActivityScore}};\r\n                   \r\nlet result = false;\r\nif(totalRiskScore>10){\r\n  result = true;\r\n}\r\n\r\nresult",
+ "parent": "rule_m8pvjeaooit6tepd4ni",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pvjeaokqyboq9r3x"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvjeao3vk1wl7xylv": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvjeaooit6tepd4ni",
+ "children": null,
+ "leftNode": [
+  "rule_m8pvgz0r0dd8au756zfi"
+ ],
+ "rightNode": [
+  "rule_m8pvk8dtgmvvvhtatnv"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvjeaobz2l2be6p3t": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvjeaooit6tepd4ni",
+ "children": null,
+ "leftNode": [
+  "rule_m8pvh8bcyrrqz7tw2un"
+ ],
+ "rightNode": [
+  "rule_m8pvklsxzjr0xs95xvp"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvjeaokqyboq9r3x": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvjeao0tbserd6ht9j",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8pvjeaooit6tepd4ni": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pvjeao0tbserd6ht9j",
+  "rule_m8pvjeao3vk1wl7xylv",
+  "rule_m8pvjeaobz2l2be6p3t"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvk8dtgmvvvhtatnv": {
+ "value": 50,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvjeao3vk1wl7xylv",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvklsxzjr0xs95xvp": {
+ "value": 6,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvjeaobz2l2be6p3t",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvkwa61lmsdkqbotm": {
+ "value": 3,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvkwa6c582oc7dyn6",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvkwa68budi18qz4m": {
+ "value": "",
+ "sourceType": "",
+ "name": "JS Code",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "let totalRiskScore = {{.customInput.transactionData.amount}} / 1000 \r\n                   + {{.customInput.transactionData.frequency}}  \r\n                   + {{.customInput.transactionData.locationMismatch}} * 3 \r\n                   + {{.customInput.transactionData.suspiciousActivityScore}};\r\n                   \r\nlet result = false;\r\nif(totalRiskScore>12){\r\n  result = true;\r\n}\r\n\r\nresult",
+ "parent": "rule_m8pvkwa6qnsgk6uomfh",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pvkwa6nhg0mxs6era"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvkwa6c582oc7dyn6": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvkwa6qnsgk6uomfh",
+ "children": null,
+ "leftNode": [
+  "rule_m8pvh8bcyrrqz7tw2un"
+ ],
+ "rightNode": [
+  "rule_m8pvkwa61lmsdkqbotm"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvkwa6hisnfeaufrg": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvkwa6qnsgk6uomfh",
+ "children": null,
+ "leftNode": [
+  "rule_m8pvgz0r0dd8au756zfi"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvkwa6nhg0mxs6era": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvkwa68budi18qz4m",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8pvkwa6qnsgk6uomfh": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pvkwa68budi18qz4m",
+  "rule_m8pvkwa6hisnfeaufrg",
+  "rule_m8pvkwa6c582oc7dyn6"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvldnd54qp77pfhut": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "bet",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvldndz71pp5elfz",
+ "children": null,
+ "leftNode": [
+  "rule_m8pvh8bcyrrqz7tw2un"
+ ],
+ "rightNode": [
+  "rule_m8pvmvqdasxxnuhn32u",
+  "rule_m8pvmvqdzj43aplisj9"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvldndcjmeq5a179f": {
+ "value": "",
+ "sourceType": "",
+ "name": "JS Code",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "let totalRiskScore = {{.customInput.transactionData.amount}} / 1000 \r\n                   + {{.customInput.transactionData.frequency}}  \r\n                   + {{.customInput.transactionData.locationMismatch}} * 3 \r\n                   + {{.customInput.transactionData.suspiciousActivityScore}};\r\n                   \r\nlet result = false;\r\nif(totalRiskScore>5 && totalRiskScore<10){\r\n  result = true;\r\n}\r\n\r\nresult",
+ "parent": "rule_m8pvldndz71pp5elfz",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pvldndd8e85p7msto"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvldndd8e85p7msto": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvldndcjmeq5a179f",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8pvldndovlogy41v9": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "bet",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvldndz71pp5elfz",
+ "children": null,
+ "leftNode": [
+  "rule_m8pvgz0r0dd8au756zfi"
+ ],
+ "rightNode": [
+  "rule_m8pvmgkyx5r0wgkc7n",
+  "rule_m8pvmgkyw4tp2ga1r3"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvldndz71pp5elfz": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pvldndcjmeq5a179f",
+  "rule_m8pvldndovlogy41v9",
+  "rule_m8pvldnd54qp77pfhut"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvmgkyw4tp2ga1r3": {
+ "value": 80,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvldndovlogy41v9",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvmgkyx5r0wgkc7n": {
+ "value": 60,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvldndovlogy41v9",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvmvqdasxxnuhn32u": {
+ "value": 6,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvldnd54qp77pfhut",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pvmvqdzj43aplisj9": {
+ "value": 12,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pvldnd54qp77pfhut",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "transactionData",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "This decision table evaluates the fraud risk of financial transactions based on multiple transaction-related factors stored in a JSON object. A JavaScript Code Node calculates the total risk score and determines whether the transaction should be approved, flagged, or blocked.",
+  "policy": "collect",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

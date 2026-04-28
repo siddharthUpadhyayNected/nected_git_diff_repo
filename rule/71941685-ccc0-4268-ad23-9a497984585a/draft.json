@@ -2,36 +2,34 @@
  "entityType": "rule",
  "category": "decisionTable",
  "data": {
-  "createdAt": "2026-01-16T08:22:21.703Z",
-  "updatedAt": "2026-03-30T09:41:23.911718Z",
+  "createdAt": "2025-04-03T11:12:25.02Z",
+  "updatedAt": "2025-04-03T11:13:33.664109Z",
   "isDeleted": false,
-  "testedAt": "2026-01-16T08:25:58.417Z",
-  "publishedAt": "2026-01-16T08:26:12.028Z",
-  "entityId": "eb642c29-7bf0-481a-80aa-e9b6028ecc61",
+  "testedAt": "2025-04-03T11:13:33.662Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "71941685-ccc0-4268-ad23-9a497984585a",
   "version": "draft",
-  "name": "raisin_git_demo",
-  "commitId": "commit-bc796380-b195-4f34-847e-fb8a9839da22",
-  "status": "draft",
-  "lastVersion": "0.10",
+  "name": "eligibilityToAppearInExam",
+  "commitId": "commit-b90f555a-5451-49bb-90c4-b5cf706a1b4e",
+  "status": "tested",
+  "lastVersion": "",
   "isLive": false,
   "commitInfo": {
-   "title": "Forked from 0.10",
-   "timeStamp": "2026-03-30T09:41:14.042897434Z"
+   "title": "Created at 2025-04-03 11:12:25",
+   "timeStamp": "2025-04-03T11:12:25.020597992Z"
   },
   "customInput": {
-   "salary": {
- "name": "salary",
+   "attendancePercentage": {
+ "name": "attendancePercentage",
  "dataType": "numeric",
  "isOptional": false,
  "isNullable": false,
  "isCaseSensitive": false,
  "attribute": "",
  "sourceType": "",
- "executedValue": 1250000,
- "config": {
-  
- },
- "value": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
  "next": "",
  "previous": "",
  "schemaId": ""
@@ -40,68 +38,63 @@
   "ruleChain": null,
   "decisionTable": {
    "rows": {
-    "g_PTGNvN": {
- "nextId": "",
- "prevId": "rule_01",
- "firstOutputData": "output_dbSfE1",
+    "rule_01": {
+ "nextId": "rule_m919c3b43dcusoeuscr",
+ "prevId": "",
+ "firstOutputData": "output_m919boy8mt674ewmygq",
  "isEnabled": true,
  "annotation": ""
 },
-    "rule_01": {
- "nextId": "g_PTGNvN",
- "prevId": "",
- "firstOutputData": "output_skT2fr",
+    "rule_m919c3b43dcusoeuscr": {
+ "nextId": "",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m919c3b4nqpeadgmvls",
  "isEnabled": true,
  "annotation": ""
 }
    },
    "properties": {
-    "param_lye4R6": {
- "nextId": "",
- "prevId": "rule_03",
- "type": "simpleCondition"
-},
     "rule_03": {
- "nextId": "param_lye4R6",
+ "nextId": "",
  "prevId": "",
  "type": "simpleCondition"
 }
    },
    "results": {
-    "result_2kDNxI": {
+    "result_m919boy8ejtdfarnant": {
  "nextId": "",
  "prevId": "",
  "dataType": "string",
- "keyName": "isTaxable",
+ "keyName": "eligibilityDecision",
  "schemaId": ""
 }
    },
    "firstRow": "rule_01",
    "firstProperty": "rule_03",
-   "firstResult": "result_2kDNxI",
+   "firstResult": "result_m919boy8ejtdfarnant",
    "firstAggOutputData": ""
   },
   "action": {
    "then": {
     "outputData": {
-     "output_dbSfE1": {
- "name": "isTaxable",
+     "output_m919boy8mt674ewmygq": {
+ "name": "eligibilityDecision",
  "dataType": "string",
  "returnType": "",
- "value": "false",
+ "value": "eligible",
  "next": "",
- "executedValue": "false",
+ "executedValue": "eligible",
  "attribute": "",
  "source": "",
  "schemaId": ""
 },
-     "output_skT2fr": {
- "name": "isTaxable",
+     "output_m919c3b4nqpeadgmvls": {
+ "name": "eligibilityDecision",
  "dataType": "string",
  "returnType": "",
- "value": "true",
+ "value": "not eligible",
  "next": "",
- "executedValue": "true",
+ "executedValue": "not eligible",
  "attribute": "",
  "source": "",
  "schemaId": ""
@@ -122,64 +115,7 @@
   },
   "conditions": {
    "nodes": {
-    "c_BNEQ2Q": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "g_PTGNvN",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_QGolD6": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "rule_01",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_zMM6RY": {
- "value": "",
- "sourceType": "",
- "name": "",
- "operator": "betex",
- "dataType": "numeric",
- "nodeType": "condition",
- "attribute": "",
- "query": "",
- "parent": "g_PTGNvN",
- "children": null,
- "leftNode": [
-  "rule_03"
- ],
- "rightNode": [
-  "rhs_qtLf4R",
-  "rhs_DAjiy3"
- ],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "g_PTGNvN": {
+    "rule_01": {
  "value": null,
  "sourceType": "",
  "name": "",
@@ -190,22 +126,41 @@
  "query": "",
  "parent": "",
  "children": [
-  "c_zMM6RY",
-  "c_BNEQ2Q"
+  "rule_02"
  ],
  "leftNode": null,
  "rightNode": null,
  "siblingIndex": 1,
  "returnType": ""
 },
-    "param_lye4R6": {
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m919bkldnhrao6tdi9d"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
  "value": null,
- "sourceType": "custom",
+ "sourceType": "customInput",
  "name": "",
  "operator": "",
- "dataType": "jsCondition",
+ "dataType": "numeric",
  "nodeType": "params",
- "attribute": "sql",
+ "attribute": "attendancePercentage",
  "query": "",
  "parent": "",
  "children": null,
@@ -214,24 +169,8 @@
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rhs_DAjiy3": {
- "value": 1200000,
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "c_zMM6RY",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rhs_RnLQzp": {
- "value": 1200000,
+    "rule_m919bkldnhrao6tdi9d": {
+ "value": 75,
  "sourceType": "",
  "name": "",
  "operator": "",
@@ -246,23 +185,7 @@
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rhs_qtLf4R": {
- "value": 600000,
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "c_zMM6RY",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rule_01": {
+    "rule_m919c3b43dcusoeuscr": {
  "value": null,
  "sourceType": "",
  "name": "",
@@ -273,44 +196,43 @@
  "query": "",
  "parent": "",
  "children": [
-  "rule_02",
-  "c_QGolD6"
+  "rule_m919c3b4a3c7zt6ansq"
  ],
  "leftNode": null,
  "rightNode": null,
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rule_02": {
+    "rule_m919c3b4a3c7zt6ansq": {
  "value": "",
  "sourceType": "",
  "name": "",
- "operator": "gt",
+ "operator": "lt",
  "dataType": "numeric",
  "nodeType": "condition",
  "attribute": "",
  "query": "",
- "parent": "rule_01",
+ "parent": "rule_m919c3b43dcusoeuscr",
  "children": null,
  "leftNode": [
   "rule_03"
  ],
  "rightNode": [
-  "rhs_RnLQzp"
+  "rule_m919c5t8qpuvmcp6haj"
  ],
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rule_03": {
- "value": null,
- "sourceType": "customInput",
+    "rule_m919c5t8qpuvmcp6haj": {
+ "value": 75,
+ "sourceType": "",
  "name": "",
  "operator": "",
  "dataType": "numeric",
- "nodeType": "params",
- "attribute": "salary",
+ "nodeType": "constant",
+ "attribute": "",
  "query": "",
- "parent": "",
+ "parent": "rule_m919c3b4a3c7zt6ansq",
  "children": null,
  "leftNode": null,
  "rightNode": null,
@@ -320,10 +242,10 @@
    },
    "startNode": ""
   },
-  "firstCustomInput": "salary",
+  "firstCustomInput": "attendancePercentage",
   "firstRuleChain": "",
   "ruleSetPolicy": "",
-  "description": "",
+  "description": "This decision table determine if a student is eligible to appear for exams based on attendance percentage. The policy used is collect.",
   "policy": "first",
   "comment": "",
   "type": "decisionTable",
@@ -343,12 +265,12 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": "d"
+     "Unit": ""
     },
     "CacheKeys": ""
    },
    "timezone": "",
-   "dateFormat": "in",
+   "dateFormat": "",
    "timeout": 0,
    "timeoutAsync": 0,
    "timeoutCron": 0,

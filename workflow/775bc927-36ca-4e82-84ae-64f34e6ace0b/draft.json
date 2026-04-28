@@ -1,23 +1,23 @@
 {
  "entityType": "workflow",
  "data": {
-  "createdAt": "2026-01-09T13:30:34.386Z",
-  "updatedAt": "2026-03-05T08:47:57.902584Z",
+  "createdAt": "2025-07-28T07:52:49.958Z",
+  "updatedAt": "2025-07-28T08:02:44.569128Z",
   "isDeleted": false,
-  "testedAt": "2026-01-09T13:35:04.092Z",
-  "publishedAt": "2026-01-09T13:35:08.903Z",
-  "entityId": "50959ed5-36ef-42e8-a52f-020439b6f5e7",
+  "testedAt": "2025-07-28T08:02:44.568Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "775bc927-36ca-4e82-84ae-64f34e6ace0b",
   "version": "draft",
-  "name": "Git Diff Workflow",
-  "commitId": "commit-15f2822c-693d-457f-9b5c-00a3066310ae",
-  "status": "draft",
-  "lastVersion": "0.10",
+  "name": "test_archive",
+  "commitId": "commit-c6619830-3128-4513-9f37-7892287e2480",
+  "status": "tested",
+  "lastVersion": "",
   "isLive": false,
   "commitInfo": {
-   "title": "Forked from 0.10",
-   "timeStamp": "2026-03-05T08:47:52.100422812Z"
+   "title": "Created at 2025-07-28 07:52:49",
+   "timeStamp": "2025-07-28T07:52:49.958740645Z"
   },
-  "startNode": "n_5cCWPa",
+  "startNode": "n_dP0zyZ",
   "description": "",
   "trigger": {
    "apiNode": "1",
@@ -36,28 +36,10 @@
     "type": "trigger",
     "data": {
      "input": {
-      "discountPercent": {
+      "price": {
  "value": null,
- "executedValue": 10,
- "name": "discountPercent",
- "dataType": "numeric",
- "source": "",
- "attribute": "",
- "keySource": "",
- "keyAttribute": "",
- "mapping": false,
- "isOptional": false,
- "isNullable": false,
- "isCaseSensitive": false,
- "sendNull": false,
- "notSend": false,
- "order": 0,
- "schemaId": ""
-},
-      "total": {
- "value": null,
- "executedValue": 1000,
- "name": "total",
+ "executedValue": 100,
+ "name": "price",
  "dataType": "numeric",
  "source": "",
  "attribute": "",
@@ -75,8 +57,7 @@
      },
      "output": null,
      "executedValue": {
-      "discountPercent": 10,
-      "total": 1000
+      "price": 100
      },
      "settings": {
       "authType": "private",
@@ -116,7 +97,7 @@
     "style": null,
     "sourcePosition": "bottom",
     "targetPosition": "top",
-    "id": "n_yJcZZ1",
+    "id": "n_fzIdOX",
     "type": "addNode",
     "data": {
      "input": null,
@@ -153,15 +134,51 @@
     "style": null,
     "sourcePosition": "bottom",
     "targetPosition": "top",
-    "id": "n_5cCWPa",
-    "type": "setVarNode",
+    "id": "n_dP0zyZ",
+    "type": "rule",
     "data": {
      "input": {
-      "discountedPrice": {
- "value": "{{.Trigger.total}} - {{.Trigger.total}}* (1/{{.Trigger.discountPercent}})",
- "executedValue": 900,
- "name": "discountedPrice",
- "dataType": "excelFormula",
+      "discountValue": {
+ "value": 5,
+ "executedValue": null,
+ "name": "discountValue",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "totalCartValue": {
+ "value": null,
+ "executedValue": null,
+ "name": "totalCartValue",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "price",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "type": {
+ "value": "fixed",
+ "executedValue": null,
+ "name": "type",
+ "dataType": "string",
  "source": "",
  "attribute": "",
  "keySource": "",
@@ -178,24 +195,35 @@
      },
      "output": null,
      "executedValue": {
-      "error": "",
-      "executionTime": "0ns",
-      "output": {
- "discountedPrice": 900
-},
-      "resetOutput": {
+      "action": null,
+      "additionalOutput": {
  
-}
+},
+      "error": "",
+      "output": [
+ {
+  "defaultOutputData": true,
+  "discount": 5,
+  "finalPrice": 95,
+  "rowError": null,
+  "rowId": 2
+ }
+],
+      "ruleId": "cf503d04-3317-4984-82ed-7b62c26e99c1",
+      "warnings": []
      },
      "settings": {
-      "errorContinue": false
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
      },
-     "nodeType": "setVarNode",
-     "entity": "setVariableNode",
-     "entityId": "n_5cCWPa",
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "cf503d04-3317-4984-82ed-7b62c26e99c1",
      "pluginName": "",
      "status": "success",
-     "name": "calculation",
+     "name": "finalPriceAndDiscountRule",
      "rootId": "",
      "sourceId": null,
      "isMergeNode": false,
@@ -207,8 +235,8 @@
      },
      "switcher": null,
      "conditions": null,
-     "blockName": "setVariable",
-     "testedAt": "0001-01-01T00:00:00Z"
+     "blockName": "decisionTable",
+     "testedAt": "2025-07-28T08:02:44.568Z"
     },
     "draggable": false
    },
@@ -220,109 +248,7 @@
     "style": null,
     "sourcePosition": "bottom",
     "targetPosition": "top",
-    "id": "n_zyZi79",
-    "type": "addNode",
-    "data": {
-     "input": null,
-     "output": null,
-     "executedValue": null,
-     "settings": null,
-     "nodeType": "addNodeMd",
-     "entity": "",
-     "entityId": "",
-     "pluginName": "",
-     "status": "",
-     "name": "",
-     "rootId": "",
-     "sourceId": null,
-     "isMergeNode": false,
-     "runInLoop": {
-      "status": false,
-      "source": "",
-      "attribute": "",
-      "value": null
-     },
-     "switcher": null,
-     "conditions": null,
-     "blockName": "",
-     "testedAt": "0001-01-01T00:00:00Z"
-    },
-    "draggable": false
-   },
-   {
-    "position": {
-     "x": 691.0546875,
-     "y": 410
-    },
-    "style": null,
-    "sourcePosition": "bottom",
-    "targetPosition": "top",
-    "id": "n_srhha3",
-    "type": "responseNode",
-    "data": {
-     "input": {
-      "discountedPrice": {
- "value": null,
- "executedValue": 900,
- "name": "discountedPrice",
- "dataType": "numeric",
- "source": "calculation",
- "attribute": "output.discountedPrice",
- "keySource": "",
- "keyAttribute": "",
- "mapping": false,
- "isOptional": false,
- "isNullable": false,
- "isCaseSensitive": false,
- "sendNull": false,
- "notSend": false,
- "order": 0,
- "schemaId": ""
-}
-     },
-     "output": null,
-     "executedValue": {
-      "error": "",
-      "output": {
- "discountedPrice": 900
-}
-     },
-     "settings": {
-      "errorContinue": false,
-      "timeout": 10,
-      "timeoutAsync": 20
-     },
-     "nodeType": "responseNode",
-     "entity": "responseNode",
-     "entityId": "n_srhha3",
-     "pluginName": "",
-     "status": "success",
-     "name": "Response",
-     "rootId": "",
-     "sourceId": null,
-     "isMergeNode": false,
-     "runInLoop": {
-      "status": false,
-      "source": "",
-      "attribute": "",
-      "value": null
-     },
-     "switcher": null,
-     "conditions": null,
-     "blockName": "response",
-     "testedAt": "0001-01-01T00:00:00Z"
-    },
-    "draggable": false
-   },
-   {
-    "position": {
-     "x": 691.0546875,
-     "y": 540
-    },
-    "style": null,
-    "sourcePosition": "bottom",
-    "targetPosition": "top",
-    "id": "n_R1gVyg",
+    "id": "n_McxZNZ",
     "type": "addNode",
     "data": {
      "input": null,
@@ -358,11 +284,11 @@
      "stroke": "gray",
      "strokeWidth": 1
     },
-    "id": "e_efhNmY",
+    "id": "e_xKdE3R",
     "markerEnd": "",
     "label": "",
     "source": "1",
-    "target": "n_yJcZZ1",
+    "target": "n_fzIdOX",
     "data": {
      "edgeType": "then",
      "pathId": ""
@@ -376,11 +302,11 @@
      "stroke": "gray",
      "strokeWidth": 1
     },
-    "id": "e_ujcbb6",
+    "id": "e_tALwGz",
     "markerEnd": "",
     "label": "",
-    "source": "n_5cCWPa",
-    "target": "n_zyZi79",
+    "source": "n_dP0zyZ",
+    "target": "n_McxZNZ",
     "data": {
      "edgeType": "then",
      "pathId": ""
@@ -394,47 +320,11 @@
      "stroke": "gray",
      "strokeWidth": 1
     },
-    "id": "e_ffUjOC",
+    "id": "e_2cw5dB",
     "markerEnd": "",
     "label": "",
-    "source": "n_yJcZZ1",
-    "target": "n_5cCWPa",
-    "data": {
-     "edgeType": "then",
-     "pathId": ""
-    },
-    "type": "smoothEdge",
-    "sourceHandle": "",
-    "animated": false
-   },
-   {
-    "style": {
-     "stroke": "gray",
-     "strokeWidth": 1
-    },
-    "id": "e_U1PrRN",
-    "markerEnd": "",
-    "label": "",
-    "source": "n_srhha3",
-    "target": "n_R1gVyg",
-    "data": {
-     "edgeType": "then",
-     "pathId": ""
-    },
-    "type": "smoothEdge",
-    "sourceHandle": "",
-    "animated": false
-   },
-   {
-    "style": {
-     "stroke": "gray",
-     "strokeWidth": 1
-    },
-    "id": "e_g3xSNH",
-    "markerEnd": "",
-    "label": "",
-    "source": "n_zyZi79",
-    "target": "n_srhha3",
+    "source": "n_fzIdOX",
+    "target": "n_dP0zyZ",
     "data": {
      "edgeType": "then",
      "pathId": ""
@@ -446,7 +336,7 @@
   ],
   "isEnabled": true,
   "settings": {
-   "auditIO": true,
+   "auditIO": null,
    "timezone": "",
    "dateFormat": "in",
    "timeout": 0,
@@ -454,5 +344,20 @@
   },
   "comment": "",
   "isDemo": false
- }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-07-28T07:53:16.824219Z",
+   "updatedAt": "2025-07-28T08:02:40.964815Z",
+   "entityCommitId": "commit-c6619830-3128-4513-9f37-7892287e2480",
+   "entityType": "workflow",
+   "entityId": "775bc927-36ca-4e82-84ae-64f34e6ace0b",
+   "entityVersion": "draft",
+   "entityNodeId": "n_dP0zyZ",
+   "dependencyType": "rule",
+   "dependencyId": "cf503d04-3317-4984-82ed-7b62c26e99c1",
+   "dependencyVersion": "draft"
+  }
+ ]
 }

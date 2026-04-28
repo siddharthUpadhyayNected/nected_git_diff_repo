@@ -2,36 +2,34 @@
  "entityType": "rule",
  "category": "decisionTable",
  "data": {
-  "createdAt": "2026-01-16T08:22:21.703Z",
-  "updatedAt": "2026-03-30T09:41:23.911718Z",
+  "createdAt": "2025-04-04T11:29:02.685Z",
+  "updatedAt": "2025-04-04T11:31:49.979873Z",
   "isDeleted": false,
-  "testedAt": "2026-01-16T08:25:58.417Z",
-  "publishedAt": "2026-01-16T08:26:12.028Z",
-  "entityId": "eb642c29-7bf0-481a-80aa-e9b6028ecc61",
+  "testedAt": "2025-04-04T11:31:49.978Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "5d9aa8b4-4f9d-463e-b75a-7067503531df",
   "version": "draft",
-  "name": "raisin_git_demo",
-  "commitId": "commit-bc796380-b195-4f34-847e-fb8a9839da22",
-  "status": "draft",
-  "lastVersion": "0.10",
+  "name": "emailNotificationForLowBalance",
+  "commitId": "commit-dcdafada-27a0-4b35-82de-dc70b6cc03ce",
+  "status": "tested",
+  "lastVersion": "",
   "isLive": false,
   "commitInfo": {
-   "title": "Forked from 0.10",
-   "timeStamp": "2026-03-30T09:41:14.042897434Z"
+   "title": "Created at 2025-04-04 11:29:02",
+   "timeStamp": "2025-04-04T11:29:02.68541099Z"
   },
   "customInput": {
-   "salary": {
- "name": "salary",
+   "accountBalance": {
+ "name": "accountBalance",
  "dataType": "numeric",
  "isOptional": false,
  "isNullable": false,
  "isCaseSensitive": false,
  "attribute": "",
  "sourceType": "",
- "executedValue": 1250000,
- "config": {
-  
- },
- "value": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
  "next": "",
  "previous": "",
  "schemaId": ""
@@ -40,68 +38,63 @@
   "ruleChain": null,
   "decisionTable": {
    "rows": {
-    "g_PTGNvN": {
- "nextId": "",
- "prevId": "rule_01",
- "firstOutputData": "output_dbSfE1",
+    "rule_01": {
+ "nextId": "rule_m92pf4vk9ta0rh30lbm",
+ "prevId": "",
+ "firstOutputData": "output_m92pecwy9zf3v0e23bv",
  "isEnabled": true,
  "annotation": ""
 },
-    "rule_01": {
- "nextId": "g_PTGNvN",
- "prevId": "",
- "firstOutputData": "output_skT2fr",
+    "rule_m92pf4vk9ta0rh30lbm": {
+ "nextId": "",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m92pf4vlq0e2nbyfhwb",
  "isEnabled": true,
  "annotation": ""
 }
    },
    "properties": {
-    "param_lye4R6": {
- "nextId": "",
- "prevId": "rule_03",
- "type": "simpleCondition"
-},
     "rule_03": {
- "nextId": "param_lye4R6",
+ "nextId": "",
  "prevId": "",
  "type": "simpleCondition"
 }
    },
    "results": {
-    "result_2kDNxI": {
+    "result_m92pecwy7ebzjb4iksu": {
  "nextId": "",
  "prevId": "",
  "dataType": "string",
- "keyName": "isTaxable",
+ "keyName": "action",
  "schemaId": ""
 }
    },
    "firstRow": "rule_01",
    "firstProperty": "rule_03",
-   "firstResult": "result_2kDNxI",
+   "firstResult": "result_m92pecwy7ebzjb4iksu",
    "firstAggOutputData": ""
   },
   "action": {
    "then": {
     "outputData": {
-     "output_dbSfE1": {
- "name": "isTaxable",
+     "output_m92pecwy9zf3v0e23bv": {
+ "name": "action",
  "dataType": "string",
  "returnType": "",
- "value": "false",
+ "value": "Send Alert",
  "next": "",
- "executedValue": "false",
+ "executedValue": "Send Alert",
  "attribute": "",
  "source": "",
  "schemaId": ""
 },
-     "output_skT2fr": {
- "name": "isTaxable",
+     "output_m92pf4vlq0e2nbyfhwb": {
+ "name": "action",
  "dataType": "string",
  "returnType": "",
- "value": "true",
+ "value": "Don't Send Alert",
  "next": "",
- "executedValue": "true",
+ "executedValue": "Don't Send Alert",
  "attribute": "",
  "source": "",
  "schemaId": ""
@@ -122,64 +115,7 @@
   },
   "conditions": {
    "nodes": {
-    "c_BNEQ2Q": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "g_PTGNvN",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_QGolD6": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "rule_01",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_zMM6RY": {
- "value": "",
- "sourceType": "",
- "name": "",
- "operator": "betex",
- "dataType": "numeric",
- "nodeType": "condition",
- "attribute": "",
- "query": "",
- "parent": "g_PTGNvN",
- "children": null,
- "leftNode": [
-  "rule_03"
- ],
- "rightNode": [
-  "rhs_qtLf4R",
-  "rhs_DAjiy3"
- ],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "g_PTGNvN": {
+    "rule_01": {
  "value": null,
  "sourceType": "",
  "name": "",
@@ -190,22 +126,41 @@
  "query": "",
  "parent": "",
  "children": [
-  "c_zMM6RY",
-  "c_BNEQ2Q"
+  "rule_02"
  ],
  "leftNode": null,
  "rightNode": null,
  "siblingIndex": 1,
  "returnType": ""
 },
-    "param_lye4R6": {
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92pf0vigtuc9kq6ayq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
  "value": null,
- "sourceType": "custom",
+ "sourceType": "customInput",
  "name": "",
  "operator": "",
- "dataType": "jsCondition",
+ "dataType": "numeric",
  "nodeType": "params",
- "attribute": "sql",
+ "attribute": "accountBalance",
  "query": "",
  "parent": "",
  "children": null,
@@ -214,24 +169,8 @@
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rhs_DAjiy3": {
- "value": 1200000,
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "c_zMM6RY",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rhs_RnLQzp": {
- "value": 1200000,
+    "rule_m92pf0vigtuc9kq6ayq": {
+ "value": 500,
  "sourceType": "",
  "name": "",
  "operator": "",
@@ -246,23 +185,7 @@
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rhs_qtLf4R": {
- "value": 600000,
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "c_zMM6RY",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rule_01": {
+    "rule_m92pf4vk9ta0rh30lbm": {
  "value": null,
  "sourceType": "",
  "name": "",
@@ -273,44 +196,43 @@
  "query": "",
  "parent": "",
  "children": [
-  "rule_02",
-  "c_QGolD6"
+  "rule_m92pf4vks1k1fu1vq"
  ],
  "leftNode": null,
  "rightNode": null,
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rule_02": {
+    "rule_m92pf4vks1k1fu1vq": {
  "value": "",
  "sourceType": "",
  "name": "",
- "operator": "gt",
+ "operator": "gte",
  "dataType": "numeric",
  "nodeType": "condition",
  "attribute": "",
  "query": "",
- "parent": "rule_01",
+ "parent": "rule_m92pf4vk9ta0rh30lbm",
  "children": null,
  "leftNode": [
   "rule_03"
  ],
  "rightNode": [
-  "rhs_RnLQzp"
+  "rule_m92pfa45f20rwjjnmzq"
  ],
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rule_03": {
- "value": null,
- "sourceType": "customInput",
+    "rule_m92pfa45f20rwjjnmzq": {
+ "value": 500,
+ "sourceType": "",
  "name": "",
  "operator": "",
  "dataType": "numeric",
- "nodeType": "params",
- "attribute": "salary",
+ "nodeType": "constant",
+ "attribute": "",
  "query": "",
- "parent": "",
+ "parent": "rule_m92pf4vks1k1fu1vq",
  "children": null,
  "leftNode": null,
  "rightNode": null,
@@ -320,10 +242,10 @@
    },
    "startNode": ""
   },
-  "firstCustomInput": "salary",
+  "firstCustomInput": "accountBalance",
   "firstRuleChain": "",
   "ruleSetPolicy": "",
-  "description": "",
+  "description": "This decision table decides whether to send an alert to the user for low balance or not. The policy used here is evaluate all.\n",
   "policy": "first",
   "comment": "",
   "type": "decisionTable",
@@ -343,12 +265,12 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": "d"
+     "Unit": ""
     },
     "CacheKeys": ""
    },
    "timezone": "",
-   "dateFormat": "in",
+   "dateFormat": "",
    "timeout": 0,
    "timeoutAsync": 0,
    "timeoutCron": 0,

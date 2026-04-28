@@ -1,237 +1,195 @@
 {
  "entityType": "rule",
- "category": "decisionTable",
+ "category": "simpleRule",
  "data": {
-  "createdAt": "2026-01-16T08:22:21.703Z",
-  "updatedAt": "2026-03-30T09:41:23.911718Z",
+  "createdAt": "2026-04-16T10:42:05.719Z",
+  "updatedAt": "2026-04-16T10:42:05.719Z",
   "isDeleted": false,
-  "testedAt": "2026-01-16T08:25:58.417Z",
-  "publishedAt": "2026-01-16T08:26:12.028Z",
-  "entityId": "eb642c29-7bf0-481a-80aa-e9b6028ecc61",
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "9fc35d08-cd89-4ad8-a82e-27eb2004ac78",
   "version": "draft",
-  "name": "raisin_git_demo",
-  "commitId": "commit-bc796380-b195-4f34-847e-fb8a9839da22",
+  "name": "AB_additional_checks",
+  "commitId": "commit-74cec81c-6ecb-4116-99dd-dc829b30a859",
   "status": "draft",
-  "lastVersion": "0.10",
+  "lastVersion": "",
   "isLive": false,
   "commitInfo": {
-   "title": "Forked from 0.10",
-   "timeStamp": "2026-03-30T09:41:14.042897434Z"
+   "title": "Created at 2026-04-16 10:42:05",
+   "timeStamp": "2026-04-16T10:42:05.719632869Z"
   },
   "customInput": {
-   "salary": {
- "name": "salary",
+   "age": {
+ "name": "age",
  "dataType": "numeric",
  "isOptional": false,
  "isNullable": false,
  "isCaseSensitive": false,
  "attribute": "",
  "sourceType": "",
- "executedValue": 1250000,
- "config": {
-  
- },
+ "executedValue": 27,
+ "config": null,
+ "value": "",
+ "next": "bmi",
+ "previous": "",
+ "schemaId": ""
+},
+   "bmi": {
+ "name": "bmi",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 18,
+ "config": null,
+ "value": "",
+ "next": "substnd_flag",
+ "previous": "age",
+ "schemaId": ""
+},
+   "substnd_flag": {
+ "name": "substnd_flag",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "no",
+ "config": null,
  "value": "",
  "next": "",
- "previous": "",
+ "previous": "bmi",
  "schemaId": ""
 }
   },
   "ruleChain": null,
   "decisionTable": {
-   "rows": {
-    "g_PTGNvN": {
- "nextId": "",
- "prevId": "rule_01",
- "firstOutputData": "output_dbSfE1",
- "isEnabled": true,
- "annotation": ""
-},
-    "rule_01": {
- "nextId": "g_PTGNvN",
- "prevId": "",
- "firstOutputData": "output_skT2fr",
- "isEnabled": true,
- "annotation": ""
-}
-   },
-   "properties": {
-    "param_lye4R6": {
- "nextId": "",
- "prevId": "rule_03",
- "type": "simpleCondition"
-},
-    "rule_03": {
- "nextId": "param_lye4R6",
- "prevId": "",
- "type": "simpleCondition"
-}
-   },
-   "results": {
-    "result_2kDNxI": {
- "nextId": "",
- "prevId": "",
- "dataType": "string",
- "keyName": "isTaxable",
- "schemaId": ""
-}
-   },
-   "firstRow": "rule_01",
-   "firstProperty": "rule_03",
-   "firstResult": "result_2kDNxI",
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
    "firstAggOutputData": ""
   },
   "action": {
    "then": {
     "outputData": {
-     "output_dbSfE1": {
- "name": "isTaxable",
+     "CAG_flag": {
+ "name": "CAG_flag",
  "dataType": "string",
- "returnType": "",
- "value": "false",
+ "returnType": "string",
+ "value": "Yes",
  "next": "",
- "executedValue": "false",
- "attribute": "",
- "source": "",
- "schemaId": ""
-},
-     "output_skT2fr": {
- "name": "isTaxable",
- "dataType": "string",
- "returnType": "",
- "value": "true",
- "next": "",
- "executedValue": "true",
+ "executedValue": "Yes",
  "attribute": "",
  "source": "",
  "schemaId": ""
 }
     },
-    "actionNode": {
-     
-    },
-    "firstOutputData": "",
+    "actionNode": null,
+    "firstOutputData": "CAG_flag",
     "firstActionNode": ""
    },
    "else": {
-    "outputData": null,
+    "outputData": {
+     "CAG_flag": {
+ "name": "CAG_flag",
+ "dataType": "string",
+ "returnType": "",
+ "value": "No",
+ "next": "",
+ "executedValue": "No",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
     "actionNode": null,
-    "firstOutputData": "",
+    "firstOutputData": "CAG_flag",
     "firstActionNode": ""
    }
   },
   "conditions": {
    "nodes": {
-    "c_BNEQ2Q": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "g_PTGNvN",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_QGolD6": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "rule_01",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_zMM6RY": {
- "value": "",
+    "c_e4IYiV": {
+ "value": null,
  "sourceType": "",
  "name": "",
- "operator": "betex",
+ "operator": "bet",
  "dataType": "numeric",
  "nodeType": "condition",
  "attribute": "",
  "query": "",
- "parent": "g_PTGNvN",
+ "parent": "rule_01",
  "children": null,
  "leftNode": [
-  "rule_03"
+  "lhs_5G6dny"
  ],
  "rightNode": [
-  "rhs_qtLf4R",
-  "rhs_DAjiy3"
+  "rhs_ysuc4R",
+  "rhs_NIVOvc"
  ],
- "siblingIndex": 1,
+ "siblingIndex": 2,
  "returnType": ""
 },
-    "g_PTGNvN": {
+    "c_yesr01": {
  "value": null,
  "sourceType": "",
  "name": "",
- "operator": "and",
- "dataType": "",
- "nodeType": "group",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
  "attribute": "",
  "query": "",
- "parent": "",
- "children": [
-  "c_zMM6RY",
-  "c_BNEQ2Q"
- ],
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "param_lye4R6": {
- "value": null,
- "sourceType": "custom",
- "name": "",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "params",
- "attribute": "sql",
- "query": "",
- "parent": "",
+ "parent": "rule_01",
  "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
+ "leftNode": [
+  "lhs_oHap5J"
+ ],
+ "rightNode": [
+  "rhs_z1NoV4"
+ ],
+ "siblingIndex": 3,
  "returnType": ""
 },
-    "rhs_DAjiy3": {
- "value": 1200000,
- "sourceType": "",
+    "lhs_5G6dny": {
+ "value": null,
+ "sourceType": "customInput",
  "name": "",
  "operator": "",
  "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
+ "nodeType": "params",
+ "attribute": "bmi",
  "query": "",
- "parent": "c_zMM6RY",
+ "parent": "c_e4IYiV",
  "children": null,
  "leftNode": null,
  "rightNode": null,
- "siblingIndex": 1,
+ "siblingIndex": 2,
  "returnType": ""
 },
-    "rhs_RnLQzp": {
- "value": 1200000,
+    "lhs_oHap5J": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "substnd_flag",
+ "query": "",
+ "parent": "c_yesr01",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 3,
+ "returnType": ""
+},
+    "rhs_FFnchs": {
+ "value": 18,
  "sourceType": "",
  "name": "",
  "operator": "",
@@ -246,8 +204,8 @@
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rhs_qtLf4R": {
- "value": 600000,
+    "rhs_NIVOvc": {
+ "value": 25,
  "sourceType": "",
  "name": "",
  "operator": "",
@@ -255,7 +213,55 @@
  "nodeType": "constant",
  "attribute": "",
  "query": "",
- "parent": "c_zMM6RY",
+ "parent": "c_e4IYiV",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 2,
+ "returnType": ""
+},
+    "rhs_yodpMY": {
+ "value": 65,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 2,
+ "returnType": ""
+},
+    "rhs_ysuc4R": {
+ "value": 15,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_e4IYiV",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_z1NoV4": {
+ "value": "no",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_yesr01",
  "children": null,
  "leftNode": null,
  "rightNode": null,
@@ -274,7 +280,8 @@
  "parent": "",
  "children": [
   "rule_02",
-  "c_QGolD6"
+  "c_e4IYiV",
+  "c_yesr01"
  ],
  "leftNode": null,
  "rightNode": null,
@@ -282,10 +289,10 @@
  "returnType": ""
 },
     "rule_02": {
- "value": "",
+ "value": null,
  "sourceType": "",
  "name": "",
- "operator": "gt",
+ "operator": "bet",
  "dataType": "numeric",
  "nodeType": "condition",
  "attribute": "",
@@ -296,7 +303,8 @@
   "rule_03"
  ],
  "rightNode": [
-  "rhs_RnLQzp"
+  "rhs_FFnchs",
+  "rhs_yodpMY"
  ],
  "siblingIndex": 1,
  "returnType": ""
@@ -308,9 +316,9 @@
  "operator": "",
  "dataType": "numeric",
  "nodeType": "params",
- "attribute": "salary",
+ "attribute": "age",
  "query": "",
- "parent": "",
+ "parent": "rule_02",
  "children": null,
  "leftNode": null,
  "rightNode": null,
@@ -318,17 +326,17 @@
  "returnType": ""
 }
    },
-   "startNode": ""
+   "startNode": "rule_01"
   },
-  "firstCustomInput": "salary",
+  "firstCustomInput": "age",
   "firstRuleChain": "",
   "ruleSetPolicy": "",
   "description": "",
-  "policy": "first",
+  "policy": "",
   "comment": "",
-  "type": "decisionTable",
+  "type": "simpleRule",
   "dataSetId": "",
-  "ruleSet": null,
+  "ruleSet": [],
   "settings": {
    "startAt": "0001-01-01T00:00:00Z",
    "endAt": "0001-01-01T00:00:00Z",
@@ -343,11 +351,11 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": "d"
+     "Unit": ""
     },
     "CacheKeys": ""
    },
-   "timezone": "",
+   "timezone": "Asia/Kolkata",
    "dateFormat": "in",
    "timeout": 0,
    "timeoutAsync": 0,

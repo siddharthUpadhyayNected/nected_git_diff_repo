@@ -1,0 +1,1553 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-26T07:20:25.285Z",
+  "updatedAt": "2025-03-26T08:48:57.181902Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-26T08:48:57.18Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "a8806aec-75cd-466b-a4ba-c3be612c32c3",
+  "version": "draft",
+  "name": "childCustodyDecisionSystem",
+  "commitId": "commit-61aa4d67-4ac4-42a9-8990-d5e34c7fa09c",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-26 07:20:25",
+   "timeStamp": "2025-03-26T07:20:25.285327454Z"
+  },
+  "customInput": {
+   "caseFiled": {
+ "name": "caseFiled",
+ "dataType": "date",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "homeConditions",
+ "schemaId": ""
+},
+   "childPreference": {
+ "name": "childPreference",
+ "dataType": "list",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "homeConditions",
+ "previous": "criminalHistory",
+ "schemaId": ""
+},
+   "criminalHistory": {
+ "name": "criminalHistory",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "childPreference",
+ "previous": "parentIncome",
+ "schemaId": ""
+},
+   "homeConditions": {
+ "name": "homeConditions",
+ "dataType": "json",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": {
+  "safe": true,
+  "spacious": true
+ },
+ "config": null,
+ "value": null,
+ "next": "caseFiled",
+ "previous": "childPreference",
+ "schemaId": ""
+},
+   "parentIncome": {
+ "name": "parentIncome",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "criminalHistory",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m8podqe8mo8yim58zz",
+ "prevId": "",
+ "firstOutputData": "output_m8plmpe62z74lmjpysy",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8podqe8mo8yim58zz": {
+ "nextId": "rule_m8pofdglbbnrqk9xxcl",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m8podqe95r729zwrwfq",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pofdglbbnrqk9xxcl": {
+ "nextId": "rule_m8poguax8s2baiy814",
+ "prevId": "rule_m8podqe8mo8yim58zz",
+ "firstOutputData": "output_m8pofdglo747etz4e1h",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8poguax8s2baiy814": {
+ "nextId": "rule_m8pohxxtidgcmnylcti",
+ "prevId": "rule_m8pofdglbbnrqk9xxcl",
+ "firstOutputData": "output_m8poguaxd3gt8h4ba9b",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pohxxtidgcmnylcti": {
+ "nextId": "rule_m8pok44dfxn7lum4r6p",
+ "prevId": "rule_m8poguax8s2baiy814",
+ "firstOutputData": "output_m8pohxxunp1ckjd459o",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pok44dfxn7lum4r6p": {
+ "nextId": "rule_m8poljmmz62i7150um",
+ "prevId": "rule_m8pohxxtidgcmnylcti",
+ "firstOutputData": "output_m8pok44djigl725am",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8poljmmz62i7150um": {
+ "nextId": "",
+ "prevId": "rule_m8pok44dfxn7lum4r6p",
+ "firstOutputData": "output_m8poljmnkxngxy2zxjo",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "rule_m8pllgxhiyv1d0zxt4c",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_m8pllgxhiyv1d0zxt4c": {
+ "nextId": "rule_m8plll4f54tmzkj0d1d",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_m8plll4f54tmzkj0d1d": {
+ "nextId": "rule_m8plly4ri33g8cjwv4q",
+ "prevId": "rule_m8pllgxhiyv1d0zxt4c",
+ "type": "simpleCondition"
+},
+    "rule_m8plly4ri33g8cjwv4q": {
+ "nextId": "rule_m8plm1vwepq22witkvi",
+ "prevId": "rule_m8plll4f54tmzkj0d1d",
+ "type": "simpleCondition"
+},
+    "rule_m8plm1vwepq22witkvi": {
+ "nextId": "",
+ "prevId": "rule_m8plly4ri33g8cjwv4q",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m8plmpe6nhh4cju78f": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "custodyDecision",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m8plmpe6nhh4cju78f",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m8plmpe62z74lmjpysy": {
+ "name": "custodyDecision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Grant custody to mother",
+ "next": "",
+ "executedValue": "Grant custody to mother",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8podqe95r729zwrwfq": {
+ "name": "custodyDecision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Grant custody to father",
+ "next": "",
+ "executedValue": "Grant custody to father",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pofdglo747etz4e1h": {
+ "name": "custodyDecision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Grant custody to father",
+ "next": "",
+ "executedValue": "Grant custody to father",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8poguaxd3gt8h4ba9b": {
+ "name": "custodyDecision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Joint Custody",
+ "next": "",
+ "executedValue": "Joint Custody",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pohxxunp1ckjd459o": {
+ "name": "custodyDecision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Joint Custody",
+ "next": "",
+ "executedValue": "Joint Custody",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pok44djigl725am": {
+ "name": "custodyDecision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Assign to guardian",
+ "next": "",
+ "executedValue": "Assign to guardian",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8poljmnkxngxy2zxjo": {
+ "name": "custodyDecision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Joint Custody",
+ "next": "",
+ "executedValue": "Joint Custody",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "rule_m8pllgxhumgd13ychof",
+  "rule_m8plll4fv62vy8ia7si",
+  "rule_m8plly4rug2u7o8tflh"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8poangp8der15cd97l"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "parentIncome",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pllgxhiyv1d0zxt4c": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "criminalHistory",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pllgxhumgd13ychof": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8pllgxhiyv1d0zxt4c"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8plll4f54tmzkj0d1d": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "params",
+ "attribute": "childPreference",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8plll4fv62vy8ia7si": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "contains",
+ "dataType": "list",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8plll4f54tmzkj0d1d"
+ ],
+ "rightNode": [
+  "rule_m8poc11tcagp59ttbl8"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8plly4r424s3ddxnvp": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8plly4rug2u7o8tflh",
+ "children": null,
+ "leftNode": [
+  "rule_m8plly4ri33g8cjwv4q"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8plly4ri33g8cjwv4q": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "homeConditions.safe",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8plly4rug2u7o8tflh": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": [
+  "rule_m8plly4r424s3ddxnvp",
+  "rule_m8plm1vw5bf007727s7"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8plm1vw5bf007727s7": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8plly4rug2u7o8tflh",
+ "children": null,
+ "leftNode": [
+  "rule_m8plm1vwepq22witkvi"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8plm1vwepq22witkvi": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "homeConditions.spacious",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poangp8der15cd97l": {
+ "value": 50000,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poc11tcagp59ttbl8": {
+ "value": [
+  "Mother"
+ ],
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8plll4fv62vy8ia7si",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8podqe8bb67wc59xpo": {
+ "value": 50000,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8podqe8fg0p2dswx0k",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8podqe8fg0p2dswx0k": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8podqe8mo8yim58zz",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8podqe8bb67wc59xpo"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8podqe8mo8yim58zz": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8podqe8fg0p2dswx0k",
+  "rule_m8podqe9vrd6nvd0mcf",
+  "rule_m8podqe9jmxt757b0l",
+  "rule_m8podqe9ixjxdplov0g"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8podqe995zr6zskv39": {
+ "value": [
+  "Father"
+ ],
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8podqe9jmxt757b0l",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8podqe9ixjxdplov0g": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8podqe8mo8yim58zz",
+ "children": [
+  "rule_m8podqe9jnf698gl7dd",
+  "rule_m8podqe9qszkhnvl1y"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8podqe9jmxt757b0l": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "contains",
+ "dataType": "list",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8podqe8mo8yim58zz",
+ "children": null,
+ "leftNode": [
+  "rule_m8plll4f54tmzkj0d1d"
+ ],
+ "rightNode": [
+  "rule_m8podqe995zr6zskv39"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8podqe9jnf698gl7dd": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8podqe9ixjxdplov0g",
+ "children": null,
+ "leftNode": [
+  "rule_m8plly4ri33g8cjwv4q"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8podqe9qszkhnvl1y": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8podqe9ixjxdplov0g",
+ "children": null,
+ "leftNode": [
+  "rule_m8plm1vwepq22witkvi"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8podqe9vrd6nvd0mcf": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8podqe8mo8yim58zz",
+ "children": null,
+ "leftNode": [
+  "rule_m8pllgxhiyv1d0zxt4c"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pofdgl66zd98dvcyp": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pofdglg7mwa1apdxu",
+ "children": null,
+ "leftNode": [
+  "rule_m8plly4ri33g8cjwv4q"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pofdglbbnrqk9xxcl": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pofdglpawg3wlv2db",
+  "rule_m8pofdglnxl0cmvelei",
+  "rule_m8pofdgledwsxf6wce7",
+  "rule_m8pofdglg7mwa1apdxu"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pofdgledwsxf6wce7": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "contains",
+ "dataType": "list",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pofdglbbnrqk9xxcl",
+ "children": null,
+ "leftNode": [
+  "rule_m8plll4f54tmzkj0d1d"
+ ],
+ "rightNode": [
+  "rule_m8pofdglfg9v1pta8dt"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pofdglfg9v1pta8dt": {
+ "value": [
+  "Father"
+ ],
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pofdgledwsxf6wce7",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pofdglg7mwa1apdxu": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pofdglbbnrqk9xxcl",
+ "children": [
+  "rule_m8pofdgl66zd98dvcyp",
+  "rule_m8pofdglqrhpc7i5yn"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8pofdglnxl0cmvelei": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pofdglbbnrqk9xxcl",
+ "children": null,
+ "leftNode": [
+  "rule_m8pllgxhiyv1d0zxt4c"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pofdglpawg3wlv2db": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pofdglbbnrqk9xxcl",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pofg2zl6e7p2758nj"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pofdglqrhpc7i5yn": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pofdglg7mwa1apdxu",
+ "children": null,
+ "leftNode": [
+  "rule_m8plm1vwepq22witkvi"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pofg2zl6e7p2758nj": {
+ "value": 30000,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pofdglpawg3wlv2db",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poguax8s2baiy814": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8poguaxopyb6rpk1vd",
+  "rule_m8poguaxur6rp9epm2j",
+  "rule_m8poguaxef2qaozrwah",
+  "rule_m8poguaxddp9xhbivgf"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poguaxddp9xhbivgf": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poguax8s2baiy814",
+ "children": [
+  "rule_m8poguaxpv73hrlbfy",
+  "rule_m8poguaxeg81c3l6obd"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8poguaxef2qaozrwah": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "matchAll",
+ "dataType": "list",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poguax8s2baiy814",
+ "children": null,
+ "leftNode": [
+  "rule_m8plll4f54tmzkj0d1d"
+ ],
+ "rightNode": [
+  "rule_m8poha4a24pppsgbxjk"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poguaxeg81c3l6obd": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poguaxddp9xhbivgf",
+ "children": null,
+ "leftNode": [
+  "rule_m8plm1vwepq22witkvi"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poguaxopyb6rpk1vd": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poguax8s2baiy814",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pogy4335u6djbymd"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poguaxpv73hrlbfy": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poguaxddp9xhbivgf",
+ "children": null,
+ "leftNode": [
+  "rule_m8plly4ri33g8cjwv4q"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poguaxur6rp9epm2j": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poguax8s2baiy814",
+ "children": null,
+ "leftNode": [
+  "rule_m8pllgxhiyv1d0zxt4c"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pogy4335u6djbymd": {
+ "value": 100000,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poguaxopyb6rpk1vd",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poha4a24pppsgbxjk": {
+ "value": [
+  "Father",
+  "Mother"
+ ],
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poguaxef2qaozrwah",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pohxxt65t22hi1g6f": {
+ "value": [
+  "Father",
+  "Mother"
+ ],
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pohxxty53kbodj6d8",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pohxxte3kmpfkvhs": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pohxxtidgcmnylcti",
+ "children": [
+  "rule_m8pohxxteycok6eyzka",
+  "rule_m8pohxxuibuh61ka8nd"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8pohxxteycok6eyzka": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pohxxte3kmpfkvhs",
+ "children": null,
+ "leftNode": [
+  "rule_m8plly4ri33g8cjwv4q"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pohxxtidgcmnylcti": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pohxxtt647k68xhe",
+  "rule_m8pohxxtw98hqx3kxdt",
+  "rule_m8pohxxty53kbodj6d8",
+  "rule_m8pohxxte3kmpfkvhs"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pohxxtimc1sz3ymfe": {
+ "value": 100000,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pohxxtt647k68xhe",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pohxxtt647k68xhe": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pohxxtidgcmnylcti",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pohxxtimc1sz3ymfe"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pohxxtw98hqx3kxdt": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pohxxtidgcmnylcti",
+ "children": null,
+ "leftNode": [
+  "rule_m8pllgxhiyv1d0zxt4c"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pohxxty53kbodj6d8": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "matchAll",
+ "dataType": "list",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pohxxtidgcmnylcti",
+ "children": null,
+ "leftNode": [
+  "rule_m8plll4f54tmzkj0d1d"
+ ],
+ "rightNode": [
+  "rule_m8pohxxt65t22hi1g6f"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pohxxuibuh61ka8nd": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pohxxte3kmpfkvhs",
+ "children": null,
+ "leftNode": [
+  "rule_m8plm1vwepq22witkvi"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pok44d1rr6z9lqlyc": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pok44dgdmoaug1to",
+ "children": null,
+ "leftNode": [
+  "rule_m8plm1vwepq22witkvi"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pok44dbji2kk4x1lp": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pok44dfxn7lum4r6p",
+ "children": null,
+ "leftNode": [
+  "rule_m8pllgxhiyv1d0zxt4c"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pok44dfxn7lum4r6p": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pok44dk7yz3ov38d",
+  "rule_m8pok44dbji2kk4x1lp",
+  "rule_m8pok44dgzlckhwdzg4",
+  "rule_m8pok44dgdmoaug1to"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pok44dgdmoaug1to": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pok44dfxn7lum4r6p",
+ "children": [
+  "rule_m8pok44dl4mgzdxpknl",
+  "rule_m8pok44d1rr6z9lqlyc"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8pok44dgzlckhwdzg4": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "empty",
+ "dataType": "list",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pok44dfxn7lum4r6p",
+ "children": null,
+ "leftNode": [
+  "rule_m8plll4f54tmzkj0d1d"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pok44dk7yz3ov38d": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pok44dfxn7lum4r6p",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pok44dl4mgzdxpknl": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pok44dgdmoaug1to",
+ "children": null,
+ "leftNode": [
+  "rule_m8plly4ri33g8cjwv4q"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poljmm5b5bbtf525h": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poljmmz62i7150um",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8poln6he4p20jfbctb"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poljmmz62i7150um": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8poljmm5b5bbtf525h",
+  "rule_m8poljmn7745qp7t08p",
+  "rule_m8poljmn4bxycpdv7cj",
+  "rule_m8poljmnih5juvzhz6f"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poljmn4bxycpdv7cj": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "in",
+ "dataType": "list",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poljmmz62i7150um",
+ "children": null,
+ "leftNode": [
+  "rule_m8plll4f54tmzkj0d1d"
+ ],
+ "rightNode": [
+  "rule_m8polzmc0ahjkqn8xr2k"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poljmn7745qp7t08p": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poljmmz62i7150um",
+ "children": null,
+ "leftNode": [
+  "rule_m8pllgxhiyv1d0zxt4c"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poljmn82nshec7o8m": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poljmnih5juvzhz6f",
+ "children": null,
+ "leftNode": [
+  "rule_m8plly4ri33g8cjwv4q"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poljmnih5juvzhz6f": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poljmmz62i7150um",
+ "children": [
+  "rule_m8poljmn82nshec7o8m",
+  "rule_m8poljmnm4rv07adcg9"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8poljmnm4rv07adcg9": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poljmnih5juvzhz6f",
+ "children": null,
+ "leftNode": [
+  "rule_m8plm1vwepq22witkvi"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8poln6he4p20jfbctb": {
+ "value": 40000,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poljmm5b5bbtf525h",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8polzmc0ahjkqn8xr2k": {
+ "value": [
+  "Father",
+  "Mother"
+ ],
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8poljmn4bxycpdv7cj",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "parentIncome",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "collect",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

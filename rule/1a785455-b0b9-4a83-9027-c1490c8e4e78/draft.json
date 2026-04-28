@@ -2,36 +2,34 @@
  "entityType": "rule",
  "category": "decisionTable",
  "data": {
-  "createdAt": "2026-01-16T08:22:21.703Z",
-  "updatedAt": "2026-03-30T09:41:23.911718Z",
+  "createdAt": "2025-04-07T06:03:03.211Z",
+  "updatedAt": "2025-04-07T06:04:14.913853Z",
   "isDeleted": false,
-  "testedAt": "2026-01-16T08:25:58.417Z",
-  "publishedAt": "2026-01-16T08:26:12.028Z",
-  "entityId": "eb642c29-7bf0-481a-80aa-e9b6028ecc61",
+  "testedAt": "2025-04-07T06:04:14.913Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "1a785455-b0b9-4a83-9027-c1490c8e4e78",
   "version": "draft",
-  "name": "raisin_git_demo",
-  "commitId": "commit-bc796380-b195-4f34-847e-fb8a9839da22",
-  "status": "draft",
-  "lastVersion": "0.10",
+  "name": "validMobileNumber",
+  "commitId": "commit-85b38c9a-5c97-44a2-a645-815cd7ebfcdd",
+  "status": "tested",
+  "lastVersion": "",
   "isLive": false,
   "commitInfo": {
-   "title": "Forked from 0.10",
-   "timeStamp": "2026-03-30T09:41:14.042897434Z"
+   "title": "Created at 2025-04-07 06:03:03",
+   "timeStamp": "2025-04-07T06:03:03.21189985Z"
   },
   "customInput": {
-   "salary": {
- "name": "salary",
+   "lengthOfMobileNo": {
+ "name": "lengthOfMobileNo",
  "dataType": "numeric",
  "isOptional": false,
  "isNullable": false,
  "isCaseSensitive": false,
  "attribute": "",
  "sourceType": "",
- "executedValue": 1250000,
- "config": {
-  
- },
- "value": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
  "next": "",
  "previous": "",
  "schemaId": ""
@@ -40,68 +38,63 @@
   "ruleChain": null,
   "decisionTable": {
    "rows": {
-    "g_PTGNvN": {
- "nextId": "",
- "prevId": "rule_01",
- "firstOutputData": "output_dbSfE1",
+    "rule_01": {
+ "nextId": "rule_m96o1nofydagr7v6geh",
+ "prevId": "",
+ "firstOutputData": "output_m96o1crniiyakstya9p",
  "isEnabled": true,
  "annotation": ""
 },
-    "rule_01": {
- "nextId": "g_PTGNvN",
- "prevId": "",
- "firstOutputData": "output_skT2fr",
+    "rule_m96o1nofydagr7v6geh": {
+ "nextId": "",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m96o1nofhf2r0vlo2lp",
  "isEnabled": true,
  "annotation": ""
 }
    },
    "properties": {
-    "param_lye4R6": {
- "nextId": "",
- "prevId": "rule_03",
- "type": "simpleCondition"
-},
     "rule_03": {
- "nextId": "param_lye4R6",
+ "nextId": "",
  "prevId": "",
  "type": "simpleCondition"
 }
    },
    "results": {
-    "result_2kDNxI": {
+    "result_m96o1crnish7ac3j9n": {
  "nextId": "",
  "prevId": "",
  "dataType": "string",
- "keyName": "isTaxable",
+ "keyName": "Result",
  "schemaId": ""
 }
    },
    "firstRow": "rule_01",
    "firstProperty": "rule_03",
-   "firstResult": "result_2kDNxI",
+   "firstResult": "result_m96o1crnish7ac3j9n",
    "firstAggOutputData": ""
   },
   "action": {
    "then": {
     "outputData": {
-     "output_dbSfE1": {
- "name": "isTaxable",
+     "output_m96o1crniiyakstya9p": {
+ "name": "Result",
  "dataType": "string",
  "returnType": "",
- "value": "false",
+ "value": "Valid",
  "next": "",
- "executedValue": "false",
+ "executedValue": "Valid",
  "attribute": "",
  "source": "",
  "schemaId": ""
 },
-     "output_skT2fr": {
- "name": "isTaxable",
+     "output_m96o1nofhf2r0vlo2lp": {
+ "name": "Result",
  "dataType": "string",
  "returnType": "",
- "value": "true",
+ "value": "Invalid",
  "next": "",
- "executedValue": "true",
+ "executedValue": "Invalid",
  "attribute": "",
  "source": "",
  "schemaId": ""
@@ -122,64 +115,7 @@
   },
   "conditions": {
    "nodes": {
-    "c_BNEQ2Q": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "g_PTGNvN",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_QGolD6": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "rule_01",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_zMM6RY": {
- "value": "",
- "sourceType": "",
- "name": "",
- "operator": "betex",
- "dataType": "numeric",
- "nodeType": "condition",
- "attribute": "",
- "query": "",
- "parent": "g_PTGNvN",
- "children": null,
- "leftNode": [
-  "rule_03"
- ],
- "rightNode": [
-  "rhs_qtLf4R",
-  "rhs_DAjiy3"
- ],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "g_PTGNvN": {
+    "rule_01": {
  "value": null,
  "sourceType": "",
  "name": "",
@@ -190,22 +126,41 @@
  "query": "",
  "parent": "",
  "children": [
-  "c_zMM6RY",
-  "c_BNEQ2Q"
+  "rule_02"
  ],
  "leftNode": null,
  "rightNode": null,
  "siblingIndex": 1,
  "returnType": ""
 },
-    "param_lye4R6": {
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m96o18sf4ntwo4g81yc"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
  "value": null,
- "sourceType": "custom",
+ "sourceType": "customInput",
  "name": "",
  "operator": "",
- "dataType": "jsCondition",
+ "dataType": "numeric",
  "nodeType": "params",
- "attribute": "sql",
+ "attribute": "lengthOfMobileNo",
  "query": "",
  "parent": "",
  "children": null,
@@ -214,24 +169,8 @@
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rhs_DAjiy3": {
- "value": 1200000,
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "c_zMM6RY",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rhs_RnLQzp": {
- "value": 1200000,
+    "rule_m96o18sf4ntwo4g81yc": {
+ "value": 10,
  "sourceType": "",
  "name": "",
  "operator": "",
@@ -246,23 +185,27 @@
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rhs_qtLf4R": {
- "value": 600000,
+    "rule_m96o1nofskj5j9sf7g": {
+ "value": "",
  "sourceType": "",
  "name": "",
- "operator": "",
+ "operator": "neq",
  "dataType": "numeric",
- "nodeType": "constant",
+ "nodeType": "condition",
  "attribute": "",
  "query": "",
- "parent": "c_zMM6RY",
+ "parent": "rule_m96o1nofydagr7v6geh",
  "children": null,
- "leftNode": null,
- "rightNode": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m96o1qeaqhghml8f9zo"
+ ],
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rule_01": {
+    "rule_m96o1nofydagr7v6geh": {
  "value": null,
  "sourceType": "",
  "name": "",
@@ -273,44 +216,23 @@
  "query": "",
  "parent": "",
  "children": [
-  "rule_02",
-  "c_QGolD6"
+  "rule_m96o1nofskj5j9sf7g"
  ],
  "leftNode": null,
  "rightNode": null,
  "siblingIndex": 1,
  "returnType": ""
 },
-    "rule_02": {
- "value": "",
+    "rule_m96o1qeaqhghml8f9zo": {
+ "value": 10,
  "sourceType": "",
- "name": "",
- "operator": "gt",
- "dataType": "numeric",
- "nodeType": "condition",
- "attribute": "",
- "query": "",
- "parent": "rule_01",
- "children": null,
- "leftNode": [
-  "rule_03"
- ],
- "rightNode": [
-  "rhs_RnLQzp"
- ],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rule_03": {
- "value": null,
- "sourceType": "customInput",
  "name": "",
  "operator": "",
  "dataType": "numeric",
- "nodeType": "params",
- "attribute": "salary",
+ "nodeType": "constant",
+ "attribute": "",
  "query": "",
- "parent": "",
+ "parent": "rule_m96o1nofskj5j9sf7g",
  "children": null,
  "leftNode": null,
  "rightNode": null,
@@ -320,10 +242,10 @@
    },
    "startNode": ""
   },
-  "firstCustomInput": "salary",
+  "firstCustomInput": "lengthOfMobileNo",
   "firstRuleChain": "",
   "ruleSetPolicy": "",
-  "description": "",
+  "description": "This decision table validates the mobile no. on the basis of the length of the mobile number. The policy used here is unique.",
   "policy": "first",
   "comment": "",
   "type": "decisionTable",
@@ -343,12 +265,12 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": "d"
+     "Unit": ""
     },
     "CacheKeys": ""
    },
    "timezone": "",
-   "dateFormat": "in",
+   "dateFormat": "",
    "timeout": 0,
    "timeoutAsync": 0,
    "timeoutCron": 0,

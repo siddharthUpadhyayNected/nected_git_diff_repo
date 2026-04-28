@@ -1,0 +1,64 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2025-03-20T09:52:23.537Z",
+  "updatedAt": "2025-03-20T09:52:23.537Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "478d1b4e-3f03-4e39-9960-6a2e764f498e",
+  "version": "draft",
+  "name": "Credit_Score_Dataset",
+  "commitId": "commit-983947a4-c5ae-4c12-8fae-0a366972d718",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-20 09:52:23",
+   "timeStamp": "2025-03-20T09:52:23.53732455Z"
+  },
+  "fields": {
+   "credit_score": {
+ "ColumnName": "credit_score",
+ "DataType": "numeric",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 2,
+ "ExecutedValue": null
+}
+  },
+  "description": "",
+  "query": "select id, credit_score from financial_and_loans.loan_details",
+  "params": null,
+  "connectorId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-03-20T09:52:23.540746Z",
+   "updatedAt": "2025-03-20T09:52:23.540746Z",
+   "entityCommitId": "commit-983947a4-c5ae-4c12-8fae-0a366972d718",
+   "entityType": "dataSet",
+   "entityId": "478d1b4e-3f03-4e39-9960-6a2e764f498e",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+   "dependencyVersion": "live"
+  }
+ ]
+}

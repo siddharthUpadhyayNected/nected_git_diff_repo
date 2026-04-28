@@ -1,0 +1,934 @@
+{
+ "entityType": "workflow",
+ "live": true,
+ "data": {
+  "createdAt": "2025-01-22T09:12:40.443Z",
+  "updatedAt": "2025-01-23T06:16:32.608Z",
+  "isDeleted": false,
+  "testedAt": "2025-01-23T06:14:59.601Z",
+  "publishedAt": "2025-01-23T06:16:32.607Z",
+  "entityId": "cf36de1a-af9e-4a24-adb4-201a9816c2b0",
+  "version": "0.10",
+  "name": "Zepto Like Coupon System",
+  "commitId": "commit-b21cb36f-a428-4492-8976-6a0105eb273c",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-01-22 09:12:40",
+   "description": "Applicable coupons are returned as per the cart values.",
+   "timeStamp": "2025-01-23T06:16:32.605Z"
+  },
+  "startNode": "node_m67ph0ah4c7pcqwubiq",
+  "description": "In this we are creating a zepto like coupon system.",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "cart": {
+ "value": null,
+ "executedValue": {
+  "cart_list": [
+ {
+  "brand": "MyGlamm",
+  "category": "MakeUp & Beauty",
+  "name": "Myglamm Popxo Makeup Collection Mini Kit",
+  "price": 200,
+  "quantity": 1,
+  "totalPrice": 200
+ },
+ {
+  "brand": "Prolume",
+  "category": "Fashion",
+  "name": "Prplume Travel Pouch",
+  "price": 150,
+  "quantity": 1,
+  "totalPrice": 150
+ },
+ {
+  "brand": "MyGlamm",
+  "category": "MakeUp & Beauty",
+  "name": "Myglamm Lit Liquid Matte Lipstick",
+  "price": 80,
+  "quantity": 2,
+  "totalPrice": 160
+ },
+ {
+  "brand": "Prolume",
+  "category": "Hair Accessories",
+  "name": "Prolume Elastic Hair Rubber Bands",
+  "price": 100,
+  "quantity": 2,
+  "totalPrice": 200
+ }
+],
+  "email": "alice@gmail.com",
+  "userId": 121
+ },
+ "name": "cart",
+ "dataType": "json",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "cart": {
+ "cart_list": [
+ {
+  "brand": "MyGlamm",
+  "category": "MakeUp & Beauty",
+  "name": "Myglamm Popxo Makeup Collection Mini Kit",
+  "price": 200,
+  "quantity": 1,
+  "totalPrice": 200
+ },
+ {
+  "brand": "Prolume",
+  "category": "Fashion",
+  "name": "Prplume Travel Pouch",
+  "price": 150,
+  "quantity": 1,
+  "totalPrice": 150
+ },
+ {
+  "brand": "MyGlamm",
+  "category": "MakeUp & Beauty",
+  "name": "Myglamm Lit Liquid Matte Lipstick",
+  "price": 80,
+  "quantity": 2,
+  "totalPrice": 160
+ },
+ {
+  "brand": "Prolume",
+  "category": "Hair Accessories",
+  "name": "Prolume Elastic Hair Rubber Bands",
+  "price": 100,
+  "quantity": 2,
+  "totalPrice": 200
+ }
+],
+ "email": "alice@gmail.com",
+ "userId": 121
+}
+     },
+     "settings": {
+      "authType": "private",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m67orkchzbp201gfzef",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m67ph0ah4c7pcqwubiq",
+    "type": "codeNode",
+    "data": {
+     "input": {
+      "language": {
+ "value": "JS",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "snippet": {
+ "value": "//We are making a cart variable that contains the cart list data provided as an input to the trigger. We are putting it in the curly braces because this is the dynamic json data we are expecting from the user end that will be recieved by the trigger from the user end.\r\n\r\nlet cart = {{.Trigger.cart.cart_list}};\r\n\r\n//Calculating the total_sum using the SUMLIST present in the nected formulas\r\nlet cartTotal = SUM_LIST(list=cart, 'totalPrice');\r\n\r\n//intializing the result array and hard coding the first two values and presenting the total cart value as the third value.\r\n\r\nlet result = [\r\n  {\r\n    type: \"overall\",\r\n    name: \"Payment Gateway\",\r\n    value: cartTotal\r\n  },\r\n];\r\nresult;",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": [
+ {
+  "name": "Payment Gateway",
+  "type": "overall",
+  "value": 710
+ }
+]
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10
+     },
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "node_m67ph0ah4c7pcqwubiq",
+     "pluginName": "",
+     "status": "success",
+     "name": "cart_total",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "code",
+     "testedAt": "2025-01-23T06:14:59.601Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m67ph0ahquosedx10gk",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m67svgqs1x87ozkvp9z",
+    "type": "rule",
+    "data": {
+     "input": {
+      "name": {
+ "value": "",
+ "executedValue": null,
+ "name": "name",
+ "dataType": "string",
+ "source": "loop",
+ "attribute": "currentItem.name",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "type": {
+ "value": "",
+ "executedValue": null,
+ "name": "type",
+ "dataType": "string",
+ "source": "loop",
+ "attribute": "currentItem.type",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "value": {
+ "value": null,
+ "executedValue": null,
+ "name": "value",
+ "dataType": "numeric",
+ "source": "loop",
+ "attribute": "currentItem.value",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": [
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "output": [
+ {
+  "coupon": "ABC30",
+  "defaultOutputData": true,
+  "discount_type": "fixed",
+  "offer": "Flat Rs. 30 off",
+  "payment_gateway": "UPI",
+  "rowError": null,
+  "rowId": 2,
+  "value": 30
+ },
+ {
+  "coupon": "ABC40",
+  "defaultOutputData": true,
+  "discount_type": "fixed",
+  "offer": "Flat Rs. 40 off",
+  "payment_gateway": "Card",
+  "rowError": null,
+  "rowId": 1,
+  "value": 40
+ }
+]
+ }
+]
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "e3e9dbeb-4336-449d-82a0-4139cc54034e",
+     "pluginName": "",
+     "status": "success",
+     "name": "Zepto_Coupon_Condition_Check",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": true,
+      "source": "cart_total",
+      "attribute": "output",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "2025-01-23T06:14:59.601Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 540
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m67svgqs3mda5f3tomi",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m67tbxak57turjmt3ph",
+    "type": "codeNode",
+    "data": {
+     "input": {
+      "language": {
+ "value": "JS",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "snippet": {
+ "value": "const data = {{.Zepto_Coupon_Condition_Check.output}};\r\nconst coupons = [];\r\n\r\ndata.forEach(group => {\r\n  if (Array.isArray(group.output)) {\r\n    group.output.forEach(coupon => {\r\n      coupons.push(coupon);\r\n    });\r\n  }\r\n});\r\n\r\nconst uniqueCoupons = [];\r\nconst duplicateCodes = {};\r\n\r\ncoupons.forEach(coupon => {\r\n  if (!duplicateCodes[coupon.coupon]) {\r\n    duplicateCodes[coupon.coupon] = true;\r\n    uniqueCoupons.push(coupon);\r\n  }\r\n});\r\n\r\ncoupons; ",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": [
+ {
+  "coupon": "ABC30",
+  "defaultOutputData": true,
+  "discount_type": "fixed",
+  "offer": "Flat Rs. 30 off",
+  "payment_gateway": "UPI",
+  "rowError": null,
+  "rowId": 2,
+  "value": 30
+ },
+ {
+  "coupon": "ABC40",
+  "defaultOutputData": true,
+  "discount_type": "fixed",
+  "offer": "Flat Rs. 40 off",
+  "payment_gateway": "Card",
+  "rowError": null,
+  "rowId": 1,
+  "value": 40
+ }
+]
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10
+     },
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "node_m67tbxak57turjmt3ph",
+     "pluginName": "",
+     "status": "success",
+     "name": "applicable_coupons",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "code",
+     "testedAt": "2025-01-23T06:14:59.601Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m67tbxakj6597sgxk9",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m67ubr09ctiqy0qkkau",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "applicable_coupons": {
+ "value": null,
+ "executedValue": null,
+ "name": "applicable_coupons",
+ "dataType": "json",
+ "source": "applicable_coupons",
+ "attribute": "output[0]",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "applicable_coupons": {
+ "coupon": "ABC30",
+ "defaultOutputData": true,
+ "discount_type": "fixed",
+ "offer": "Flat Rs. 30 off",
+ "payment_gateway": "UPI",
+ "rowError": null,
+ "rowId": 2,
+ "value": 30
+}
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_m67ubr09ctiqy0qkkau",
+     "pluginName": "",
+     "status": "success",
+     "name": "Response",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "2025-01-23T06:14:59.601Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 950
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m67ubr0999clvilxgru",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m67orkchui988j3338",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "node_m67orkchzbp201gfzef",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m67ph0ah5337koqfxx9",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m67ph0ah4c7pcqwubiq",
+    "target": "node_m67ph0ahquosedx10gk",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m67ph0ah5l0g4qhisua",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m67orkchzbp201gfzef",
+    "target": "node_m67ph0ah4c7pcqwubiq",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m67svgqsh4wzkld3l2o",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m67svgqs1x87ozkvp9z",
+    "target": "node_m67svgqs3mda5f3tomi",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m67svgqs8grf3yysfd3",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m67ph0ahquosedx10gk",
+    "target": "node_m67svgqs1x87ozkvp9z",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m67tbxal45pfo8h590o",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m67tbxak57turjmt3ph",
+    "target": "node_m67tbxakj6597sgxk9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m67tbxalmy3fc625ljr",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m67svgqs3mda5f3tomi",
+    "target": "node_m67tbxak57turjmt3ph",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m67ubr09g7hd2vcj3t5",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m67ubr09ctiqy0qkkau",
+    "target": "node_m67ubr0999clvilxgru",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m67ubr09v7hq8jeaan",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m67tbxakj6597sgxk9",
+    "target": "node_m67ubr09ctiqy0qkkau",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": null,
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-01-22T11:07:45.11523Z",
+   "updatedAt": "2025-01-23T06:16:32.621136Z",
+   "entityCommitId": "commit-b21cb36f-a428-4492-8976-6a0105eb273c",
+   "entityType": "workflow",
+   "entityId": "cf36de1a-af9e-4a24-adb4-201a9816c2b0",
+   "entityVersion": "0.10",
+   "entityNodeId": "node_m67svgqs1x87ozkvp9z",
+   "dependencyType": "rule",
+   "dependencyId": "e3e9dbeb-4336-449d-82a0-4139cc54034e",
+   "dependencyVersion": "0.10"
+  }
+ ]
+}

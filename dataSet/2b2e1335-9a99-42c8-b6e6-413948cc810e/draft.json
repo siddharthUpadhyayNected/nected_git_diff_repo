@@ -1,0 +1,99 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2025-06-24T10:28:50.012Z",
+  "updatedAt": "2025-06-24T10:28:50.012Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "2b2e1335-9a99-42c8-b6e6-413948cc810e",
+  "version": "draft",
+  "name": "Amazon Pricing",
+  "commitId": "commit-067bad55-0b1e-4d08-b739-69d1b0c8376f",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-06-24 10:28:50",
+   "timeStamp": "2025-06-24T10:28:50.012618779Z"
+  },
+  "fields": {
+   "Notes": {
+ "ColumnName": "F",
+ "DataType": "string",
+ "Order": 6,
+ "ExecutedValue": null
+},
+   "basePrice": {
+ "ColumnName": "E",
+ "DataType": "numeric",
+ "Order": 5,
+ "ExecutedValue": null
+},
+   "countryCode": {
+ "ColumnName": "A",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "countryName": {
+ "ColumnName": "B",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": null
+},
+   "currencyCode": {
+ "ColumnName": "D",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": null
+},
+   "currencySymbol": {
+ "ColumnName": "C",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": null
+}
+  },
+  "description": "",
+  "query": "",
+  "params": {
+   "file": {
+ "label": "Kindle Price",
+ "value": "13LQybKMfnZOmjru4a2ur1e6V7J4F_bwa7JA6umAm1s4"
+},
+   "hasHeader": true,
+   "isShared": false,
+   "sheet": {
+ "label": "Sheet1",
+ "value": 0
+}
+  },
+  "connectorId": "441a9761-c772-49cf-8eea-005c88acebb2",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-06-24T10:28:50.020052Z",
+   "updatedAt": "2025-06-24T10:28:50.020052Z",
+   "entityCommitId": "commit-067bad55-0b1e-4d08-b739-69d1b0c8376f",
+   "entityType": "dataSet",
+   "entityId": "2b2e1335-9a99-42c8-b6e6-413948cc810e",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "441a9761-c772-49cf-8eea-005c88acebb2",
+   "dependencyVersion": "live"
+  }
+ ]
+}

@@ -2,36 +2,36 @@
  "entityType": "rule",
  "category": "decisionTable",
  "data": {
-  "createdAt": "2026-01-16T08:22:21.703Z",
-  "updatedAt": "2026-03-30T09:41:23.911718Z",
+  "createdAt": "2025-04-03T10:08:51.653Z",
+  "updatedAt": "2025-04-03T10:10:16.306205Z",
   "isDeleted": false,
-  "testedAt": "2026-01-16T08:25:58.417Z",
-  "publishedAt": "2026-01-16T08:26:12.028Z",
-  "entityId": "eb642c29-7bf0-481a-80aa-e9b6028ecc61",
+  "testedAt": "2025-04-03T10:10:16.305Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "1144256f-02ff-4e14-b9f4-3c408be63214",
   "version": "draft",
-  "name": "raisin_git_demo",
-  "commitId": "commit-bc796380-b195-4f34-847e-fb8a9839da22",
-  "status": "draft",
-  "lastVersion": "0.10",
+  "name": "drivingLicensceEligibilityAgeInIndia",
+  "commitId": "commit-5c1108a6-c701-4c9b-8c32-7fddae74357f",
+  "status": "tested",
+  "lastVersion": "",
   "isLive": false,
   "commitInfo": {
-   "title": "Forked from 0.10",
-   "timeStamp": "2026-03-30T09:41:14.042897434Z"
+   "title": "Created at 2025-04-03 10:08:51",
+   "timeStamp": "2025-04-03T10:08:51.653355145Z"
   },
   "customInput": {
-   "salary": {
- "name": "salary",
+   "age": {
+ "name": "age",
  "dataType": "numeric",
  "isOptional": false,
  "isNullable": false,
  "isCaseSensitive": false,
  "attribute": "",
  "sourceType": "",
- "executedValue": 1250000,
+ "executedValue": null,
  "config": {
   
  },
- "value": "",
+ "value": null,
  "next": "",
  "previous": "",
  "schemaId": ""
@@ -40,68 +40,63 @@
   "ruleChain": null,
   "decisionTable": {
    "rows": {
-    "g_PTGNvN": {
- "nextId": "",
- "prevId": "rule_01",
- "firstOutputData": "output_dbSfE1",
+    "rule_m9171k7tpbsxd3tjovr": {
+ "nextId": "rule_m9172otfk5llw0bcxdk",
+ "prevId": "",
+ "firstOutputData": "output_m9171ptvuu2ir466shs",
  "isEnabled": true,
  "annotation": ""
 },
-    "rule_01": {
- "nextId": "g_PTGNvN",
- "prevId": "",
- "firstOutputData": "output_skT2fr",
+    "rule_m9172otfk5llw0bcxdk": {
+ "nextId": "",
+ "prevId": "rule_m9171k7tpbsxd3tjovr",
+ "firstOutputData": "output_m9172otfxpc931arq9k",
  "isEnabled": true,
  "annotation": ""
 }
    },
    "properties": {
-    "param_lye4R6": {
- "nextId": "",
- "prevId": "rule_03",
- "type": "simpleCondition"
-},
     "rule_03": {
- "nextId": "param_lye4R6",
+ "nextId": "",
  "prevId": "",
  "type": "simpleCondition"
 }
    },
    "results": {
-    "result_2kDNxI": {
+    "result_m9171ptvpe8f8n6ks1a": {
  "nextId": "",
  "prevId": "",
- "dataType": "string",
- "keyName": "isTaxable",
+ "dataType": "boolean",
+ "keyName": "eligibleToOwnALicense",
  "schemaId": ""
 }
    },
-   "firstRow": "rule_01",
+   "firstRow": "rule_m9171k7tpbsxd3tjovr",
    "firstProperty": "rule_03",
-   "firstResult": "result_2kDNxI",
+   "firstResult": "result_m9171ptvpe8f8n6ks1a",
    "firstAggOutputData": ""
   },
   "action": {
    "then": {
     "outputData": {
-     "output_dbSfE1": {
- "name": "isTaxable",
- "dataType": "string",
+     "output_m9171ptvuu2ir466shs": {
+ "name": "eligibleToOwnALicense",
+ "dataType": "boolean",
  "returnType": "",
- "value": "false",
+ "value": true,
  "next": "",
- "executedValue": "false",
+ "executedValue": true,
  "attribute": "",
  "source": "",
  "schemaId": ""
 },
-     "output_skT2fr": {
- "name": "isTaxable",
- "dataType": "string",
+     "output_m9172otfxpc931arq9k": {
+ "name": "eligibleToOwnALicense",
+ "dataType": "boolean",
  "returnType": "",
- "value": "true",
+ "value": false,
  "next": "",
- "executedValue": "true",
+ "executedValue": false,
  "attribute": "",
  "source": "",
  "schemaId": ""
@@ -122,146 +117,6 @@
   },
   "conditions": {
    "nodes": {
-    "c_BNEQ2Q": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "g_PTGNvN",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_QGolD6": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "rule_01",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_zMM6RY": {
- "value": "",
- "sourceType": "",
- "name": "",
- "operator": "betex",
- "dataType": "numeric",
- "nodeType": "condition",
- "attribute": "",
- "query": "",
- "parent": "g_PTGNvN",
- "children": null,
- "leftNode": [
-  "rule_03"
- ],
- "rightNode": [
-  "rhs_qtLf4R",
-  "rhs_DAjiy3"
- ],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "g_PTGNvN": {
- "value": null,
- "sourceType": "",
- "name": "",
- "operator": "and",
- "dataType": "",
- "nodeType": "group",
- "attribute": "",
- "query": "",
- "parent": "",
- "children": [
-  "c_zMM6RY",
-  "c_BNEQ2Q"
- ],
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "param_lye4R6": {
- "value": null,
- "sourceType": "custom",
- "name": "",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "params",
- "attribute": "sql",
- "query": "",
- "parent": "",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rhs_DAjiy3": {
- "value": 1200000,
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "c_zMM6RY",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rhs_RnLQzp": {
- "value": 1200000,
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "rule_02",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rhs_qtLf4R": {
- "value": 600000,
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "c_zMM6RY",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
     "rule_01": {
  "value": null,
  "sourceType": "",
@@ -273,8 +128,7 @@
  "query": "",
  "parent": "",
  "children": [
-  "rule_02",
-  "c_QGolD6"
+  "rule_02"
  ],
  "leftNode": null,
  "rightNode": null,
@@ -282,11 +136,11 @@
  "returnType": ""
 },
     "rule_02": {
- "value": "",
+ "value": null,
  "sourceType": "",
  "name": "",
- "operator": "gt",
- "dataType": "numeric",
+ "operator": "",
+ "dataType": "",
  "nodeType": "condition",
  "attribute": "",
  "query": "",
@@ -296,7 +150,7 @@
   "rule_03"
  ],
  "rightNode": [
-  "rhs_RnLQzp"
+  "rule_04"
  ],
  "siblingIndex": 1,
  "returnType": ""
@@ -308,9 +162,133 @@
  "operator": "",
  "dataType": "numeric",
  "nodeType": "params",
- "attribute": "salary",
+ "attribute": "age",
  "query": "",
  "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_04": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9171k7tpbsxd3tjovr": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m9171k7txmgujj4jp0r"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9171k7txmgujj4jp0r": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m9171k7tpbsxd3tjovr",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m9172f3a973bvagc6gd"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9172f3a973bvagc6gd": {
+ "value": 18,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m9171k7txmgujj4jp0r",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9172otf9yfmb0zkvnk": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "lt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m9172otfk5llw0bcxdk",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m9172s3kwjmk3n1smq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9172otfk5llw0bcxdk": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m9172otf9yfmb0zkvnk"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m9172s3kwjmk3n1smq": {
+ "value": 18,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m9172otf9yfmb0zkvnk",
  "children": null,
  "leftNode": null,
  "rightNode": null,
@@ -320,10 +298,10 @@
    },
    "startNode": ""
   },
-  "firstCustomInput": "salary",
+  "firstCustomInput": "age",
   "firstRuleChain": "",
   "ruleSetPolicy": "",
-  "description": "",
+  "description": "This decision table takes the age input of the person and returns that is the person eligible to own a driving license. The rule policy is evaluate all.",
   "policy": "first",
   "comment": "",
   "type": "decisionTable",
@@ -343,12 +321,12 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": "d"
+     "Unit": ""
     },
     "CacheKeys": ""
    },
    "timezone": "",
-   "dateFormat": "in",
+   "dateFormat": "",
    "timeout": 0,
    "timeoutAsync": 0,
    "timeoutCron": 0,

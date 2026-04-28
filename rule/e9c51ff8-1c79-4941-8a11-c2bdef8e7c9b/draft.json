@@ -1,0 +1,1905 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-19T05:37:53.1Z",
+  "updatedAt": "2025-03-24T13:15:49.684956Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-19T06:06:26.357Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "e9c51ff8-1c79-4941-8a11-c2bdef8e7c9b",
+  "version": "draft",
+  "name": "hotelPricingManagement",
+  "commitId": "commit-a345d410-376c-4812-a323-fb2478f7ab3b",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-19 05:37:53",
+   "timeStamp": "2025-03-19T05:37:53.10062807Z"
+  },
+  "customInput": {
+   "discountsAvailable": {
+ "name": "discountsAvailable",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "roomType",
+ "previous": "peakSeason",
+ "schemaId": ""
+},
+   "peakSeason": {
+ "name": "peakSeason",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "discountsAvailable",
+ "previous": "",
+ "schemaId": ""
+},
+   "roomType": {
+ "name": "roomType",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "",
+ "previous": "discountsAvailable",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m8fhzyjg3zb2gopec2s",
+ "prevId": "",
+ "firstOutputData": "output_m8fhyit2ku6uefkkt9i",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fhzx68cz81fpj1wt5": {
+ "nextId": "rule_m8fi6b4absneefg4pt",
+ "prevId": "rule_m8fhzxqgfmqkdz94xst",
+ "firstOutputData": "output_m8fhzx699f7usrid1m7",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fhzxqgfmqkdz94xst": {
+ "nextId": "rule_m8fhzx68cz81fpj1wt5",
+ "prevId": "rule_m8fhzyjg3zb2gopec2s",
+ "firstOutputData": "output_m8fhzxqhsji7mt7fjs8",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fhzyjg3zb2gopec2s": {
+ "nextId": "rule_m8fhzxqgfmqkdz94xst",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m8fhzyjg41xf0w6tce6",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fi6b4absneefg4pt": {
+ "nextId": "rule_m8fi8cut6cymlvzznoq",
+ "prevId": "rule_m8fhzx68cz81fpj1wt5",
+ "firstOutputData": "output_m8fi6b4blh3wwk7qfl8",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fi8cut6cymlvzznoq": {
+ "nextId": "rule_m8fi8oy9paklxn0op6k",
+ "prevId": "rule_m8fi6b4absneefg4pt",
+ "firstOutputData": "output_m8fi8cuu38ipakm8ya7",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fi8oy9paklxn0op6k": {
+ "nextId": "rule_m8fibgkdwyx7ic5bgd",
+ "prevId": "rule_m8fi8cut6cymlvzznoq",
+ "firstOutputData": "output_m8fi8oyamk7dsj5nxjo",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fibgkdwyx7ic5bgd": {
+ "nextId": "rule_m8ficf55v1f04ww4f4d",
+ "prevId": "rule_m8fi8oy9paklxn0op6k",
+ "firstOutputData": "output_m8fibgke6jv3v3992xu",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8ficf55v1f04ww4f4d": {
+ "nextId": "rule_m8fiepd4zv25x6b39is",
+ "prevId": "rule_m8fibgkdwyx7ic5bgd",
+ "firstOutputData": "output_m8ficf562t92yoveew2",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fiepd4zv25x6b39is": {
+ "nextId": "rule_m8fimheu1m69l4hz3wf",
+ "prevId": "rule_m8ficf55v1f04ww4f4d",
+ "firstOutputData": "output_m8fiepd4yqwqlyc31d",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fimheu1m69l4hz3wf": {
+ "nextId": "rule_m8fiou1w3mu629cx8e9",
+ "prevId": "rule_m8fiepd4zv25x6b39is",
+ "firstOutputData": "output_m8fimhevb0940ifc2t",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fiou1w3mu629cx8e9": {
+ "nextId": "",
+ "prevId": "rule_m8fimheu1m69l4hz3wf",
+ "firstOutputData": "output_m8fiou1x765wjnlunuh",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "rule_m8fhtc8rhwiaddfvjo",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_m8fhtc8rhwiaddfvjo": {
+ "nextId": "rule_m8fhtfm8owp03w5cnpp",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_m8fhtfm8owp03w5cnpp": {
+ "nextId": "",
+ "prevId": "rule_m8fhtc8rhwiaddfvjo",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m8fhyit2ubcb88fw0r": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "roomPrice",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m8fhyit2ubcb88fw0r",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m8fhyit2ku6uefkkt9i": {
+ "name": "roomPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "(Base Price * Peak Multiplier) - discounts",
+ "next": "",
+ "executedValue": "(Base Price * Peak Multiplier) - discounts",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fhzx699f7usrid1m7": {
+ "name": "roomPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "(Base Price *off-peak discount ) - dicounts",
+ "next": "",
+ "executedValue": "(Base Price *off-peak discount ) - dicounts",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fhzxqhsji7mt7fjs8": {
+ "name": "roomPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "(Base Price * off-peak discount)",
+ "next": "",
+ "executedValue": "(Base Price * off-peak discount)",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fhzyjg41xf0w6tce6": {
+ "name": "roomPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "(Base Price * Peak Multiplier)",
+ "next": "",
+ "executedValue": "(Base Price * Peak Multiplier)",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fi6b4blh3wwk7qfl8": {
+ "name": "roomPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "((Base Price + premium) * Peak Multiplier  ) - dicounts",
+ "next": "",
+ "executedValue": "((Base Price + premium) * Peak Multiplier  ) - dicounts",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fi8cuu38ipakm8ya7": {
+ "name": "roomPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "((Base Price + premium) * Peak Multiplier  )",
+ "next": "",
+ "executedValue": "((Base Price + premium) * Peak Multiplier  )",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fi8oyamk7dsj5nxjo": {
+ "name": "roomPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "((Base Price + premium) * off-peak discount  ) - dicounts",
+ "next": "",
+ "executedValue": "((Base Price + premium) * off-peak discount  ) - dicounts",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fibgke6jv3v3992xu": {
+ "name": "roomPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "((Base Price + premium) * off-peak discount  )",
+ "next": "",
+ "executedValue": "((Base Price + premium) * off-peak discount  )",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8ficf562t92yoveew2": {
+ "name": "roomPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "((Base Price + Luxury tax) * Peak Multiplier  ) - discounts",
+ "next": "",
+ "executedValue": "((Base Price + Luxury tax) * Peak Multiplier  ) - discounts",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fiepd4yqwqlyc31d": {
+ "name": "roomPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "((Base Price + Luxury tax) * Peak Multiplier  )",
+ "next": "",
+ "executedValue": "((Base Price + Luxury tax) * Peak Multiplier  )",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fimhevb0940ifc2t": {
+ "name": "roomPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "((Base Price + Luxury tax) * off-peak discount  ) - discounts",
+ "next": "",
+ "executedValue": "((Base Price + Luxury tax) * off-peak discount  ) - discounts",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fiou1x765wjnlunuh": {
+ "name": "roomPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "((Base Price + Luxury tax) * off-peak discount  )",
+ "next": "",
+ "executedValue": "((Base Price + Luxury tax) * off-peak discount  )",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "rule_m8fhtc8s41fvh1nvupf",
+  "rule_m8fhtfm8v769g8caqck"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fhukborz4c1541xz"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "roomType",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhtc8rhwiaddfvjo": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "peakSeason",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhtc8s41fvh1nvupf": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhtfm8owp03w5cnpp": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "discountsAvailable",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhtfm8v769g8caqck": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhukborz4c1541xz": {
+ "value": "Standard Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzuii26zhcnuzmsq": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fhzuiiladkhda2nu",
+  "rule_m8fhzuij0cvo7zvdb4oq",
+  "rule_m8fhzuij50oacxas53"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzuiifqhdu50bcdr": {
+ "value": "Standard Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzuiiladkhda2nu",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzuiiladkhda2nu": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzuii26zhcnuzmsq",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fhzuiifqhdu50bcdr"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzuij0cvo7zvdb4oq": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzuii26zhcnuzmsq",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzuij50oacxas53": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzuii26zhcnuzmsq",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzvadn5sacoctoff": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzvadyhajg8zx04f",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzvadoavi9cjj5ch": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzvadyhajg8zx04f",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fhzvadvxtyad96vfr"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzvadvxtyad96vfr": {
+ "value": "Standard Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzvadoavi9cjj5ch",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzvadyhajg8zx04f": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fhzvadoavi9cjj5ch",
+  "rule_m8fhzvadn5sacoctoff",
+  "rule_m8fhzvadzd4n9cbgwx"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzvadzd4n9cbgwx": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzvadyhajg8zx04f",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzvxy0av9urng6g2m": {
+ "value": "Standard Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzvxykgj7wipcbr",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzvxy9q07fd7w9vc": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fhzvxykgj7wipcbr",
+  "rule_m8fhzvxyanowmep8teo",
+  "rule_m8fhzvxzceh9loppf1"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzvxyanowmep8teo": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzvxy9q07fd7w9vc",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzvxykgj7wipcbr": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzvxy9q07fd7w9vc",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fhzvxy0av9urng6g2m"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzvxzceh9loppf1": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzvxy9q07fd7w9vc",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzwm36jcrqx9d9du": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzwm3x9uimw23sr",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fhzwm3vpzmwn5wo7"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzwm3vpzmwn5wo7": {
+ "value": "Standard Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzwm36jcrqx9d9du",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzwm3x9uimw23sr": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fhzwm36jcrqx9d9du",
+  "rule_m8fhzwm4oqp4mt8ahr",
+  "rule_m8fhzwm45bzzv7afo0q"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzwm45bzzv7afo0q": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzwm3x9uimw23sr",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzwm4oqp4mt8ahr": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzwm3x9uimw23sr",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzx68cz81fpj1wt5": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fhzx68dtwi0qg94zl",
+  "rule_m8fhzx69c01ut3cupw",
+  "rule_m8fhzx69crjlbrxghz"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzx68dtwi0qg94zl": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzx68cz81fpj1wt5",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fhzx68e0kd0ecyhm5"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzx68e0kd0ecyhm5": {
+ "value": "Standard Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzx68dtwi0qg94zl",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzx69c01ut3cupw": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzx68cz81fpj1wt5",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzx69crjlbrxghz": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzx68cz81fpj1wt5",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzxqg1gx6lrfpwtb": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzxqgfmqkdz94xst",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fhzxqgktuc96g9sin"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzxqgfmqkdz94xst": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fhzxqg1gx6lrfpwtb",
+  "rule_m8fhzxqgzsc7h62ugy9",
+  "rule_m8fhzxqgric2p7vi5jh"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzxqgktuc96g9sin": {
+ "value": "Standard Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzxqg1gx6lrfpwtb",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzxqgric2p7vi5jh": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzxqgfmqkdz94xst",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzxqgzsc7h62ugy9": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzxqgfmqkdz94xst",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzyjg2bwnw2ux13": {
+ "value": "Standard Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzyjg7wct9tljryv",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzyjg3zb2gopec2s": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fhzyjg7wct9tljryv",
+  "rule_m8fhzyjg4ktnxmy1vcl",
+  "rule_m8fhzyjgc3xzatcf7ai"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzyjg4ktnxmy1vcl": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzyjg3zb2gopec2s",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzyjg7wct9tljryv": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzyjg3zb2gopec2s",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fhzyjg2bwnw2ux13"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fhzyjgc3xzatcf7ai": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fhzyjg3zb2gopec2s",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi6b4absneefg4pt": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fi6b4awq8rzk1jizs",
+  "rule_m8fi6b4br7f2sco9d5",
+  "rule_m8fi6b4bsi2pmci0aa"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi6b4amau75tskwr": {
+ "value": "Deluxe Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fi6b4awq8rzk1jizs",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi6b4awq8rzk1jizs": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fi6b4absneefg4pt",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fi6b4amau75tskwr"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi6b4br7f2sco9d5": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fi6b4absneefg4pt",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi6b4bsi2pmci0aa": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fi6b4absneefg4pt",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi8cut6cymlvzznoq": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fi8cutgf5bv5v5dy9",
+  "rule_m8fi8cuuol31hwrm7qt",
+  "rule_m8fi8cuuekq857icfad"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi8cutdwhr8bv0rth": {
+ "value": "Deluxe Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fi8cutgf5bv5v5dy9",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi8cutgf5bv5v5dy9": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fi8cut6cymlvzznoq",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fi8cutdwhr8bv0rth"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi8cuuekq857icfad": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fi8cut6cymlvzznoq",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi8cuuol31hwrm7qt": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fi8cut6cymlvzznoq",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi8oy940sey8y4o3y": {
+ "value": "Deluxe Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fi8oy95499xoeaa4o",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi8oy95499xoeaa4o": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fi8oy9paklxn0op6k",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fi8oy940sey8y4o3y"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi8oy9paklxn0op6k": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fi8oy95499xoeaa4o",
+  "rule_m8fi8oya4ohiwh165mx",
+  "rule_m8fi8oyaclnzm5iz46"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi8oya4ohiwh165mx": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fi8oy9paklxn0op6k",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fi8oyaclnzm5iz46": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fi8oy9paklxn0op6k",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fibgkdi3ag4fupkuq": {
+ "value": "Deluxe Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fibgkdzasibalnjc",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fibgkdwyx7ic5bgd": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fibgkdzasibalnjc",
+  "rule_m8fibgkejf01xt55ue",
+  "rule_m8fibgkeuz8pqyp1udr"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fibgkdzasibalnjc": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fibgkdwyx7ic5bgd",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fibgkdi3ag4fupkuq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fibgkejf01xt55ue": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fibgkdwyx7ic5bgd",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fibgkeuz8pqyp1udr": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fibgkdwyx7ic5bgd",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ficf559jxae1ctokt": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8ficf55v1f04ww4f4d",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8ficf55rzel0tf614"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ficf55rzel0tf614": {
+ "value": "Suite Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8ficf559jxae1ctokt",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ficf55v1f04ww4f4d": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8ficf559jxae1ctokt",
+  "rule_m8ficf561j9twn3dzoc",
+  "rule_m8ficf56ts4tzs5hnq"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ficf561j9twn3dzoc": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8ficf55v1f04ww4f4d",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ficf56ts4tzs5hnq": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8ficf55v1f04ww4f4d",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fiepd40ns1hmeemuy": {
+ "value": "Suite Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fiepd4cze24y1p4cg",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fiepd41agjkpe9hw0i": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fiepd4zv25x6b39is",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fiepd4cze24y1p4cg": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fiepd4zv25x6b39is",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fiepd40ns1hmeemuy"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fiepd4ekmfqmo0ibw": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fiepd4zv25x6b39is",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fiepd4zv25x6b39is": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fiepd4cze24y1p4cg",
+  "rule_m8fiepd41agjkpe9hw0i",
+  "rule_m8fiepd4ekmfqmo0ibw"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fimheu1m69l4hz3wf": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fimheu22129crdkkr",
+  "rule_m8fimheub88hu7gjzl8",
+  "rule_m8fimheuzrqmd9mjh4"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fimheu22129crdkkr": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fimheu1m69l4hz3wf",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fimheuiya9f1kyr7"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fimheub88hu7gjzl8": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fimheu1m69l4hz3wf",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fimheuiya9f1kyr7": {
+ "value": "Suite Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fimheu22129crdkkr",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fimheuzrqmd9mjh4": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fimheu1m69l4hz3wf",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fiou1w3mu629cx8e9": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fiou1xvk9qphcirpm",
+  "rule_m8fiou1xju2720opx1d",
+  "rule_m8fiou1xcja77ro1p7f"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fiou1x3w1g2s5rbm": {
+ "value": "Suite Room",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fiou1xvk9qphcirpm",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fiou1xcja77ro1p7f": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fiou1w3mu629cx8e9",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtfm8owp03w5cnpp"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fiou1xju2720opx1d": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fiou1w3mu629cx8e9",
+ "children": null,
+ "leftNode": [
+  "rule_m8fhtc8rhwiaddfvjo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fiou1xvk9qphcirpm": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fiou1w3mu629cx8e9",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fiou1x3w1g2s5rbm"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "peakSeason",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "collect",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

@@ -1,23 +1,23 @@
 {
  "entityType": "workflow",
  "data": {
-  "createdAt": "2026-01-09T13:30:34.386Z",
-  "updatedAt": "2026-03-05T08:47:57.902584Z",
+  "createdAt": "2025-09-07T16:59:19.062Z",
+  "updatedAt": "2025-12-01T11:08:09.793381Z",
   "isDeleted": false,
-  "testedAt": "2026-01-09T13:35:04.092Z",
-  "publishedAt": "2026-01-09T13:35:08.903Z",
-  "entityId": "50959ed5-36ef-42e8-a52f-020439b6f5e7",
+  "testedAt": "2025-12-01T11:06:38.185Z",
+  "publishedAt": "2025-12-01T11:07:04.053Z",
+  "entityId": "73d3f995-0008-4e75-a778-2701a65df359",
   "version": "draft",
-  "name": "Git Diff Workflow",
-  "commitId": "commit-15f2822c-693d-457f-9b5c-00a3066310ae",
+  "name": "Xometry Single Part Workflow",
+  "commitId": "commit-83f4e7bf-4e1b-4ef7-b87a-66ddfbeef3af",
   "status": "draft",
   "lastVersion": "0.10",
   "isLive": false,
   "commitInfo": {
    "title": "Forked from 0.10",
-   "timeStamp": "2026-03-05T08:47:52.100422812Z"
+   "timeStamp": "2025-12-01T11:08:09.79258977Z"
   },
-  "startNode": "n_5cCWPa",
+  "startNode": "n_1rPc1T",
   "description": "",
   "trigger": {
    "apiNode": "1",
@@ -26,7 +26,7 @@
   "nodes": [
    {
     "position": {
-     "x": 691.0546875,
+     "x": 609.6000366210938,
      "y": 0
     },
     "style": null,
@@ -36,29 +36,11 @@
     "type": "trigger",
     "data": {
      "input": {
-      "discountPercent": {
+      "a": {
  "value": null,
- "executedValue": 10,
- "name": "discountPercent",
- "dataType": "numeric",
- "source": "",
- "attribute": "",
- "keySource": "",
- "keyAttribute": "",
- "mapping": false,
- "isOptional": false,
- "isNullable": false,
- "isCaseSensitive": false,
- "sendNull": false,
- "notSend": false,
- "order": 0,
- "schemaId": ""
-},
-      "total": {
- "value": null,
- "executedValue": 1000,
- "name": "total",
- "dataType": "numeric",
+ "executedValue": "name",
+ "name": "a",
+ "dataType": "string",
  "source": "",
  "attribute": "",
  "keySource": "",
@@ -75,8 +57,7 @@
      },
      "output": null,
      "executedValue": {
-      "discountPercent": 10,
-      "total": 1000
+      "a": "name"
      },
      "settings": {
       "authType": "private",
@@ -110,13 +91,13 @@
    },
    {
     "position": {
-     "x": 691.0546875,
+     "x": 609.6000366210938,
      "y": 130
     },
     "style": null,
     "sourcePosition": "bottom",
     "targetPosition": "top",
-    "id": "n_yJcZZ1",
+    "id": "n_JQXnfQ",
     "type": "addNode",
     "data": {
      "input": null,
@@ -147,21 +128,39 @@
    },
    {
     "position": {
-     "x": 691.0546875,
+     "x": 609.6000366210938,
      "y": 205
     },
     "style": null,
     "sourcePosition": "bottom",
     "targetPosition": "top",
-    "id": "n_5cCWPa",
-    "type": "setVarNode",
+    "id": "n_1rPc1T",
+    "type": "codeNode",
     "data": {
      "input": {
-      "discountedPrice": {
- "value": "{{.Trigger.total}} - {{.Trigger.total}}* (1/{{.Trigger.discountPercent}})",
- "executedValue": 900,
- "name": "discountedPrice",
- "dataType": "excelFormula",
+      "language": {
+ "value": "JS",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "snippet": {
+ "value": "true",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
  "source": "",
  "attribute": "",
  "keySource": "",
@@ -179,23 +178,19 @@
      "output": null,
      "executedValue": {
       "error": "",
-      "executionTime": "0ns",
-      "output": {
- "discountedPrice": 900
-},
-      "resetOutput": {
- 
-}
+      "output": true
      },
      "settings": {
-      "errorContinue": false
+      "errorContinue": false,
+      "timeout": 10,
+      "timeoutAsync": 20
      },
-     "nodeType": "setVarNode",
-     "entity": "setVariableNode",
-     "entityId": "n_5cCWPa",
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "n_1rPc1T",
      "pluginName": "",
      "status": "success",
-     "name": "calculation",
+     "name": "Code",
      "rootId": "",
      "sourceId": null,
      "isMergeNode": false,
@@ -207,20 +202,20 @@
      },
      "switcher": null,
      "conditions": null,
-     "blockName": "setVariable",
+     "blockName": "code",
      "testedAt": "0001-01-01T00:00:00Z"
     },
     "draggable": false
    },
    {
     "position": {
-     "x": 691.0546875,
+     "x": 609.6000366210938,
      "y": 335
     },
     "style": null,
     "sourcePosition": "bottom",
     "targetPosition": "top",
-    "id": "n_zyZi79",
+    "id": "n_xYdaPY",
     "type": "addNode",
     "data": {
      "input": null,
@@ -251,23 +246,23 @@
    },
    {
     "position": {
-     "x": 691.0546875,
+     "x": 609.6000366210938,
      "y": 410
     },
     "style": null,
     "sourcePosition": "bottom",
     "targetPosition": "top",
-    "id": "n_srhha3",
+    "id": "n_WnFZfY",
     "type": "responseNode",
     "data": {
      "input": {
-      "discountedPrice": {
- "value": null,
- "executedValue": 900,
- "name": "discountedPrice",
- "dataType": "numeric",
- "source": "calculation",
- "attribute": "output.discountedPrice",
+      "response": {
+ "value": false,
+ "executedValue": false,
+ "name": "response",
+ "dataType": "boolean",
+ "source": "",
+ "attribute": "",
  "keySource": "",
  "keyAttribute": "",
  "mapping": false,
@@ -284,7 +279,7 @@
      "executedValue": {
       "error": "",
       "output": {
- "discountedPrice": 900
+ "response": false
 }
      },
      "settings": {
@@ -294,7 +289,7 @@
      },
      "nodeType": "responseNode",
      "entity": "responseNode",
-     "entityId": "n_srhha3",
+     "entityId": "n_WnFZfY",
      "pluginName": "",
      "status": "success",
      "name": "Response",
@@ -316,13 +311,13 @@
    },
    {
     "position": {
-     "x": 691.0546875,
+     "x": 609.6000366210938,
      "y": 540
     },
     "style": null,
     "sourcePosition": "bottom",
     "targetPosition": "top",
-    "id": "n_R1gVyg",
+    "id": "n_2O6hHE",
     "type": "addNode",
     "data": {
      "input": null,
@@ -358,11 +353,11 @@
      "stroke": "gray",
      "strokeWidth": 1
     },
-    "id": "e_efhNmY",
+    "id": "e_TQ0UWZ",
     "markerEnd": "",
     "label": "",
     "source": "1",
-    "target": "n_yJcZZ1",
+    "target": "n_JQXnfQ",
     "data": {
      "edgeType": "then",
      "pathId": ""
@@ -376,11 +371,11 @@
      "stroke": "gray",
      "strokeWidth": 1
     },
-    "id": "e_ujcbb6",
+    "id": "e_4LgU5K",
     "markerEnd": "",
     "label": "",
-    "source": "n_5cCWPa",
-    "target": "n_zyZi79",
+    "source": "n_1rPc1T",
+    "target": "n_xYdaPY",
     "data": {
      "edgeType": "then",
      "pathId": ""
@@ -394,11 +389,11 @@
      "stroke": "gray",
      "strokeWidth": 1
     },
-    "id": "e_ffUjOC",
+    "id": "e_Tqro70",
     "markerEnd": "",
     "label": "",
-    "source": "n_yJcZZ1",
-    "target": "n_5cCWPa",
+    "source": "n_JQXnfQ",
+    "target": "n_1rPc1T",
     "data": {
      "edgeType": "then",
      "pathId": ""
@@ -412,11 +407,11 @@
      "stroke": "gray",
      "strokeWidth": 1
     },
-    "id": "e_U1PrRN",
+    "id": "e_bKvIup",
     "markerEnd": "",
     "label": "",
-    "source": "n_srhha3",
-    "target": "n_R1gVyg",
+    "source": "n_WnFZfY",
+    "target": "n_2O6hHE",
     "data": {
      "edgeType": "then",
      "pathId": ""
@@ -430,11 +425,11 @@
      "stroke": "gray",
      "strokeWidth": 1
     },
-    "id": "e_g3xSNH",
+    "id": "e_inYdn9",
     "markerEnd": "",
     "label": "",
-    "source": "n_zyZi79",
-    "target": "n_srhha3",
+    "source": "n_xYdaPY",
+    "target": "n_WnFZfY",
     "data": {
      "edgeType": "then",
      "pathId": ""
@@ -446,7 +441,7 @@
   ],
   "isEnabled": true,
   "settings": {
-   "auditIO": true,
+   "auditIO": null,
    "timezone": "",
    "dateFormat": "in",
    "timeout": 0,

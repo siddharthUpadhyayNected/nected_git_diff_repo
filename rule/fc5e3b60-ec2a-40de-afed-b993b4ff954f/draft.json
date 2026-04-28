@@ -1,0 +1,409 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-04-04T05:45:22.617Z",
+  "updatedAt": "2025-04-04T05:47:07.142429Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-04T05:47:07.141Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "fc5e3b60-ec2a-40de-afed-b993b4ff954f",
+  "version": "draft",
+  "name": "priorityBasedSupport",
+  "commitId": "commit-929f44e3-0f4b-4e5d-8d6d-f053fb32cbf0",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-04-04 05:45:22",
+   "timeStamp": "2025-04-04T05:45:22.617452764Z"
+  },
+  "customInput": {
+   "subscriptionPlan": {
+ "name": "subscriptionPlan",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_m92d319ono02sgs9ayr": {
+ "nextId": "rule_m92d32bb9jj8jji5fs8",
+ "prevId": "",
+ "firstOutputData": "output_m92d319pqh0kjslcdt",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m92d32bb9jj8jji5fs8": {
+ "nextId": "rule_m92d33vpxygwf0uqg2n",
+ "prevId": "rule_m92d319ono02sgs9ayr",
+ "firstOutputData": "output_m92d32bctdb4l8p6yis",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m92d33vpxygwf0uqg2n": {
+ "nextId": "",
+ "prevId": "rule_m92d32bb9jj8jji5fs8",
+ "firstOutputData": "output_m92d33vpwn8ykx1d7s",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m92d2w2zwefqdtu4g": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "priority",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_m92d319ono02sgs9ayr",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m92d2w2zwefqdtu4g",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m92d319pqh0kjslcdt": {
+ "name": "priority",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Low",
+ "next": "",
+ "executedValue": "Low",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m92d32bctdb4l8p6yis": {
+ "name": "priority",
+ "dataType": "string",
+ "returnType": "",
+ "value": "High",
+ "next": "",
+ "executedValue": "High",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m92d33vpwn8ykx1d7s": {
+ "name": "priority",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Critical",
+ "next": "",
+ "executedValue": "Critical",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_04"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "subscriptionPlan",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_04": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92d319of3evwv59uu7": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92d319ono02sgs9ayr",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92d37k4v62e7scfea"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92d319ono02sgs9ayr": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92d319of3evwv59uu7"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92d32bb9jj8jji5fs8": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92d32bbwlvw51s8fz"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92d32bbwlvw51s8fz": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92d32bb9jj8jji5fs8",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92d39t7antf2zojd07"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92d33vpgusaxz6ojn5": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92d33vpxygwf0uqg2n",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92d3c8c7vcbvxo7ocv"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92d33vpxygwf0uqg2n": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92d33vpgusaxz6ojn5"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92d37k4v62e7scfea": {
+ "value": "Basic",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92d319of3evwv59uu7",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92d39t7antf2zojd07": {
+ "value": "Premium",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92d32bbwlvw51s8fz",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92d3c8c7vcbvxo7ocv": {
+ "value": "Enterprise",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92d33vpgusaxz6ojn5",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "subscriptionPlan",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "This decision table analyses the priority of the support on the basis of type of subscription plan. The policy used here is unique.",
+  "policy": "unique",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

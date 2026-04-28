@@ -1,0 +1,428 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-04-04T06:16:33.84Z",
+  "updatedAt": "2025-04-04T06:21:21.832611Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-04T06:21:21.832Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "d5df48dc-7160-43bd-91a7-85a78ba9543f",
+  "version": "draft",
+  "name": "internetSpeedThrottlingBasedOnDataUsage",
+  "commitId": "commit-fb8c49f1-11cc-469c-bca7-3b3a128c2254",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-04-04 06:16:33",
+   "timeStamp": "2025-04-04T06:16:33.840703101Z"
+  },
+  "customInput": {
+   "dataUsageinGBs": {
+ "name": "dataUsageinGBs",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_m92e7sd4q7ji5fognml": {
+ "nextId": "rule_m92ea5ut7btj91nde6o",
+ "prevId": "",
+ "firstOutputData": "output_m92e7sd5b8gmvtoptza",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m92ea5ut7btj91nde6o": {
+ "nextId": "rule_m92eamhzrq6517l9rir",
+ "prevId": "rule_m92e7sd4q7ji5fognml",
+ "firstOutputData": "output_m92ea5uuh816oeczv5o",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m92eamhzrq6517l9rir": {
+ "nextId": "",
+ "prevId": "rule_m92ea5ut7btj91nde6o",
+ "firstOutputData": "output_m92eami03rbltgo7bku",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m92e7mu36y9hsef9ox8": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "speed",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_m92e7sd4q7ji5fognml",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m92e7mu36y9hsef9ox8",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m92e7sd5b8gmvtoptza": {
+ "name": "speed",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Full speed",
+ "next": "",
+ "executedValue": "Full speed",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m92ea5uuh816oeczv5o": {
+ "name": "speed",
+ "dataType": "string",
+ "returnType": "",
+ "value": "50% speed",
+ "next": "",
+ "executedValue": "50% speed",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m92eami03rbltgo7bku": {
+ "name": "speed",
+ "dataType": "string",
+ "returnType": "",
+ "value": "25% speed",
+ "next": "",
+ "executedValue": "25% speed",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_04"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "dataUsageinGBs",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_04": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92e7sd4q7ji5fognml": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92e7sd5o8zfwbors1"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92e7sd5o8zfwbors1": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "lte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92e7sd4q7ji5fognml",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92e7ye4anq7f3ypfk8"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92e7ye4anq7f3ypfk8": {
+ "value": 100,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92e7sd5o8zfwbors1",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92ea5ut7btj91nde6o": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92ea5utketrqnlfayn"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92ea5utketrqnlfayn": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "bet",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92ea5ut7btj91nde6o",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92eaazpn67rgx4wml",
+  "rule_m92eaazpx08qv0m42b"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92eaazpn67rgx4wml": {
+ "value": 101,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92ea5utketrqnlfayn",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92eaazpx08qv0m42b": {
+ "value": 200,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92ea5utketrqnlfayn",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92eamhzrq6517l9rir": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92eamhzzu476im1m1g"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92eamhzzu476im1m1g": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92eamhzrq6517l9rir",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92eat1tjt4apcalc2l"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92eat1tjt4apcalc2l": {
+ "value": 201,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92eamhzzu476im1m1g",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "dataUsageinGBs",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "This decision table returns the internet speed throttling based upon the internet usage. The policy used here is order.",
+  "policy": "order",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

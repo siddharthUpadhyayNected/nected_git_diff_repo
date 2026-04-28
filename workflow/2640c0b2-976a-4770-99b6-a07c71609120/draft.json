@@ -1,0 +1,515 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2025-03-07T13:28:36.974Z",
+  "updatedAt": "2025-03-07T13:45:23.211308Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-07T13:45:23.21Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "2640c0b2-976a-4770-99b6-a07c71609120",
+  "version": "draft",
+  "name": "Coupon_workflow_demo",
+  "commitId": "commit-3de23c0c-f93d-457a-a04c-1ca1fa40e1eb",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-07 13:28:36",
+   "timeStamp": "2025-03-07T13:28:36.974018099Z"
+  },
+  "startNode": "node_m7yteqnlt1v6bhsxkp",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "cart_items": {
+ "value": null,
+ "executedValue": [
+  {
+   "MRP": 500,
+   "category": "Furniture",
+   "name": "Men's T-Shirt",
+   "price": 900,
+   "quantity": 2,
+   "sku": "SKU56789"
+  },
+  {
+   "MRP": 1500,
+   "category": "Electronics",
+   "name": "Wireless Headphones",
+   "price": 1400,
+   "quantity": 1,
+   "sku": "SKU4567"
+  },
+  {
+   "MRP": 1200,
+   "category": "Fashion",
+   "name": "Women's Dress 1",
+   "price": 1150,
+   "quantity": 1,
+   "sku": "SKUv1234"
+  },
+  {
+   "MRP": 1000,
+   "category": "Fashion",
+   "name": "Women's Dress 2",
+   "price": 1050,
+   "quantity": 1,
+   "sku": "SKUv135"
+  }
+ ],
+ "name": "cart_items",
+ "dataType": "json",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "coupon_code": {
+ "value": null,
+ "executedValue": "COUPON1111",
+ "name": "coupon_code",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": true,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "order_id": {
+ "value": null,
+ "executedValue": "ORDER12345",
+ "name": "order_id",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": true,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "payment_gateway": {
+ "value": null,
+ "executedValue": "debit_card",
+ "name": "payment_gateway",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": true,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "request_type": {
+ "value": null,
+ "executedValue": "get_coupon",
+ "name": "request_type",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "transaction_no": {
+ "value": null,
+ "executedValue": "TRANS123456789",
+ "name": "transaction_no",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": true,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "cart_items": [
+ {
+  "MRP": 500,
+  "category": "Furniture",
+  "name": "Men's T-Shirt",
+  "price": 900,
+  "quantity": 2,
+  "sku": "SKU56789"
+ },
+ {
+  "MRP": 1500,
+  "category": "Electronics",
+  "name": "Wireless Headphones",
+  "price": 1400,
+  "quantity": 1,
+  "sku": "SKU4567"
+ },
+ {
+  "MRP": 1200,
+  "category": "Fashion",
+  "name": "Women's Dress 1",
+  "price": 1150,
+  "quantity": 1,
+  "sku": "SKUv1234"
+ },
+ {
+  "MRP": 1000,
+  "category": "Fashion",
+  "name": "Women's Dress 2",
+  "price": 1050,
+  "quantity": 1,
+  "sku": "SKUv135"
+ }
+],
+      "coupon_code": "COUPON1111",
+      "order_id": "ORDER12345",
+      "payment_gateway": "debit_card",
+      "request_type": "get_coupon",
+      "transaction_no": "TRANS123456789"
+     },
+     "settings": {
+      "authType": "private",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7yta4nfpf6mjjddwne",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7yteqnlt1v6bhsxkp",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "cart_value": {
+ "value": "SUM_LIST(list={{.Trigger.cart_items}}, keyName='price')",
+ "executedValue": 4500,
+ "name": "cart_value",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "category_list": {
+ "value": "DISTINCT(FILTER({{.Trigger.cart_items}},\"\" , \"category\"))",
+ "executedValue": [
+  "Furniture",
+  "Electronics",
+  "Fashion"
+ ],
+ "name": "category_list",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 2,
+ "schemaId": ""
+},
+      "sku_lis": {
+ "value": "DISTINCT(FILTER({{.Trigger.cart_items}},\"\" , \"sku\"))",
+ "executedValue": [
+  "SKU56789",
+  "SKU4567",
+  "SKUv1234",
+  "SKUv135"
+ ],
+ "name": "sku_lis",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "cart_value": 4500,
+ "category_list": [
+ "Furniture",
+ "Electronics",
+ "Fashion"
+],
+ "sku_lis": [
+ "SKU56789",
+ "SKU4567",
+ "SKUv1234",
+ "SKUv135"
+]
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "node_m7yteqnlt1v6bhsxkp",
+     "pluginName": "",
+     "status": "success",
+     "name": "SetVariable",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "testedAt": "2025-03-07T13:45:23.21Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m7yteqnl6qopnru8obm",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7yta4nfmdiidd0pjgc",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "node_m7yta4nfpf6mjjddwne",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7yteqnlsbs1me193jr",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7yteqnlt1v6bhsxkp",
+    "target": "node_m7yteqnl6qopnru8obm",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m7yteqnl211z68gkggx",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m7yta4nfpf6mjjddwne",
+    "target": "node_m7yteqnlt1v6bhsxkp",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": null,
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ }
+}

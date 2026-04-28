@@ -2,36 +2,34 @@
  "entityType": "rule",
  "category": "decisionTable",
  "data": {
-  "createdAt": "2026-01-16T08:22:21.703Z",
-  "updatedAt": "2026-03-30T09:41:23.911718Z",
+  "createdAt": "2025-04-04T09:41:21.107Z",
+  "updatedAt": "2025-04-04T09:44:22.43013Z",
   "isDeleted": false,
-  "testedAt": "2026-01-16T08:25:58.417Z",
-  "publishedAt": "2026-01-16T08:26:12.028Z",
-  "entityId": "eb642c29-7bf0-481a-80aa-e9b6028ecc61",
+  "testedAt": "2025-04-04T09:44:22.428Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "46ab64d3-7bb7-4f72-b0b7-75e5d647de32",
   "version": "draft",
-  "name": "raisin_git_demo",
-  "commitId": "commit-bc796380-b195-4f34-847e-fb8a9839da22",
-  "status": "draft",
-  "lastVersion": "0.10",
+  "name": "outOfStock",
+  "commitId": "commit-70998c1b-9bc1-4370-a224-9f6faa0716c6",
+  "status": "tested",
+  "lastVersion": "",
   "isLive": false,
   "commitInfo": {
-   "title": "Forked from 0.10",
-   "timeStamp": "2026-03-30T09:41:14.042897434Z"
+   "title": "Created at 2025-04-04 09:41:21",
+   "timeStamp": "2025-04-04T09:41:21.107458006Z"
   },
   "customInput": {
-   "salary": {
- "name": "salary",
+   "inventoryCount": {
+ "name": "inventoryCount",
  "dataType": "numeric",
  "isOptional": false,
  "isNullable": false,
  "isCaseSensitive": false,
  "attribute": "",
  "sourceType": "",
- "executedValue": 1250000,
- "config": {
-  
- },
- "value": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
  "next": "",
  "previous": "",
  "schemaId": ""
@@ -40,68 +38,63 @@
   "ruleChain": null,
   "decisionTable": {
    "rows": {
-    "g_PTGNvN": {
- "nextId": "",
- "prevId": "rule_01",
- "firstOutputData": "output_dbSfE1",
+    "rule_m92lk3sblxuzuof33u": {
+ "nextId": "rule_m92lkokox1p8pwuv4m8",
+ "prevId": "",
+ "firstOutputData": "output_m92lk3scmrqxse5ajz",
  "isEnabled": true,
  "annotation": ""
 },
-    "rule_01": {
- "nextId": "g_PTGNvN",
- "prevId": "",
- "firstOutputData": "output_skT2fr",
+    "rule_m92lkokox1p8pwuv4m8": {
+ "nextId": "",
+ "prevId": "rule_m92lk3sblxuzuof33u",
+ "firstOutputData": "output_m92lkokpk51ebv5zfe",
  "isEnabled": true,
  "annotation": ""
 }
    },
    "properties": {
-    "param_lye4R6": {
- "nextId": "",
- "prevId": "rule_03",
- "type": "simpleCondition"
-},
     "rule_03": {
- "nextId": "param_lye4R6",
+ "nextId": "",
  "prevId": "",
  "type": "simpleCondition"
 }
    },
    "results": {
-    "result_2kDNxI": {
+    "result_m92ljw3y956289je2ke": {
  "nextId": "",
  "prevId": "",
  "dataType": "string",
- "keyName": "isTaxable",
+ "keyName": "stockStatus",
  "schemaId": ""
 }
    },
-   "firstRow": "rule_01",
+   "firstRow": "rule_m92lk3sblxuzuof33u",
    "firstProperty": "rule_03",
-   "firstResult": "result_2kDNxI",
+   "firstResult": "result_m92ljw3y956289je2ke",
    "firstAggOutputData": ""
   },
   "action": {
    "then": {
     "outputData": {
-     "output_dbSfE1": {
- "name": "isTaxable",
+     "output_m92lk3scmrqxse5ajz": {
+ "name": "stockStatus",
  "dataType": "string",
  "returnType": "",
- "value": "false",
+ "value": "Out of stock",
  "next": "",
- "executedValue": "false",
+ "executedValue": "Out of stock",
  "attribute": "",
  "source": "",
  "schemaId": ""
 },
-     "output_skT2fr": {
- "name": "isTaxable",
+     "output_m92lkokpk51ebv5zfe": {
+ "name": "stockStatus",
  "dataType": "string",
  "returnType": "",
- "value": "true",
+ "value": "In stock",
  "next": "",
- "executedValue": "true",
+ "executedValue": "In stock",
  "attribute": "",
  "source": "",
  "schemaId": ""
@@ -122,146 +115,6 @@
   },
   "conditions": {
    "nodes": {
-    "c_BNEQ2Q": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "g_PTGNvN",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_QGolD6": {
- "value": "",
- "sourceType": "",
- "name": "Any",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "jsCondition",
- "attribute": "",
- "query": "1===1",
- "parent": "rule_01",
- "children": null,
- "leftNode": [
-  "param_lye4R6"
- ],
- "rightNode": [],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "c_zMM6RY": {
- "value": "",
- "sourceType": "",
- "name": "",
- "operator": "betex",
- "dataType": "numeric",
- "nodeType": "condition",
- "attribute": "",
- "query": "",
- "parent": "g_PTGNvN",
- "children": null,
- "leftNode": [
-  "rule_03"
- ],
- "rightNode": [
-  "rhs_qtLf4R",
-  "rhs_DAjiy3"
- ],
- "siblingIndex": 1,
- "returnType": ""
-},
-    "g_PTGNvN": {
- "value": null,
- "sourceType": "",
- "name": "",
- "operator": "and",
- "dataType": "",
- "nodeType": "group",
- "attribute": "",
- "query": "",
- "parent": "",
- "children": [
-  "c_zMM6RY",
-  "c_BNEQ2Q"
- ],
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "param_lye4R6": {
- "value": null,
- "sourceType": "custom",
- "name": "",
- "operator": "",
- "dataType": "jsCondition",
- "nodeType": "params",
- "attribute": "sql",
- "query": "",
- "parent": "",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rhs_DAjiy3": {
- "value": 1200000,
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "c_zMM6RY",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rhs_RnLQzp": {
- "value": 1200000,
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "rule_02",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
-    "rhs_qtLf4R": {
- "value": 600000,
- "sourceType": "",
- "name": "",
- "operator": "",
- "dataType": "numeric",
- "nodeType": "constant",
- "attribute": "",
- "query": "",
- "parent": "c_zMM6RY",
- "children": null,
- "leftNode": null,
- "rightNode": null,
- "siblingIndex": 1,
- "returnType": ""
-},
     "rule_01": {
  "value": null,
  "sourceType": "",
@@ -273,8 +126,7 @@
  "query": "",
  "parent": "",
  "children": [
-  "rule_02",
-  "c_QGolD6"
+  "rule_02"
  ],
  "leftNode": null,
  "rightNode": null,
@@ -282,11 +134,11 @@
  "returnType": ""
 },
     "rule_02": {
- "value": "",
+ "value": null,
  "sourceType": "",
  "name": "",
- "operator": "gt",
- "dataType": "numeric",
+ "operator": "",
+ "dataType": "",
  "nodeType": "condition",
  "attribute": "",
  "query": "",
@@ -296,7 +148,7 @@
   "rule_03"
  ],
  "rightNode": [
-  "rhs_RnLQzp"
+  "rule_04"
  ],
  "siblingIndex": 1,
  "returnType": ""
@@ -308,9 +160,133 @@
  "operator": "",
  "dataType": "numeric",
  "nodeType": "params",
- "attribute": "salary",
+ "attribute": "inventoryCount",
  "query": "",
  "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_04": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92lk3sblxuzuof33u": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92lk3scw2dyi86abyh"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92lk3scw2dyi86abyh": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "eq",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92lk3sblxuzuof33u",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92lk8y2e1ykx36vfju"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92lk8y2e1ykx36vfju": {
+ "value": 0,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92lk3scw2dyi86abyh",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92lkoko265dl39bhj5": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92lkokox1p8pwuv4m8",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92lkssfersndjq67tv"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92lkokox1p8pwuv4m8": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92lkoko265dl39bhj5"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92lkssfersndjq67tv": {
+ "value": 0,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92lkoko265dl39bhj5",
  "children": null,
  "leftNode": null,
  "rightNode": null,
@@ -320,11 +296,11 @@
    },
    "startNode": ""
   },
-  "firstCustomInput": "salary",
+  "firstCustomInput": "inventoryCount",
   "firstRuleChain": "",
   "ruleSetPolicy": "",
-  "description": "",
-  "policy": "first",
+  "description": "The decision table updates the out of stock status of the product when inventory count is equal to 0 else in stock. The rule policy used here is order.\n",
+  "policy": "order",
   "comment": "",
   "type": "decisionTable",
   "dataSetId": "",
@@ -343,12 +319,12 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": "d"
+     "Unit": ""
     },
     "CacheKeys": ""
    },
    "timezone": "",
-   "dateFormat": "in",
+   "dateFormat": "",
    "timeout": 0,
    "timeoutAsync": 0,
    "timeoutCron": 0,

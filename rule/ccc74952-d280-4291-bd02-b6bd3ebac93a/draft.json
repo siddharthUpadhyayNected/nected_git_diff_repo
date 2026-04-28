@@ -1,0 +1,767 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-27T05:54:18.016Z",
+  "updatedAt": "2025-03-27T06:08:41.781768Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-27T06:08:33.419Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "ccc74952-d280-4291-bd02-b6bd3ebac93a",
+  "version": "draft",
+  "name": "membershipExpiryAndRenewalDiscountEligibility",
+  "commitId": "commit-b3799a10-c79a-4cc5-a392-e38597ac86d7",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-27 05:54:18",
+   "timeStamp": "2025-03-27T05:54:18.016073299Z"
+  },
+  "customInput": {
+   "membershipExpiryDate": {
+ "name": "membershipExpiryDate",
+ "dataType": "date",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m8qy0fwn36y95jf5ksh",
+ "prevId": "",
+ "firstOutputData": "output_m8qxw7s7tu23sz89pe",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8qy0fwn36y95jf5ksh": {
+ "nextId": "rule_m8qy1s1bh3u9xcy2sxn",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m8qy0fwoev9d5wy6d4i",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8qy1s1bh3u9xcy2sxn": {
+ "nextId": "rule_m8qy2nzvq1r156i3wg",
+ "prevId": "rule_m8qy0fwn36y95jf5ksh",
+ "firstOutputData": "output_m8qy1s1c6op1jeeyy63",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8qy2nzvq1r156i3wg": {
+ "nextId": "",
+ "prevId": "rule_m8qy1s1bh3u9xcy2sxn",
+ "firstOutputData": "output_m8qy2nzv24lb4nf7v5p",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "rule_m8qxw1ejw3gcfdll9lo",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_m8qxw1ejw3gcfdll9lo": {
+ "nextId": "rule_m8qxw3nv7izkym7of8r",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_m8qxw3nv7izkym7of8r": {
+ "nextId": "",
+ "prevId": "rule_m8qxw1ejw3gcfdll9lo",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m8qxw7s756iehjsh30i": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "Action",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m8qxw7s756iehjsh30i",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m8qxw7s7tu23sz89pe": {
+ "name": "Action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Eligible for Standard Renewal",
+ "next": "",
+ "executedValue": "Eligible for Standard Renewal",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8qy0fwoev9d5wy6d4i": {
+ "name": "Action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Eligible for 10% Renewal Discount",
+ "next": "",
+ "executedValue": "Eligible for 10% Renewal Discount",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8qy1s1c6op1jeeyy63": {
+ "name": "Action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Eligible for 20% Last-Minute Discount",
+ "next": "",
+ "executedValue": "Eligible for 20% Last-Minute Discount",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8qy2nzv24lb4nf7v5p": {
+ "name": "Action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Membership expired - No Discount",
+ "next": "",
+ "executedValue": "Membership expired - No Discount",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "rule_m8qxw1eka0eksmhsbdq",
+  "rule_m8qxw3nvoa59al43cyg"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8qxwloa06kntnpq5svh"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "membershipExpiryDate",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qxw1ejw3gcfdll9lo": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "membershipExpiryDate",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qxw1eka0eksmhsbdq": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8qxw1ejw3gcfdll9lo"
+ ],
+ "rightNode": [
+  "rule_m8qxy8shalhi3r4i2yq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qxw3nv7izkym7of8r": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "membershipExpiryDate",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qxw3nvoa59al43cyg": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8qxw3nv7izkym7of8r"
+ ],
+ "rightNode": [
+  "rule_m8qxzrcbbktdy047h9r"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qxwloa06kntnpq5svh": {
+ "value": null,
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "Today",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qxy8shalhi3r4i2yq": {
+ "value": {
+  "FUNC_NAME": "relativeDate",
+  "duration": 30,
+  "subOp": "next",
+  "unit": "d",
+  "value": "{{.systemVar.Today}}"
+ },
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "noCodeFunc",
+ "attribute": "Today",
+ "query": "",
+ "parent": "rule_m8qxw1eka0eksmhsbdq",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qxzrcbbktdy047h9r": {
+ "value": {
+  "FUNC_NAME": "relativeDate",
+  "duration": 7,
+  "subOp": "next",
+  "unit": "d",
+  "value": "{{.systemVar.Today}}"
+ },
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "noCodeFunc",
+ "attribute": "Today",
+ "query": "",
+ "parent": "rule_m8qxw3nvoa59al43cyg",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy0fwn36y95jf5ksh": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8qy0fwnvt2kphuqf2h",
+  "rule_m8qy0fwnyqo9beu37w",
+  "rule_m8qy0fwnurln2jrm8l"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy0fwngy5wnbl49l": {
+ "value": {
+  "FUNC_NAME": "relativeDate",
+  "duration": 7,
+  "subOp": "next",
+  "unit": "d",
+  "value": "{{.systemVar.Today}}"
+ },
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "noCodeFunc",
+ "attribute": "Today",
+ "query": "",
+ "parent": "rule_m8qy0fwnurln2jrm8l",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy0fwnt2bhh9qbcy": {
+ "value": null,
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "Today",
+ "query": "",
+ "parent": "rule_m8qy0fwnvt2kphuqf2h",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy0fwnurln2jrm8l": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8qy0fwn36y95jf5ksh",
+ "children": null,
+ "leftNode": [
+  "rule_m8qxw3nv7izkym7of8r"
+ ],
+ "rightNode": [
+  "rule_m8qy0fwngy5wnbl49l"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy0fwnvt2kphuqf2h": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8qy0fwn36y95jf5ksh",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8qy0fwnt2bhh9qbcy"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy0fwnyqo9beu37w": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lt",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8qy0fwn36y95jf5ksh",
+ "children": null,
+ "leftNode": [
+  "rule_m8qxw1ejw3gcfdll9lo"
+ ],
+ "rightNode": [
+  "rule_m8qy0qkompt7hkgnkz"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy0qkompt7hkgnkz": {
+ "value": {
+  "FUNC_NAME": "relativeDate",
+  "duration": 30,
+  "subOp": "next",
+  "unit": "d",
+  "value": "{{.systemVar.Today}}"
+ },
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "noCodeFunc",
+ "attribute": "Today",
+ "query": "",
+ "parent": "rule_m8qy0fwnyqo9beu37w",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy1s1b1wjpyn8ddzz": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lt",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8qy1s1bh3u9xcy2sxn",
+ "children": null,
+ "leftNode": [
+  "rule_m8qxw1ejw3gcfdll9lo"
+ ],
+ "rightNode": [
+  "rule_m8qy1s1b4l21cbxpnwb"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy1s1b4l21cbxpnwb": {
+ "value": {
+  "FUNC_NAME": "relativeDate",
+  "duration": 30,
+  "subOp": "next",
+  "unit": "d",
+  "value": "{{.systemVar.Today}}"
+ },
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "noCodeFunc",
+ "attribute": "Today",
+ "query": "",
+ "parent": "rule_m8qy1s1b1wjpyn8ddzz",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy1s1bg463do3rfpw": {
+ "value": null,
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "Today",
+ "query": "",
+ "parent": "rule_m8qy1s1boccn06codv",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy1s1bh3u9xcy2sxn": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8qy1s1boccn06codv",
+  "rule_m8qy1s1b1wjpyn8ddzz",
+  "rule_m8qy1s1cvip06bkv2u"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy1s1boccn06codv": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8qy1s1bh3u9xcy2sxn",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8qy1s1bg463do3rfpw"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy1s1cvip06bkv2u": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lt",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8qy1s1bh3u9xcy2sxn",
+ "children": null,
+ "leftNode": [
+  "rule_m8qxw3nv7izkym7of8r"
+ ],
+ "rightNode": [
+  "rule_m8qy1zbrsxpn8wjz9ch"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy1zbrsxpn8wjz9ch": {
+ "value": {
+  "FUNC_NAME": "relativeDate",
+  "duration": 7,
+  "subOp": "next",
+  "unit": "d",
+  "value": "{{.systemVar.Today}}"
+ },
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "noCodeFunc",
+ "attribute": "Today",
+ "query": "",
+ "parent": "rule_m8qy1s1cvip06bkv2u",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy2nzvdv3m1t9vckh": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8qy2nzvq1r156i3wg",
+ "children": null,
+ "leftNode": [
+  "rule_m8qxw1ejw3gcfdll9lo"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy2nzvmjdkhnvswgb": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8qy2nzvq1r156i3wg",
+ "children": null,
+ "leftNode": [
+  "rule_m8qxw3nv7izkym7of8r"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy2nzvq1r156i3wg": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8qy2nzvtm00ykyrhv9",
+  "rule_m8qy2nzvdv3m1t9vckh",
+  "rule_m8qy2nzvmjdkhnvswgb"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy2nzvtm00ykyrhv9": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lt",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8qy2nzvq1r156i3wg",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8qy2v522rhnmebkcox"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8qy2v522rhnmebkcox": {
+ "value": null,
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "Today",
+ "query": "",
+ "parent": "rule_m8qy2nzvtm00ykyrhv9",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "membershipExpiryDate",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "This rule determines whether a user is eligible for a membership renewal discount based on their membership expiry date. It returns an action that has the suggestion to do what. The policy used here is order.",
+  "policy": "order",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2025-03-18T06:11:42.584Z",
+  "updatedAt": "2025-03-18T06:11:42.584Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "d68e5c69-c1d8-4976-81b2-cb52e21bf0d5",
+  "version": "draft",
+  "name": "Lending/loan-eligibiltyCalculator_Dataset-0.10-1742278302584",
+  "commitId": "commit-3db72f47-77c0-4293-b147-a2beafee37e8",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-18 06:11:42",
+   "timeStamp": "2025-03-18T06:11:42.5848215Z"
+  },
+  "fields": {
+   "credit_score": {
+ "ColumnName": "credit_score",
+ "DataType": "numeric",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "existing_loans": {
+ "ColumnName": "existing_loans",
+ "DataType": "boolean",
+ "Order": 2,
+ "ExecutedValue": null
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": null
+},
+   "loan_amount": {
+ "ColumnName": "loan_amount",
+ "DataType": "numeric",
+ "Order": 4,
+ "ExecutedValue": null
+}
+  },
+  "description": "",
+  "query": "select id, credit_score, existing_loans, loan_amount from financial_and_loans.loan_details;",
+  "params": null,
+  "connectorId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-03-18T06:11:42.588366Z",
+   "updatedAt": "2025-03-18T06:11:42.588366Z",
+   "entityCommitId": "commit-3db72f47-77c0-4293-b147-a2beafee37e8",
+   "entityType": "dataSet",
+   "entityId": "d68e5c69-c1d8-4976-81b2-cb52e21bf0d5",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+   "dependencyVersion": "live"
+  }
+ ]
+}

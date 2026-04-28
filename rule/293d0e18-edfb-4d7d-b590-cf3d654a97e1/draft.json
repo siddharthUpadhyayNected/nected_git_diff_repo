@@ -1,0 +1,314 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-25T05:33:39.997Z",
+  "updatedAt": "2025-04-23T11:41:38.545273Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-25T05:38:24.236Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "293d0e18-edfb-4d7d-b590-cf3d654a97e1",
+  "version": "draft",
+  "name": "kpiBasedIncentiveApprovalVariation",
+  "commitId": "commit-46e0ef54-864b-4a73-93b8-f380cd2c09b7",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-25 05:33:39",
+   "timeStamp": "2025-03-25T05:33:39.997506094Z"
+  },
+  "customInput": {
+   "kpiList": {
+ "name": "kpiList",
+ "dataType": "list",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": [
+  "KPI1",
+  "KPI2",
+  "KPI3"
+ ],
+ "config": {
+  
+ },
+ "value": null,
+ "next": "",
+ "previous": "revenue",
+ "schemaId": ""
+},
+   "revenue": {
+ "name": "revenue",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 100000,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "kpiList",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_m8hc4d62b0f37rh153i": {
+ "nextId": "rule_m8o2b0ax2m5luon15gy",
+ "prevId": "",
+ "firstOutputData": "output_m8hc4d62k7dcbi2o6ns",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8o2b0ax2m5luon15gy": {
+ "nextId": "",
+ "prevId": "rule_m8hc4d62b0f37rh153i",
+ "firstOutputData": "output_m8o2b0axwom5bgjg0sd",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m8hbuatsvrbkcfbdqgn": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "jsFormula",
+ "keyName": "incentivesEarned",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_m8hc4d62b0f37rh153i",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m8hbuatsvrbkcfbdqgn",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m8hc4d62k7dcbi2o6ns": {
+ "name": "incentivesEarned",
+ "dataType": "jsFormula",
+ "returnType": "number",
+ "value": "{\n  incentive = {{.customInput.revenue}} * .1;\n}\n\nincentive;",
+ "next": "",
+ "executedValue": 10000,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8o2b0axwom5bgjg0sd": {
+ "name": "incentivesEarned",
+ "dataType": "jsFormula",
+ "returnType": "string",
+ "value": "\"No incentives awarded\"",
+ "next": "",
+ "executedValue": "No incentives awarded",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "params",
+ "attribute": "kpiList",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8hc4d62b0f37rh153i": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8hc4d62rmgzhjlnema"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8hc4d62rmgzhjlnema": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "in",
+ "dataType": "list",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8hc4d62b0f37rh153i",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8o2addmsaq3iorf72o"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8o2addmsaq3iorf72o": {
+ "value": [
+  "KPI1",
+  "KPI2",
+  "KPI3"
+ ],
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8hc4d62rmgzhjlnema",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8o2b0ax2m5luon15gy": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8o2b0axrjxnxqo8p4j"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8o2b0axrjxnxqo8p4j": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "nin",
+ "dataType": "list",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8o2b0ax2m5luon15gy",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8o2b57jy8119pf1m0k"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8o2b57jy8119pf1m0k": {
+ "value": [
+  "KPI1",
+  "KPI2",
+  "KPI3"
+ ],
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8o2b0axrjxnxqo8p4j",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "revenue",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "The incentives will be provided to the employees upon the fact that they have achieved how many KPIs. More the KPIs more is the incentive.",
+  "policy": "unique",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

@@ -1,0 +1,499 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-20T07:30:17.358Z",
+  "updatedAt": "2025-03-25T06:11:34.320801Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-20T09:14:46.878Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "393ed8ea-dd7b-454f-94b1-be555f155f45",
+  "version": "draft",
+  "name": "timeSensitivePaymentDiscount",
+  "commitId": "commit-e8ac457f-e05f-4536-85ad-30f95dd0ac87",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-20 07:30:17",
+   "timeStamp": "2025-03-20T07:30:17.358609415Z"
+  },
+  "customInput": {
+   "dueDateBreached": {
+ "name": "dueDateBreached",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "invoiceIssueDate",
+ "schemaId": ""
+},
+   "invoiceIssueDate": {
+ "name": "invoiceIssueDate",
+ "dataType": "date",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "dueDateBreached",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m8h1e7iqpd635npujeq",
+ "prevId": "",
+ "firstOutputData": "output_m8h4thiytgbmh2sg7g",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h1e7iqpd635npujeq": {
+ "nextId": "rule_m8h1f1smxt6zm1bxbar",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m8h4thizeeg4l8y1fas",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h1f1smxt6zm1bxbar": {
+ "nextId": "",
+ "prevId": "rule_m8h1e7iqpd635npujeq",
+ "firstOutputData": "output_m8h4thizh2ot9pxvwa",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "rule_m8h1bvz2hiyxr41ofx",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_m8h1bvz2hiyxr41ofx": {
+ "nextId": "",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m8h4thiyhfgzxxc524s": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "discountOffered",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m8h4thiyhfgzxxc524s",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m8h4thiytgbmh2sg7g": {
+ "name": "discountOffered",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Avail 10% extra discount",
+ "next": "",
+ "executedValue": "Avail 10% extra discount",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h4thizeeg4l8y1fas": {
+ "name": "discountOffered",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Avail 5% discount",
+ "next": "",
+ "executedValue": "Avail 5% discount",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h4thizh2ot9pxvwa": {
+ "name": "discountOffered",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Ask to pay 5% more due to late payment. ",
+ "next": "",
+ "executedValue": "Ask to pay 5% more due to late payment. ",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "rule_m8h1bvz3n0svmu7015d"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "bet",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h4jaxam4fl6t8rc1r",
+  "rule_m8h4jaxaakjfpd2yw2l"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "invoiceIssueDate",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h1bvz2hiyxr41ofx": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "dueDateBreached",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h1bvz3n0svmu7015d": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8h1bvz2hiyxr41ofx"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h1e7iq7vtpw59tgts": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h1e7iqpd635npujeq",
+ "children": null,
+ "leftNode": [
+  "rule_m8h1bvz2hiyxr41ofx"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h1e7iqpd635npujeq": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h1e7iqrtavwi92xe",
+  "rule_m8h1e7iq7vtpw59tgts"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h1e7iqrtavwi92xe": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "bet",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h1e7iqpd635npujeq",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h1eage6v45c7xa14q",
+  "rule_m8h1eage9vekd8l3hf5"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h1eage6v45c7xa14q": {
+ "value": "2025-04-02",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h1e7iqrtavwi92xe",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h1eage9vekd8l3hf5": {
+ "value": "2025-04-09",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h1e7iqrtavwi92xe",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h1f1smomhha17kwcg": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h1f1smxt6zm1bxbar",
+ "children": null,
+ "leftNode": [
+  "rule_m8h1bvz2hiyxr41ofx"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h1f1smxt6zm1bxbar": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h1f1smzija2xsphcp",
+  "rule_m8h1f1smomhha17kwcg"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h1f1smzija2xsphcp": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "nbet",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h1f1smxt6zm1bxbar",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h4ugm9aw50dfwq5re",
+  "rule_m8h4ugm9dvohu1pp219"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h4jaxaakjfpd2yw2l": {
+ "value": "2025-04-01",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h4jaxam4fl6t8rc1r": {
+ "value": null,
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "Today",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h4ugm9aw50dfwq5re": {
+ "value": "2025-04-10",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h1f1smzija2xsphcp",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h4ugm9dvohu1pp219": {
+ "value": "2025-04-25",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h1f1smzija2xsphcp",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "invoiceIssueDate",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "Businesses often offer time-sensitive discounts to encourage early payments. This rule ensures that customers get the best discount if they pay within a certain time frame.\n\nWithin 7 Days: 10% discount on the total amount.\nWithin 15 Days: 5% discount on the total amount.\nAfter 15 Days but before the due date: No discount is applied.\nAfter the Due Date: Late fee of 5% is charged.\nThis helps businesses improve cash flow while rewarding prompt payments.",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

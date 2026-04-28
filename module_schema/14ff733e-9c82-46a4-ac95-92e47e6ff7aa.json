@@ -1,0 +1,36 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-03-05T08:59:06.337Z",
+  "updatedAt": "2026-03-05T08:59:06.337Z",
+  "isDeleted": false,
+  "entityId": "14ff733e-9c82-46a4-ac95-92e47e6ff7aa",
+  "name": "Customers",
+  "moduleId": "65ccf529-ba19-452a-a8a6-b75fed012b67",
+  "dataType": "string",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": "Siddharth"
+   },
+   {
+    "value": "XYZ"
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-03-05T08:59:06.343492Z",
+   "updatedAt": "2026-03-05T08:59:06.343492Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "14ff733e-9c82-46a4-ac95-92e47e6ff7aa",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "65ccf529-ba19-452a-a8a6-b75fed012b67",
+   "dependencyVersion": "live"
+  }
+ ]
+}

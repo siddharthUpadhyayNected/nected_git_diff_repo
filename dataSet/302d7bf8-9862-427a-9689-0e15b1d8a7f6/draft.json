@@ -1,0 +1,94 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2024-12-26T10:56:06.766Z",
+  "updatedAt": "2024-12-31T05:41:54.921641Z",
+  "isDeleted": false,
+  "testedAt": "2024-12-31T05:41:54.912Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "302d7bf8-9862-427a-9689-0e15b1d8a7f6",
+  "version": "draft",
+  "name": "Term_Insurance_Dataset",
+  "commitId": "commit-9424cbe0-903c-42e0-ae7f-c87b89ac9679",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2024-12-26 10:56:06",
+   "timeStamp": "2024-12-26T10:56:06.766957586Z"
+  },
+  "fields": {
+   "age": {
+ "ColumnName": "age",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": 43
+},
+   "alcohol_tobacco_consumption": {
+ "ColumnName": "alcohol_tobacco_consumption",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": "true"
+},
+   "dosage": {
+ "ColumnName": "dosage",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": "High"
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 6,
+ "ExecutedValue": 1
+},
+   "medication": {
+ "ColumnName": "medication",
+ "DataType": "string",
+ "Order": 7,
+ "ExecutedValue": "Drug A"
+},
+   "pre_existing_diseases": {
+ "ColumnName": "pre_existing_diseases",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": "Medium"
+},
+   "renal_function": {
+ "ColumnName": "renal_function",
+ "DataType": "numeric",
+ "Order": 2,
+ "ExecutedValue": 28
+}
+  },
+  "description": "",
+  "query": "SELECT\n    c.id,\n    c.age,\n    hd.alcohol_tobacco_consumption,\n    hd.pre_existing_diseases,\n    hd.medication,\n    hd.renal_function,\n    hd.dosage\nFROM\n    insurance.customers c\nJOIN\n    insurance.health_details hd ON c.id = hd.id;",
+  "params": null,
+  "connectorId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2024-12-26T10:56:06.776917Z",
+   "updatedAt": "2024-12-31T05:41:47.874478Z",
+   "entityCommitId": "commit-9424cbe0-903c-42e0-ae7f-c87b89ac9679",
+   "entityType": "dataSet",
+   "entityId": "302d7bf8-9862-427a-9689-0e15b1d8a7f6",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+   "dependencyVersion": "live"
+  }
+ ]
+}

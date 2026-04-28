@@ -1,0 +1,42 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-03-06T05:16:11.973Z",
+  "updatedAt": "2026-03-06T05:16:11.973Z",
+  "isDeleted": false,
+  "entityId": "0ed2ec6b-e123-4f02-8fd9-68c3be2fea7e",
+  "name": "Customer",
+  "moduleId": "65ccf529-ba19-452a-a8a6-b75fed012b67",
+  "dataType": "list",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": [
+     "abc",
+     "def"
+    ]
+   },
+   {
+    "value": [
+     "pqr",
+     "xyz"
+    ]
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-03-06T05:16:11.979994Z",
+   "updatedAt": "2026-03-06T05:16:11.979994Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "0ed2ec6b-e123-4f02-8fd9-68c3be2fea7e",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "65ccf529-ba19-452a-a8a6-b75fed012b67",
+   "dependencyVersion": "live"
+  }
+ ]
+}

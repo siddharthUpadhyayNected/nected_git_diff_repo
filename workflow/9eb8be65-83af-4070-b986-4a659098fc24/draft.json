@@ -1,0 +1,2365 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2025-06-06T11:10:44.566Z",
+  "updatedAt": "2025-06-09T09:37:22.830554Z",
+  "isDeleted": false,
+  "testedAt": "2025-06-09T09:37:22.829Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "9eb8be65-83af-4070-b986-4a659098fc24",
+  "version": "draft",
+  "name": "businessCouponsSubWF",
+  "commitId": "commit-fc2032f7-e61c-434a-848c-455d081ec8bf",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-06-06 11:10:44",
+   "timeStamp": "2025-06-06T11:10:44.566663109Z"
+  },
+  "startNode": "node_mbkpnf8fm3eh3pu41xk",
+  "description": "Calculate the business coupons sub workflow using loop node to avoid aggregation.",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "cart": {
+ "value": null,
+ "executedValue": {
+  "cartList": [
+ {
+  "brand": "Myglamm",
+  "category": "Makeup and Beauty",
+  "totalPrice": 350
+ },
+ {
+  "brand": "Prolume",
+  "category": "Toys",
+  "totalPrice": 550
+ },
+ {
+  "brand": "Myglamm",
+  "category": "Makeup and Beauty",
+  "totalPrice": 350
+ },
+ {
+  "brand": "Prolume",
+  "category": "Toys",
+  "totalPrice": 550
+ }
+]
+ },
+ "name": "cart",
+ "dataType": "json",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "listOfBrands": {
+ "value": null,
+ "executedValue": [
+  "Myglamm",
+  "Prolume"
+ ],
+ "name": "listOfBrands",
+ "dataType": "list",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "listOfCategories": {
+ "value": null,
+ "executedValue": [
+  "Makeup and Beauty",
+  "Toys"
+ ],
+ "name": "listOfCategories",
+ "dataType": "list",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "totalCartValue": {
+ "value": null,
+ "executedValue": 1000,
+ "name": "totalCartValue",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "cart": {
+ "cartList": [
+ {
+  "brand": "Myglamm",
+  "category": "Makeup and Beauty",
+  "totalPrice": 350
+ },
+ {
+  "brand": "Prolume",
+  "category": "Toys",
+  "totalPrice": 550
+ },
+ {
+  "brand": "Myglamm",
+  "category": "Makeup and Beauty",
+  "totalPrice": 350
+ },
+ {
+  "brand": "Prolume",
+  "category": "Toys",
+  "totalPrice": 550
+ }
+]
+},
+      "listOfBrands": [
+ "Myglamm",
+ "Prolume"
+],
+      "listOfCategories": [
+ "Makeup and Beauty",
+ "Toys"
+],
+      "totalCartValue": 1000
+     },
+     "settings": {
+      "authType": "none",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkpfeyvi26getoaiwn",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkpnf8fm3eh3pu41xk",
+    "type": "loopNode",
+    "data": {
+     "input": {
+      "chunkSize": {
+ "value": 1,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "concurrency": {
+ "value": 1,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "inputValue": {
+ "value": null,
+ "executedValue": [
+  "Myglamm"
+ ],
+ "name": "",
+ "dataType": "list",
+ "source": "Trigger",
+ "attribute": "listOfBrands",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "logId": "internal-loop-wf:3160:node_mbkpnf8fm3eh3pu41xk:1609f575-acc0-4daa-89f7-583ef5ab559f",
+      "output": [
+ {
+  "action": null,
+  "additionalOutput": {
+ "collectedCoupons": [
+ "ZEPTO50AU",
+ "AIRZEP",
+ "MYGLAMM5"
+]
+},
+  "error": "",
+  "output": [
+ {
+  "code": "ZEPTO50AU",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1
+ },
+ {
+  "code": "AIRZEP",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 2
+ },
+ {
+  "code": "MYGLAMM5",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 3
+ }
+],
+  "ruleId": "fd167859-c698-4a8a-895f-a67d4040961c",
+  "warnings": []
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ "collectedCoupons": [
+ "ZEPTO50AU",
+ "AIRZEP",
+ "PROLUME10"
+]
+},
+  "error": "",
+  "output": [
+ {
+  "code": "ZEPTO50AU",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1
+ },
+ {
+  "code": "AIRZEP",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 2
+ },
+ {
+  "code": "PROLUME10",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 4
+ }
+],
+  "ruleId": "fd167859-c698-4a8a-895f-a67d4040961c",
+  "warnings": []
+ }
+]
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "loopNode",
+     "entity": "loop",
+     "entityId": "node_mbkpnf8fm3eh3pu41xk",
+     "pluginName": "",
+     "status": "success",
+     "name": "BrandLoopBlock",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "loopBlock",
+     "testedAt": "2025-06-09T09:28:25.287Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 494.60003662109375,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkpnf8f9looe7k6fi4",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbkpnf8fm3eh3pu41xk",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkpnf8fi9ozu8dkphl",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "loopDoneNode",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "loopDoneNode",
+     "rootId": "node_mbkpnf8fm3eh3pu41xk",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 724.6000366210938,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkpnf8fhduz6pookj",
+    "type": "arrowNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "reverseArrowNode",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbkpnf8fm3eh3pu41xk",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 494.60003662109375,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkpobi3xy69v783csq",
+    "type": "rule",
+    "data": {
+     "input": {
+      "brand": {
+ "value": "",
+ "executedValue": null,
+ "name": "brand",
+ "dataType": "string",
+ "source": "BrandLoopBlock",
+ "attribute": "currentItem[0]",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "category": {
+ "value": "any",
+ "executedValue": null,
+ "name": "category",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "paymentGateway": {
+ "value": "",
+ "executedValue": null,
+ "name": "paymentGateway",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "value": {
+ "value": null,
+ "executedValue": null,
+ "name": "value",
+ "dataType": "numeric",
+ "source": "brandValueAggregation",
+ "attribute": "output.brandTotal",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ "collectedCoupons": [
+ "AIRZEP",
+ "MYGLAMM5",
+ "ZEPTO50AU"
+]
+},
+      "error": "",
+      "output": [
+ {
+  "code": "AIRZEP",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 2
+ },
+ {
+  "code": "MYGLAMM5",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 3
+ },
+ {
+  "code": "ZEPTO50AU",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1
+ }
+],
+      "ruleId": "fd167859-c698-4a8a-895f-a67d4040961c",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "fd167859-c698-4a8a-895f-a67d4040961c",
+     "pluginName": "",
+     "status": "success",
+     "name": "businessRulesZepto",
+     "rootId": "node_mbkpnf8fm3eh3pu41xk",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "2025-06-09T09:37:22.829Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 494.60003662109375,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkpobi3qnxo4d66srj",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbkpnf8fm3eh3pu41xk",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 494.60003662109375,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkpronkc4tw3ia30k",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "brandTotal": {
+ "value": "SUM_LIST(FILTER({{.Trigger.cart.cartList}}, `$item.$brand === \"{{.BrandLoopBlock.currentItem[0]}}\"`), \"totalPrice\");",
+ "executedValue": 250,
+ "name": "brandTotal",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "brandTotal": 700
+},
+      "resetOutput": {
+ 
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "node_mbkpronkc4tw3ia30k",
+     "pluginName": "",
+     "status": "success",
+     "name": "brandValueAggregation",
+     "rootId": "node_mbkpnf8fm3eh3pu41xk",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "testedAt": "2025-06-09T09:28:25.287Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 494.60003662109375,
+     "y": 540
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkpronkkb1g8cxdaze",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbkpnf8fm3eh3pu41xk",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 895
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbksxh6tfqxblrxl0pe",
+    "type": "loopNode",
+    "data": {
+     "input": {
+      "chunkSize": {
+ "value": 1,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "concurrency": {
+ "value": 1,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "inputValue": {
+ "value": null,
+ "executedValue": [
+  "Makeup and Beauty",
+  "Fashion"
+ ],
+ "name": "",
+ "dataType": "list",
+ "source": "Trigger",
+ "attribute": "listOfCategories",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "logId": "internal-loop-wf:3160:node_mbksxh6tfqxblrxl0pe:5606e3d7-de31-4919-99a8-65fed8d15fa1",
+      "output": [
+ {
+  "action": null,
+  "additionalOutput": {
+ "collectedCoupons": [
+ "AIRZEP",
+ "ZEPTO50AU"
+]
+},
+  "error": "",
+  "output": [
+ {
+  "code": "AIRZEP",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 2
+ },
+ {
+  "code": "ZEPTO50AU",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1
+ }
+],
+  "ruleId": "fd167859-c698-4a8a-895f-a67d4040961c",
+  "warnings": []
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ "collectedCoupons": [
+ "ZEPTO50AU",
+ "AIRZEP",
+ "TOYS100"
+]
+},
+  "error": "",
+  "output": [
+ {
+  "code": "ZEPTO50AU",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1
+ },
+ {
+  "code": "AIRZEP",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 2
+ },
+ {
+  "code": "TOYS100",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 6
+ }
+],
+  "ruleId": "fd167859-c698-4a8a-895f-a67d4040961c",
+  "warnings": []
+ }
+]
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "loopNode",
+     "entity": "loop",
+     "entityId": "node_mbksxh6tfqxblrxl0pe",
+     "pluginName": "",
+     "status": "success",
+     "name": "categoryLoopBlock",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "loopBlock",
+     "testedAt": "2025-06-09T09:28:25.287Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 494.60003662109375,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbksxh6tgbha9i8x3lp",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbksxh6tfqxblrxl0pe",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 1510
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbksxh6tvcdexf1zwha",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "loopDoneNode",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "loopDoneNode",
+     "rootId": "node_mbksxh6tfqxblrxl0pe",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 724.6000366210938,
+     "y": 1435
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbksxh6tjqfswd7a0t",
+    "type": "arrowNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "reverseArrowNode",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbksxh6tfqxblrxl0pe",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 494.60003662109375,
+     "y": 1100
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbksxzug35qihsmj8b7",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "categoryAggregation": {
+ "value": "SUM_LIST(list=FILTER({{.Trigger.cart.cartList}},`$item.$category === \"{{.categoryLoopBlock.currentItem[0]}}\"`), 'totalPrice');",
+ "executedValue": 350,
+ "name": "categoryAggregation",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "categoryAggregation": 700
+},
+      "resetOutput": {
+ 
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "node_mbksxzug35qihsmj8b7",
+     "pluginName": "",
+     "status": "success",
+     "name": "SetVariable",
+     "rootId": "node_mbksxh6tfqxblrxl0pe",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "testedAt": "2025-06-09T09:28:25.287Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 494.60003662109375,
+     "y": 1230
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbksxzug6c9de5gvmnj",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbksxh6tfqxblrxl0pe",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 494.60003662109375,
+     "y": 1305
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkt4o9uca7avw2nu1g",
+    "type": "rule",
+    "data": {
+     "input": {
+      "brand": {
+ "value": "any",
+ "executedValue": null,
+ "name": "brand",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "category": {
+ "value": "",
+ "executedValue": null,
+ "name": "category",
+ "dataType": "string",
+ "source": "categoryLoopBlock",
+ "attribute": "currentItem[0]",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "paymentGateway": {
+ "value": "",
+ "executedValue": null,
+ "name": "paymentGateway",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "value": {
+ "value": null,
+ "executedValue": null,
+ "name": "value",
+ "dataType": "numeric",
+ "source": "SetVariable",
+ "attribute": "output.categoryAggregation",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ "collectedCoupons": [
+ "AIRZEP",
+ "ZEPTO50AU"
+]
+},
+      "error": "",
+      "output": [
+ {
+  "code": "AIRZEP",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 2
+ },
+ {
+  "code": "ZEPTO50AU",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1
+ }
+],
+      "ruleId": "fd167859-c698-4a8a-895f-a67d4040961c",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "fd167859-c698-4a8a-895f-a67d4040961c",
+     "pluginName": "",
+     "status": "success",
+     "name": "businessRulesZepto1",
+     "rootId": "node_mbksxh6tfqxblrxl0pe",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "2025-06-09T09:28:25.287Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 494.60003662109375,
+     "y": 1435
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkt4o9uslgkqyg8t9e",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbksxh6tfqxblrxl0pe",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 1585
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mboryu0d8qfavh6wm5",
+    "type": "rule",
+    "data": {
+     "input": {
+      "brand": {
+ "value": "any",
+ "executedValue": null,
+ "name": "brand",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "category": {
+ "value": "any",
+ "executedValue": null,
+ "name": "category",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "paymentGateway": {
+ "value": "",
+ "executedValue": null,
+ "name": "paymentGateway",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "value": {
+ "value": null,
+ "executedValue": null,
+ "name": "value",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "totalCartValue",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ "collectedCoupons": [
+ "ZEPTO50AU",
+ "AIRZEP"
+]
+},
+      "error": "",
+      "output": [
+ {
+  "code": "ZEPTO50AU",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1
+ },
+ {
+  "code": "AIRZEP",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 2
+ }
+],
+      "ruleId": "fd167859-c698-4a8a-895f-a67d4040961c",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "fd167859-c698-4a8a-895f-a67d4040961c",
+     "pluginName": "",
+     "status": "success",
+     "name": "businessRulesZepto2",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "2025-06-09T09:28:25.287Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 1715
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mboryu0d0ww2akrrgyxj",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 1790
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mboulou28sarqnl2wzn",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "brandWiseCoupons": {
+ "value": "FILTER({{.BrandLoopBlock.output}},\"\" , \"additionalOutput.collectedCoupons\").flat()\n",
+ "executedValue": [
+  "ZEPTO50AU",
+  "AIRZEP",
+  "MYGLAMM5",
+  "AIRZEP",
+  "ZEPTO50AU",
+  "PROLUME10"
+ ],
+ "name": "brandWiseCoupons",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "businessCoupons": {
+ "value": "a = {{.currentNode.brandWiseCoupons}}.concat({{.currentNode.categoryWiseCoupons}});\nb = a.concat({{.currentNode.overallCoupons}});\nDISTINCT(b);",
+ "executedValue": [
+  "ZEPTO50AU",
+  "AIRZEP",
+  "MYGLAMM5",
+  "PROLUME10",
+  "TOYS100"
+ ],
+ "name": "businessCoupons",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 3,
+ "schemaId": ""
+},
+      "categoryWiseCoupons": {
+ "value": "FILTER({{.categoryLoopBlock.output}},\"\" , \"additionalOutput.collectedCoupons\").flat()",
+ "executedValue": [
+  "AIRZEP",
+  "ZEPTO50AU",
+  "AIRZEP",
+  "TOYS100",
+  "ZEPTO50AU"
+ ],
+ "name": "categoryWiseCoupons",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+},
+      "overallCoupons": {
+ "value": "FILTER({{.businessRulesZepto2.additionalOutput.collectedCoupons}}, '')",
+ "executedValue": [
+  "AIRZEP",
+  "ZEPTO50AU"
+ ],
+ "name": "overallCoupons",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 2,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "brandWiseCoupons": [
+ "ZEPTO50AU",
+ "AIRZEP",
+ "MYGLAMM5",
+ "ZEPTO50AU",
+ "AIRZEP",
+ "PROLUME10"
+],
+ "businessCoupons": [
+ "ZEPTO50AU",
+ "AIRZEP",
+ "MYGLAMM5",
+ "PROLUME10",
+ "TOYS100"
+],
+ "categoryWiseCoupons": [
+ "AIRZEP",
+ "ZEPTO50AU",
+ "ZEPTO50AU",
+ "AIRZEP",
+ "TOYS100"
+],
+ "overallCoupons": [
+ "ZEPTO50AU",
+ "AIRZEP"
+]
+},
+      "resetOutput": {
+ 
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "node_mboulou28sarqnl2wzn",
+     "pluginName": "",
+     "status": "success",
+     "name": "couponAggregation",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "testedAt": "2025-06-09T09:28:25.288Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 1920
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mboulou25an0y1r3tov",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 1995
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbovave8wur2dr5qjf",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "businessCoupons": {
+ "value": null,
+ "executedValue": [
+  "ZEPTO50AU",
+  "AIRZEP",
+  "MYGLAMM5",
+  "PROLUME10",
+  "TOYS100"
+ ],
+ "name": "businessCoupons",
+ "dataType": "list",
+ "source": "couponAggregation",
+ "attribute": "output.businessCoupons",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "businessCoupons": [
+ "ZEPTO50AU",
+ "AIRZEP",
+ "MYGLAMM5",
+ "PROLUME10",
+ "TOYS100"
+]
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_mbovave8wur2dr5qjf",
+     "pluginName": "",
+     "status": "success",
+     "name": "Response",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "2025-06-09T09:28:25.288Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 609.6000366210938,
+     "y": 2125
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbovave8gxqg6mr0xm5",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkpfeyv0duugufw3owb",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "node_mbkpfeyvi26getoaiwn",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkpnf8fsca2m1nfq0s",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkpfeyvi26getoaiwn",
+    "target": "node_mbkpnf8fm3eh3pu41xk",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkpnf8f6n1mcapklon",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkpnf8fm3eh3pu41xk",
+    "target": "node_mbkpnf8f9looe7k6fi4",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkpnf8f33n4k9ut6dq",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkpnf8fm3eh3pu41xk",
+    "target": "node_mbkpnf8fhduz6pookj",
+    "data": {
+     "edgeType": "ignore",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkpnf8fyy9fg1xl9o",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkpnf8fhduz6pookj",
+    "target": "node_mbkpnf8fi9ozu8dkphl",
+    "data": {
+     "edgeType": "ignore",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkpobi4328j2cuwzvl",
+    "markerEnd": "",
+    "label": "Loop Done",
+    "source": "node_mbkpobi3qnxo4d66srj",
+    "target": "node_mbkpnf8fi9ozu8dkphl",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkpobi303z2mb9oc9ef",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkpobi3xy69v783csq",
+    "target": "node_mbkpobi3qnxo4d66srj",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkpronlar385vxietu",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkpronkkb1g8cxdaze",
+    "target": "node_mbkpobi3xy69v783csq",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkpronlro1pmv7g4v",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkpronkc4tw3ia30k",
+    "target": "node_mbkpronkkb1g8cxdaze",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkpronl8wwi2fjgy8u",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkpnf8f9looe7k6fi4",
+    "target": "node_mbkpronkc4tw3ia30k",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbksxh6uiwyur867wxk",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkpnf8fi9ozu8dkphl",
+    "target": "node_mbksxh6tfqxblrxl0pe",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbksxh6uvh5wy0jn5mg",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbksxh6tfqxblrxl0pe",
+    "target": "node_mbksxh6tgbha9i8x3lp",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbksxh6uwix877v16mt",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbksxh6tfqxblrxl0pe",
+    "target": "node_mbksxh6tjqfswd7a0t",
+    "data": {
+     "edgeType": "ignore",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbksxh6uiir2pdtmdgs",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbksxh6tjqfswd7a0t",
+    "target": "node_mbksxh6tvcdexf1zwha",
+    "data": {
+     "edgeType": "ignore",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbksxzug6f1tod3f2zl",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbksxzug35qihsmj8b7",
+    "target": "node_mbksxzug6c9de5gvmnj",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbksxzugprbczr3e3rr",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbksxh6tgbha9i8x3lp",
+    "target": "node_mbksxzug35qihsmj8b7",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkt4o9uofdxzry4cn8",
+    "markerEnd": "",
+    "label": "Loop Done",
+    "source": "node_mbkt4o9uslgkqyg8t9e",
+    "target": "node_mbksxh6tvcdexf1zwha",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkt4o9uc4mdk6wunld",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkt4o9uca7avw2nu1g",
+    "target": "node_mbkt4o9uslgkqyg8t9e",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkt4o9u6bjgc99lyy4",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbksxzug6c9de5gvmnj",
+    "target": "node_mbkt4o9uca7avw2nu1g",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mboryu0dkzjbwm92swf",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mboryu0d8qfavh6wm5",
+    "target": "node_mboryu0d0ww2akrrgyxj",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mboryu0d123ixsmsigai",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbksxh6tvcdexf1zwha",
+    "target": "node_mboryu0d8qfavh6wm5",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mboulou3h1y9v0xn1k6",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mboulou28sarqnl2wzn",
+    "target": "node_mboulou25an0y1r3tov",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mboulou3he2wu2x573t",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mboryu0d0ww2akrrgyxj",
+    "target": "node_mboulou28sarqnl2wzn",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbovave8b5oadxlz2sa",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbovave8wur2dr5qjf",
+    "target": "node_mbovave8gxqg6mr0xm5",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbovave81erxjitj3h2",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mboulou25an0y1r3tov",
+    "target": "node_mbovave8wur2dr5qjf",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": null,
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-06-06T11:17:43.317192Z",
+   "updatedAt": "2025-06-09T09:28:13.428233Z",
+   "entityCommitId": "commit-fc2032f7-e61c-434a-848c-455d081ec8bf",
+   "entityType": "workflow",
+   "entityId": "9eb8be65-83af-4070-b986-4a659098fc24",
+   "entityVersion": "draft",
+   "entityNodeId": "node_mbkpobi3xy69v783csq",
+   "dependencyType": "rule",
+   "dependencyId": "fd167859-c698-4a8a-895f-a67d4040961c",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-06-06T12:54:24.88923Z",
+   "updatedAt": "2025-06-09T09:28:13.426172Z",
+   "entityCommitId": "commit-fc2032f7-e61c-434a-848c-455d081ec8bf",
+   "entityType": "workflow",
+   "entityId": "9eb8be65-83af-4070-b986-4a659098fc24",
+   "entityVersion": "draft",
+   "entityNodeId": "node_mbkt4o9uca7avw2nu1g",
+   "dependencyType": "rule",
+   "dependencyId": "fd167859-c698-4a8a-895f-a67d4040961c",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-06-09T07:32:56.355799Z",
+   "updatedAt": "2025-06-09T09:28:13.42414Z",
+   "entityCommitId": "commit-fc2032f7-e61c-434a-848c-455d081ec8bf",
+   "entityType": "workflow",
+   "entityId": "9eb8be65-83af-4070-b986-4a659098fc24",
+   "entityVersion": "draft",
+   "entityNodeId": "node_mboryu0d8qfavh6wm5",
+   "dependencyType": "rule",
+   "dependencyId": "fd167859-c698-4a8a-895f-a67d4040961c",
+   "dependencyVersion": "draft"
+  }
+ ]
+}

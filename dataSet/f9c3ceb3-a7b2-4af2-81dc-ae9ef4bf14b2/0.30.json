@@ -1,0 +1,80 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "live": true,
+ "data": {
+  "createdAt": "2025-02-21T12:36:12.904Z",
+  "updatedAt": "2025-02-24T12:46:25.092Z",
+  "isDeleted": false,
+  "testedAt": "2025-02-24T12:46:01.519Z",
+  "publishedAt": "2025-02-24T12:46:25.084Z",
+  "entityId": "f9c3ceb3-a7b2-4af2-81dc-ae9ef4bf14b2",
+  "version": "0.30",
+  "name": "coupon  table source",
+  "commitId": "commit-840c9189-7d17-4a4f-bfa7-9b9acff81217",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Forked from 0.20",
+   "description": "Required fetch",
+   "timeStamp": "2025-02-24T12:46:25.077Z"
+  },
+  "fields": {
+   "cat_array": {
+ "ColumnName": "cat_array",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": "{Appliances}"
+},
+   "coupon_code": {
+ "ColumnName": "coupon_code",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": "COUPON_1"
+},
+   "minimum_order_value": {
+ "ColumnName": "minimum_order_value",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": 110
+},
+   "sku_array": {
+ "ColumnName": "sku_array",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": "{SKU222}"
+}
+  },
+  "description": "",
+  "query": "SELECT string_to_array(sku_name, ',') as sku_array, string_to_array(category_name, ',') as cat_array, coupon_code , minimum_order_value\nFROM coupons\nGROUP BY coupon_code\nORDER BY id ASC\n",
+  "params": {
+   
+  },
+  "connectorId": "0b5ede46-75c1-413d-bff6-0912b1a77dc0",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-02-24T12:12:03.583337Z",
+   "updatedAt": "2025-02-24T12:46:25.10126Z",
+   "entityCommitId": "commit-840c9189-7d17-4a4f-bfa7-9b9acff81217",
+   "entityType": "dataSet",
+   "entityId": "f9c3ceb3-a7b2-4af2-81dc-ae9ef4bf14b2",
+   "entityVersion": "0.30",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "0b5ede46-75c1-413d-bff6-0912b1a77dc0",
+   "dependencyVersion": "live"
+  }
+ ]
+}

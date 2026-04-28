@@ -1,0 +1,16 @@
+{
+ "entityType": "connector",
+ "category": "postgres",
+ "data": {
+  "createdAt": "2025-02-21T12:27:37.603Z",
+  "updatedAt": "2025-02-21T12:30:38.625806Z",
+  "isDeleted": false,
+  "entityId": "0b5ede46-75c1-413d-bff6-0912b1a77dc0",
+  "name": "CouponDB",
+  "isDemo": false,
+  "category": "database",
+  "isSource": true,
+  "isAction": true,
+  "isTrigger": true
+ }
+}

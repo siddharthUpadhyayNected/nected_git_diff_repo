@@ -1,0 +1,1581 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-05-29T05:38:28.377Z",
+  "updatedAt": "2025-05-29T06:46:07.598905Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "8e10e5d4-22f4-43df-826b-33dc86fc61a7",
+  "version": "draft",
+  "name": "Zepto_Coupons_Each",
+  "commitId": "commit-22fd2f31-ab02-4938-a737-2f37fa0f6586",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-05-29 05:38:28",
+   "timeStamp": "2025-05-29T05:38:28.377416456Z"
+  },
+  "customInput": {
+   "name": {
+ "name": "name",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "MakeUp & Beauty",
+ "config": null,
+ "value": null,
+ "next": "value",
+ "previous": "type",
+ "schemaId": ""
+},
+   "type": {
+ "name": "type",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "category",
+ "config": null,
+ "value": null,
+ "next": "name",
+ "previous": "",
+ "schemaId": ""
+},
+   "value": {
+ "name": "value",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 360,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "name",
+ "schemaId": ""
+}
+  },
+  "ruleChain": {
+   
+  },
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_lym7ywspmdoz5br1wd8",
+ "prevId": "",
+ "firstOutputData": "output_lym7liowbxw4gq7fv35",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_lym7ywspmdoz5br1wd8": {
+ "nextId": "rule_lym7yxj6n6qf4e78mz",
+ "prevId": "rule_01",
+ "firstOutputData": "output_lym7ywsp67kx61whx0w",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_lym7yxj6n6qf4e78mz": {
+ "nextId": "rule_lym87rlve2byndo7zxa",
+ "prevId": "rule_lym7ywspmdoz5br1wd8",
+ "firstOutputData": "output_lym7yxj662q6u6zv6yp",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_lym87rlve2byndo7zxa": {
+ "nextId": "rule_lym89sxnlqhdo5byu2",
+ "prevId": "rule_lym7yxj6n6qf4e78mz",
+ "firstOutputData": "output_lym87rlwz1vv5sn5uk",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_lym89sxnlqhdo5byu2": {
+ "nextId": "rule_lym8c6gfolwat3q677",
+ "prevId": "rule_lym87rlve2byndo7zxa",
+ "firstOutputData": "output_lym89sxnsciqqxlnt1e",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_lym8c6gfolwat3q677": {
+ "nextId": "",
+ "prevId": "rule_lym89sxnlqhdo5byu2",
+ "firstOutputData": "output_lym8c6ggp2s067d21l",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_lym8iu28h4i9afcl5mu": {
+ "nextId": "rule_lym8j6dvtftcne8p17r",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_lym8j6dvtftcne8p17r": {
+ "nextId": "rule_lym8j7zjcvonkozeql",
+ "prevId": "rule_lym8iu28h4i9afcl5mu",
+ "type": "simpleCondition"
+},
+    "rule_lym8j7zjcvonkozeql": {
+ "nextId": "",
+ "prevId": "rule_lym8j6dvtftcne8p17r",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_lym7liooxcwk57d7unb": {
+ "nextId": "result_lym7lxberirv8a72ivp",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "code",
+ "schemaId": ""
+},
+    "result_lym7lxberirv8a72ivp": {
+ "nextId": "result_lym7lysi2i6ukrauprf",
+ "prevId": "result_lym7liooxcwk57d7unb",
+ "dataType": "string",
+ "keyName": "main",
+ "schemaId": ""
+},
+    "result_lym7lysi2i6ukrauprf": {
+ "nextId": "result_lym7m08h137r0dd69j7",
+ "prevId": "result_lym7lxberirv8a72ivp",
+ "dataType": "string",
+ "keyName": "description",
+ "schemaId": ""
+},
+    "result_lym7m08h137r0dd69j7": {
+ "nextId": "result_lym7rmit2142npgjwv8",
+ "prevId": "result_lym7lysi2i6ukrauprf",
+ "dataType": "string",
+ "keyName": "discount_type",
+ "schemaId": ""
+},
+    "result_lym7rmit2142npgjwv8": {
+ "nextId": "result_lym8elqabcsf094m6n5",
+ "prevId": "result_lym7m08h137r0dd69j7",
+ "dataType": "numeric",
+ "keyName": "discount_value",
+ "schemaId": ""
+},
+    "result_lym7wp9f047q5r3f7mzi": {
+ "nextId": "",
+ "prevId": "result_lym8elqabcsf094m6n5",
+ "dataType": "json",
+ "keyName": "meta",
+ "schemaId": ""
+},
+    "result_lym8elqabcsf094m6n5": {
+ "nextId": "result_lym7wp9f047q5r3f7mzi",
+ "prevId": "result_lym7rmit2142npgjwv8",
+ "dataType": "string",
+ "keyName": "payment_gateway",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_lym8iu28h4i9afcl5mu",
+   "firstResult": "result_lym7liooxcwk57d7unb",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_lym7liowbxw4gq7fv35": {
+ "name": "code",
+ "dataType": "string",
+ "returnType": "",
+ "value": "ZEPTO50AU",
+ "next": "output_lym7lxbnxlootifduo",
+ "executedValue": "ZEPTO50AU",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7lxbnxlootifduo": {
+ "name": "main",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Get flat 50 off using AU Credit cards",
+ "next": "output_lym7lysppr2v8ihshyq",
+ "executedValue": "Get flat 50 off using AU Credit cards",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7lysppr2v8ihshyq": {
+ "name": "description",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Get flat 50 off on transactions above ₹599 using AU Credit Cards",
+ "next": "output_lym7m08p6tjhwlctvmj",
+ "executedValue": "Get flat 50 off on transactions above ₹599 using AU Credit Cards",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7m08p6tjhwlctvmj": {
+ "name": "discount_type",
+ "dataType": "string",
+ "returnType": "",
+ "value": "fixed",
+ "next": "output_lym7rmj0aelb0gpzrtb",
+ "executedValue": "fixed",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7rmj0aelb0gpzrtb": {
+ "name": "discount_value",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 50,
+ "next": "output_lym8elqk0ibmbft1mxid",
+ "executedValue": 50,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7wp9mubh36q9663": {
+ "name": "meta",
+ "dataType": "json",
+ "returnType": "",
+ "value": "{\n    \"discount_on\": \"overall\",\n    \"discount_on_name\": \"Payment Gateyway\",\n    \"max_discount\": 50,\n    \"min_transaction\": 599,\n    \"validity_start\": \"2024-07-01T00:00:00Z\",\n    \"validity_end\": \"2024-09-31T23:59:59Z\",\n    \"allow_count\": 1,\n    \"terms\": \"Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on AU Credit Cards<br>• Minimum transaction: ₹599<br>• Maximum discount: ₹50<br>• Offer valid between 1st-31st July '24 11:59 PM<br>• Other T&C may apply\"\n}",
+ "next": "",
+ "executedValue": {
+  "allow_count": 1,
+  "discount_on": "overall",
+  "discount_on_name": "Payment Gateyway",
+  "max_discount": 50,
+  "min_transaction": 599,
+  "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on AU Credit Cards<br>• Minimum transaction: ₹599<br>• Maximum discount: ₹50<br>• Offer valid between 1st-31st July '24 11:59 PM<br>• Other T&C may apply",
+  "validity_end": "2024-09-31T23:59:59Z",
+  "validity_start": "2024-07-01T00:00:00Z"
+ },
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7ywsp67kx61whx0w": {
+ "name": "code",
+ "dataType": "string",
+ "returnType": "",
+ "value": "AIRZEP",
+ "next": "output_lym7ywspme7r0rkzgxk",
+ "executedValue": "AIRZEP",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7ywsp849eylhiyih": {
+ "name": "meta",
+ "dataType": "json",
+ "returnType": "",
+ "value": "{\n    \"discount_on\": \"overall\",\n    \"discount_on_name\": \"Payment Gateyway\",\n    \"max_discount\": null,\n    \"min_transaction\": 399,\n    \"validity_start\": \"2024-07-01T00:00:00Z\",\n    \"validity_end\": \"2024-09-31T23:59:59Z\",\n    \"allow_count\": 1,\n    \"terms\": \"Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on Airtel Payments Bank<br>• Cashback would be credited within 72 business hours in the user's Airtel Payments Bank wallet or savings account.<br>• Offer valid between 1st July-31st July '24 11:59 PM<br>• Other T&C may apply\"\n}",
+ "next": "",
+ "executedValue": {
+  "allow_count": 1,
+  "discount_on": "overall",
+  "discount_on_name": "Payment Gateyway",
+  "max_discount": null,
+  "min_transaction": 399,
+  "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on Airtel Payments Bank<br>• Cashback would be credited within 72 business hours in the user's Airtel Payments Bank wallet or savings account.<br>• Offer valid between 1st July-31st July '24 11:59 PM<br>• Other T&C may apply",
+  "validity_end": "2024-09-31T23:59:59Z",
+  "validity_start": "2024-07-01T00:00:00Z"
+ },
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7ywspghn871nr1xs": {
+ "name": "discount_type",
+ "dataType": "string",
+ "returnType": "",
+ "value": "cashback",
+ "next": "output_lym7ywspzxi8mmqizbm",
+ "executedValue": "cashback",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7ywspme7r0rkzgxk": {
+ "name": "main",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Get up to 80 cashback on orders above ₹399",
+ "next": "output_lym7ywspu8he5848hl",
+ "executedValue": "Get up to 80 cashback on orders above ₹399",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7ywspu8he5848hl": {
+ "name": "description",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Get flat 80 cashback on orders above ₹399 via Airtel Payment Bank Wallet and Netbanking",
+ "next": "output_lym7ywspghn871nr1xs",
+ "executedValue": "Get flat 80 cashback on orders above ₹399 via Airtel Payment Bank Wallet and Netbanking",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7ywspzxi8mmqizbm": {
+ "name": "discount_value",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 80,
+ "next": "output_lym8elrwklyqwi6luvi",
+ "executedValue": 80,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7yxj61ru6lm62vc1": {
+ "name": "discount_value",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 5,
+ "next": "output_lym8elsjsrg57ty7snm",
+ "executedValue": 5,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7yxj640nam8zzn1h": {
+ "name": "meta",
+ "dataType": "json",
+ "returnType": "",
+ "value": "{\n    \"discount_on\": \"brand\",\n    \"discount_on_name\": \"MyGlamm\",\n    \"max_discount\": null,\n    \"min_transaction\": 299,\n    \"validity_start\": \"2024-07-01T00:00:00Z\",\n    \"validity_end\": \"2024-09-31T23:59:59Z\",\n    \"allow_count\": 1,\n    \"terms\": \"Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on MyGlamm Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.\"\n}",
+ "next": "",
+ "executedValue": {
+  "allow_count": 1,
+  "discount_on": "brand",
+  "discount_on_name": "MyGlamm",
+  "max_discount": null,
+  "min_transaction": 299,
+  "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on MyGlamm Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+  "validity_end": "2024-09-31T23:59:59Z",
+  "validity_start": "2024-07-01T00:00:00Z"
+ },
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7yxj64t14jdqjup": {
+ "name": "main",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Flat 5% Off on MyGlamm products",
+ "next": "output_lym7yxj6jvrictrssiq",
+ "executedValue": "Flat 5% Off on MyGlamm products",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7yxj662q6u6zv6yp": {
+ "name": "code",
+ "dataType": "string",
+ "returnType": "",
+ "value": "MYGLAMM5",
+ "next": "output_lym7yxj64t14jdqjup",
+ "executedValue": "MYGLAMM5",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7yxj6jvrictrssiq": {
+ "name": "description",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Get Flat 5% Off on MyGlamm products",
+ "next": "output_lym7yxj6xqkt17je2ys",
+ "executedValue": "Get Flat 5% Off on MyGlamm products",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym7yxj6xqkt17je2ys": {
+ "name": "discount_type",
+ "dataType": "string",
+ "returnType": "",
+ "value": "percent",
+ "next": "output_lym7yxj61ru6lm62vc1",
+ "executedValue": "percent",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym87rlwd73828nr509": {
+ "name": "description",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Get Flat 10% Off on Prolume products",
+ "next": "output_lym87rlwxkmhi2cyuc",
+ "executedValue": "Get Flat 10% Off on Prolume products",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym87rlwfrre9jcvng": {
+ "name": "discount_value",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 10,
+ "next": "output_lym8elt8kcl1ln36bh",
+ "executedValue": 10,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym87rlwnuthchdo5h": {
+ "name": "main",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Flat 10% Off on Prolume products",
+ "next": "output_lym87rlwd73828nr509",
+ "executedValue": "Flat 10% Off on Prolume products",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym87rlwxkmhi2cyuc": {
+ "name": "discount_type",
+ "dataType": "string",
+ "returnType": "",
+ "value": "percent",
+ "next": "output_lym87rlwfrre9jcvng",
+ "executedValue": "percent",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym87rlwy3h6q8elbn": {
+ "name": "meta",
+ "dataType": "json",
+ "returnType": "",
+ "value": "{\n    \"discount_on\": \"brand\",\n    \"discount_on_name\": \"Prolume\",\n    \"max_discount\": null,\n    \"min_transaction\": 249,\n    \"validity_start\": \"2024-07-01T00:00:00Z\",\n    \"validity_end\": \"2024-09-31T23:59:59Z\",\n    \"allow_count\": 1,\n    \"terms\": \"Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on Prolume Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.\"\n}",
+ "next": "",
+ "executedValue": {
+  "allow_count": 1,
+  "discount_on": "brand",
+  "discount_on_name": "Prolume",
+  "max_discount": null,
+  "min_transaction": 249,
+  "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on Prolume Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+  "validity_end": "2024-09-31T23:59:59Z",
+  "validity_start": "2024-07-01T00:00:00Z"
+ },
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym87rlwz1vv5sn5uk": {
+ "name": "code",
+ "dataType": "string",
+ "returnType": "",
+ "value": "PROLUME10",
+ "next": "output_lym87rlwnuthchdo5h",
+ "executedValue": "PROLUME10",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym89sxn05fwnpqzzm03": {
+ "name": "main",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Flat 50 Off on MakeUp & Beauty",
+ "next": "output_lym89sxn558y61528gc",
+ "executedValue": "Flat 50 Off on MakeUp & Beauty",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym89sxn558y61528gc": {
+ "name": "description",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Get Flat 50 Off above ₹199. Valid only on MakeUp & Beauty",
+ "next": "output_lym89sxnkzqumsrkfi",
+ "executedValue": "Get Flat 50 Off above ₹199. Valid only on MakeUp & Beauty",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym89sxnithcfn47l1": {
+ "name": "discount_value",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 50,
+ "next": "output_lym8eltr85pfwigjmq9",
+ "executedValue": 50,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym89sxnkzqumsrkfi": {
+ "name": "discount_type",
+ "dataType": "string",
+ "returnType": "",
+ "value": "fixed",
+ "next": "output_lym89sxnithcfn47l1",
+ "executedValue": "fixed",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym89sxnsciqqxlnt1e": {
+ "name": "code",
+ "dataType": "string",
+ "returnType": "",
+ "value": "MAKEUP50",
+ "next": "output_lym89sxn05fwnpqzzm03",
+ "executedValue": "MAKEUP50",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym89sxo3f27p377go6": {
+ "name": "meta",
+ "dataType": "json",
+ "returnType": "",
+ "value": "{\n    \"discount_on\": \"category\",\n    \"discount_on_name\": \"MakeUp & Beauty\",\n    \"max_discount\": 50,\n    \"min_transaction\": 199,\n    \"validity_start\": \"2024-07-01T00:00:00Z\",\n    \"validity_end\": \"2024-09-31T23:59:59Z\",\n    \"allow_count\": 1,\n    \"terms\": \"Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹199.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on MakeUp & Beauty products.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.\"\n}",
+ "next": "",
+ "executedValue": {
+  "allow_count": 1,
+  "discount_on": "category",
+  "discount_on_name": "MakeUp & Beauty",
+  "max_discount": 50,
+  "min_transaction": 199,
+  "terms": "Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹199.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on MakeUp & Beauty products.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+  "validity_end": "2024-09-31T23:59:59Z",
+  "validity_start": "2024-07-01T00:00:00Z"
+ },
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym8c6gg00b1j3gdhmxzn": {
+ "name": "main",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Flat 100 Off on Toys",
+ "next": "output_lym8c6ggrzr15e2njdl",
+ "executedValue": "Flat 100 Off on Toys",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym8c6gg87d3cda2196": {
+ "name": "meta",
+ "dataType": "json",
+ "returnType": "",
+ "value": "{\n    \"discount_on\": \"category\",\n    \"discount_on_name\": \"Toys\",\n    \"max_discount\": 100,\n    \"min_transaction\": 299,\n    \"validity_start\": \"2024-07-01T00:00:00Z\",\n    \"validity_end\": \"2024-09-31T23:59:59Z\",\n    \"allow_count\": 1,\n    \"terms\": \"Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹299.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on Toys<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.\"\n}",
+ "next": "",
+ "executedValue": {
+  "allow_count": 1,
+  "discount_on": "category",
+  "discount_on_name": "Toys",
+  "max_discount": 100,
+  "min_transaction": 299,
+  "terms": "Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹299.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on Toys<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+  "validity_end": "2024-09-31T23:59:59Z",
+  "validity_start": "2024-07-01T00:00:00Z"
+ },
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym8c6ggp2s067d21l": {
+ "name": "code",
+ "dataType": "string",
+ "returnType": "",
+ "value": "TOYS100",
+ "next": "output_lym8c6gg00b1j3gdhmxzn",
+ "executedValue": "TOYS100",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym8c6ggrzr15e2njdl": {
+ "name": "description",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Get Flat ₹100 Off above ₹299. Valid only on Toys",
+ "next": "output_lym8c6ggtuytiwp0en",
+ "executedValue": "Get Flat ₹100 Off above ₹299. Valid only on Toys",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym8c6ggtuytiwp0en": {
+ "name": "discount_type",
+ "dataType": "string",
+ "returnType": "",
+ "value": "fixed",
+ "next": "output_lym8c6ggy79bxwp1kv",
+ "executedValue": "fixed",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym8c6ggy79bxwp1kv": {
+ "name": "discount_value",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 100,
+ "next": "output_lym8elugj1l7ebhmg9b",
+ "executedValue": 100,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym8elqk0ibmbft1mxid": {
+ "name": "payment_gateway",
+ "dataType": "string",
+ "returnType": "",
+ "value": "AU Credit Cards",
+ "next": "output_lym7wp9mubh36q9663",
+ "executedValue": "AU Credit Cards",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym8elrwklyqwi6luvi": {
+ "name": "payment_gateway",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Airtel Payment Bank",
+ "next": "output_lym7ywsp849eylhiyih",
+ "executedValue": "Airtel Payment Bank",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym8elsjsrg57ty7snm": {
+ "name": "payment_gateway",
+ "dataType": "string",
+ "returnType": "",
+ "value": "any",
+ "next": "output_lym7yxj640nam8zzn1h",
+ "executedValue": "any",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym8elt8kcl1ln36bh": {
+ "name": "payment_gateway",
+ "dataType": "string",
+ "returnType": "",
+ "value": "any",
+ "next": "output_lym87rlwy3h6q8elbn",
+ "executedValue": "any",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym8eltr85pfwigjmq9": {
+ "name": "payment_gateway",
+ "dataType": "string",
+ "returnType": "",
+ "value": "any",
+ "next": "output_lym89sxo3f27p377go6",
+ "executedValue": "any",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lym8elugj1l7ebhmg9b": {
+ "name": "payment_gateway",
+ "dataType": "string",
+ "returnType": "",
+ "value": "any",
+ "next": "output_lym8c6gg87d3cda2196",
+ "executedValue": "any",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_lym8iu29gaeet1gng7j",
+  "rule_lym8j6dvlilpu0wxoto",
+  "rule_lym8j7zk0g5wx4l1g06"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym7ywspmdoz5br1wd8": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_lym8iu2hb1oqrjwqaz",
+  "rule_lym8j6e54r3oano8dcj",
+  "rule_lym8j7zvr4ss0fclm9m"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym7yxj6n6qf4e78mz": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_lym8iu2ozkg21mkaf7l",
+  "rule_lym8j6egnts40qdu5z9",
+  "rule_lym8j805cmmncli71eh"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym87rlve2byndo7zxa": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_lym8iu2vc2gs2dn48i",
+  "rule_lym8j6eso11aodn1g",
+  "rule_lym8j80g32w5raes5bh"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym89sxnlqhdo5byu2": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_lym8iu33bpqcwmsuz2l",
+  "rule_lym8j6f3ltl9d5cir8m",
+  "rule_lym8j80qbv0adsg6t9h"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8c6gfolwat3q677": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_lym8iu3ghxfjvasu9ww",
+  "rule_lym8j6fajt2zu9cxb4c",
+  "rule_lym8j80xkgo3mb4ocxl"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8iu28h4i9afcl5mu": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "type",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8iu29gaeet1gng7j": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_lym8iu28h4i9afcl5mu"
+ ],
+ "rightNode": [
+  "rule_lym94a3cq7p145gih1o"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8iu2hb1oqrjwqaz": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym7ywspmdoz5br1wd8",
+ "children": null,
+ "leftNode": [
+  "rule_lym8iu28h4i9afcl5mu"
+ ],
+ "rightNode": [
+  "rule_lym94gs2whojdol2v09"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8iu2ozkg21mkaf7l": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym7yxj6n6qf4e78mz",
+ "children": null,
+ "leftNode": [
+  "rule_lym8iu28h4i9afcl5mu"
+ ],
+ "rightNode": [
+  "rule_lym8x055x6p364xiuuk"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8iu2vc2gs2dn48i": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym87rlve2byndo7zxa",
+ "children": null,
+ "leftNode": [
+  "rule_lym8iu28h4i9afcl5mu"
+ ],
+ "rightNode": [
+  "rule_lym8x759e1n8rjwp9z"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8iu33bpqcwmsuz2l": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym89sxnlqhdo5byu2",
+ "children": null,
+ "leftNode": [
+  "rule_lym8iu28h4i9afcl5mu"
+ ],
+ "rightNode": [
+  "rule_lym8xomf606q6jh5d18"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8iu3ghxfjvasu9ww": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8c6gfolwat3q677",
+ "children": null,
+ "leftNode": [
+  "rule_lym8iu28h4i9afcl5mu"
+ ],
+ "rightNode": [
+  "rule_lym8xrb9vvcj2sa3mn"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j6dvlilpu0wxoto": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_lym8j6dvtftcne8p17r"
+ ],
+ "rightNode": [
+  "rule_lym94ou7dlsm4p39tya"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j6dvtftcne8p17r": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "name",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j6e54r3oano8dcj": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym7ywspmdoz5br1wd8",
+ "children": null,
+ "leftNode": [
+  "rule_lym8j6dvtftcne8p17r"
+ ],
+ "rightNode": [
+  "rule_lym94z4kbz6u9pvyc6q"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j6egnts40qdu5z9": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym7yxj6n6qf4e78mz",
+ "children": null,
+ "leftNode": [
+  "rule_lym8j6dvtftcne8p17r"
+ ],
+ "rightNode": [
+  "rule_lym8xwsdmom7g6nr428"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j6eso11aodn1g": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym87rlve2byndo7zxa",
+ "children": null,
+ "leftNode": [
+  "rule_lym8j6dvtftcne8p17r"
+ ],
+ "rightNode": [
+  "rule_lym8xy7xgza0tnbtpie"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j6f3ltl9d5cir8m": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym89sxnlqhdo5byu2",
+ "children": null,
+ "leftNode": [
+  "rule_lym8j6dvtftcne8p17r"
+ ],
+ "rightNode": [
+  "rule_lym8y1jxsd6orkts71"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j6fajt2zu9cxb4c": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8c6gfolwat3q677",
+ "children": null,
+ "leftNode": [
+  "rule_lym8j6dvtftcne8p17r"
+ ],
+ "rightNode": [
+  "rule_lym8y37wozihkry3vqn"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j7zjcvonkozeql": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "value",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j7zk0g5wx4l1g06": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_lym8j7zjcvonkozeql"
+ ],
+ "rightNode": [
+  "rule_lym95a5f7nvz4gh89fn"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j7zvr4ss0fclm9m": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym7ywspmdoz5br1wd8",
+ "children": null,
+ "leftNode": [
+  "rule_lym8j7zjcvonkozeql"
+ ],
+ "rightNode": [
+  "rule_lym95cauruo7amjrejb"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j805cmmncli71eh": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym7yxj6n6qf4e78mz",
+ "children": null,
+ "leftNode": [
+  "rule_lym8j7zjcvonkozeql"
+ ],
+ "rightNode": [
+  "rule_lym95ed1253xktu9b5p"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j80g32w5raes5bh": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym87rlve2byndo7zxa",
+ "children": null,
+ "leftNode": [
+  "rule_lym8j7zjcvonkozeql"
+ ],
+ "rightNode": [
+  "rule_lym95gj1zwrqg6ggoy"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j80qbv0adsg6t9h": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym89sxnlqhdo5byu2",
+ "children": null,
+ "leftNode": [
+  "rule_lym8j7zjcvonkozeql"
+ ],
+ "rightNode": [
+  "rule_lym95ir7yxbxruo6vxr"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8j80xkgo3mb4ocxl": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8c6gfolwat3q677",
+ "children": null,
+ "leftNode": [
+  "rule_lym8j7zjcvonkozeql"
+ ],
+ "rightNode": [
+  "rule_lym95l95qqad65l38r"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8x055x6p364xiuuk": {
+ "value": "brand",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8iu2ozkg21mkaf7l",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8x759e1n8rjwp9z": {
+ "value": "brand",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8iu2vc2gs2dn48i",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8xomf606q6jh5d18": {
+ "value": "category",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8iu33bpqcwmsuz2l",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8xrb9vvcj2sa3mn": {
+ "value": "category",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8iu3ghxfjvasu9ww",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8xwsdmom7g6nr428": {
+ "value": "MyGlamm",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8j6egnts40qdu5z9",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8xy7xgza0tnbtpie": {
+ "value": "Prolume",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8j6eso11aodn1g",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8y1jxsd6orkts71": {
+ "value": "MakeUp & Beauty",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8j6f3ltl9d5cir8m",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym8y37wozihkry3vqn": {
+ "value": "Toys",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8j6fajt2zu9cxb4c",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym94a3cq7p145gih1o": {
+ "value": "overall",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8iu29gaeet1gng7j",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym94gs2whojdol2v09": {
+ "value": "overall",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8iu2hb1oqrjwqaz",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym94ou7dlsm4p39tya": {
+ "value": "Payment Gateway",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8j6dvlilpu0wxoto",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym94z4kbz6u9pvyc6q": {
+ "value": "Payment Gateway",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8j6e54r3oano8dcj",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym95a5f7nvz4gh89fn": {
+ "value": 599,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8j7zk0g5wx4l1g06",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym95cauruo7amjrejb": {
+ "value": 399,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8j7zvr4ss0fclm9m",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym95ed1253xktu9b5p": {
+ "value": 299,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8j805cmmncli71eh",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym95gj1zwrqg6ggoy": {
+ "value": 249,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8j80g32w5raes5bh",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym95ir7yxbxruo6vxr": {
+ "value": 199,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8j80qbv0adsg6t9h",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_lym95l95qqad65l38r": {
+ "value": 299,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_lym8j80xkgo3mb4ocxl",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "type",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "order",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": [],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": false
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": null,
+  "schemaVersion": "0.1.1"
+ }
+}

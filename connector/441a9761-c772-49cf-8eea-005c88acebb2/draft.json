@@ -1,0 +1,16 @@
+{
+ "entityType": "connector",
+ "category": "gsheet",
+ "data": {
+  "createdAt": "2025-06-24T10:28:49.998Z",
+  "updatedAt": "2025-06-24T10:28:49.998Z",
+  "isDeleted": false,
+  "entityId": "441a9761-c772-49cf-8eea-005c88acebb2",
+  "name": "Kindle Price",
+  "isDemo": false,
+  "category": "third-party",
+  "isSource": true,
+  "isAction": true,
+  "isTrigger": false
+ }
+}
