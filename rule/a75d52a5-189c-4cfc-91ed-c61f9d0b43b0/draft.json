@@ -1,0 +1,898 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2026-05-19T02:42:37.876Z",
+  "updatedAt": "2026-06-13T01:08:41.663632Z",
+  "isDeleted": false,
+  "testedAt": "2026-05-19T06:38:31.642Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "a75d52a5-189c-4cfc-91ed-c61f9d0b43b0",
+  "version": "draft",
+  "name": "Delivery fee calculator",
+  "commitId": "commit-25fa6696-7b91-49c7-b303-0d679449c361",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-05-19 02:42:37",
+   "timeStamp": "2026-05-19T02:42:37.876916636Z"
+  },
+  "customInput": {
+   "distance_km": {
+ "name": "distance_km",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 7,
+ "config": null,
+ "value": "",
+ "next": "rain",
+ "previous": "",
+ "schemaId": ""
+},
+   "membership": {
+ "name": "membership",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "gold",
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "order_value",
+ "schemaId": ""
+},
+   "order_value": {
+ "name": "order_value",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 450,
+ "config": null,
+ "value": "",
+ "next": "membership",
+ "previous": "rain",
+ "schemaId": ""
+},
+   "rain": {
+ "name": "rain",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": true,
+ "config": null,
+ "value": "",
+ "next": "order_value",
+ "previous": "distance_km",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "g_HLhKe9": {
+ "nextId": "g_q1p7mJ",
+ "prevId": "g_ReXTBq",
+ "firstOutputData": "output_eaHfJS",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "g_ReXTBq": {
+ "nextId": "g_HLhKe9",
+ "prevId": "rule_01",
+ "firstOutputData": "output_k7OOcg",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "g_q1p7mJ": {
+ "nextId": "",
+ "prevId": "g_HLhKe9",
+ "firstOutputData": "output_DXROID",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_01": {
+ "nextId": "g_ReXTBq",
+ "prevId": "",
+ "firstOutputData": "output_hqkr2q",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "param_VtBWur": {
+ "nextId": "",
+ "prevId": "param_v3QAOj",
+ "type": "simpleCondition"
+},
+    "param_pjm9cP": {
+ "nextId": "param_v3QAOj",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "param_v3QAOj": {
+ "nextId": "param_VtBWur",
+ "prevId": "param_pjm9cP",
+ "type": "simpleCondition"
+},
+    "rule_03": {
+ "nextId": "param_pjm9cP",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_fZV1QZ": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "numeric",
+ "keyName": "delivery_fee",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_fZV1QZ",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_DXROID": {
+ "name": "delivery_fee",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.distance_km}} * 8",
+ "next": "",
+ "executedValue": 56,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_eaHfJS": {
+ "name": "delivery_fee",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.distance_km}}*10",
+ "next": "",
+ "executedValue": 70,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_hqkr2q": {
+ "name": "delivery_fee",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.distance_km}}*15",
+ "next": "",
+ "executedValue": 105,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_k7OOcg": {
+ "name": "delivery_fee",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.distance_km}}*12",
+ "next": "",
+ "executedValue": 84,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     "actionData_action_1": {
+ "name": "action_1",
+ "connectorId": "",
+ "entity": "rule",
+ "entityId": "4d8ffdcf-20be-4c81-887f-702151484041",
+ "pluginName": "",
+ "config": {
+  "query": ""
+ },
+ "input": {
+  "module": {
+ "name": "module",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "value": "abc",
+ "sendNull": false,
+ "notSend": false
+},
+  "submodule": {
+ "name": "submodule",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "value": "xyz",
+ "sendNull": false,
+ "notSend": false
+}
+ },
+ "next": ""
+}
+    },
+    "firstOutputData": "",
+    "firstActionNode": "actionData_action_1"
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "c_5CLswT": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "param_v3QAOj"
+ ],
+ "rightNode": [
+  "rhs_MCXxia"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_7UW5EY": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_HLhKe9",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_PobA2J"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_EjXYSm": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "param_pjm9cP"
+ ],
+ "rightNode": [
+  "rhs_8azaDM"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_FXLze3": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_HLhKe9",
+ "children": null,
+ "leftNode": [
+  "param_VtBWur"
+ ],
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_GqxrSV": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "any",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_q1p7mJ",
+ "children": null,
+ "leftNode": [
+  "param_pjm9cP"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_L0XeFC": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_HLhKe9",
+ "children": null,
+ "leftNode": [
+  "param_pjm9cP"
+ ],
+ "rightNode": [
+  "rhs_fbrmg4"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_Oby29O": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "neq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_HLhKe9",
+ "children": null,
+ "leftNode": [
+  "param_v3QAOj"
+ ],
+ "rightNode": [
+  "rhs_iaCVmT"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_R4APcP": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_q1p7mJ",
+ "children": null,
+ "leftNode": [
+  "param_v3QAOj"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_T3Srxl": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_ReXTBq",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_sWe6h9"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_XPO0mD": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_ReXTBq",
+ "children": null,
+ "leftNode": [
+  "param_VtBWur"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_ctZJTi": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_q1p7mJ",
+ "children": null,
+ "leftNode": [
+  "param_VtBWur"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_fMxNZc": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_ReXTBq",
+ "children": null,
+ "leftNode": [
+  "param_v3QAOj"
+ ],
+ "rightNode": [
+  "rhs_9nFMaa"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_oRwgyA": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "param_VtBWur"
+ ],
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_qmWyBf": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_ReXTBq",
+ "children": null,
+ "leftNode": [
+  "param_pjm9cP"
+ ],
+ "rightNode": [
+  "rhs_zQAEtK"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_sn6GcJ": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "any",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_q1p7mJ",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_HLhKe9": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_7UW5EY",
+  "c_L0XeFC",
+  "c_Oby29O",
+  "c_FXLze3"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_ReXTBq": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_T3Srxl",
+  "c_qmWyBf",
+  "c_fMxNZc",
+  "c_XPO0mD"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_q1p7mJ": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_sn6GcJ",
+  "c_GqxrSV",
+  "c_R4APcP",
+  "c_ctZJTi"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "param_VtBWur": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "rain",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "param_pjm9cP": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "order_value",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "param_v3QAOj": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "membership",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_8azaDM": {
+ "value": 500,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_EjXYSm",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_9nFMaa": {
+ "value": "gold",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_fMxNZc",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_MCXxia": {
+ "value": "gold",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_5CLswT",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_PobA2J": {
+ "value": 5,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_7UW5EY",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_fbrmg4": {
+ "value": 500,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_L0XeFC",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_iaCVmT": {
+ "value": "gold",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_Oby29O",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_sWe6h9": {
+ "value": 5,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_T3Srxl",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_yfb5R9": {
+ "value": 8,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_zQAEtK": {
+ "value": 500,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_qmWyBf",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "c_EjXYSm",
+  "c_5CLswT",
+  "c_oRwgyA"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_yfb5R9"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "distance_km",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "distance_km",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "Calculates delivery fee according to distance",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": [],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-06-13T01:08:26.928439Z",
+   "updatedAt": "2026-06-13T01:08:41.676406Z",
+   "entityCommitId": "commit-25fa6696-7b91-49c7-b303-0d679449c361",
+   "entityType": "rule",
+   "entityId": "a75d52a5-189c-4cfc-91ed-c61f9d0b43b0",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_action_1",
+   "dependencyType": "rule",
+   "dependencyId": "4d8ffdcf-20be-4c81-887f-702151484041",
+   "dependencyVersion": "draft"
+  }
+ ]
+}

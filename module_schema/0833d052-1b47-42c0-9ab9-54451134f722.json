@@ -1,0 +1,45 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-05-23T06:59:09.467Z",
+  "updatedAt": "2026-05-23T06:59:09.467Z",
+  "isDeleted": false,
+  "entityId": "0833d052-1b47-42c0-9ab9-54451134f722",
+  "name": "TestStrings_Colors",
+  "moduleId": "51d07afb-5cbc-4830-97ec-67d654881ad0",
+  "dataType": "String",
+  "usageType": "",
+  "options": [
+   {
+    "value": "red"
+   },
+   {
+    "value": "green"
+   },
+   {
+    "value": "blue"
+   },
+   {
+    "value": "yellow"
+   },
+   {
+    "value": "orange"
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-23T06:59:09.471163Z",
+   "updatedAt": "2026-05-23T06:59:09.471163Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "0833d052-1b47-42c0-9ab9-54451134f722",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "51d07afb-5cbc-4830-97ec-67d654881ad0",
+   "dependencyVersion": "live"
+  }
+ ]
+}

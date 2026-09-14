@@ -1,0 +1,20 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2026-08-07T06:33:40.498Z",
+  "updatedAt": "2026-08-07T06:33:40.498Z",
+  "isDeleted": false,
+  "entityId": "77940259-e27a-408d-962b-9248ba960b34",
+  "name": "GL_FEE_INCOME",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "string",
+  "value": {
+   "data": "GL-41200",
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

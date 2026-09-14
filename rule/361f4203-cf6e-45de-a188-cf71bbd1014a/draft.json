@@ -1,0 +1,603 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2026-06-18T08:38:56.507Z",
+  "updatedAt": "2026-06-18T12:04:47.225415Z",
+  "isDeleted": false,
+  "testedAt": "2026-06-18T12:04:47.224Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "361f4203-cf6e-45de-a188-cf71bbd1014a",
+  "version": "draft",
+  "name": "eventLmtDT",
+  "commitId": "commit-be129167-da75-4e10-bec2-8135601de630",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-06-18 08:38:56",
+   "timeStamp": "2026-06-18T08:38:56.507441281Z"
+  },
+  "customInput": {
+   "cartQty": {
+ "name": "cartQty",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 2,
+ "config": {
+  
+ },
+ "value": "",
+ "next": "evtMaxQty",
+ "previous": "",
+ "schemaId": ""
+},
+   "evtMaxQty": {
+ "name": "evtMaxQty",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 4,
+ "config": {
+  
+ },
+ "value": "",
+ "next": "evtPurchased",
+ "previous": "cartQty",
+ "schemaId": ""
+},
+   "evtPurchased": {
+ "name": "evtPurchased",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 1,
+ "config": {
+  
+ },
+ "value": "",
+ "next": "totalQty",
+ "previous": "evtMaxQty",
+ "schemaId": ""
+},
+   "orderIntent": {
+ "name": "orderIntent",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "Event",
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "totalQty",
+ "schemaId": ""
+},
+   "totalQty": {
+ "name": "totalQty",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "jsFormula",
+ "executedValue": 3,
+ "config": {
+  
+ },
+ "value": "{{.customInput.cartQty}} + {{.customInput.evtPurchased}}",
+ "next": "orderIntent",
+ "previous": "evtPurchased",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "0_1": {
+ "nextId": "1_1",
+ "prevId": "",
+ "firstOutputData": "0_0",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "1_1": {
+ "nextId": "2_1",
+ "prevId": "0_1",
+ "firstOutputData": "1_0",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "2_1": {
+ "nextId": "",
+ "prevId": "1_1",
+ "firstOutputData": "2_0",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "param_Ao6b1l": {
+ "nextId": "param_CNteOw",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "param_CNteOw": {
+ "nextId": "",
+ "prevId": "param_Ao6b1l",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "0": {
+ "nextId": "1",
+ "prevId": "",
+ "dataType": "boolean",
+ "keyName": "evtBlocked",
+ "schemaId": ""
+},
+    "1": {
+ "nextId": "2",
+ "prevId": "0",
+ "dataType": "jsFormula",
+ "keyName": "evtRemaining",
+ "schemaId": ""
+},
+    "2": {
+ "nextId": "",
+ "prevId": "1",
+ "dataType": "string",
+ "keyName": "evtViolation",
+ "schemaId": ""
+}
+   },
+   "firstRow": "0_1",
+   "firstProperty": "param_Ao6b1l",
+   "firstResult": "0",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "0_0": {
+ "name": "evtBlocked",
+ "dataType": "boolean",
+ "returnType": "",
+ "value": true,
+ "next": "0_1",
+ "executedValue": true,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "0_1": {
+ "name": "evtRemaining",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "0",
+ "next": "0_2",
+ "executedValue": 0,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "0_2": {
+ "name": "evtViolation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "EVENT_TICKET_EXCEED_MAX_QTY",
+ "next": "",
+ "executedValue": "EVENT_TICKET_EXCEED_MAX_QTY",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "1_0": {
+ "name": "evtBlocked",
+ "dataType": "boolean",
+ "returnType": "",
+ "value": false,
+ "next": "1_1",
+ "executedValue": false,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "1_1": {
+ "name": "evtRemaining",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.evtMaxQty}} - {{.customInput.evtPurchased}}",
+ "next": "1_2",
+ "executedValue": 3,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "1_2": {
+ "name": "evtViolation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "NA",
+ "next": "",
+ "executedValue": "NA",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "2_0": {
+ "name": "evtBlocked",
+ "dataType": "boolean",
+ "returnType": "",
+ "value": true,
+ "next": "2_1",
+ "executedValue": true,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "2_1": {
+ "name": "evtRemaining",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "0",
+ "next": "2_2",
+ "executedValue": 0,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "2_2": {
+ "name": "evtViolation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "EVENT_TICKET_EXCEED_MAX_QTY",
+ "next": "",
+ "executedValue": "EVENT_TICKET_EXCEED_MAX_QTY",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "0_1": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_TSWimI",
+  "c_zCWAQz"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "1_1": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_FOyL8k",
+  "c_TAWsoK"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "2_1": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_yuornT",
+  "c_5XoOrU"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "c_5XoOrU": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "2_1",
+ "children": null,
+ "leftNode": [
+  "param_CNteOw"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_FOyL8k": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "1_1",
+ "children": null,
+ "leftNode": [
+  "param_Ao6b1l"
+ ],
+ "rightNode": [
+  "rhs_JkQzUQ"
+ ],
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "c_TAWsoK": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "1_1",
+ "children": null,
+ "leftNode": [
+  "param_CNteOw"
+ ],
+ "rightNode": [
+  "rhs_XGJWcs"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_TSWimI": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "0_1",
+ "children": null,
+ "leftNode": [
+  "param_Ao6b1l"
+ ],
+ "rightNode": [
+  "rhs_K7HSzW"
+ ],
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "c_yuornT": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "2_1",
+ "children": null,
+ "leftNode": [
+  "param_Ao6b1l"
+ ],
+ "rightNode": [],
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "c_zCWAQz": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "0_1",
+ "children": null,
+ "leftNode": [
+  "param_CNteOw"
+ ],
+ "rightNode": [
+  "rhs_lUI2Ou"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "param_Ao6b1l": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "totalQty",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "param_CNteOw": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "orderIntent",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_JkQzUQ": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "evtMaxQty",
+ "query": "",
+ "parent": "c_FOyL8k",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_K7HSzW": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "evtMaxQty",
+ "query": "",
+ "parent": "c_TSWimI",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_XGJWcs": {
+ "value": "Event",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_TAWsoK",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_lUI2Ou": {
+ "value": "Event",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_zCWAQz",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "cartQty",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": [],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": "d"
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": {
+    "columnWidths": {
+ "0": 38.6
+}
+   }
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

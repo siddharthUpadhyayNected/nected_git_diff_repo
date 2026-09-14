@@ -1,0 +1,247 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-04-07T06:32:52.565Z",
+  "updatedAt": "2025-04-23T11:43:14.187503Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-07T06:42:29.642Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "e9544693-d868-47d5-8ec8-2d130bda8c2d",
+  "version": "draft",
+  "name": "lateFeeOnBillPayment",
+  "commitId": "commit-23475508-4715-4c83-9483-c2917ac459fc",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-04-07 06:32:52",
+   "timeStamp": "2025-04-07T06:32:52.565347091Z"
+  },
+  "customInput": {
+   "dueDateBreached": {
+ "name": "dueDateBreached",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m96p48tqu2pb3eb9y4s",
+ "prevId": "",
+ "firstOutputData": "output_m96p3qqxcviwe4ez48",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m96p48tqu2pb3eb9y4s": {
+ "nextId": "",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m96p48tq9zbc6ke1tyk",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m96p3qqx5llyfel7xea": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "lateFeeIsApplicable",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m96p3qqx5llyfel7xea",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m96p3qqxcviwe4ez48": {
+ "name": "lateFeeIsApplicable",
+ "dataType": "excelFormula",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": "",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m96p48tq9zbc6ke1tyk": {
+ "name": "lateFeeIsApplicable",
+ "dataType": "excelFormula",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": "",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "dueDateBreached",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m96p48tqd7dd8gjx7": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m96p48tqu2pb3eb9y4s",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m96p48tqu2pb3eb9y4s": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m96p48tqd7dd8gjx7"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "dueDateBreached",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "This decison table decides whether late fee is applicable or not on the basis of the decision that the due date is breached or not. The policy used here is collect.\n",
+  "policy": "collect",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

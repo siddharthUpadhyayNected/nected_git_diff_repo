@@ -1,0 +1,31 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2026-06-18T12:17:31.908Z",
+  "updatedAt": "2026-06-18T12:17:31.908Z",
+  "isDeleted": false,
+  "entityId": "94f2ed08-63d1-4a3b-a9db-0d7b79d8af16",
+  "name": "event_restricted_skus",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "list",
+  "value": {
+   "data": [
+    "sku_031",
+    "sku_032",
+    "sku_033",
+    "sku_034",
+    "sku_035",
+    "sku_036",
+    "sku_037",
+    "sku_038",
+    "sku_039",
+    "sku_040"
+   ],
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

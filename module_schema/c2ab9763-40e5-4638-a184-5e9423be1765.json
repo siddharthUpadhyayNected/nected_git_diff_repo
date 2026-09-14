@@ -1,0 +1,42 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-05-23T06:58:38.886Z",
+  "updatedAt": "2026-05-23T06:58:38.886Z",
+  "isDeleted": false,
+  "entityId": "c2ab9763-40e5-4638-a184-5e9423be1765",
+  "name": "TestStrings_Statuses",
+  "moduleId": "34a00ec7-2905-4434-8a75-d23a8a436ce4",
+  "dataType": "String",
+  "usageType": "",
+  "options": [
+   {
+    "value": "Active"
+   },
+   {
+    "value": "Inactive"
+   },
+   {
+    "value": "Pending"
+   },
+   {
+    "value": "Archived"
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-23T06:58:38.890894Z",
+   "updatedAt": "2026-05-23T06:58:38.890894Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "c2ab9763-40e5-4638-a184-5e9423be1765",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "34a00ec7-2905-4434-8a75-d23a8a436ce4",
+   "dependencyVersion": "live"
+  }
+ ]
+}

@@ -3,21 +3,20 @@
  "category": "decisionTable",
  "data": {
   "createdAt": "2026-01-16T08:22:21.703Z",
-  "updatedAt": "2026-01-16T08:26:12.035969Z",
+  "updatedAt": "2026-03-30T09:41:23.911718Z",
   "isDeleted": false,
   "testedAt": "2026-01-16T08:25:58.417Z",
   "publishedAt": "2026-01-16T08:26:12.028Z",
   "entityId": "eb642c29-7bf0-481a-80aa-e9b6028ecc61",
-  "version": "0.10",
+  "version": "draft",
   "name": "raisin_git_demo",
-  "commitId": "commit-960bcc3b-3609-4258-8e44-5c3d1a79ef94",
-  "status": "published",
-  "lastVersion": "draft",
-  "isLive": true,
+  "commitId": "commit-bc796380-b195-4f34-847e-fb8a9839da22",
+  "status": "draft",
+  "lastVersion": "0.10",
+  "isLive": false,
   "commitInfo": {
-   "title": "Created at 2026-01-16 08:22:21",
-   "description": "v1",
-   "timeStamp": "2026-01-16T08:26:12.027Z"
+   "title": "Forked from 0.10",
+   "timeStamp": "2026-03-30T09:41:14.042897434Z"
   },
   "customInput": {
    "salary": {
@@ -45,18 +44,25 @@
  "nextId": "",
  "prevId": "rule_01",
  "firstOutputData": "output_dbSfE1",
- "isEnabled": true
+ "isEnabled": true,
+ "annotation": ""
 },
     "rule_01": {
  "nextId": "g_PTGNvN",
  "prevId": "",
  "firstOutputData": "output_skT2fr",
- "isEnabled": true
+ "isEnabled": true,
+ "annotation": ""
 }
    },
    "properties": {
-    "rule_03": {
+    "param_lye4R6": {
  "nextId": "",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_03": {
+ "nextId": "param_lye4R6",
  "prevId": "",
  "type": "simpleCondition"
 }
@@ -116,6 +122,42 @@
   },
   "conditions": {
    "nodes": {
+    "c_BNEQ2Q": {
+ "value": "",
+ "sourceType": "",
+ "name": "Any",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "1===1",
+ "parent": "g_PTGNvN",
+ "children": null,
+ "leftNode": [
+  "param_lye4R6"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_QGolD6": {
+ "value": "",
+ "sourceType": "",
+ "name": "Any",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "1===1",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "param_lye4R6"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
     "c_zMM6RY": {
  "value": "",
  "sourceType": "",
@@ -148,8 +190,25 @@
  "query": "",
  "parent": "",
  "children": [
-  "c_zMM6RY"
+  "c_zMM6RY",
+  "c_BNEQ2Q"
  ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "param_lye4R6": {
+ "value": null,
+ "sourceType": "custom",
+ "name": "",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "params",
+ "attribute": "sql",
+ "query": "",
+ "parent": "",
+ "children": null,
  "leftNode": null,
  "rightNode": null,
  "siblingIndex": 1,
@@ -214,7 +273,8 @@
  "query": "",
  "parent": "",
  "children": [
-  "rule_02"
+  "rule_02",
+  "c_QGolD6"
  ],
  "leftNode": null,
  "rightNode": null,
@@ -283,7 +343,7 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": ""
+     "Unit": "d"
     },
     "CacheKeys": ""
    },
@@ -291,7 +351,8 @@
    "dateFormat": "in",
    "timeout": 0,
    "timeoutAsync": 0,
-   "timeoutCron": 0
+   "timeoutCron": 0,
+   "styles": null
   },
   "isDemo": false,
   "warnings": [],

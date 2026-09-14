@@ -1,0 +1,48 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-05-23T07:06:02.069Z",
+  "updatedAt": "2026-05-23T07:06:02.069Z",
+  "isDeleted": false,
+  "entityId": "e2170500-309d-4afe-9c44-33125740ae3d",
+  "name": "TestNumbers_Thresholds",
+  "moduleId": "4417fbc2-e424-4ebb-9659-222c0d493626",
+  "dataType": "Numeric",
+  "usageType": "",
+  "options": [
+   {
+    "value": 10
+   },
+   {
+    "value": 25
+   },
+   {
+    "value": 50
+   },
+   {
+    "value": 100
+   },
+   {
+    "value": 250
+   },
+   {
+    "value": 500
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-23T07:06:02.074713Z",
+   "updatedAt": "2026-05-23T07:06:02.074713Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "e2170500-309d-4afe-9c44-33125740ae3d",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "4417fbc2-e424-4ebb-9659-222c0d493626",
+   "dependencyVersion": "live"
+  }
+ ]
+}

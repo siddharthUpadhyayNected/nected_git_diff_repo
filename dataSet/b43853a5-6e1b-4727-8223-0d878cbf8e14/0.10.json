@@ -1,0 +1,80 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "live": true,
+ "data": {
+  "createdAt": "2025-04-29T17:00:14.059Z",
+  "updatedAt": "2025-04-30T06:47:01.328Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-29T17:04:47.301Z",
+  "publishedAt": "2025-04-30T06:47:01.32Z",
+  "entityId": "b43853a5-6e1b-4727-8223-0d878cbf8e14",
+  "version": "0.10",
+  "name": "managerEscalationSource",
+  "commitId": "commit-b5f2cd43-5300-4620-b379-de19f6fc8b94",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Created at 2025-04-29 17:00:14",
+   "description": "ghki",
+   "timeStamp": "2025-04-30T06:47:01.318Z"
+  },
+  "fields": {
+   "approvalLimit": {
+ "ColumnName": "approvalLimit",
+ "DataType": "numeric",
+ "Order": 1,
+ "ExecutedValue": 30000
+},
+   "empID": {
+ "ColumnName": "empID",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": "11"
+},
+   "empName": {
+ "ColumnName": "empName",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": "Professor "
+},
+   "team": {
+ "ColumnName": "team",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": "sales"
+}
+  },
+  "description": "",
+  "query": "SELECT \r\n  e.\"empID\",\r\n  e.\"empName\",\r\n  e.\"team\",\r\n  e.\"approvalLimit\"\r\nFROM manager e;",
+  "params": {
+   
+  },
+  "connectorId": "c5fa0d71-a2e7-4cbe-b327-b9104edde777",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-04-29T17:00:14.082497Z",
+   "updatedAt": "2025-04-30T06:47:01.341433Z",
+   "entityCommitId": "commit-b5f2cd43-5300-4620-b379-de19f6fc8b94",
+   "entityType": "dataSet",
+   "entityId": "b43853a5-6e1b-4727-8223-0d878cbf8e14",
+   "entityVersion": "0.10",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "c5fa0d71-a2e7-4cbe-b327-b9104edde777",
+   "dependencyVersion": "live"
+  }
+ ]
+}

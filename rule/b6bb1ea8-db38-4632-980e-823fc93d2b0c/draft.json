@@ -1,0 +1,1057 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-20T09:35:38.914Z",
+  "updatedAt": "2025-03-24T13:34:34.219377Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-20T09:45:18.76Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "b6bb1ea8-db38-4632-980e-823fc93d2b0c",
+  "version": "draft",
+  "name": "payrollTaxCalculation",
+  "commitId": "commit-3239429b-e17e-4d4a-bf57-55b7f19cab98",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-20 09:35:38",
+   "timeStamp": "2025-03-20T09:35:38.914847663Z"
+  },
+  "customInput": {
+   "employmentType": {
+ "name": "employmentType",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "regionSpecificTax",
+ "previous": "salaryRange",
+ "schemaId": ""
+},
+   "regionSpecificTax": {
+ "name": "regionSpecificTax",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "",
+ "previous": "employmentType",
+ "schemaId": ""
+},
+   "salaryRange": {
+ "name": "salaryRange",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "employmentType",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m8h5s7j7xist2v1e48",
+ "prevId": "",
+ "firstOutputData": "output_m8h5qx86poz914jilm",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h5s7j7xist2v1e48": {
+ "nextId": "rule_m8h5v3ltnoaqlslhc3r",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m8h5s7j7f8tcz29dq9b",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h5v3ltnoaqlslhc3r": {
+ "nextId": "rule_m8h5vcmrm1rrk7f7da",
+ "prevId": "rule_m8h5s7j7xist2v1e48",
+ "firstOutputData": "output_m8h5v3ltha066rcfa7e",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h5vcmrm1rrk7f7da": {
+ "nextId": "rule_m8h5wbhib9ukfgxfrzi",
+ "prevId": "rule_m8h5v3ltnoaqlslhc3r",
+ "firstOutputData": "output_m8h5vcmrdnli4bpokjp",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h5wbhib9ukfgxfrzi": {
+ "nextId": "rule_m8h5xpt6likosh7z10j",
+ "prevId": "rule_m8h5vcmrm1rrk7f7da",
+ "firstOutputData": "output_m8h5wbhiobemxrp3sri",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h5wn1mfz5x71dgi3j": {
+ "nextId": "",
+ "prevId": "rule_m8h5xpt6likosh7z10j",
+ "firstOutputData": "output_m8h5wn1ml8xr28vxb3",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8h5xpt6likosh7z10j": {
+ "nextId": "rule_m8h5wn1mfz5x71dgi3j",
+ "prevId": "rule_m8h5wbhib9ukfgxfrzi",
+ "firstOutputData": "output_m8h5xpt7r2u8v2v9ncr",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "rule_m8h5qmlfvwu9srmvq1l",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_m8h5qmlfvwu9srmvq1l": {
+ "nextId": "rule_m8h5qoj42gmggtz3k5d",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_m8h5qoj42gmggtz3k5d": {
+ "nextId": "",
+ "prevId": "rule_m8h5qmlfvwu9srmvq1l",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m8h5qx86ad36lj59gyu": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "jsFormula",
+ "keyName": "taxToBePaid",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m8h5qx86ad36lj59gyu",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m8h5qx86poz914jilm": {
+ "name": "taxToBePaid",
+ "dataType": "jsFormula",
+ "returnType": "number",
+ "value": "0",
+ "next": "",
+ "executedValue": 0,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h5s7j7f8tcz29dq9b": {
+ "name": "taxToBePaid",
+ "dataType": "jsFormula",
+ "returnType": "number",
+ "value": "let salary = {{.customInput.salaryRange}};\nlet tax = salary*.1;\ntax",
+ "next": "",
+ "executedValue": 0,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h5v3ltha066rcfa7e": {
+ "name": "taxToBePaid",
+ "dataType": "jsFormula",
+ "returnType": "number",
+ "value": "let salary = {{.customInput.salaryRange}};\nlet tax = salary*.2;\ntax",
+ "next": "",
+ "executedValue": 0,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h5vcmrdnli4bpokjp": {
+ "name": "taxToBePaid",
+ "dataType": "jsFormula",
+ "returnType": "number",
+ "value": "let salary = {{.customInput.salaryRange}};\nlet tax = salary*.3;\ntax",
+ "next": "",
+ "executedValue": 0,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h5wbhiobemxrp3sri": {
+ "name": "taxToBePaid",
+ "dataType": "jsFormula",
+ "returnType": "number",
+ "value": "let salary = {{.customInput.salaryRange}};\nlet tax = salary*.15;\ntax",
+ "next": "",
+ "executedValue": 0,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h5wn1ml8xr28vxb3": {
+ "name": "taxToBePaid",
+ "dataType": "jsFormula",
+ "returnType": "number",
+ "value": "0",
+ "next": "",
+ "executedValue": 0,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8h5xpt7r2u8v2v9ncr": {
+ "name": "taxToBePaid",
+ "dataType": "jsFormula",
+ "returnType": "number",
+ "value": "let salary = {{.customInput.salaryRange}};\nlet tax = salary*.05;\ntax",
+ "next": "",
+ "executedValue": 0,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "rule_m8h5qmlf17pupj3lqrji",
+  "rule_m8h5qoj43z753bp2l1e"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h5rnyp6zp06o2rusq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "salaryRange",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5qmlf17pupj3lqrji": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qmlfvwu9srmvq1l"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5qmlfvwu9srmvq1l": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "employmentType",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5qoj42gmggtz3k5d": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "regionSpecificTax",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5qoj43z753bp2l1e": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qoj42gmggtz3k5d"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5rnyp6zp06o2rusq": {
+ "value": 30000,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5s7j74q1ea8g72d": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "bet",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5s7j7xist2v1e48",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h5sayxrdvm1tpraz8",
+  "rule_m8h5sayxc8e5aczhpvq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5s7j77aku7q4g128": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5s7j7xist2v1e48",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qmlfvwu9srmvq1l"
+ ],
+ "rightNode": [
+  "rule_m8h5sryesjwaatix9w"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5s7j7lp4r95o3w17": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5s7j7xist2v1e48",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qoj42gmggtz3k5d"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5s7j7xist2v1e48": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h5s7j74q1ea8g72d",
+  "rule_m8h5s7j77aku7q4g128",
+  "rule_m8h5s7j7lp4r95o3w17"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5sayxc8e5aczhpvq": {
+ "value": 60000,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5s7j74q1ea8g72d",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5sayxrdvm1tpraz8": {
+ "value": 30001,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5s7j74q1ea8g72d",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5sryesjwaatix9w": {
+ "value": "Salaried",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5s7j77aku7q4g128",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5v3lt2zehh7ij9q5": {
+ "value": 100000,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5v3lt5ckgxib1pi9",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5v3lt5ckgxib1pi9": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "bet",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5v3ltnoaqlslhc3r",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h5v3ltdfps84ifbxr",
+  "rule_m8h5v3lt2zehh7ij9q5"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5v3lt5kcgrs9tcna": {
+ "value": "Salaried",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5v3lto2rfy3omu7",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5v3ltdfps84ifbxr": {
+ "value": 60001,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5v3lt5ckgxib1pi9",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5v3ltnoaqlslhc3r": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h5v3lt5ckgxib1pi9",
+  "rule_m8h5v3lto2rfy3omu7",
+  "rule_m8h5v3ltovu6x4962wl"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5v3lto2rfy3omu7": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5v3ltnoaqlslhc3r",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qmlfvwu9srmvq1l"
+ ],
+ "rightNode": [
+  "rule_m8h5v3lt5kcgrs9tcna"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5v3ltovu6x4962wl": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5v3ltnoaqlslhc3r",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qoj42gmggtz3k5d"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5vcmrex642lfsmcl": {
+ "value": "Salaried",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5vcmriy0p6my8oeq",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5vcmrf3pocahdy8": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5vcmrm1rrk7f7da",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8h5vlw9m9lp7h89tl"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5vcmriy0p6my8oeq": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5vcmrm1rrk7f7da",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qmlfvwu9srmvq1l"
+ ],
+ "rightNode": [
+  "rule_m8h5vcmrex642lfsmcl"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5vcmrm1rrk7f7da": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h5vcmrf3pocahdy8",
+  "rule_m8h5vcmriy0p6my8oeq",
+  "rule_m8h5vcmrq6dar7ezb5"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5vcmrq6dar7ezb5": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5vcmrm1rrk7f7da",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qoj42gmggtz3k5d"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5vlw9m9lp7h89tl": {
+ "value": 100000,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5vcmrf3pocahdy8",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5wbhiaofv850yy86": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5wbhib9ukfgxfrzi",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qoj42gmggtz3k5d"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5wbhib54v6s38p0k": {
+ "value": "Freelancer",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5wbhieig82tb8e4m",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5wbhib9ukfgxfrzi": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h5wbhiihd0lmuexep",
+  "rule_m8h5wbhieig82tb8e4m",
+  "rule_m8h5wbhiaofv850yy86"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5wbhieig82tb8e4m": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5wbhib9ukfgxfrzi",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qmlfvwu9srmvq1l"
+ ],
+ "rightNode": [
+  "rule_m8h5wbhib54v6s38p0k"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5wbhiihd0lmuexep": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5wbhib9ukfgxfrzi",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5wn1m2v6m73vimfm": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5wn1mfz5x71dgi3j",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qoj42gmggtz3k5d"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5wn1m62ofzicsv2q": {
+ "value": "Retired",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5wn1mwb6n92n2gid",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5wn1mdpqvceines": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5wn1mfz5x71dgi3j",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5wn1mfz5x71dgi3j": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h5wn1mdpqvceines",
+  "rule_m8h5wn1mwb6n92n2gid",
+  "rule_m8h5wn1m2v6m73vimfm"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5wn1mwb6n92n2gid": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5wn1mfz5x71dgi3j",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qmlfvwu9srmvq1l"
+ ],
+ "rightNode": [
+  "rule_m8h5wn1m62ofzicsv2q"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5xpt6183q3lsoyd1": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5xpt6likosh7z10j",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qmlfvwu9srmvq1l"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5xpt6likosh7z10j": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8h5xpt6qedyltgo7vk",
+  "rule_m8h5xpt6183q3lsoyd1",
+  "rule_m8h5xpt7s2d6c3utlk"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5xpt6qedyltgo7vk": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5xpt6likosh7z10j",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8h5xpt7s2d6c3utlk": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8h5xpt6likosh7z10j",
+ "children": null,
+ "leftNode": [
+  "rule_m8h5qoj42gmggtz3k5d"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "salaryRange",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "Payroll tax calculation varies based on salary brackets, employment type, tax slabs, and regional tax laws. This rule ensures that employees are taxed correctly based on their earnings and applicable deductions.\n\nLow Income (≤ ₹30,000/month) → No tax\nMedium Income (₹30,001 - ₹60,000/month) → 10% tax\nHigh Income (₹60,001 - ₹1,00,000/month) → 20% tax\nVery High Income (> ₹1,00,000/month) → 30% tax\nFreelancers/Contractors → Flat 15% tax\nRetired Employees → No tax",
+  "policy": "unique",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

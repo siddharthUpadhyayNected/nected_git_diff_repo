@@ -1,0 +1,117 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "live": true,
+ "data": {
+  "createdAt": "2025-02-21T12:36:12.904Z",
+  "updatedAt": "2025-03-04T10:21:49.059Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-04T10:21:03.189Z",
+  "publishedAt": "2025-03-04T10:21:49.057Z",
+  "entityId": "f9c3ceb3-a7b2-4af2-81dc-ae9ef4bf14b2",
+  "version": "0.60",
+  "name": "coupon  table source",
+  "commitId": "commit-57a8f20b-da39-4676-94bb-22d89ac30cb0",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Forked from 0.50",
+   "description": "used to_json results",
+   "timeStamp": "2025-03-04T10:21:49.056Z"
+  },
+  "fields": {
+   "cat_array": {
+ "ColumnName": "cat_array",
+ "DataType": "list",
+ "Order": 1,
+ "ExecutedValue": [
+  "Fashion"
+ ]
+},
+   "coupon_code": {
+ "ColumnName": "coupon_code",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": "COUPON1111"
+},
+   "description": {
+ "ColumnName": "description",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": "IT IS A FIXED COUPON."
+},
+   "discount_type": {
+ "ColumnName": "discount_type",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": "cart"
+},
+   "end_date": {
+ "ColumnName": "end_date",
+ "DataType": "dateTime",
+ "Order": 2,
+ "ExecutedValue": "2025-03-31T00:00:00Z"
+},
+   "maximum_discount": {
+ "ColumnName": "maximum_discount",
+ "DataType": "numeric",
+ "Order": 6,
+ "ExecutedValue": 75
+},
+   "minimum_order_value": {
+ "ColumnName": "minimum_order_value",
+ "DataType": "numeric",
+ "Order": 7,
+ "ExecutedValue": 1000
+},
+   "payment_gateway": {
+ "ColumnName": "payment_gateway",
+ "DataType": "string",
+ "Order": 8,
+ "ExecutedValue": "credit_card"
+},
+   "sku_array": {
+ "ColumnName": "sku_array",
+ "DataType": "list",
+ "Order": 9,
+ "ExecutedValue": [
+  "SKU1234",
+  "SKU4567",
+  "SKUv1234",
+  "SKUbhu8"
+ ]
+}
+  },
+  "description": "",
+  "query": "SELECT to_json(string_to_array(sku_name, ',')) as sku_array, to_json(string_to_array(category_name, ',')) as cat_array, coupon_code , minimum_order_value, payment_gateway, end_date,description , maximum_discount, discount_type\nFROM coupons\nGROUP BY coupon_code\nORDER BY id ASC\n",
+  "params": {
+   
+  },
+  "connectorId": "0b5ede46-75c1-413d-bff6-0912b1a77dc0",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-03-04T10:20:40.191758Z",
+   "updatedAt": "2025-03-04T10:21:49.065145Z",
+   "entityCommitId": "commit-57a8f20b-da39-4676-94bb-22d89ac30cb0",
+   "entityType": "dataSet",
+   "entityId": "f9c3ceb3-a7b2-4af2-81dc-ae9ef4bf14b2",
+   "entityVersion": "0.60",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "0b5ede46-75c1-413d-bff6-0912b1a77dc0",
+   "dependencyVersion": "live"
+  }
+ ]
+}

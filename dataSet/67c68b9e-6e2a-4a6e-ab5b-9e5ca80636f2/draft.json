@@ -1,0 +1,82 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2025-03-18T11:47:51.667Z",
+  "updatedAt": "2025-03-18T11:47:51.667Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "67c68b9e-6e2a-4a6e-ab5b-9e5ca80636f2",
+  "version": "draft",
+  "name": "Product_Recommendation_Dataset",
+  "commitId": "commit-eb3df28b-42d0-40eb-819b-16b3a06c9ee1",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-18 11:47:51",
+   "timeStamp": "2025-03-18T11:47:51.66749952Z"
+  },
+  "fields": {
+   "browsing_history": {
+ "ColumnName": "browsing_history",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "customer_segment": {
+ "ColumnName": "customer_segment",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": null
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": null
+},
+   "preference_store": {
+ "ColumnName": "preference_store",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": null
+},
+   "purchase_history": {
+ "ColumnName": "purchase_history",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": null
+}
+  },
+  "description": "",
+  "query": "select * from customers_and_analytics.browsing_preferences;",
+  "params": null,
+  "connectorId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-03-18T11:47:51.671542Z",
+   "updatedAt": "2025-03-18T11:47:51.671542Z",
+   "entityCommitId": "commit-eb3df28b-42d0-40eb-819b-16b3a06c9ee1",
+   "entityType": "dataSet",
+   "entityId": "67c68b9e-6e2a-4a6e-ab5b-9e5ca80636f2",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+   "dependencyVersion": "live"
+  }
+ ]
+}

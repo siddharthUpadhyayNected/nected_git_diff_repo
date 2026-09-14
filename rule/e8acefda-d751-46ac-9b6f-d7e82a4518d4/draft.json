@@ -1,0 +1,443 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-04-04T07:11:51.477Z",
+  "updatedAt": "2025-04-04T07:13:41.653833Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-04T07:13:41.653Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "e8acefda-d751-46ac-9b6f-d7e82a4518d4",
+  "version": "draft",
+  "name": "loanApprovalOnTheBasisOfCreditScore",
+  "commitId": "commit-a6813938-9611-4d46-b957-01a42c30e867",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-04-04 07:11:51",
+   "timeStamp": "2025-04-04T07:11:51.477353513Z"
+  },
+  "customInput": {
+   "creditScore": {
+ "name": "creditScore",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_m92g6bg604o4omtu20nq": {
+ "nextId": "rule_m92g6p34ezsa1ib9wmj",
+ "prevId": "",
+ "firstOutputData": "output_m92g6bg76rqaz7899n2",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m92g6p34ezsa1ib9wmj": {
+ "nextId": "rule_m92g774h5uanwe9ucf8",
+ "prevId": "rule_m92g6bg604o4omtu20nq",
+ "firstOutputData": "output_m92g6p34byepbw7r77k",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m92g774h5uanwe9ucf8": {
+ "nextId": "",
+ "prevId": "rule_m92g6p34ezsa1ib9wmj",
+ "firstOutputData": "output_m92g774hdvfa65wdbbc",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m92g64qfy9xz36dggec": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "approvalStatus",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_m92g6bg604o4omtu20nq",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m92g64qfy9xz36dggec",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m92g6bg76rqaz7899n2": {
+ "name": "approvalStatus",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Approved",
+ "next": "",
+ "executedValue": "Approved",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m92g6p34byepbw7r77k": {
+ "name": "approvalStatus",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Partially Approved",
+ "next": "",
+ "executedValue": "Partially Approved",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m92g774hdvfa65wdbbc": {
+ "name": "approvalStatus",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Rejected",
+ "next": "",
+ "executedValue": "Rejected",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_04"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "creditScore",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_04": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92g6bg604o4omtu20nq": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92g6bg7qjgikbw7eig"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92g6bg7qjgikbw7eig": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "bet",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92g6bg604o4omtu20nq",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92g6elzs4jbvj129ls",
+  "rule_m92g6elzztnnimpgpkl"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92g6elzs4jbvj129ls": {
+ "value": 750,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92g6bg7qjgikbw7eig",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92g6elzztnnimpgpkl": {
+ "value": 900,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92g6bg7qjgikbw7eig",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92g6p348o5t4lyatki": {
+ "value": 650,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92g6p34hl8q21ln287",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92g6p34ezsa1ib9wmj": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92g6p34hl8q21ln287"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92g6p34hl8q21ln287": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "bet",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92g6p34ezsa1ib9wmj",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92g6p348o5t4lyatki",
+  "rule_m92g6p34lwjdstfknli"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92g6p34lwjdstfknli": {
+ "value": 749,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92g6p34hl8q21ln287",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92g774h5uanwe9ucf8": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92g774h87p22k488sm"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92g774h87p22k488sm": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "lt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92g774h5uanwe9ucf8",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92g7hapq1vwj2w37nb"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92g7hapq1vwj2w37nb": {
+ "value": 650,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92g774h87p22k488sm",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "creditScore",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "This decision table decides whether a loan application should be approved based on the applicant’s credit score. The policy used here is order.",
+  "policy": "order",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2025-02-21T05:31:17.056Z",
+  "updatedAt": "2025-02-21T05:31:17.056Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "9c17a0c1-58f5-46e2-b2be-d17d97183c99",
+  "version": "draft",
+  "name": "Loyalty_Rule_Dataset",
+  "commitId": "commit-05059dc7-a3f8-407b-9861-9cfe8c680baf",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-02-21 05:31:17",
+   "timeStamp": "2025-02-21T05:31:17.056465507Z"
+  },
+  "fields": {
+   "booked_nights": {
+ "ColumnName": "booked_nights",
+ "DataType": "numeric",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "hotel_type": {
+ "ColumnName": "hotel_type",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": null
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": null
+},
+   "membership_type": {
+ "ColumnName": "membership_type",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": null
+}
+  },
+  "description": "",
+  "query": "select * from customers_and_analytics.membership;",
+  "params": null,
+  "connectorId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-02-21T05:31:17.064381Z",
+   "updatedAt": "2025-02-21T05:31:17.064381Z",
+   "entityCommitId": "commit-05059dc7-a3f8-407b-9861-9cfe8c680baf",
+   "entityType": "dataSet",
+   "entityId": "9c17a0c1-58f5-46e2-b2be-d17d97183c99",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+   "dependencyVersion": "live"
+  }
+ ]
+}

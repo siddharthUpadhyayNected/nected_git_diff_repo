@@ -1,0 +1,20 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2026-08-07T06:33:40.481Z",
+  "updatedAt": "2026-08-07T06:33:40.481Z",
+  "isDeleted": false,
+  "entityId": "c584d571-819c-4c6a-b2c9-c87628bc1fb8",
+  "name": "GL_WIRE_CLEARING",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "string",
+  "value": {
+   "data": "GL-10250",
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

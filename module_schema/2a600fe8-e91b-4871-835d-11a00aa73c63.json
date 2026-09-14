@@ -1,0 +1,36 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-09-09T13:34:56.705Z",
+  "updatedAt": "2026-09-14T10:59:01.032127Z",
+  "isDeleted": false,
+  "entityId": "2a600fe8-e91b-4871-835d-11a00aa73c63",
+  "name": "DocId",
+  "moduleId": "ba363459-fb74-4b9f-ac36-910611385970",
+  "dataType": "list",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": [
+     "DOC12",
+     "DOC34"
+    ]
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-09-09T13:34:56.712543Z",
+   "updatedAt": "2026-09-09T13:34:56.712543Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "2a600fe8-e91b-4871-835d-11a00aa73c63",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "ba363459-fb74-4b9f-ac36-910611385970",
+   "dependencyVersion": "live"
+  }
+ ]
+}

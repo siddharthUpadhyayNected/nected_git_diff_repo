@@ -1,0 +1,16 @@
+{
+ "entityType": "connector",
+ "category": "restAPI",
+ "data": {
+  "createdAt": "2025-07-28T07:21:17.503Z",
+  "updatedAt": "2025-07-28T07:21:17.503Z",
+  "isDeleted": false,
+  "entityId": "a99c4fa5-5184-4220-85ff-e62d8215f75b",
+  "name": "notion get api",
+  "isDemo": false,
+  "category": "api",
+  "isSource": false,
+  "isAction": true,
+  "isTrigger": true
+ }
+}

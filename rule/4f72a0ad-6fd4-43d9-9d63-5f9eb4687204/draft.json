@@ -1,0 +1,2162 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-19T06:32:44.316Z",
+  "updatedAt": "2025-03-24T13:17:07.064873Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-19T06:53:34.017Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "4f72a0ad-6fd4-43d9-9d63-5f9eb4687204",
+  "version": "draft",
+  "name": "trafficViolationProcessing",
+  "commitId": "commit-ee91c603-4a04-4be5-9da8-569668c6393a",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-19 06:32:44",
+   "timeStamp": "2025-03-19T06:32:44.316144809Z"
+  },
+  "customInput": {
+   "firstViolation": {
+ "name": "firstViolation",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "severityOfViolation",
+ "previous": "overSpeeding",
+ "schemaId": ""
+},
+   "overSpeeding": {
+ "name": "overSpeeding",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "firstViolation",
+ "previous": "violationType",
+ "schemaId": ""
+},
+   "severityOfViolation": {
+ "name": "severityOfViolation",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "firstViolation",
+ "schemaId": ""
+},
+   "violationType": {
+ "name": "violationType",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": null,
+ "next": "overSpeeding",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m8fjwq64gudv6bzt08p",
+ "prevId": "",
+ "firstOutputData": "output_m8fjvg1c8d4k8csp0ts",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fjwq64gudv6bzt08p": {
+ "nextId": "rule_m8fjx741in9e0ekbpzs",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m8fjwq65dlsfgo88hhe",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fjx741in9e0ekbpzs": {
+ "nextId": "rule_m8fk01p5nnzltywfn1i",
+ "prevId": "rule_m8fjwq64gudv6bzt08p",
+ "firstOutputData": "output_m8fjx742qr2kpqbcoie",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fk01p5nnzltywfn1i": {
+ "nextId": "rule_m8fk0nysik65detd4o",
+ "prevId": "rule_m8fjx741in9e0ekbpzs",
+ "firstOutputData": "output_m8fk01p6ewkh52e40c",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fk0nysik65detd4o": {
+ "nextId": "rule_m8fk36q0pp153if4ja",
+ "prevId": "rule_m8fk01p5nnzltywfn1i",
+ "firstOutputData": "output_m8fk0nyu1nbv86bmwpe",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fk36q0pp153if4ja": {
+ "nextId": "rule_m8fk3g3gr1rmksrt0r8",
+ "prevId": "rule_m8fk0nysik65detd4o",
+ "firstOutputData": "output_m8fk36q1a5fovfm6dbu",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fk3g3gr1rmksrt0r8": {
+ "nextId": "rule_m8fk3wrynidycj3sxr",
+ "prevId": "rule_m8fk36q0pp153if4ja",
+ "firstOutputData": "output_m8fk3g3hgrbnru6in26",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fk3wrynidycj3sxr": {
+ "nextId": "rule_m8fk4tunp5dae7u06zq",
+ "prevId": "rule_m8fk3g3gr1rmksrt0r8",
+ "firstOutputData": "output_m8fk3wrz5znue94ahye",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fk4tunp5dae7u06zq": {
+ "nextId": "rule_m8fk6mh77wg917tro9c",
+ "prevId": "rule_m8fk3wrynidycj3sxr",
+ "firstOutputData": "output_m8fk4tuoc8qo64hsqsv",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fk6mh77wg917tro9c": {
+ "nextId": "rule_m8fk8q9wc55vi25lndv",
+ "prevId": "rule_m8fk4tunp5dae7u06zq",
+ "firstOutputData": "output_m8fk6mh98s84wzpssty",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fk8q9wc55vi25lndv": {
+ "nextId": "rule_m8fkamjizns4fzz4tn8",
+ "prevId": "rule_m8fk6mh77wg917tro9c",
+ "firstOutputData": "output_m8fk8q9xoalfqiips9f",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fkamjizns4fzz4tn8": {
+ "nextId": "rule_m8fkd8ubza9k7n9c8y",
+ "prevId": "rule_m8fk8q9wc55vi25lndv",
+ "firstOutputData": "output_m8fkamjj1k8ruqf3lft",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8fkd8ubza9k7n9c8y": {
+ "nextId": "",
+ "prevId": "rule_m8fkamjizns4fzz4tn8",
+ "firstOutputData": "output_m8fkd8ucggcjp4q9ov6",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "rule_m8fjtig7a1ojldl4ad",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_m8fjtig7a1ojldl4ad": {
+ "nextId": "rule_m8fjtkme0eiu7ob5avzu",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_m8fjtkme0eiu7ob5avzu": {
+ "nextId": "rule_m8fjtmy4enc0qcp1nxv",
+ "prevId": "rule_m8fjtig7a1ojldl4ad",
+ "type": "simpleCondition"
+},
+    "rule_m8fjtmy4enc0qcp1nxv": {
+ "nextId": "",
+ "prevId": "rule_m8fjtkme0eiu7ob5avzu",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m8fjvg1cshtuqigc96s": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "challanPrice",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m8fjvg1cshtuqigc96s",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m8fjvg1c8d4k8csp0ts": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "10-20kmph  overspeeding- Rs. 500\n20+ kmph overspeeding - Rs. 1000",
+ "next": "",
+ "executedValue": "10-20kmph  overspeeding- Rs. 500\n20+ kmph overspeeding - Rs. 1000",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fjwq65dlsfgo88hhe": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "10-20kmph overspeeding - Rs. 1000\n20+ kmph overspeeding - Rs. 2000",
+ "next": "",
+ "executedValue": "10-20kmph overspeeding - Rs. 1000\n20+ kmph overspeeding - Rs. 2000",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fjx742qr2kpqbcoie": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Base Fine  - Rs. 3000",
+ "next": "",
+ "executedValue": "Base Fine  - Rs. 3000",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fk01p6ewkh52e40c": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Base Fine  - Rs. 5000 + License suspension warning",
+ "next": "",
+ "executedValue": "Base Fine  - Rs. 5000 + License suspension warning",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fk0nyu1nbv86bmwpe": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Base Fine  - Rs. 500",
+ "next": "",
+ "executedValue": "Base Fine  - Rs. 500",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fk36q1a5fovfm6dbu": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Base Fine  - Rs. 1000",
+ "next": "",
+ "executedValue": "Base Fine  - Rs. 1000",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fk3g3hgrbnru6in26": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Base Fine  - Rs. 1000",
+ "next": "",
+ "executedValue": "Base Fine  - Rs. 1000",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fk3wrz5znue94ahye": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Base Fine  - Rs. 2000",
+ "next": "",
+ "executedValue": "Base Fine  - Rs. 2000",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fk4tuoc8qo64hsqsv": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Base Fine  - Rs. 5000",
+ "next": "",
+ "executedValue": "Base Fine  - Rs. 5000",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fk6mh98s84wzpssty": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Base Fine  - Rs. 10000 + License points deduction",
+ "next": "",
+ "executedValue": "Base Fine  - Rs. 10000 + License points deduction",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fk8q9xoalfqiips9f": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Base Fine  - Rs. 10000 + License points deduction",
+ "next": "",
+ "executedValue": "Base Fine  - Rs. 10000 + License points deduction",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fkamjj1k8ruqf3lft": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Base Fine  - Rs. 20000 + Immediate License suspension",
+ "next": "",
+ "executedValue": "Base Fine  - Rs. 20000 + Immediate License suspension",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8fkd8ucggcjp4q9ov6": {
+ "name": "challanPrice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Base Fine  - Rs. 50000 + Immediate License suspension + Jail Term",
+ "next": "",
+ "executedValue": "Base Fine  - Rs. 50000 + Immediate License suspension + Jail Term",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "rule_m8fjtig8qrlenktllv",
+  "rule_m8fjtkme276z680pxt",
+  "rule_m8fjtmy4evuwipyq04v"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fju2s0z71ngj8zg68"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "violationType",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjtig7a1ojldl4ad": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "severityOfViolation",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjtig8qrlenktllv": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fjuinjun3hx2mc0i"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjtkme0eiu7ob5avzu": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "firstViolation",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjtkme276z680pxt": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjtmy4enc0qcp1nxv": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "overSpeeding",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjtmy4evuwipyq04v": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fju2s0z71ngj8zg68": {
+ "value": "Overspeeding",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjuinjun3hx2mc0i": {
+ "value": "minor",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjtig8qrlenktllv",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjwq643cfa9rvvh7a": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjwq64gudv6bzt08p",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjwq64gb9yj9te87": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjwq64gudv6bzt08p",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fjwq64y516p81jb4o"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjwq64gudv6bzt08p": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fjwq64gb9yj9te87",
+  "rule_m8fjwq64nwiz3djb53j",
+  "rule_m8fjwq64wt4vt1w2ius",
+  "rule_m8fjwq643cfa9rvvh7a"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjwq64nwiz3djb53j": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjwq64gudv6bzt08p",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fjwq64sa8rpjtjra"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjwq64sa8rpjtjra": {
+ "value": "minor",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjwq64nwiz3djb53j",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjwq64wt4vt1w2ius": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjwq64gudv6bzt08p",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjwq64y516p81jb4o": {
+ "value": "Overspeeding",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjwq64gb9yj9te87",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjx741in9e0ekbpzs": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fjx741qaqld4tilel",
+  "rule_m8fjx741z7u159sx52k",
+  "rule_m8fjx741jtp8qlunkle",
+  "rule_m8fjx742wgwmci48l0q"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjx741jtp8qlunkle": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjx741in9e0ekbpzs",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjx741qaqld4tilel": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjx741in9e0ekbpzs",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fjx741twdhocmh90k"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjx741twdhocmh90k": {
+ "value": "Running red light",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjx741qaqld4tilel",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjx741yfnom3793ia": {
+ "value": "major",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjx741z7u159sx52k",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjx741z7u159sx52k": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjx741in9e0ekbpzs",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fjx741yfnom3793ia"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fjx742wgwmci48l0q": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fjx741in9e0ekbpzs",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk01p54bka0dklr4p": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk01p5nnzltywfn1i",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fk01p55x3pmde4vj6"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk01p55x3pmde4vj6": {
+ "value": "Running red light",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk01p54bka0dklr4p",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk01p5nnzltywfn1i": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fk01p54bka0dklr4p",
+  "rule_m8fk01p6a4sqxm88v2v",
+  "rule_m8fk01p6w5mqvfck7wp",
+  "rule_m8fk01p6k93wgg0f6"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk01p61awbfohy2m5": {
+ "value": "major",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk01p6a4sqxm88v2v",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk01p6a4sqxm88v2v": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk01p5nnzltywfn1i",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fk01p61awbfohy2m5"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk01p6k93wgg0f6": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk01p5nnzltywfn1i",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk01p6w5mqvfck7wp": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk01p5nnzltywfn1i",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk0nysik65detd4o": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fk0nysjctygovum3e",
+  "rule_m8fk0nytq5o21lngv7",
+  "rule_m8fk0nytgaw4vmq3mks",
+  "rule_m8fk0nytzi75dkoh8y"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk0nysjctygovum3e": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk0nysik65detd4o",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fk0nysuvv80fma8ek"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk0nysuvv80fma8ek": {
+ "value": "No helmet",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk0nysjctygovum3e",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk0nytg5fyewwsezp": {
+ "value": "minor",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk0nytq5o21lngv7",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk0nytgaw4vmq3mks": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk0nysik65detd4o",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk0nytq5o21lngv7": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk0nysik65detd4o",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fk0nytg5fyewwsezp"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk0nytzi75dkoh8y": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk0nysik65detd4o",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk36q065zxmv0ac7x": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk36q0pp153if4ja",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk36q0e7lkaa7ecn": {
+ "value": "minor",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk36q0nyccos072k",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk36q0lriz3p6y6t": {
+ "value": "No helmet",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk36q0tn84j4k94sr",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk36q0nyccos072k": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk36q0pp153if4ja",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fk36q0e7lkaa7ecn"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk36q0pp153if4ja": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fk36q0tn84j4k94sr",
+  "rule_m8fk36q0nyccos072k",
+  "rule_m8fk36q0w8y2f5ns2tb",
+  "rule_m8fk36q065zxmv0ac7x"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk36q0tn84j4k94sr": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk36q0pp153if4ja",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fk36q0lriz3p6y6t"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk36q0w8y2f5ns2tb": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk36q0pp153if4ja",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3g3g265fmd90g2h": {
+ "value": "No seatbelt",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk3g3g4weogdp839v",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3g3g4weogdp839v": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk3g3gr1rmksrt0r8",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fk3g3g265fmd90g2h"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3g3gr1rmksrt0r8": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fk3g3g4weogdp839v",
+  "rule_m8fk3g3h9ul4ldo4ffn",
+  "rule_m8fk3g3hgviridfykuh",
+  "rule_m8fk3g3hf92z2lg8fca"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3g3h9ul4ldo4ffn": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk3g3gr1rmksrt0r8",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fk3g3hcvar8cce8hk"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3g3hcvar8cce8hk": {
+ "value": "minor",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk3g3h9ul4ldo4ffn",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3g3hf92z2lg8fca": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk3g3gr1rmksrt0r8",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3g3hgviridfykuh": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk3g3gr1rmksrt0r8",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3wryegf6xx6mg8w": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk3wrynidycj3sxr",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fk3wryz4zgje7097h"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3wryio2zbo8k3ta": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk3wrynidycj3sxr",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fk3wryr0lzgy3jwys"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3wrynidycj3sxr": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fk3wryio2zbo8k3ta",
+  "rule_m8fk3wryegf6xx6mg8w",
+  "rule_m8fk3wryzipdspahspq",
+  "rule_m8fk3wrz2ircok8zjzz"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3wryr0lzgy3jwys": {
+ "value": "No seatbelt",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk3wryio2zbo8k3ta",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3wryz4zgje7097h": {
+ "value": "minor",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk3wryegf6xx6mg8w",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3wryzipdspahspq": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk3wrynidycj3sxr",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk3wrz2ircok8zjzz": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk3wrynidycj3sxr",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk4tun2x8fjcln8bm": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk4tunp5dae7u06zq",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fk4tunq69oyp38oal"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk4tun912rb6v1naf": {
+ "value": "major",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk4tunc1aacbzepsm",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk4tunc1aacbzepsm": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk4tunp5dae7u06zq",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fk4tun912rb6v1naf"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk4tunp5dae7u06zq": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fk4tun2x8fjcln8bm",
+  "rule_m8fk4tunc1aacbzepsm",
+  "rule_m8fk4tuohgtj1osj586",
+  "rule_m8fk4tuoj9wz9as4eel"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk4tunq69oyp38oal": {
+ "value": "Using mobile while driving",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk4tun2x8fjcln8bm",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk4tuohgtj1osj586": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk4tunp5dae7u06zq",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk4tuoj9wz9as4eel": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk4tunp5dae7u06zq",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk6mh77wg917tro9c": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fk6mh7wlhhw2td02l",
+  "rule_m8fk6mh8jrueddaz5t8",
+  "rule_m8fk6mh8c6op2ffjfch",
+  "rule_m8fk6mh821vcwljz77y"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk6mh7c8b5biycx5p": {
+ "value": "Using mobile while driving",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk6mh7wlhhw2td02l",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk6mh7wlhhw2td02l": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk6mh77wg917tro9c",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fk6mh7c8b5biycx5p"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk6mh821vcwljz77y": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk6mh77wg917tro9c",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk6mh8c6op2ffjfch": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk6mh77wg917tro9c",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk6mh8jrueddaz5t8": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk6mh77wg917tro9c",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fk6mh8z278tmiaqz"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk6mh8z278tmiaqz": {
+ "value": "major",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk6mh8jrueddaz5t8",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk8q9w3wn1vraq05j": {
+ "value": "critical",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk8q9wum7wpfq7i2r",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk8q9wa03a092ta5": {
+ "value": "Drunk driving",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk8q9wbpu2etxwh0o",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk8q9wbpu2etxwh0o": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk8q9wc55vi25lndv",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fk8q9wa03a092ta5"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk8q9wc55vi25lndv": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fk8q9wbpu2etxwh0o",
+  "rule_m8fk8q9wum7wpfq7i2r",
+  "rule_m8fk8q9x0g9ex5ifnmq7",
+  "rule_m8fk8q9x8gw3ap672gi"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk8q9wum7wpfq7i2r": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk8q9wc55vi25lndv",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fk8q9w3wn1vraq05j"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk8q9x0g9ex5ifnmq7": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk8q9wc55vi25lndv",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fk8q9x8gw3ap672gi": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fk8q9wc55vi25lndv",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkamjiixhfwb2u7g8": {
+ "value": "critical",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fkamjiv49c9m3hdf",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkamjiiyap3lf8d9s": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fkamjizns4fzz4tn8",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fkamjilips01nodz"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkamjilips01nodz": {
+ "value": "Drunk driving",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fkamjiiyap3lf8d9s",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkamjiv49c9m3hdf": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fkamjizns4fzz4tn8",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fkamjiixhfwb2u7g8"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkamjizns4fzz4tn8": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fkamjiiyap3lf8d9s",
+  "rule_m8fkamjiv49c9m3hdf",
+  "rule_m8fkamjjzcyqnkdm19",
+  "rule_m8fkamjjrmpkjhh01c"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkamjjrmpkjhh01c": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fkamjizns4fzz4tn8",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkamjjzcyqnkdm19": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fkamjizns4fzz4tn8",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkd8ub1ykbfhne91y": {
+ "value": "Hit and run",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fkd8ubm2cfynhb7d",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkd8ubm2cfynhb7d": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fkd8ubza9k7n9c8y",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8fkd8ub1ykbfhne91y"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkd8ubza9k7n9c8y": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8fkd8ubm2cfynhb7d",
+  "rule_m8fkd8ucuwgze19sya",
+  "rule_m8fkd8uc66ny6f9dm5g",
+  "rule_m8fkd8uce6nnafhsvy"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkd8uc66ny6f9dm5g": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fkd8ubza9k7n9c8y",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtkme0eiu7ob5avzu"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkd8uce6nnafhsvy": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fkd8ubza9k7n9c8y",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtmy4enc0qcp1nxv"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkd8ucg4r00zve8cs": {
+ "value": "critical",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fkd8ucuwgze19sya",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8fkd8ucuwgze19sya": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8fkd8ubza9k7n9c8y",
+ "children": null,
+ "leftNode": [
+  "rule_m8fjtig7a1ojldl4ad"
+ ],
+ "rightNode": [
+  "rule_m8fkd8ucg4r00zve8cs"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "violationType",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "The traffic violation processing system determines the penalties based on the type of violation, its severity, and whether the offender has any prior infractions. The decision table below outlines how different violations are handled, with penalties ranging from fines to license suspensions and legal consequences.",
+  "policy": "evaluteAll",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

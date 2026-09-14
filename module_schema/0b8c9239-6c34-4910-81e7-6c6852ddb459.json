@@ -1,0 +1,45 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-05-23T06:58:38.952Z",
+  "updatedAt": "2026-05-23T06:58:38.952Z",
+  "isDeleted": false,
+  "entityId": "0b8c9239-6c34-4910-81e7-6c6852ddb459",
+  "name": "TestStrings_Tenure",
+  "moduleId": "34a00ec7-2905-4434-8a75-d23a8a436ce4",
+  "dataType": "String",
+  "usageType": "",
+  "options": [
+   {
+    "value": "1st Prior"
+   },
+   {
+    "value": "2nd Prior"
+   },
+   {
+    "value": "3rd Prior"
+   },
+   {
+    "value": "Contract <= 6 months"
+   },
+   {
+    "value": "Contract 7-12 months"
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-23T06:58:38.955377Z",
+   "updatedAt": "2026-05-23T06:58:38.955377Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "0b8c9239-6c34-4910-81e7-6c6852ddb459",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "34a00ec7-2905-4434-8a75-d23a8a436ce4",
+   "dependencyVersion": "live"
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2026-08-07T06:30:07.852Z",
+  "updatedAt": "2026-08-07T06:30:07.852Z",
+  "isDeleted": false,
+  "entityId": "87309f0c-9b97-443a-911e-d1ded8acd641",
+  "name": "TC_SUSPENSE",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "list",
+  "value": {
+   "data": [
+    "SUS01"
+   ],
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-08-05T17:04:46.788Z",
+  "updatedAt": "2026-08-05T17:04:46.788Z",
+  "isDeleted": false,
+  "entityId": "e7deff8d-3b4c-4e6a-91a1-e9500ef0bef2",
+  "name": "evidence_item",
+  "moduleId": "07c4291d-dcab-4cba-82a9-8efcda01f125",
+  "dataType": "string",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": "Loan posting (credit entry to the loan)"
+   },
+   {
+    "value": "Bill / payment notice"
+   },
+   {
+    "value": "Interest calculation worksheet"
+   },
+   {
+    "value": "Deposit credit (wire-clearing entry)"
+   },
+   {
+    "value": "Fee posting"
+   },
+   {
+    "value": "Loan history / posting confirmation"
+   },
+   {
+    "value": "Rate-adjustment evidence"
+   },
+   {
+    "value": "GL journal / cross-application movement"
+   },
+   {
+    "value": "Suspense-posting evidence"
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-05T17:04:46.796516Z",
+   "updatedAt": "2026-08-05T17:04:46.796516Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "e7deff8d-3b4c-4e6a-91a1-e9500ef0bef2",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "07c4291d-dcab-4cba-82a9-8efcda01f125",
+   "dependencyVersion": "live"
+  }
+ ]
+}

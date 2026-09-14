@@ -1,0 +1,158 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "live": true,
+ "data": {
+  "createdAt": "2025-02-21T12:36:12.904Z",
+  "updatedAt": "2025-02-21T12:37:05.354Z",
+  "isDeleted": false,
+  "testedAt": "2025-02-21T12:36:36.621Z",
+  "publishedAt": "2025-02-21T12:37:05.348Z",
+  "entityId": "f9c3ceb3-a7b2-4af2-81dc-ae9ef4bf14b2",
+  "version": "0.10",
+  "name": "coupon  table source",
+  "commitId": "commit-8d5324a8-2255-40a0-962c-8cfb0fff5445",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-02-21 12:36:12",
+   "description": "Coupon table fetched",
+   "timeStamp": "2025-02-21T12:37:05.345Z"
+  },
+  "fields": {
+   "cart_discount_type": {
+ "ColumnName": "cart_discount_type",
+ "DataType": "string",
+ "Order": 7,
+ "ExecutedValue": "fixed_discount"
+},
+   "cart_discount_value": {
+ "ColumnName": "cart_discount_value",
+ "DataType": "numeric",
+ "Order": 13,
+ "ExecutedValue": 21
+},
+   "category_name": {
+ "ColumnName": "category_name",
+ "DataType": "string",
+ "Order": 14,
+ "ExecutedValue": "Appliances"
+},
+   "coupon_code": {
+ "ColumnName": "coupon_code",
+ "DataType": "string",
+ "Order": 8,
+ "ExecutedValue": "COUPON_1"
+},
+   "created_at": {
+ "ColumnName": "created_at",
+ "DataType": "dateTime",
+ "Order": 17,
+ "ExecutedValue": "2025-02-19T11:17:04.376156Z"
+},
+   "description": {
+ "ColumnName": "description",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": "Discount offer 1"
+},
+   "end_date": {
+ "ColumnName": "end_date",
+ "DataType": "dateTime",
+ "Order": 9,
+ "ExecutedValue": "2025-03-22T00:00:00Z"
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 2,
+ "ExecutedValue": 1
+},
+   "is_deleted": {
+ "ColumnName": "is_deleted",
+ "DataType": "boolean",
+ "Order": 3,
+ "ExecutedValue": false
+},
+   "item_discount_type": {
+ "ColumnName": "item_discount_type",
+ "DataType": "string",
+ "Order": 10,
+ "ExecutedValue": "percent_discount"
+},
+   "item_discount_value": {
+ "ColumnName": "item_discount_value",
+ "DataType": "numeric",
+ "Order": 11,
+ "ExecutedValue": 11
+},
+   "maximum_discount": {
+ "ColumnName": "maximum_discount",
+ "DataType": "numeric",
+ "Order": 4,
+ "ExecutedValue": 55
+},
+   "minimum_order_value": {
+ "ColumnName": "minimum_order_value",
+ "DataType": "numeric",
+ "Order": 15,
+ "ExecutedValue": 110
+},
+   "payment_gateway": {
+ "ColumnName": "payment_gateway",
+ "DataType": "string",
+ "Order": 16,
+ "ExecutedValue": "debit_card"
+},
+   "sku_name": {
+ "ColumnName": "sku_name",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": "SKU222"
+},
+   "start_date": {
+ "ColumnName": "start_date",
+ "DataType": "dateTime",
+ "Order": 12,
+ "ExecutedValue": "2025-02-20T00:00:00Z"
+},
+   "updated_at": {
+ "ColumnName": "updated_at",
+ "DataType": "dateTime",
+ "Order": 6,
+ "ExecutedValue": "2025-02-19T11:17:04.376156Z"
+}
+  },
+  "description": "",
+  "query": "SELECT * FROM coupons;",
+  "params": {
+   
+  },
+  "connectorId": "0b5ede46-75c1-413d-bff6-0912b1a77dc0",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-02-21T12:36:12.91025Z",
+   "updatedAt": "2025-02-21T12:37:05.368986Z",
+   "entityCommitId": "commit-8d5324a8-2255-40a0-962c-8cfb0fff5445",
+   "entityType": "dataSet",
+   "entityId": "f9c3ceb3-a7b2-4af2-81dc-ae9ef4bf14b2",
+   "entityVersion": "0.10",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "0b5ede46-75c1-413d-bff6-0912b1a77dc0",
+   "dependencyVersion": "live"
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "entityType": "connector",
+ "category": "gsheet",
+ "data": {
+  "createdAt": "2026-05-25T05:53:16.916Z",
+  "updatedAt": "2026-09-02T15:54:49.380568Z",
+  "isDeleted": false,
+  "entityId": "63a9d2e9-c57e-473e-939a-b61d35e03c4c",
+  "name": "Siddharth Gsheet",
+  "isDemo": false,
+  "category": "third-party",
+  "isSource": true,
+  "isAction": true,
+  "isTrigger": false
+ }
+}

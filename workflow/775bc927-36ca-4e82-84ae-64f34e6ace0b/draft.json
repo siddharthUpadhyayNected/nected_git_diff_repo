@@ -1,0 +1,363 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2025-07-28T07:52:49.958Z",
+  "updatedAt": "2025-07-28T08:02:44.569128Z",
+  "isDeleted": false,
+  "testedAt": "2025-07-28T08:02:44.568Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "775bc927-36ca-4e82-84ae-64f34e6ace0b",
+  "version": "draft",
+  "name": "test_archive",
+  "commitId": "commit-c6619830-3128-4513-9f37-7892287e2480",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-07-28 07:52:49",
+   "timeStamp": "2025-07-28T07:52:49.958740645Z"
+  },
+  "startNode": "n_dP0zyZ",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 691.0546875,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "price": {
+ "value": null,
+ "executedValue": 100,
+ "name": "price",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "price": 100
+     },
+     "settings": {
+      "authType": "private",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 691.0546875,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_fzIdOX",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 691.0546875,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_dP0zyZ",
+    "type": "rule",
+    "data": {
+     "input": {
+      "discountValue": {
+ "value": 5,
+ "executedValue": null,
+ "name": "discountValue",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "totalCartValue": {
+ "value": null,
+ "executedValue": null,
+ "name": "totalCartValue",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "price",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "type": {
+ "value": "fixed",
+ "executedValue": null,
+ "name": "type",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "output": [
+ {
+  "defaultOutputData": true,
+  "discount": 5,
+  "finalPrice": 95,
+  "rowError": null,
+  "rowId": 2
+ }
+],
+      "ruleId": "cf503d04-3317-4984-82ed-7b62c26e99c1",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "cf503d04-3317-4984-82ed-7b62c26e99c1",
+     "pluginName": "",
+     "status": "success",
+     "name": "finalPriceAndDiscountRule",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "2025-07-28T08:02:44.568Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 691.0546875,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_McxZNZ",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_xKdE3R",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "n_fzIdOX",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_tALwGz",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_dP0zyZ",
+    "target": "n_McxZNZ",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_2cw5dB",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_fzIdOX",
+    "target": "n_dP0zyZ",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": null,
+   "timezone": "",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-07-28T07:53:16.824219Z",
+   "updatedAt": "2025-07-28T08:02:40.964815Z",
+   "entityCommitId": "commit-c6619830-3128-4513-9f37-7892287e2480",
+   "entityType": "workflow",
+   "entityId": "775bc927-36ca-4e82-84ae-64f34e6ace0b",
+   "entityVersion": "draft",
+   "entityNodeId": "n_dP0zyZ",
+   "dependencyType": "rule",
+   "dependencyId": "cf503d04-3317-4984-82ed-7b62c26e99c1",
+   "dependencyVersion": "draft"
+  }
+ ]
+}

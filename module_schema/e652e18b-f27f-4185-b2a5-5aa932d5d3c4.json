@@ -1,0 +1,39 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-08-06T10:15:03.513Z",
+  "updatedAt": "2026-08-06T10:15:03.513Z",
+  "isDeleted": false,
+  "entityId": "e652e18b-f27f-4185-b2a5-5aa932d5d3c4",
+  "name": "trust",
+  "moduleId": "07c4291d-dcab-4cba-82a9-8efcda01f125",
+  "dataType": "string",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": "high"
+   },
+   {
+    "value": "medium"
+   },
+   {
+    "value": "low"
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-06T10:15:03.520087Z",
+   "updatedAt": "2026-08-06T10:15:03.520087Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "e652e18b-f27f-4185-b2a5-5aa932d5d3c4",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "07c4291d-dcab-4cba-82a9-8efcda01f125",
+   "dependencyVersion": "live"
+  }
+ ]
+}

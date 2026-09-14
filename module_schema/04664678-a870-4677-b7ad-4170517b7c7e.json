@@ -1,0 +1,45 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-05-23T06:58:38.899Z",
+  "updatedAt": "2026-05-23T06:58:38.899Z",
+  "isDeleted": false,
+  "entityId": "04664678-a870-4677-b7ad-4170517b7c7e",
+  "name": "TestNumbers_Ratings",
+  "moduleId": "34a00ec7-2905-4434-8a75-d23a8a436ce4",
+  "dataType": "Numeric",
+  "usageType": "",
+  "options": [
+   {
+    "value": 1
+   },
+   {
+    "value": 2
+   },
+   {
+    "value": 3
+   },
+   {
+    "value": 4
+   },
+   {
+    "value": 5
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-23T06:58:38.902727Z",
+   "updatedAt": "2026-05-23T06:58:38.902727Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "04664678-a870-4677-b7ad-4170517b7c7e",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "34a00ec7-2905-4434-8a75-d23a8a436ce4",
+   "dependencyVersion": "live"
+  }
+ ]
+}

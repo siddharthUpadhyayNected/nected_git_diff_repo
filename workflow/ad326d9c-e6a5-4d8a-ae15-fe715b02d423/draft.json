@@ -1,0 +1,1906 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2025-05-29T05:38:28.396Z",
+  "updatedAt": "2025-06-03T07:35:22.093609Z",
+  "isDeleted": false,
+  "testedAt": "2025-06-03T07:35:22.093Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "ad326d9c-e6a5-4d8a-ae15-fe715b02d423",
+  "version": "draft",
+  "name": "Zep_Prod",
+  "commitId": "commit-6a545a51-1391-4f78-bcb0-7315826dcf9d",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-05-29 05:38:28",
+   "timeStamp": "2025-05-29T05:38:28.396257179Z"
+  },
+  "startNode": "node_lym9oa7kivbvr0ykmw",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 782.5000610351562,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "cart": {
+ "value": null,
+ "executedValue": {
+  "cart_list": [
+ {
+  "brand": "MyGlamm",
+  "category": "MakeUp & Beauty",
+  "name": "Myglamm Popxo Makeup Collection Mini Kit",
+  "price": 200,
+  "quantity": 1,
+  "totalPrice": 200
+ },
+ {
+  "brand": "Prolume",
+  "category": "Fashion",
+  "name": "Prplume Travel Pouch",
+  "price": 150,
+  "quantity": 1,
+  "totalPrice": 150
+ },
+ {
+  "brand": "MyGlamm",
+  "category": "MakeUp & Beauty",
+  "name": "Myglamm Lit Liquid Matte Lipstick",
+  "price": 80,
+  "quantity": 2,
+  "totalPrice": 160
+ },
+ {
+  "brand": "Prolume",
+  "category": "Hair Accessories",
+  "name": "Prolume Elastic Hair Rubber Bands",
+  "price": 100,
+  "quantity": 2,
+  "totalPrice": 200
+ }
+],
+  "email": "alice@gmail.com",
+  "userId": 121
+ },
+ "name": "cart",
+ "dataType": "json",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "cart": {
+ "cart_list": [
+ {
+  "brand": "MyGlamm",
+  "category": "MakeUp & Beauty",
+  "name": "Myglamm Popxo Makeup Collection Mini Kit",
+  "price": 200,
+  "quantity": 1,
+  "totalPrice": 200
+ },
+ {
+  "brand": "Prolume",
+  "category": "Fashion",
+  "name": "Prplume Travel Pouch",
+  "price": 150,
+  "quantity": 1,
+  "totalPrice": 150
+ },
+ {
+  "brand": "MyGlamm",
+  "category": "MakeUp & Beauty",
+  "name": "Myglamm Lit Liquid Matte Lipstick",
+  "price": 80,
+  "quantity": 2,
+  "totalPrice": 160
+ },
+ {
+  "brand": "Prolume",
+  "category": "Hair Accessories",
+  "name": "Prolume Elastic Hair Rubber Bands",
+  "price": 100,
+  "quantity": 2,
+  "totalPrice": 200
+ }
+],
+ "email": "alice@gmail.com",
+ "userId": 121
+}
+     },
+     "settings": {
+      "authType": "none",
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 782.5000610351562,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lym9aids749rwzrgkgk",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 782.5000610351562,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lym9oa7kivbvr0ykmw",
+    "type": "codeNode",
+    "data": {
+     "input": {
+      "language": {
+ "value": "excelFormula",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "snippet": {
+ "value": "// Initialize\nlet cart = {{.Trigger.cart}}.cart_list;\n\n// Calculate overall total\nlet overallTotal = SUM_LIST(list=cart, 'totalPrice');\n\n// Initialize result array\nlet result = [\n  {\n    type: \"overall\",\n    name: \"Payment Gateway\",\n    value: overallTotal\n  },\n];\n\n// Calculate Category Totals\ncart.map(item => item.category).filter((value, index, self) => self.indexOf(value) === index).forEach(category => {\n  let categoryTotal = SUM_LIST(list=FILTER(cart, \"$item.$category === '\" + category + \"'\"), 'totalPrice');\n  result.push({\n    type: \"category\",\n    name: category,\n    value: categoryTotal\n  });\n});\n\n// Calculate Brand Totals\ncart.map(item => item.brand).filter((value, index, self) => self.indexOf(value) === index).forEach(brand => {\n  let brandTotal = SUM_LIST(list=FILTER(cart, \"$item.$brand === '\" + brand + \"'\"), 'totalPrice');\n  result.push({\n    type: \"brand\",\n    name: brand,\n    value: brandTotal\n  });\n});\n\nresult;\n",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": [
+ {
+  "name": "Payment Gateway",
+  "type": "overall",
+  "value": 710
+ },
+ {
+  "name": "MakeUp & Beauty",
+  "type": "category",
+  "value": 360
+ },
+ {
+  "name": "Fashion",
+  "type": "category",
+  "value": 150
+ },
+ {
+  "name": "Hair Accessories",
+  "type": "category",
+  "value": 200
+ },
+ {
+  "name": "MyGlamm",
+  "type": "brand",
+  "value": 360
+ },
+ {
+  "name": "Prolume",
+  "type": "brand",
+  "value": 350
+ }
+]
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10
+     },
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "node_lym9oa7kivbvr0ykmw",
+     "pluginName": "",
+     "status": "success",
+     "name": "Modified_Cart",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "2025-06-03T07:35:22.093Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 782.5000610351562,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lym9oa7kfj5cpf31odv",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 782.5000610351562,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lymadjfsdlq537xt2r",
+    "type": "rule",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "output": [
+ {
+  "code": "ZEPTO50AU",
+  "defaultOutputData": true,
+  "description": "Get flat 50 off on transactions above ₹599 using AU Credit Cards",
+  "discount_type": "fixed",
+  "discount_value": 50,
+  "main": "Get flat 50 off using AU Credit cards",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": 50,
+ "min_transaction": 599,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on AU Credit Cards<br>• Minimum transaction: ₹599<br>• Maximum discount: ₹50<br>• Offer valid between 1st-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "AU Credit Cards",
+  "rowError": null,
+  "rowId": 1
+ },
+ {
+  "code": "AIRZEP",
+  "defaultOutputData": true,
+  "description": "Get flat 80 cashback on orders above ₹399 via Airtel Payment Bank Wallet and Netbanking",
+  "discount_type": "cashback",
+  "discount_value": 80,
+  "main": "Get up to 80 cashback on orders above ₹399",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": null,
+ "min_transaction": 399,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on Airtel Payments Bank<br>• Cashback would be credited within 72 business hours in the user's Airtel Payments Bank wallet or savings account.<br>• Offer valid between 1st July-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-07-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "Airtel Payment Bank",
+  "rowError": null,
+  "rowId": 2
+ },
+ {
+  "code": "MYGLAMM5",
+  "defaultOutputData": true,
+  "description": "Get Flat 5% Off on MyGlamm products",
+  "discount_type": "percent",
+  "discount_value": 5,
+  "main": "Flat 5% Off on MyGlamm products",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "MyGlamm",
+ "max_discount": null,
+ "min_transaction": 299,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on MyGlamm Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 3
+ },
+ {
+  "code": "PROLUME10",
+  "defaultOutputData": true,
+  "description": "Get Flat 10% Off on Prolume products",
+  "discount_type": "percent",
+  "discount_value": 10,
+  "main": "Flat 10% Off on Prolume products",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "Prolume",
+ "max_discount": null,
+ "min_transaction": 249,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on Prolume Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 4
+ },
+ {
+  "code": "MAKEUP50",
+  "defaultOutputData": true,
+  "description": "Get Flat 50 Off above ₹199. Valid only on MakeUp & Beauty",
+  "discount_type": "fixed",
+  "discount_value": 50,
+  "main": "Flat 50 Off on MakeUp & Beauty",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "category",
+ "discount_on_name": "MakeUp & Beauty",
+ "max_discount": 50,
+ "min_transaction": 199,
+ "terms": "Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹199.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on MakeUp & Beauty products.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 5
+ },
+ {
+  "code": "TOYS100",
+  "defaultOutputData": true,
+  "description": "Get Flat ₹100 Off above ₹299. Valid only on Toys",
+  "discount_type": "fixed",
+  "discount_value": 100,
+  "main": "Flat 100 Off on Toys",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "category",
+ "discount_on_name": "Toys",
+ "max_discount": 100,
+ "min_transaction": 299,
+ "terms": "Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹299.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on Toys<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 6
+ }
+],
+      "ruleId": "499905b4-4b62-4a66-9753-64e739929dda",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "499905b4-4b62-4a66-9753-64e739929dda",
+     "pluginName": "",
+     "status": "success",
+     "name": "Zepto_Coupons_All",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "2025-06-03T07:35:22.093Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 782.5000610351562,
+     "y": 950
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lymadjfsvmuhk2gyyvi",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 782.5000610351562,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lymarpry5vws31dwygt",
+    "type": "codeNode",
+    "data": {
+     "input": {
+      "language": {
+ "value": "JS",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "snippet": {
+ "value": "const data = {{.Zepto_Coupons_Each.output}};\nconst coupons = [];\n\ndata.forEach(group => {\n  if (Array.isArray(group.output)) {\n    group.output.forEach(coupon => {\n      coupons.push(coupon);\n    });\n  }\n});\n\nconst uniqueCoupons = [];\nconst seenCodes = {};\n\ncoupons.forEach(coupon => {\n  if (!seenCodes[coupon.code]) {\n    seenCodes[coupon.code] = true;\n    uniqueCoupons.push(coupon);\n  }\n});\n\ncoupons",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": [
+ {
+  "code": "ZEPTO50AU",
+  "defaultOutputData": true,
+  "description": "Get flat 50 off on transactions above ₹599 using AU Credit Cards",
+  "discount_type": "fixed",
+  "discount_value": 50,
+  "main": "Get flat 50 off using AU Credit cards",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": 50,
+ "min_transaction": 599,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on AU Credit Cards<br>• Minimum transaction: ₹599<br>• Maximum discount: ₹50<br>• Offer valid between 1st-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "AU Credit Cards",
+  "rowError": null,
+  "rowId": 1
+ },
+ {
+  "code": "AIRZEP",
+  "defaultOutputData": true,
+  "description": "Get flat 80 cashback on orders above ₹399 via Airtel Payment Bank Wallet and Netbanking",
+  "discount_type": "cashback",
+  "discount_value": 80,
+  "main": "Get up to 80 cashback on orders above ₹399",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": null,
+ "min_transaction": 399,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on Airtel Payments Bank<br>• Cashback would be credited within 72 business hours in the user's Airtel Payments Bank wallet or savings account.<br>• Offer valid between 1st July-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "Airtel Payment Bank",
+  "rowError": null,
+  "rowId": 2
+ },
+ {
+  "code": "MAKEUP50",
+  "defaultOutputData": true,
+  "description": "Get Flat 50 Off above ₹199. Valid only on MakeUp & Beauty",
+  "discount_type": "fixed",
+  "discount_value": 50,
+  "main": "Flat 50 Off on MakeUp & Beauty",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "category",
+ "discount_on_name": "MakeUp & Beauty",
+ "max_discount": 50,
+ "min_transaction": 199,
+ "terms": "Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹199.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on MakeUp & Beauty products.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 5
+ },
+ {
+  "code": "MYGLAMM5",
+  "defaultOutputData": true,
+  "description": "Get Flat 5% Off on MyGlamm products",
+  "discount_type": "percent",
+  "discount_value": 5,
+  "main": "Flat 5% Off on MyGlamm products",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "MyGlamm",
+ "max_discount": null,
+ "min_transaction": 299,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on MyGlamm Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 3
+ },
+ {
+  "code": "PROLUME10",
+  "defaultOutputData": true,
+  "description": "Get Flat 10% Off on Prolume products",
+  "discount_type": "percent",
+  "discount_value": 10,
+  "main": "Flat 10% Off on Prolume products",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "Prolume",
+ "max_discount": null,
+ "min_transaction": 249,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on Prolume Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 4
+ }
+]
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10
+     },
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "node_lymarpry5vws31dwygt",
+     "pluginName": "",
+     "status": "success",
+     "name": "Applicable_Coupons",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "2025-06-03T07:35:22.093Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 782.5000610351562,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lymarpryrakhce7qgss",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 782.5000610351562,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lzmaz7mquuivvmw6h",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "All_Coupons": {
+ "value": null,
+ "executedValue": [
+  {
+   "code": "ZEPTO50AU",
+   "defaultOutputData": true,
+   "description": "Get flat 50 off on transactions above ₹599 using AU Credit Cards",
+   "discount_type": "fixed",
+   "discount_value": 50,
+   "main": "Get flat 50 off using AU Credit cards",
+   "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": 50,
+ "min_transaction": 599,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on AU Credit Cards<br>• Minimum transaction: ₹599<br>• Maximum discount: ₹50<br>• Offer valid between 1st-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+   "payment_gateway": "AU Credit Cards",
+   "rowError": null,
+   "rowId": 1
+  },
+  {
+   "code": "AIRZEP",
+   "defaultOutputData": true,
+   "description": "Get flat 80 cashback on orders above ₹399 via Airtel Payment Bank Wallet and Netbanking",
+   "discount_type": "cashback",
+   "discount_value": 80,
+   "main": "Get up to 80 cashback on orders above ₹399",
+   "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": null,
+ "min_transaction": 399,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on Airtel Payments Bank<br>• Cashback would be credited within 72 business hours in the user's Airtel Payments Bank wallet or savings account.<br>• Offer valid between 1st July-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-07-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+   "payment_gateway": "Airtel Payment Bank",
+   "rowError": null,
+   "rowId": 2
+  },
+  {
+   "code": "MYGLAMM5",
+   "defaultOutputData": true,
+   "description": "Get Flat 5% Off on MyGlamm products",
+   "discount_type": "percent",
+   "discount_value": 5,
+   "main": "Flat 5% Off on MyGlamm products",
+   "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "MyGlamm",
+ "max_discount": null,
+ "min_transaction": 299,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on MyGlamm Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+   "payment_gateway": "any",
+   "rowError": null,
+   "rowId": 3
+  },
+  {
+   "code": "PROLUME10",
+   "defaultOutputData": true,
+   "description": "Get Flat 10% Off on Prolume products",
+   "discount_type": "percent",
+   "discount_value": 10,
+   "main": "Flat 10% Off on Prolume products",
+   "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "Prolume",
+ "max_discount": null,
+ "min_transaction": 249,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on Prolume Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+   "payment_gateway": "any",
+   "rowError": null,
+   "rowId": 4
+  },
+  {
+   "code": "MAKEUP50",
+   "defaultOutputData": true,
+   "description": "Get Flat 50 Off above ₹199. Valid only on MakeUp & Beauty",
+   "discount_type": "fixed",
+   "discount_value": 50,
+   "main": "Flat 50 Off on MakeUp & Beauty",
+   "meta": {
+ "allow_count": 1,
+ "discount_on": "category",
+ "discount_on_name": "MakeUp & Beauty",
+ "max_discount": 50,
+ "min_transaction": 199,
+ "terms": "Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹199.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on MakeUp & Beauty products.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+   "payment_gateway": "any",
+   "rowError": null,
+   "rowId": 5
+  },
+  {
+   "code": "TOYS100",
+   "defaultOutputData": true,
+   "description": "Get Flat ₹100 Off above ₹299. Valid only on Toys",
+   "discount_type": "fixed",
+   "discount_value": 100,
+   "main": "Flat 100 Off on Toys",
+   "meta": {
+ "allow_count": 1,
+ "discount_on": "category",
+ "discount_on_name": "Toys",
+ "max_discount": 100,
+ "min_transaction": 299,
+ "terms": "Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹299.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on Toys<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+   "payment_gateway": "any",
+   "rowError": null,
+   "rowId": 6
+  }
+ ],
+ "name": "All_Coupons",
+ "dataType": "list",
+ "source": "Zepto_Coupons_All",
+ "attribute": "output",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Applicable_Coupons": {
+ "value": null,
+ "executedValue": [
+  {
+   "code": "ZEPTO50AU",
+   "defaultOutputData": true,
+   "description": "Get flat 50 off on transactions above ₹599 using AU Credit Cards",
+   "discount_type": "fixed",
+   "discount_value": 50,
+   "main": "Get flat 50 off using AU Credit cards",
+   "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": 50,
+ "min_transaction": 599,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on AU Credit Cards<br>• Minimum transaction: ₹599<br>• Maximum discount: ₹50<br>• Offer valid between 1st-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+   "payment_gateway": "AU Credit Cards",
+   "rowError": null,
+   "rowId": 1
+  },
+  {
+   "code": "AIRZEP",
+   "defaultOutputData": true,
+   "description": "Get flat 80 cashback on orders above ₹399 via Airtel Payment Bank Wallet and Netbanking",
+   "discount_type": "cashback",
+   "discount_value": 80,
+   "main": "Get up to 80 cashback on orders above ₹399",
+   "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": null,
+ "min_transaction": 399,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on Airtel Payments Bank<br>• Cashback would be credited within 72 business hours in the user's Airtel Payments Bank wallet or savings account.<br>• Offer valid between 1st July-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+   "payment_gateway": "Airtel Payment Bank",
+   "rowError": null,
+   "rowId": 2
+  },
+  {
+   "code": "MAKEUP50",
+   "defaultOutputData": true,
+   "description": "Get Flat 50 Off above ₹199. Valid only on MakeUp & Beauty",
+   "discount_type": "fixed",
+   "discount_value": 50,
+   "main": "Flat 50 Off on MakeUp & Beauty",
+   "meta": {
+ "allow_count": 1,
+ "discount_on": "category",
+ "discount_on_name": "MakeUp & Beauty",
+ "max_discount": 50,
+ "min_transaction": 199,
+ "terms": "Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹199.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on MakeUp & Beauty products.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+   "payment_gateway": "any",
+   "rowError": null,
+   "rowId": 5
+  },
+  {
+   "code": "MYGLAMM5",
+   "defaultOutputData": true,
+   "description": "Get Flat 5% Off on MyGlamm products",
+   "discount_type": "percent",
+   "discount_value": 5,
+   "main": "Flat 5% Off on MyGlamm products",
+   "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "MyGlamm",
+ "max_discount": null,
+ "min_transaction": 299,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on MyGlamm Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+   "payment_gateway": "any",
+   "rowError": null,
+   "rowId": 3
+  },
+  {
+   "code": "PROLUME10",
+   "defaultOutputData": true,
+   "description": "Get Flat 10% Off on Prolume products",
+   "discount_type": "percent",
+   "discount_value": 10,
+   "main": "Flat 10% Off on Prolume products",
+   "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "Prolume",
+ "max_discount": null,
+ "min_transaction": 249,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on Prolume Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+   "payment_gateway": "any",
+   "rowError": null,
+   "rowId": 4
+  }
+ ],
+ "name": "Applicable_Coupons",
+ "dataType": "list",
+ "source": "Applicable_Coupons",
+ "attribute": "output",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "All_Coupons": [
+ {
+  "code": "ZEPTO50AU",
+  "defaultOutputData": true,
+  "description": "Get flat 50 off on transactions above ₹599 using AU Credit Cards",
+  "discount_type": "fixed",
+  "discount_value": 50,
+  "main": "Get flat 50 off using AU Credit cards",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": 50,
+ "min_transaction": 599,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on AU Credit Cards<br>• Minimum transaction: ₹599<br>• Maximum discount: ₹50<br>• Offer valid between 1st-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "AU Credit Cards",
+  "rowError": null,
+  "rowId": 1
+ },
+ {
+  "code": "AIRZEP",
+  "defaultOutputData": true,
+  "description": "Get flat 80 cashback on orders above ₹399 via Airtel Payment Bank Wallet and Netbanking",
+  "discount_type": "cashback",
+  "discount_value": 80,
+  "main": "Get up to 80 cashback on orders above ₹399",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": null,
+ "min_transaction": 399,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on Airtel Payments Bank<br>• Cashback would be credited within 72 business hours in the user's Airtel Payments Bank wallet or savings account.<br>• Offer valid between 1st July-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-07-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "Airtel Payment Bank",
+  "rowError": null,
+  "rowId": 2
+ },
+ {
+  "code": "MYGLAMM5",
+  "defaultOutputData": true,
+  "description": "Get Flat 5% Off on MyGlamm products",
+  "discount_type": "percent",
+  "discount_value": 5,
+  "main": "Flat 5% Off on MyGlamm products",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "MyGlamm",
+ "max_discount": null,
+ "min_transaction": 299,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on MyGlamm Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 3
+ },
+ {
+  "code": "PROLUME10",
+  "defaultOutputData": true,
+  "description": "Get Flat 10% Off on Prolume products",
+  "discount_type": "percent",
+  "discount_value": 10,
+  "main": "Flat 10% Off on Prolume products",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "Prolume",
+ "max_discount": null,
+ "min_transaction": 249,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on Prolume Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 4
+ },
+ {
+  "code": "MAKEUP50",
+  "defaultOutputData": true,
+  "description": "Get Flat 50 Off above ₹199. Valid only on MakeUp & Beauty",
+  "discount_type": "fixed",
+  "discount_value": 50,
+  "main": "Flat 50 Off on MakeUp & Beauty",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "category",
+ "discount_on_name": "MakeUp & Beauty",
+ "max_discount": 50,
+ "min_transaction": 199,
+ "terms": "Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹199.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on MakeUp & Beauty products.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 5
+ },
+ {
+  "code": "TOYS100",
+  "defaultOutputData": true,
+  "description": "Get Flat ₹100 Off above ₹299. Valid only on Toys",
+  "discount_type": "fixed",
+  "discount_value": 100,
+  "main": "Flat 100 Off on Toys",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "category",
+ "discount_on_name": "Toys",
+ "max_discount": 100,
+ "min_transaction": 299,
+ "terms": "Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹299.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on Toys<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 6
+ }
+],
+ "Applicable_Coupons": [
+ {
+  "code": "ZEPTO50AU",
+  "defaultOutputData": true,
+  "description": "Get flat 50 off on transactions above ₹599 using AU Credit Cards",
+  "discount_type": "fixed",
+  "discount_value": 50,
+  "main": "Get flat 50 off using AU Credit cards",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": 50,
+ "min_transaction": 599,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on AU Credit Cards<br>• Minimum transaction: ₹599<br>• Maximum discount: ₹50<br>• Offer valid between 1st-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "AU Credit Cards",
+  "rowError": null,
+  "rowId": 1
+ },
+ {
+  "code": "AIRZEP",
+  "defaultOutputData": true,
+  "description": "Get flat 80 cashback on orders above ₹399 via Airtel Payment Bank Wallet and Netbanking",
+  "discount_type": "cashback",
+  "discount_value": 80,
+  "main": "Get up to 80 cashback on orders above ₹399",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": null,
+ "min_transaction": 399,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on Airtel Payments Bank<br>• Cashback would be credited within 72 business hours in the user's Airtel Payments Bank wallet or savings account.<br>• Offer valid between 1st July-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "Airtel Payment Bank",
+  "rowError": null,
+  "rowId": 2
+ },
+ {
+  "code": "MAKEUP50",
+  "defaultOutputData": true,
+  "description": "Get Flat 50 Off above ₹199. Valid only on MakeUp & Beauty",
+  "discount_type": "fixed",
+  "discount_value": 50,
+  "main": "Flat 50 Off on MakeUp & Beauty",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "category",
+ "discount_on_name": "MakeUp & Beauty",
+ "max_discount": 50,
+ "min_transaction": 199,
+ "terms": "Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹199.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on MakeUp & Beauty products.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 5
+ },
+ {
+  "code": "MYGLAMM5",
+  "defaultOutputData": true,
+  "description": "Get Flat 5% Off on MyGlamm products",
+  "discount_type": "percent",
+  "discount_value": 5,
+  "main": "Flat 5% Off on MyGlamm products",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "MyGlamm",
+ "max_discount": null,
+ "min_transaction": 299,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on MyGlamm Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 3
+ },
+ {
+  "code": "PROLUME10",
+  "defaultOutputData": true,
+  "description": "Get Flat 10% Off on Prolume products",
+  "discount_type": "percent",
+  "discount_value": 10,
+  "main": "Flat 10% Off on Prolume products",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "Prolume",
+ "max_discount": null,
+ "min_transaction": 249,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on Prolume Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 4
+ }
+]
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_lzmaz7mquuivvmw6h",
+     "pluginName": "",
+     "status": "success",
+     "name": "Response",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "2025-06-03T07:35:22.093Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 782.5000610351562,
+     "y": 1155
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lzmaz7mqa61jfq2fr5n",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 782.5000610351562,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m17ibf4i656tm1v5gcr",
+    "type": "rule",
+    "data": {
+     "input": {
+      "name": {
+ "value": "",
+ "executedValue": null,
+ "name": "name",
+ "dataType": "string",
+ "source": "loop",
+ "attribute": "currentItem.name",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "type": {
+ "value": "",
+ "executedValue": null,
+ "name": "type",
+ "dataType": "string",
+ "source": "loop",
+ "attribute": "currentItem.type",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "value": {
+ "value": null,
+ "executedValue": null,
+ "name": "value",
+ "dataType": "numeric",
+ "source": "loop",
+ "attribute": "currentItem.value",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": [
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "output": [
+ {
+  "code": "ZEPTO50AU",
+  "defaultOutputData": true,
+  "description": "Get flat 50 off on transactions above ₹599 using AU Credit Cards",
+  "discount_type": "fixed",
+  "discount_value": 50,
+  "main": "Get flat 50 off using AU Credit cards",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": 50,
+ "min_transaction": 599,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on AU Credit Cards<br>• Minimum transaction: ₹599<br>• Maximum discount: ₹50<br>• Offer valid between 1st-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "AU Credit Cards",
+  "rowError": null,
+  "rowId": 1
+ },
+ {
+  "code": "AIRZEP",
+  "defaultOutputData": true,
+  "description": "Get flat 80 cashback on orders above ₹399 via Airtel Payment Bank Wallet and Netbanking",
+  "discount_type": "cashback",
+  "discount_value": 80,
+  "main": "Get up to 80 cashback on orders above ₹399",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "overall",
+ "discount_on_name": "Payment Gateyway",
+ "max_discount": null,
+ "min_transaction": 399,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable once per user<br>• Valid only on Airtel Payments Bank<br>• Cashback would be credited within 72 business hours in the user's Airtel Payments Bank wallet or savings account.<br>• Offer valid between 1st July-31st July '24 11:59 PM<br>• Other T&C may apply",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "Airtel Payment Bank",
+  "rowError": null,
+  "rowId": 2
+ }
+]
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "output": [
+ {
+  "code": "MAKEUP50",
+  "defaultOutputData": true,
+  "description": "Get Flat 50 Off above ₹199. Valid only on MakeUp & Beauty",
+  "discount_type": "fixed",
+  "discount_value": 50,
+  "main": "Flat 50 Off on MakeUp & Beauty",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "category",
+ "discount_on_name": "MakeUp & Beauty",
+ "max_discount": 50,
+ "min_transaction": 199,
+ "terms": "Terms and Conditions Apply:<br>• The minimum order value to avail of the offer is ₹199.<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer not applicable on Baby food, Cigarettes, Milk, Hookah flavors, Cables, chargers & More.<br>• Offer applicable only on MakeUp & Beauty products.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 5
+ }
+]
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "output": []
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "output": []
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "output": [
+ {
+  "code": "MYGLAMM5",
+  "defaultOutputData": true,
+  "description": "Get Flat 5% Off on MyGlamm products",
+  "discount_type": "percent",
+  "discount_value": 5,
+  "main": "Flat 5% Off on MyGlamm products",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "MyGlamm",
+ "max_discount": null,
+ "min_transaction": 299,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on MyGlamm Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 3
+ }
+]
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "output": [
+ {
+  "code": "PROLUME10",
+  "defaultOutputData": true,
+  "description": "Get Flat 10% Off on Prolume products",
+  "discount_type": "percent",
+  "discount_value": 10,
+  "main": "Flat 10% Off on Prolume products",
+  "meta": {
+ "allow_count": 1,
+ "discount_on": "brand",
+ "discount_on_name": "Prolume",
+ "max_discount": null,
+ "min_transaction": 249,
+ "terms": "Terms and Conditions Apply:<br>• Offer applicable only in cities where Zepto is operational.<br>• Offer applicable only on Prolume Products<br>• Offer applicable only on Zepto App.<br>• Zepto has the right to amend the terms and conditions, end the offer, or call back any or all of its offers without any prior notice.",
+ "validity_end": "2024-09-31T23:59:59Z",
+ "validity_start": "2024-07-01T00:00:00Z"
+},
+  "payment_gateway": "any",
+  "rowError": null,
+  "rowId": 4
+ }
+]
+ }
+]
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "8e10e5d4-22f4-43df-826b-33dc86fc61a7",
+     "pluginName": "",
+     "status": "success",
+     "name": "Zepto_Coupons_Each",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": true,
+      "source": "Modified_Cart",
+      "attribute": "output",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "2025-06-03T07:35:22.093Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 782.5000610351562,
+     "y": 540
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m17ibf4iosjqiccdt1m",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lym9aidsivti9fy4zkm",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "node_lym9aids749rwzrgkgk",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lym9oa7l90nzixdm2nd",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lym9oa7kivbvr0ykmw",
+    "target": "node_lym9oa7kfj5cpf31odv",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lym9oa7lx7b20n0oyqm",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lym9aids749rwzrgkgk",
+    "target": "node_lym9oa7kivbvr0ykmw",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lymadjft81egg8ziwlw",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lymadjfsdlq537xt2r",
+    "target": "node_lymadjfsvmuhk2gyyvi",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lymarprywerzh597ga",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lymarpry5vws31dwygt",
+    "target": "node_lymarpryrakhce7qgss",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lzmaz7mrtqxfj3assrb",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lzmaz7mquuivvmw6h",
+    "target": "node_lzmaz7mqa61jfq2fr5n",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lzmcfeldhm376kpy2dp",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lymadjfsvmuhk2gyyvi",
+    "target": "node_lzmaz7mquuivvmw6h",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m17ibf4ik83zabbpl2",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m17ibf4iosjqiccdt1m",
+    "target": "node_lymarpry5vws31dwygt",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m17ibf4ipixhsg8dh3a",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m17ibf4i656tm1v5gcr",
+    "target": "node_m17ibf4iosjqiccdt1m",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m2kb5qayqe5sxdf5hwa",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lym9oa7kfj5cpf31odv",
+    "target": "node_m17ibf4i656tm1v5gcr",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m8r1b0oxcyy9ik5gg0k",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lymarpryrakhce7qgss",
+    "target": "node_lymadjfsdlq537xt2r",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": true,
+   "timezone": "Africa/Algiers",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-05-29T05:38:28.411814Z",
+   "updatedAt": "2025-05-29T05:38:28.411814Z",
+   "entityCommitId": "commit-6a545a51-1391-4f78-bcb0-7315826dcf9d",
+   "entityType": "workflow",
+   "entityId": "ad326d9c-e6a5-4d8a-ae15-fe715b02d423",
+   "entityVersion": "draft",
+   "entityNodeId": "node_m17ibf4i656tm1v5gcr",
+   "dependencyType": "rule",
+   "dependencyId": "8e10e5d4-22f4-43df-826b-33dc86fc61a7",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-05-29T05:38:28.408741Z",
+   "updatedAt": "2025-05-29T05:38:28.408741Z",
+   "entityCommitId": "commit-6a545a51-1391-4f78-bcb0-7315826dcf9d",
+   "entityType": "workflow",
+   "entityId": "ad326d9c-e6a5-4d8a-ae15-fe715b02d423",
+   "entityVersion": "draft",
+   "entityNodeId": "node_lymadjfsdlq537xt2r",
+   "dependencyType": "rule",
+   "dependencyId": "499905b4-4b62-4a66-9753-64e739929dda",
+   "dependencyVersion": "draft"
+  }
+ ]
+}

@@ -1,0 +1,391 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-04-04T07:52:38.697Z",
+  "updatedAt": "2025-04-04T09:21:44.003605Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-04T09:21:44.002Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "334df6b7-4c32-4268-bea7-efc1924bf4f0",
+  "version": "draft",
+  "name": "isFileTypeAllowedToUpload",
+  "commitId": "commit-11ba5379-5eb8-4026-a5f2-9094c2d13902",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-04-04 07:52:38",
+   "timeStamp": "2025-04-04T07:52:38.697685758Z"
+  },
+  "customInput": {
+   "fileType": {
+ "name": "fileType",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_m92kpm36hqd7rjtwfnn": {
+ "nextId": "rule_m92kq7tozatuu9ysy6",
+ "prevId": "",
+ "firstOutputData": "output_m92kpm3743dsdmhmmbt",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m92kq7tozatuu9ysy6": {
+ "nextId": "rule_m92kqnfdvfrf6orw6x",
+ "prevId": "rule_m92kpm36hqd7rjtwfnn",
+ "firstOutputData": "output_m92kq7tpg3y06ktqvuo",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m92kqnfdvfrf6orw6x": {
+ "nextId": "",
+ "prevId": "rule_m92kq7tozatuu9ysy6",
+ "firstOutputData": "output_m92kqnferqmr10e5ywl",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m92koz6osqkjg9kqeuq": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "uploadable",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_m92kpm36hqd7rjtwfnn",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m92koz6osqkjg9kqeuq",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m92kpm3743dsdmhmmbt": {
+ "name": "uploadable",
+ "dataType": "string",
+ "returnType": "",
+ "value": "valid",
+ "next": "",
+ "executedValue": "valid",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m92kq7tpg3y06ktqvuo": {
+ "name": "uploadable",
+ "dataType": "string",
+ "returnType": "",
+ "value": "valid",
+ "next": "",
+ "executedValue": "valid",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m92kqnferqmr10e5ywl": {
+ "name": "uploadable",
+ "dataType": "string",
+ "returnType": "",
+ "value": "not valid",
+ "next": "",
+ "executedValue": "not valid",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_04"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "fileType",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_04": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92kpm36hqd7rjtwfnn": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92kpm36unqnwjivmwk"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92kpm36unqnwjivmwk": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92kpm36hqd7rjtwfnn",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92kpqd447w6aiyk1ap"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92kpqd447w6aiyk1ap": {
+ "value": ".pdf",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92kpm36unqnwjivmwk",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92kq7tozatuu9ysy6": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92kq7tplnoyn3wk4wb"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92kq7tplnoyn3wk4wb": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92kq7tozatuu9ysy6",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92kq7tpngu4h7lxty"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92kq7tpngu4h7lxty": {
+ "value": ".docx",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92kq7tplnoyn3wk4wb",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92kqnfdbkjhple3cd5": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92kqnfdvfrf6orw6x",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92kqnfdvfrf6orw6x": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92kqnfdbkjhple3cd5"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "fileType",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "Determines the valid filetype to be uploaded. The policy used here is first.\n",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

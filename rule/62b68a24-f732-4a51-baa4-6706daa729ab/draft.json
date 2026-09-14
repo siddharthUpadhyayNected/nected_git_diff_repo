@@ -1,0 +1,236 @@
+{
+ "entityType": "rule",
+ "category": "ruleSet",
+ "data": {
+  "createdAt": "2026-09-09T13:34:56.772Z",
+  "updatedAt": "2026-09-09T13:34:56.772Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "62b68a24-f732-4a51-baa4-6706daa729ab",
+  "version": "draft",
+  "name": "PI_RULES",
+  "commitId": "commit-ac2fee6d-e095-49e1-a160-b3b92e5ddf3d",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-09-09 13:34:56",
+   "timeStamp": "2026-09-09T13:34:56.7722191Z"
+  },
+  "customInput": {
+   "State": {
+ "name": "State",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+},
+   "annualIncome": {
+ "name": "annualIncome",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 249999,
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": "a967c20e-7643-41ec-9f40-f90a75f5b0ad"
+},
+   "bankAccStatus": {
+ "name": "bankAccStatus",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "\"valid\"",
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+},
+   "bankAccVerificationScore": {
+ "name": "bankAccVerificationScore",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 80,
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": "f2eececa-1b44-4e11-b489-e723c30d0b4d"
+},
+   "occupation": {
+ "name": "occupation",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "Farmer",
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+},
+   "panNotAvailable": {
+ "name": "panNotAvailable",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": true,
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": "03205eac-ac8d-4971-9252-27ab396f3741"
+},
+   "proposer_type": {
+ "name": "proposer_type",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "\t\nIND",
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": {
+   "8f237fd8-a4d3-4729-9a90-e62c06c85cc6": {
+ "prevRuleId": "e81f8a8a-a320-40a1-9ec5-99be7413ad3a",
+ "nextRuleId": "",
+ "isEnabled": true
+},
+   "e81f8a8a-a320-40a1-9ec5-99be7413ad3a": {
+ "prevRuleId": "",
+ "nextRuleId": "8f237fd8-a4d3-4729-9a90-e62c06c85cc6",
+ "isEnabled": true
+}
+  },
+  "decisionTable": {
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": null,
+   "startNode": ""
+  },
+  "firstCustomInput": "",
+  "firstRuleChain": "e81f8a8a-a320-40a1-9ec5-99be7413ad3a",
+  "ruleSetPolicy": "evaluteAll",
+  "description": "",
+  "policy": "",
+  "comment": "",
+  "type": "ruleSet",
+  "dataSetId": null,
+  "ruleSet": [
+   "e81f8a8a-a320-40a1-9ec5-99be7413ad3a",
+   "8f237fd8-a4d3-4729-9a90-e62c06c85cc6"
+  ],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-09-09T13:34:56.782944Z",
+   "updatedAt": "2026-09-09T13:34:56.782944Z",
+   "entityCommitId": "commit-ac2fee6d-e095-49e1-a160-b3b92e5ddf3d",
+   "entityType": "rule",
+   "entityId": "62b68a24-f732-4a51-baa4-6706daa729ab",
+   "entityVersion": "draft",
+   "entityNodeId": "8f237fd8-a4d3-4729-9a90-e62c06c85cc6",
+   "dependencyType": "rule",
+   "dependencyId": "8f237fd8-a4d3-4729-9a90-e62c06c85cc6",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-09-09T13:34:56.78071Z",
+   "updatedAt": "2026-09-09T13:34:56.78071Z",
+   "entityCommitId": "commit-ac2fee6d-e095-49e1-a160-b3b92e5ddf3d",
+   "entityType": "rule",
+   "entityId": "62b68a24-f732-4a51-baa4-6706daa729ab",
+   "entityVersion": "draft",
+   "entityNodeId": "e81f8a8a-a320-40a1-9ec5-99be7413ad3a",
+   "dependencyType": "rule",
+   "dependencyId": "e81f8a8a-a320-40a1-9ec5-99be7413ad3a",
+   "dependencyVersion": "draft"
+  }
+ ]
+}

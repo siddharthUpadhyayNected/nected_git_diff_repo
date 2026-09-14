@@ -1,0 +1,114 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2025-05-29T07:21:50.504Z",
+  "updatedAt": "2025-05-29T07:24:53.324822Z",
+  "isDeleted": false,
+  "testedAt": "2025-05-29T07:24:53.322Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "4e74f801-2fa7-4ecc-b5cc-51b9ea521e1c",
+  "version": "draft",
+  "name": "Coupons DS",
+  "commitId": "commit-5e928650-a4be-4ccc-b806-b59c09b433cb",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-05-29 07:21:50",
+   "timeStamp": "2025-05-29T07:21:50.503118984Z"
+  },
+  "fields": {
+   "brand": {
+ "ColumnName": "brand",
+ "DataType": "string",
+ "Order": 7,
+ "ExecutedValue": "any"
+},
+   "category": {
+ "ColumnName": "category",
+ "DataType": "string",
+ "Order": 8,
+ "ExecutedValue": "Toys"
+},
+   "code": {
+ "ColumnName": "code",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": "TOYS100"
+},
+   "description": {
+ "ColumnName": "description",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": "Get Flat ₹100 Off above ₹299. Valid only on Toys"
+},
+   "discount_type": {
+ "ColumnName": "discount_type",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": "fixed"
+},
+   "discount_value": {
+ "ColumnName": "discount_value",
+ "DataType": "numeric",
+ "Order": 5,
+ "ExecutedValue": 100
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 9,
+ "ExecutedValue": 6
+},
+   "main": {
+ "ColumnName": "main",
+ "DataType": "string",
+ "Order": 10,
+ "ExecutedValue": "Flat 100 Off on Toys"
+},
+   "min_order_value": {
+ "ColumnName": "min_order_value",
+ "DataType": "numeric",
+ "Order": 1,
+ "ExecutedValue": 299
+},
+   "payment_gateway": {
+ "ColumnName": "payment_gateway",
+ "DataType": "string",
+ "Order": 6,
+ "ExecutedValue": "any"
+}
+  },
+  "description": "",
+  "query": "SELECT * from \"coupons\"",
+  "params": {
+   
+  },
+  "connectorId": "c5fa0d71-a2e7-4cbe-b327-b9104edde777",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-05-29T07:21:50.509043Z",
+   "updatedAt": "2025-05-29T07:24:50.407366Z",
+   "entityCommitId": "commit-5e928650-a4be-4ccc-b806-b59c09b433cb",
+   "entityType": "dataSet",
+   "entityId": "4e74f801-2fa7-4ecc-b5cc-51b9ea521e1c",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "c5fa0d71-a2e7-4cbe-b327-b9104edde777",
+   "dependencyVersion": "live"
+  }
+ ]
+}

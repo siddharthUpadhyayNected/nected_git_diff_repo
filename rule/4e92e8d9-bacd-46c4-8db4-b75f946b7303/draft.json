@@ -1,0 +1,1707 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-25T12:28:44.084Z",
+  "updatedAt": "2025-03-26T07:09:00.464918Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-26T07:09:00.464Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "4e92e8d9-bacd-46c4-8db4-b75f946b7303",
+  "version": "draft",
+  "name": "bailGrantingSystem",
+  "commitId": "commit-dba12d19-cf23-4d37-9f06-9cb535a703e3",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-25 12:28:44",
+   "timeStamp": "2025-03-25T12:28:44.084708329Z"
+  },
+  "customInput": {
+   "complianceWithBailConditions": {
+ "name": "complianceWithBailConditions",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "",
+ "previous": "courtJurisdiction",
+ "schemaId": ""
+},
+   "courtJurisdiction": {
+ "name": "courtJurisdiction",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "complianceWithBailConditions",
+ "previous": "severityOfCrime",
+ "schemaId": ""
+},
+   "criminalHistory": {
+ "name": "criminalHistory",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "severityOfCrime",
+ "previous": "offenceType",
+ "schemaId": ""
+},
+   "offenceType": {
+ "name": "offenceType",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "criminalHistory",
+ "previous": "",
+ "schemaId": ""
+},
+   "severityOfCrime": {
+ "name": "severityOfCrime",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "courtJurisdiction",
+ "previous": "criminalHistory",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m8pkuxrou0p1fu5g4mi",
+ "prevId": "",
+ "firstOutputData": "output_m8ohmakjj51x6medwdm",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pkuxrou0p1fu5g4mi": {
+ "nextId": "rule_m8pl1hk0ohns9bceo0g",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m8pkuxrofgdfbue2x6g",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pkwch6n1p0bapqyts": {
+ "nextId": "rule_m8pky84v6dnp15finu",
+ "prevId": "rule_m8pl1hk0ohns9bceo0g",
+ "firstOutputData": "output_m8pkwch6zly7iyipw8k",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pky84v6dnp15finu": {
+ "nextId": "rule_m8pkz70n4yu7h76ml5j",
+ "prevId": "rule_m8pkwch6n1p0bapqyts",
+ "firstOutputData": "output_m8pky84wej5npsyueqo",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pkz70n4yu7h76ml5j": {
+ "nextId": "rule_m8pl0jlx7ko2w257f5p",
+ "prevId": "rule_m8pky84v6dnp15finu",
+ "firstOutputData": "output_m8pkz70ool11fpazy1",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pl0jlx7ko2w257f5p": {
+ "nextId": "",
+ "prevId": "rule_m8pkz70n4yu7h76ml5j",
+ "firstOutputData": "output_m8pl0jly7cxcp810vbm",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pl1hk0ohns9bceo0g": {
+ "nextId": "rule_m8pkwch6n1p0bapqyts",
+ "prevId": "rule_m8pkuxrou0p1fu5g4mi",
+ "firstOutputData": "output_m8pl1hk1pbkpmeb11q",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "rule_m8ohhdmugi5sqoruew4",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_m8ohh9r9m9m08iwbsz": {
+ "nextId": "rule_m8ohltjzxh4ieivxhbt",
+ "prevId": "rule_m8ohhbrae2phkqgpwcq",
+ "type": "simpleCondition"
+},
+    "rule_m8ohhbrae2phkqgpwcq": {
+ "nextId": "rule_m8ohh9r9m9m08iwbsz",
+ "prevId": "rule_m8ohhdmugi5sqoruew4",
+ "type": "simpleCondition"
+},
+    "rule_m8ohhdmugi5sqoruew4": {
+ "nextId": "rule_m8ohhbrae2phkqgpwcq",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_m8ohltjzxh4ieivxhbt": {
+ "nextId": "",
+ "prevId": "rule_m8ohh9r9m9m08iwbsz",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m8ohmakjbdpturdt5n": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "Decision",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m8ohmakjbdpturdt5n",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m8ohmakjj51x6medwdm": {
+ "name": "Decision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Grant Bail",
+ "next": "",
+ "executedValue": "Grant Bail",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pkuxrofgdfbue2x6g": {
+ "name": "Decision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Deny Bail",
+ "next": "",
+ "executedValue": "Deny Bail",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pkwch6zly7iyipw8k": {
+ "name": "Decision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Grant Bail with conditions",
+ "next": "",
+ "executedValue": "Grant Bail with conditions",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pky84wej5npsyueqo": {
+ "name": "Decision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Deny Bail",
+ "next": "",
+ "executedValue": "Deny Bail",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pkz70ool11fpazy1": {
+ "name": "Decision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Deny Bail",
+ "next": "",
+ "executedValue": "Deny Bail",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pl0jly7cxcp810vbm": {
+ "name": "Decision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Grant Bail with conditions",
+ "next": "",
+ "executedValue": "Grant Bail with conditions",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pl1hk1pbkpmeb11q": {
+ "name": "Decision",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Grant Bail with conditions",
+ "next": "",
+ "executedValue": "Grant Bail with conditions",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "rule_m8ohhdmumcbxjnmxamm",
+  "rule_m8ohhbraed1xpzqw4hw",
+  "rule_m8ohh9r9lg5qlxlqqs",
+  "rule_m8ohltjzl7qxjhxifod"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pkrt79c4j5ycbnni"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "offenceType",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ohh9r9lg5qlxlqqs": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohh9r9m9m08iwbsz"
+ ],
+ "rightNode": [
+  "rule_m8pku7x0jbjddha0dd"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ohh9r9m9m08iwbsz": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "courtJurisdiction",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ohhbrae2phkqgpwcq": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "severityOfCrime",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ohhbraed1xpzqw4hw": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhbrae2phkqgpwcq"
+ ],
+ "rightNode": [
+  "rule_m8pku25g6vt0vdohd3"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ohhdmugi5sqoruew4": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "criminalHistory",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ohhdmumcbxjnmxamm": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhdmugi5sqoruew4"
+ ],
+ "rightNode": [
+  "rule_m8pktq2pvr2t28bql7s"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ohltjzl7qxjhxifod": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohltjzxh4ieivxhbt"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8ohltjzxh4ieivxhbt": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "complianceWithBailConditions",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkrt79c4j5ycbnni": {
+ "value": "Bailable",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pktq2pvr2t28bql7s": {
+ "value": "First-time",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8ohhdmumcbxjnmxamm",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pku25g6vt0vdohd3": {
+ "value": "Minor",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8ohhbraed1xpzqw4hw",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pku7x0jbjddha0dd": {
+ "value": "Session Court",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8ohh9r9lg5qlxlqqs",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkuxroargo1wmr6r": {
+ "value": "Repeat-offender",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkuxrolxsc1m6qqnm",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkuxrojzunb43zyy": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkuxrou0p1fu5g4mi",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohltjzxh4ieivxhbt"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkuxrokk70b16ofbl": {
+ "value": "High Court",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkuxrorl9x7acimxi",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkuxrolxsc1m6qqnm": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkuxrou0p1fu5g4mi",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhdmugi5sqoruew4"
+ ],
+ "rightNode": [
+  "rule_m8pkuxroargo1wmr6r"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkuxrommyljfaji9f": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkuxrou0p1fu5g4mi",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhbrae2phkqgpwcq"
+ ],
+ "rightNode": [
+  "rule_m8pkuxrovmfup7qnxa"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkuxroqvw7chlml0l": {
+ "value": "Bailable",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkuxrou9abq0yl0ro",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkuxrorl9x7acimxi": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkuxrou0p1fu5g4mi",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohh9r9m9m08iwbsz"
+ ],
+ "rightNode": [
+  "rule_m8pkuxrokk70b16ofbl"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkuxrou0p1fu5g4mi": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pkuxrou9abq0yl0ro",
+  "rule_m8pkuxrolxsc1m6qqnm",
+  "rule_m8pkuxrommyljfaji9f",
+  "rule_m8pkuxrorl9x7acimxi",
+  "rule_m8pkuxrojzunb43zyy"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkuxrou9abq0yl0ro": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkuxrou0p1fu5g4mi",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pkuxroqvw7chlml0l"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkuxrovmfup7qnxa": {
+ "value": "Serious",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkuxrommyljfaji9f",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkwch61hudosvawck": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkwch6n1p0bapqyts",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohltjzxh4ieivxhbt"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkwch62jigoufs6rl": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkwch6n1p0bapqyts",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pkwch65wk1mad00r"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkwch659ur50cp9mb": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkwch6n1p0bapqyts",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhdmugi5sqoruew4"
+ ],
+ "rightNode": [
+  "rule_m8pkwch6ciejfmq00zq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkwch65wk1mad00r": {
+ "value": "Non-Bailable",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkwch62jigoufs6rl",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkwch6a03lq6owtnv": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkwch6n1p0bapqyts",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohh9r9m9m08iwbsz"
+ ],
+ "rightNode": [
+  "rule_m8pkwch6ng8r5k6q637"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkwch6ciejfmq00zq": {
+ "value": "First-time",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkwch659ur50cp9mb",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkwch6dqkzpn0ula": {
+ "value": "Serious",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkwch6xfmh31zktdb",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkwch6n1p0bapqyts": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pkwch62jigoufs6rl",
+  "rule_m8pkwch659ur50cp9mb",
+  "rule_m8pkwch6xfmh31zktdb",
+  "rule_m8pkwch6a03lq6owtnv",
+  "rule_m8pkwch61hudosvawck"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkwch6ng8r5k6q637": {
+ "value": "High Court",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkwch6a03lq6owtnv",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkwch6xfmh31zktdb": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkwch6n1p0bapqyts",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhbrae2phkqgpwcq"
+ ],
+ "rightNode": [
+  "rule_m8pkwch6dqkzpn0ula"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pky84v1dn7nku6892": {
+ "value": "Non-Bailable",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pky84vbx681w2owbi",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pky84v6dnp15finu": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pky84vbx681w2owbi",
+  "rule_m8pky84w6a021i2ued",
+  "rule_m8pky84wav1bwsp0i2n",
+  "rule_m8pky84wga4jmp4zuc6",
+  "rule_m8pky84wmm9x9ni0lx"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pky84vbx681w2owbi": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pky84v6dnp15finu",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pky84v1dn7nku6892"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pky84w6a021i2ued": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pky84v6dnp15finu",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhdmugi5sqoruew4"
+ ],
+ "rightNode": [
+  "rule_m8pky84wz8abnyspei"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pky84wav1bwsp0i2n": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pky84v6dnp15finu",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhbrae2phkqgpwcq"
+ ],
+ "rightNode": [
+  "rule_m8pky84wdzdxkxgpyq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pky84wdzdxkxgpyq": {
+ "value": "Serious",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pky84wav1bwsp0i2n",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pky84wga4jmp4zuc6": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pky84v6dnp15finu",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohh9r9m9m08iwbsz"
+ ],
+ "rightNode": [
+  "rule_m8pky84wrmqy0nsu0aq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pky84wmm9x9ni0lx": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pky84v6dnp15finu",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohltjzxh4ieivxhbt"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pky84wrmqy0nsu0aq": {
+ "value": "High Court",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pky84wga4jmp4zuc6",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pky84wz8abnyspei": {
+ "value": "Repeat-offender",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pky84w6a021i2ued",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkz70n4s30kkd8xnl": {
+ "value": "Non-Bailable",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkz70n61fgxejqdex",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkz70n4yu7h76ml5j": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pkz70n61fgxejqdex",
+  "rule_m8pkz70n97u34124n1q",
+  "rule_m8pkz70oyu89ua6wol",
+  "rule_m8pkz70o5dar84f30wy",
+  "rule_m8pkz70o7jq4nrkmjli"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkz70n61fgxejqdex": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkz70n4yu7h76ml5j",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pkz70n4s30kkd8xnl"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkz70n97u34124n1q": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkz70n4yu7h76ml5j",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhdmugi5sqoruew4"
+ ],
+ "rightNode": [
+  "rule_m8pkz70nslx4730c70j"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkz70nslx4730c70j": {
+ "value": "Repeat-offender",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkz70n97u34124n1q",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkz70o5dar84f30wy": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkz70n4yu7h76ml5j",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohh9r9m9m08iwbsz"
+ ],
+ "rightNode": [
+  "rule_m8pkz70oaaa6fdeei5u"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkz70o7jq4nrkmjli": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkz70n4yu7h76ml5j",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohltjzxh4ieivxhbt"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkz70oaaa6fdeei5u": {
+ "value": "High Court",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkz70o5dar84f30wy",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkz70op0w8rwj9og": {
+ "value": "Major",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkz70oyu89ua6wol",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pkz70oyu89ua6wol": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pkz70n4yu7h76ml5j",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhbrae2phkqgpwcq"
+ ],
+ "rightNode": [
+  "rule_m8pkz70op0w8rwj9og"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl0jlx4rhh3352wl5": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl0jlx7ko2w257f5p",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhbrae2phkqgpwcq"
+ ],
+ "rightNode": [
+  "rule_m8pl0jlxo27u72ijpzc"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl0jlx72w67tg7nbr": {
+ "value": "Supreme Court",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl0jlxp13aspmehe",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl0jlx7ko2w257f5p": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pl0jlxb41t4qbar8j",
+  "rule_m8pl0jlxnxf3zt9kfcm",
+  "rule_m8pl0jlx4rhh3352wl5",
+  "rule_m8pl0jlxp13aspmehe",
+  "rule_m8pl0jlx9v9t2dp0tv"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl0jlx9v9t2dp0tv": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl0jlx7ko2w257f5p",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohltjzxh4ieivxhbt"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl0jlxb41t4qbar8j": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl0jlx7ko2w257f5p",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pl0jlxt662eidkua"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl0jlxkgnbrqmoye": {
+ "value": "Repeat-offender",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl0jlxnxf3zt9kfcm",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl0jlxnxf3zt9kfcm": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl0jlx7ko2w257f5p",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhdmugi5sqoruew4"
+ ],
+ "rightNode": [
+  "rule_m8pl0jlxkgnbrqmoye"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl0jlxo27u72ijpzc": {
+ "value": "Serious",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl0jlx4rhh3352wl5",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl0jlxp13aspmehe": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl0jlx7ko2w257f5p",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohh9r9m9m08iwbsz"
+ ],
+ "rightNode": [
+  "rule_m8pl0jlx72w67tg7nbr"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl0jlxt662eidkua": {
+ "value": "Non-Bailable",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl0jlxb41t4qbar8j",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl1hk06vffqywn14a": {
+ "value": "High Court",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl1hk0m56ig9ji6u",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl1hk08cgi4bj26kr": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl1hk0ohns9bceo0g",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pl1hk0gqfkrquf966"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl1hk0ggu3ctldh": {
+ "value": "First-time",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl1hk0ysrgy14s0q",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl1hk0gqfkrquf966": {
+ "value": "Bailable",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl1hk08cgi4bj26kr",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl1hk0m56ig9ji6u": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl1hk0ohns9bceo0g",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohh9r9m9m08iwbsz"
+ ],
+ "rightNode": [
+  "rule_m8pl1hk06vffqywn14a"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl1hk0mvimzgdgg1": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl1hk0ohns9bceo0g",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhbrae2phkqgpwcq"
+ ],
+ "rightNode": [
+  "rule_m8pl1hk0suiogbg3p9f"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl1hk0ohns9bceo0g": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pl1hk08cgi4bj26kr",
+  "rule_m8pl1hk0ysrgy14s0q",
+  "rule_m8pl1hk0mvimzgdgg1",
+  "rule_m8pl1hk0m56ig9ji6u",
+  "rule_m8pl1hk18wym9ucqnp9"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl1hk0suiogbg3p9f": {
+ "value": "Major",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl1hk0mvimzgdgg1",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl1hk0ysrgy14s0q": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl1hk0ohns9bceo0g",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohhdmugi5sqoruew4"
+ ],
+ "rightNode": [
+  "rule_m8pl1hk0ggu3ctldh"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pl1hk18wym9ucqnp9": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pl1hk0ohns9bceo0g",
+ "children": null,
+ "leftNode": [
+  "rule_m8ohltjzxh4ieivxhbt"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "offenceType",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "The Bail Granting System decision table automates the process of determining whether an accused person is eligible for bail based on legal conditions. Courts and law enforcement agencies can use this system to maintain consistency, reduce biases, and speed up decision-making while ensuring compliance with judicial norms.",
+  "policy": "order",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

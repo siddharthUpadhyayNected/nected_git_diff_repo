@@ -1,0 +1,82 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2025-04-30T12:53:48.102Z",
+  "updatedAt": "2025-05-01T07:04:16.955653Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-30T12:57:51.661Z",
+  "publishedAt": "2025-05-01T07:04:16.926Z",
+  "entityId": "69badb39-9b53-43e8-930d-b5ede4298e0b",
+  "version": "0.10",
+  "name": "allocationSource",
+  "commitId": "commit-27b32b17-5bf4-43c3-ac7c-31c3ee3331f1",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Created at 2025-04-30 12:53:48",
+   "description": "V1",
+   "timeStamp": "2025-05-01T07:04:16.923Z"
+  },
+  "fields": {
+   "allocations": {
+ "ColumnName": "allocations",
+ "DataType": "numeric",
+ "Order": 6,
+ "ExecutedValue": 0
+},
+   "approvalLimit": {
+ "ColumnName": "approvalLimit",
+ "DataType": "numeric",
+ "Order": 7,
+ "ExecutedValue": 10000
+},
+   "empID": {
+ "ColumnName": "empID",
+ "DataType": "numeric",
+ "Order": 1,
+ "ExecutedValue": 4
+},
+   "empName": {
+ "ColumnName": "empName",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": "Walter White"
+},
+   "level": {
+ "ColumnName": "level",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": 1
+},
+   "managerID": {
+ "ColumnName": "managerID",
+ "DataType": "numeric",
+ "Order": 4,
+ "ExecutedValue": 8
+},
+   "team": {
+ "ColumnName": "team",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": "HR"
+}
+  },
+  "description": "",
+  "query": "SELECT \r\n  e.\"empID\",\r\n  e.\"empName\",\r\n  e.\"team\",\r\n  e.\"approvalLimit\",\r\n  e.\"managerID\",\r\n  e.\"level\",\r\n  COUNT(c.\"approverId\") AS \"allocations\"\r\nFROM \r\n  \"employee\" e\r\nLEFT JOIN \r\n  \"case\" c\r\n  ON c.\"approverId\" = e.\"empID\"\r\nGROUP BY \r\n  e.\"empID\", \r\n  e.\"empName\", \r\n  e.\"team\", \r\n  e.\"approvalLimit\", \r\n  e.\"managerID\",\r\n  e.\"level\"\r\nORDER BY \r\n  \"allocations\", e.\"level\" ASC;",
+  "params": {
+   
+  },
+  "connectorId": "c5fa0d71-a2e7-4cbe-b327-b9104edde777",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ }
+}

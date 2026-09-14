@@ -1,0 +1,78 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2024-12-26T07:23:58.65Z",
+  "updatedAt": "2024-12-26T07:24:13.977882Z",
+  "isDeleted": false,
+  "testedAt": "2024-12-26T07:24:13.975Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "2a0c8cb6-e481-4c69-9157-fc9c5735814a",
+  "version": "draft",
+  "name": "Sid",
+  "commitId": "commit-bd572159-e987-4180-919c-c8540ab1873f",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2024-12-26 07:23:58",
+   "timeStamp": "2024-12-26T07:23:58.647496759Z"
+  },
+  "fields": {
+   "_id": {
+ "ColumnName": "_id",
+ "DataType": "objectid",
+ "Order": 1,
+ "ExecutedValue": "59b99db4cfa9a34dcd7885b6"
+},
+   "email": {
+ "ColumnName": "email",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": "sean_bean@gameofthron.es"
+},
+   "name": {
+ "ColumnName": "name",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": "Ned Stark"
+},
+   "password": {
+ "ColumnName": "password",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": "$2b$12$UREFwsRUoyF0CRqGNK0LzO0HM/jLhgUCNNIJ9RJAqMUQ74crlJ1Vu"
+}
+  },
+  "description": "",
+  "query": "db.users.find({})",
+  "params": {
+   
+  },
+  "connectorId": "68fb4297-8868-408f-8690-ff29c31ce404",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2024-12-26T07:23:58.657486Z",
+   "updatedAt": "2024-12-26T07:24:10.302606Z",
+   "entityCommitId": "commit-bd572159-e987-4180-919c-c8540ab1873f",
+   "entityType": "dataSet",
+   "entityId": "2a0c8cb6-e481-4c69-9157-fc9c5735814a",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "68fb4297-8868-408f-8690-ff29c31ce404",
+   "dependencyVersion": "live"
+  }
+ ]
+}

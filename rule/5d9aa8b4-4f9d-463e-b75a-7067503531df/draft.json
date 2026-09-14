@@ -1,0 +1,283 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-04-04T11:29:02.685Z",
+  "updatedAt": "2025-04-04T11:31:49.979873Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-04T11:31:49.978Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "5d9aa8b4-4f9d-463e-b75a-7067503531df",
+  "version": "draft",
+  "name": "emailNotificationForLowBalance",
+  "commitId": "commit-dcdafada-27a0-4b35-82de-dc70b6cc03ce",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-04-04 11:29:02",
+   "timeStamp": "2025-04-04T11:29:02.68541099Z"
+  },
+  "customInput": {
+   "accountBalance": {
+ "name": "accountBalance",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m92pf4vk9ta0rh30lbm",
+ "prevId": "",
+ "firstOutputData": "output_m92pecwy9zf3v0e23bv",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m92pf4vk9ta0rh30lbm": {
+ "nextId": "",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m92pf4vlq0e2nbyfhwb",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m92pecwy7ebzjb4iksu": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "action",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m92pecwy7ebzjb4iksu",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m92pecwy9zf3v0e23bv": {
+ "name": "action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Send Alert",
+ "next": "",
+ "executedValue": "Send Alert",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m92pf4vlq0e2nbyfhwb": {
+ "name": "action",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Don't Send Alert",
+ "next": "",
+ "executedValue": "Don't Send Alert",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92pf0vigtuc9kq6ayq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "accountBalance",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92pf0vigtuc9kq6ayq": {
+ "value": 500,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92pf4vk9ta0rh30lbm": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92pf4vks1k1fu1vq"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92pf4vks1k1fu1vq": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92pf4vk9ta0rh30lbm",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92pfa45f20rwjjnmzq"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92pfa45f20rwjjnmzq": {
+ "value": 500,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92pf4vks1k1fu1vq",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "accountBalance",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "This decision table decides whether to send an alert to the user for low balance or not. The policy used here is evaluate all.\n",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

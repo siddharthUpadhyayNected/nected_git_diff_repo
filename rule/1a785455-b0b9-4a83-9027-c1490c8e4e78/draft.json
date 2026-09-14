@@ -1,0 +1,283 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-04-07T06:03:03.211Z",
+  "updatedAt": "2025-04-07T06:04:14.913853Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-07T06:04:14.913Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "1a785455-b0b9-4a83-9027-c1490c8e4e78",
+  "version": "draft",
+  "name": "validMobileNumber",
+  "commitId": "commit-85b38c9a-5c97-44a2-a645-815cd7ebfcdd",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-04-07 06:03:03",
+   "timeStamp": "2025-04-07T06:03:03.21189985Z"
+  },
+  "customInput": {
+   "lengthOfMobileNo": {
+ "name": "lengthOfMobileNo",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m96o1nofydagr7v6geh",
+ "prevId": "",
+ "firstOutputData": "output_m96o1crniiyakstya9p",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m96o1nofydagr7v6geh": {
+ "nextId": "",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m96o1nofhf2r0vlo2lp",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m96o1crnish7ac3j9n": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "Result",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m96o1crnish7ac3j9n",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m96o1crniiyakstya9p": {
+ "name": "Result",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Valid",
+ "next": "",
+ "executedValue": "Valid",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m96o1nofhf2r0vlo2lp": {
+ "name": "Result",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Invalid",
+ "next": "",
+ "executedValue": "Invalid",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m96o18sf4ntwo4g81yc"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "lengthOfMobileNo",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m96o18sf4ntwo4g81yc": {
+ "value": 10,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m96o1nofskj5j9sf7g": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "neq",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m96o1nofydagr7v6geh",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m96o1qeaqhghml8f9zo"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m96o1nofydagr7v6geh": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m96o1nofskj5j9sf7g"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m96o1qeaqhghml8f9zo": {
+ "value": 10,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m96o1nofskj5j9sf7g",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "lengthOfMobileNo",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "This decision table validates the mobile no. on the basis of the length of the mobile number. The policy used here is unique.",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

@@ -1,0 +1,652 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-03-26T12:15:15.291Z",
+  "updatedAt": "2025-03-26T13:26:16.801248Z",
+  "isDeleted": false,
+  "testedAt": "2025-03-26T13:26:16.8Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "47cccee2-1e42-4c30-adaa-b35c298f47fc",
+  "version": "draft",
+  "name": "cartBasedDiscount",
+  "commitId": "commit-8c2a979e-8e86-40fc-9b5b-f13d01c05c73",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-26 12:15:15",
+   "timeStamp": "2025-03-26T12:15:15.291818252Z"
+  },
+  "customInput": {
+   "cart": {
+ "name": "cart",
+ "dataType": "list",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": [
+  {
+   "name": "earplugs",
+   "price": 5000
+  },
+  {
+   "name": "jeans",
+   "price": 1000
+  },
+  {
+   "name": "tshirt",
+   "price": 200
+  }
+ ],
+ "config": {
+  
+ },
+ "value": null,
+ "next": "seasonSale",
+ "previous": "",
+ "schemaId": ""
+},
+   "seasonSale": {
+ "name": "seasonSale",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "userMembeship",
+ "previous": "cart",
+ "schemaId": ""
+},
+   "userMembeship": {
+ "name": "userMembeship",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "",
+ "previous": "seasonSale",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m8pwcmiqcirdi0j5x77",
+ "prevId": "",
+ "firstOutputData": "output_m8pw3ybonkvmue19a1d",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pwcmiqcirdi0j5x77": {
+ "nextId": "rule_m8pwcntd3of00p10dwo",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m8pwcmiqsu1t21sqbh",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pwcntd3of00p10dwo": {
+ "nextId": "rule_m8pwdhc2kn3kr16pm7p",
+ "prevId": "rule_m8pwcmiqcirdi0j5x77",
+ "firstOutputData": "output_m8pwcntdqdxvgwns3q",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m8pwdhc2kn3kr16pm7p": {
+ "nextId": "",
+ "prevId": "rule_m8pwcntd3of00p10dwo",
+ "firstOutputData": "output_m8pwdhc2gg062lsumxh",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "rule_m8pw37ug34w3whjdswn",
+ "prevId": "",
+ "type": "simpleCondition"
+},
+    "rule_m8pw37ug34w3whjdswn": {
+ "nextId": "rule_m8pw3ekmgt7fyxfjbi",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_m8pw3ekmgt7fyxfjbi": {
+ "nextId": "",
+ "prevId": "rule_m8pw37ug34w3whjdswn",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m8pw3ybob2ht8nv5afv": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "numeric",
+ "keyName": "discountPercentage",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m8pw3ybob2ht8nv5afv",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m8pw3ybonkvmue19a1d": {
+ "name": "discountPercentage",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 20,
+ "next": "",
+ "executedValue": 20,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pwcmiqsu1t21sqbh": {
+ "name": "discountPercentage",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 10,
+ "next": "",
+ "executedValue": 10,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pwcntdqdxvgwns3q": {
+ "name": "discountPercentage",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 2,
+ "next": "",
+ "executedValue": 2,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m8pwdhc2gg062lsumxh": {
+ "name": "discountPercentage",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 5,
+ "next": "",
+ "executedValue": 5,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "rule_m8pw37uhm8w6r38syno",
+  "rule_m8pw3ekm6e3q59prof6"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "JS Code",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "let cart = {{.customInput.cart}}\n\nlet cartValue = SUM_LIST(list = cart, \"price\");\nlet result = false;\n\nif(cartValue>5000){\n  result = true;\n}\n\nresult",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "custom",
+ "name": "",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "params",
+ "attribute": "sql",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pw37ug34w3whjdswn": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "seasonSale",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pw37uhm8w6r38syno": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8pw37ug34w3whjdswn"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pw3ekm6e3q59prof6": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_m8pw3ekmgt7fyxfjbi"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pw3ekmgt7fyxfjbi": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "userMembeship",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pwcmiq40v2hmvtqd9": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pwcmiqcirdi0j5x77",
+ "children": null,
+ "leftNode": [
+  "rule_m8pw3ekmgt7fyxfjbi"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pwcmiqb75alchq47": {
+ "value": "",
+ "sourceType": "",
+ "name": "JS Code",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "let cart = {{.customInput.cart}}\n\nlet cartValue = SUM_LIST(list = cart, \"price\");\nlet result = false;\n\nif(cartValue>6000){\n  result = true;\n}\n\nresult",
+ "parent": "rule_m8pwcmiqcirdi0j5x77",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pwcmiqy9lsrwlwx8"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pwcmiqcirdi0j5x77": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pwcmiqb75alchq47",
+  "rule_m8pwcmiqd6g2hkjbkj",
+  "rule_m8pwcmiq40v2hmvtqd9"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pwcmiqd6g2hkjbkj": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pwcmiqcirdi0j5x77",
+ "children": null,
+ "leftNode": [
+  "rule_m8pw37ug34w3whjdswn"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pwcmiqy9lsrwlwx8": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pwcmiqb75alchq47",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8pwcntd3of00p10dwo": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pwcntd4z2k0h9ef15",
+  "rule_m8pwcntdubk7parb3m9",
+  "rule_m8pwcntdzp7ewrqcbh"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pwcntd4z2k0h9ef15": {
+ "value": "",
+ "sourceType": "",
+ "name": "JS Code",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "let cart = {{.customInput.cart}}\n\nlet cartValue = SUM_LIST(list = cart, \"price\");\nlet result = false;\n\nif(cartValue>4000){\n  result = true;\n}\n\nresult",
+ "parent": "rule_m8pwcntd3of00p10dwo",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pwcntdcrc4pc6t7d4"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pwcntdcrc4pc6t7d4": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pwcntd4z2k0h9ef15",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8pwcntdubk7parb3m9": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pwcntd3of00p10dwo",
+ "children": null,
+ "leftNode": [
+  "rule_m8pw37ug34w3whjdswn"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pwcntdzp7ewrqcbh": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pwcntd3of00p10dwo",
+ "children": null,
+ "leftNode": [
+  "rule_m8pw3ekmgt7fyxfjbi"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pwdhc29dusotauqcj": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "f",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pwdhc2kn3kr16pm7p",
+ "children": null,
+ "leftNode": [
+  "rule_m8pw3ekmgt7fyxfjbi"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pwdhc2kn3kr16pm7p": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m8pwdhc2tvhz5w4ojec",
+  "rule_m8pwdhc2o10ejzv6iap",
+  "rule_m8pwdhc29dusotauqcj"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pwdhc2o10ejzv6iap": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pwdhc2kn3kr16pm7p",
+ "children": null,
+ "leftNode": [
+  "rule_m8pw37ug34w3whjdswn"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m8pwdhc2rywn4ha02mn": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "",
+ "nodeType": "",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m8pwdhc2tvhz5w4ojec",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 0,
+ "returnType": ""
+},
+    "rule_m8pwdhc2tvhz5w4ojec": {
+ "value": "",
+ "sourceType": "",
+ "name": "JS Code",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "let cart = {{.customInput.cart}}\n\nlet cartValue = SUM_LIST(list = cart, \"price\");\nlet result = false;\n\nif(cartValue>2000){\n  result = true;\n}\n\nresult",
+ "parent": "rule_m8pwdhc2kn3kr16pm7p",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m8pwdhc2rywn4ha02mn"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "cart",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "This decision table applies discounts based on a cart JSON object, evaluating item categories, total item price, and quantities. A JavaScript Code Node calculates the total cart value dynamically before applying the discount.",
+  "policy": "unique",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

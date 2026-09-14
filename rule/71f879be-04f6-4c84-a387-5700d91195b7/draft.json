@@ -1,0 +1,638 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2026-08-06T09:42:35.831Z",
+  "updatedAt": "2026-08-06T10:29:49.077331Z",
+  "isDeleted": false,
+  "testedAt": "2026-08-06T10:29:49.076Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "71f879be-04f6-4c84-a387-5700d91195b7",
+  "version": "draft",
+  "name": "BR-EVD-005_notice",
+  "commitId": "commit-421405e8-e14b-404c-a8bd-ea9ab851a1ff",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-08-06 09:42:35",
+   "timeStamp": "2026-08-06T09:42:35.831340803Z"
+  },
+  "customInput": {
+   "notice_capture_mode": {
+ "name": "notice_capture_mode",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "auto_captured",
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "g_QHLsqU": {
+ "nextId": "g_z1n5oZ",
+ "prevId": "rule_01",
+ "firstOutputData": "output_Em2lzD",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "g_WsNOjZ": {
+ "nextId": "g_e33ek3",
+ "prevId": "g_z1n5oZ",
+ "firstOutputData": "output_XBnCWq",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "g_e33ek3": {
+ "nextId": "",
+ "prevId": "g_WsNOjZ",
+ "firstOutputData": "output_oDmJIC",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "g_z1n5oZ": {
+ "nextId": "g_WsNOjZ",
+ "prevId": "g_QHLsqU",
+ "firstOutputData": "output_bRFMee",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_01": {
+ "nextId": "g_QHLsqU",
+ "prevId": "",
+ "firstOutputData": "output_jxlzPW",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_AZX79X": {
+ "nextId": "result_UzbDik",
+ "prevId": "result_rXoVar",
+ "dataType": "string",
+ "keyName": "action_required",
+ "schemaId": ""
+},
+    "result_UzbDik": {
+ "nextId": "",
+ "prevId": "result_AZX79X",
+ "dataType": "string",
+ "keyName": "type",
+ "schemaId": ""
+},
+    "result_rXoVar": {
+ "nextId": "result_AZX79X",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "trust",
+ "schemaId": "e652e18b-f27f-4185-b2a5-5aa932d5d3c4"
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_rXoVar",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_36IUcQ": {
+ "name": "type",
+ "dataType": "string",
+ "returnType": "",
+ "value": "notice",
+ "next": "",
+ "executedValue": "notice",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_9Jhq2R": {
+ "name": "action_required",
+ "dataType": "string",
+ "returnType": "",
+ "value": "\treviewer_attestation",
+ "next": "output_36IUcQ",
+ "executedValue": "\treviewer_attestation",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_Em2lzD": {
+ "name": "trust",
+ "dataType": "string",
+ "returnType": "",
+ "value": "high",
+ "next": "output_dNLmEz",
+ "executedValue": "high",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_QkTf3K": {
+ "name": "action_required",
+ "dataType": "string",
+ "returnType": "",
+ "value": "retain_document",
+ "next": "output_xTAXlA",
+ "executedValue": "retain_document",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_R4rdAh": {
+ "name": "action_required",
+ "dataType": "string",
+ "returnType": "",
+ "value": "\tdocumented_justification",
+ "next": "output_h8LWuK",
+ "executedValue": "\tdocumented_justification",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_XBnCWq": {
+ "name": "trust",
+ "dataType": "string",
+ "returnType": "",
+ "value": "low",
+ "next": "output_9Jhq2R",
+ "executedValue": "low",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_bRFMee": {
+ "name": "trust",
+ "dataType": "string",
+ "returnType": "",
+ "value": "medium",
+ "next": "output_QkTf3K",
+ "executedValue": "medium",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_dNLmEz": {
+ "name": "action_required",
+ "dataType": "string",
+ "returnType": "",
+ "value": "",
+ "next": "output_rDlkCS",
+ "executedValue": "",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_fthdNR": {
+ "name": "action_required",
+ "dataType": "string",
+ "returnType": "",
+ "value": "",
+ "next": "output_meipb9",
+ "executedValue": "",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_h8LWuK": {
+ "name": "type",
+ "dataType": "string",
+ "returnType": "",
+ "value": "notice",
+ "next": "",
+ "executedValue": "notice",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_jxlzPW": {
+ "name": "trust",
+ "dataType": "string",
+ "returnType": "",
+ "value": "high",
+ "next": "output_fthdNR",
+ "executedValue": "high",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_meipb9": {
+ "name": "type",
+ "dataType": "string",
+ "returnType": "",
+ "value": "notice",
+ "next": "",
+ "executedValue": "notice",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_oDmJIC": {
+ "name": "trust",
+ "dataType": "string",
+ "returnType": "",
+ "value": "low",
+ "next": "output_R4rdAh",
+ "executedValue": "low",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_rDlkCS": {
+ "name": "type",
+ "dataType": "string",
+ "returnType": "",
+ "value": "notice",
+ "next": "",
+ "executedValue": "notice",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_xTAXlA": {
+ "name": "type",
+ "dataType": "string",
+ "returnType": "",
+ "value": "notice",
+ "next": "",
+ "executedValue": "notice",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "c_2q8xJG": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_QHLsqU",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_mGlzBf"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_HiIqoz": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_z1n5oZ",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_CZfI0R"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_pJnBfJ": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_WsNOjZ",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_Y4WGcE"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_sIOgex": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_e33ek3",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_AIawt7"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_QHLsqU": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_2q8xJG"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_WsNOjZ": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_pJnBfJ"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_e33ek3": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_sIOgex"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_z1n5oZ": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_HiIqoz"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_AIawt7": {
+ "value": "judgement_no_source",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_sIOgex",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_CZfI0R": {
+ "value": "uploaded_document",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_HiIqoz",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_Y4WGcE": {
+ "value": "manually_keyed",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_pJnBfJ",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_mGlzBf": {
+ "value": "system_sourced",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_2q8xJG",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_mlLBOs": {
+ "value": "auto_captured",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_mlLBOs"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "notice_capture_mode",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "notice_capture_mode",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": [],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-06T10:15:14.805852Z",
+   "updatedAt": "2026-08-06T10:29:46.343275Z",
+   "entityCommitId": "commit-421405e8-e14b-404c-a8bd-ea9ab851a1ff",
+   "entityType": "rule",
+   "entityId": "71f879be-04f6-4c84-a387-5700d91195b7",
+   "entityVersion": "draft",
+   "entityNodeId": "result-result_rXoVar",
+   "dependencyType": "module_schema",
+   "dependencyId": "e652e18b-f27f-4185-b2a5-5aa932d5d3c4",
+   "dependencyVersion": "live"
+  }
+ ]
+}

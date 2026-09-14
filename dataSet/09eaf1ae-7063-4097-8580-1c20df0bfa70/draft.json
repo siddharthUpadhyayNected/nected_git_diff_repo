@@ -1,0 +1,76 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2025-04-29T11:24:09.525Z",
+  "updatedAt": "2025-04-30T06:46:47.259878Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-29T11:49:01.228Z",
+  "publishedAt": "2025-04-30T06:46:47.231Z",
+  "entityId": "09eaf1ae-7063-4097-8580-1c20df0bfa70",
+  "version": "0.10",
+  "name": "invoiceApprovalValidation",
+  "commitId": "commit-445b0b95-c48e-494a-8de4-997166ba3820",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Created at 2025-04-29 11:24:09",
+   "description": "cxvb",
+   "timeStamp": "2025-04-30T06:46:47.227Z"
+  },
+  "fields": {
+   "approvalLimit": {
+ "ColumnName": "approvalLimit",
+ "DataType": "numeric",
+ "Order": 6,
+ "ExecutedValue": 10000
+},
+   "categoryName": {
+ "ColumnName": "categoryName",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": "sale"
+},
+   "empID": {
+ "ColumnName": "empID",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": "1"
+},
+   "invoiceAmount": {
+ "ColumnName": "invoiceAmount",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": 1000
+},
+   "invoiceID": {
+ "ColumnName": "invoiceID",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": "1"
+},
+   "team": {
+ "ColumnName": "team",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": "sales"
+}
+  },
+  "description": "",
+  "query": "select\r\n\"i\".\"invoiceID\" as \"invoiceID\",\r\n\"i\".\"invoiceAmount\",\r\n\"i\".\"categoryName\",\r\n\"e\".\"empID\",\r\n\"e\".\"approvalLimit\",\r\n\"e\".\"team\"\r\nFROM\r\n\"invoice\" i \r\nJOIN \"employee\" e \r\nON \"e\".\"empID\" = \"i\".\"accountApproverId\";",
+  "params": {
+   
+  },
+  "connectorId": "c5fa0d71-a2e7-4cbe-b327-b9104edde777",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2025-03-18T12:31:47.394Z",
+  "updatedAt": "2025-03-18T12:31:47.394Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "0da1500b-12d1-4abb-a01d-004e06f1303a",
+  "version": "draft",
+  "name": "Risk_Management_Dataset",
+  "commitId": "commit-7531abca-ffab-4864-9aa2-add5ff164be1",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-03-18 12:31:47",
+   "timeStamp": "2025-03-18T12:31:47.394902885Z"
+  },
+  "fields": {
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "transaction_amount": {
+ "ColumnName": "transaction_amount",
+ "DataType": "numeric",
+ "Order": 2,
+ "ExecutedValue": null
+},
+   "transaction_frequency": {
+ "ColumnName": "transaction_frequency",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": null
+},
+   "transaction_location": {
+ "ColumnName": "transaction_location",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": null
+},
+   "user_history": {
+ "ColumnName": "user_history",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": null
+}
+  },
+  "description": "",
+  "query": "select * from risk_and_compliance.transaction_details;",
+  "params": null,
+  "connectorId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "",
+   "dateFormat": ""
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-03-18T12:31:47.402502Z",
+   "updatedAt": "2025-03-18T12:31:47.402502Z",
+   "entityCommitId": "commit-7531abca-ffab-4864-9aa2-add5ff164be1",
+   "entityType": "dataSet",
+   "entityId": "0da1500b-12d1-4abb-a01d-004e06f1303a",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+   "dependencyVersion": "live"
+  }
+ ]
+}

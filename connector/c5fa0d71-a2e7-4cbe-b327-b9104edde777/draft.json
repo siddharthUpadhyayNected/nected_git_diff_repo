@@ -1,0 +1,16 @@
+{
+ "entityType": "connector",
+ "category": "postgres",
+ "data": {
+  "createdAt": "2025-04-29T07:29:43.899Z",
+  "updatedAt": "2025-04-30T08:19:45.702258Z",
+  "isDeleted": false,
+  "entityId": "c5fa0d71-a2e7-4cbe-b327-b9104edde777",
+  "name": "invoiceDB",
+  "isDemo": false,
+  "category": "database",
+  "isSource": true,
+  "isAction": true,
+  "isTrigger": true
+ }
+}

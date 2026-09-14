@@ -1,0 +1,3213 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2026-05-19T06:41:40.916Z",
+  "updatedAt": "2026-05-19T06:41:40.916Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "0f06e02c-039e-44f5-872e-ff5895cab86c",
+  "version": "draft",
+  "name": "Credit Limit WF",
+  "commitId": "commit-0a8d3110-6d45-4d07-85cc-04e3df01484e",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-05-19 06:41:40",
+   "timeStamp": "2026-05-19T06:41:40.916142152Z"
+  },
+  "startNode": "node_lzi9ic3hsax5upsouap",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "Age": {
+ "value": null,
+ "executedValue": 32,
+ "name": "Age",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Annual_income": {
+ "value": null,
+ "executedValue": 500000,
+ "name": "Annual_income",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Customer_ID": {
+ "value": null,
+ "executedValue": 1,
+ "name": "Customer_ID",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Employement_type": {
+ "value": null,
+ "executedValue": "Salaried",
+ "name": "Employement_type",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Existing_Loan": {
+ "value": null,
+ "executedValue": 28654,
+ "name": "Existing_Loan",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Property_Value": {
+ "value": null,
+ "executedValue": 4500000,
+ "name": "Property_Value",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "type": {
+ "value": null,
+ "executedValue": "sfo",
+ "name": "type",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "Age": 32,
+      "Annual_income": 500000,
+      "Customer_ID": 1,
+      "Employement_type": "Salaried",
+      "Existing_Loan": 28654,
+      "Property_Value": 4500000,
+      "type": "sfo"
+     },
+     "settings": {
+      "authType": "none",
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lyskixxdwpct89jp17n",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 690
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lyskmwe8jgxj9p0puy8",
+    "type": "rule",
+    "data": {
+     "input": {
+      "Age": {
+ "value": null,
+ "executedValue": null,
+ "name": "Age",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "Age",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "CibilAPI": {
+ "value": {
+  
+ },
+ "executedValue": null,
+ "name": "CibilAPI",
+ "dataType": "restAPI",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Employment_Type": {
+ "value": "",
+ "executedValue": null,
+ "name": "Employment_Type",
+ "dataType": "string",
+ "source": "Trigger",
+ "attribute": "Employement_type",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Property_Value": {
+ "value": null,
+ "executedValue": null,
+ "name": "Property_Value",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "Property_Value",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "User_ID": {
+ "value": null,
+ "executedValue": null,
+ "name": "User_ID",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "Customer_ID",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "output": [
+ {
+  "Loan_Status": "Value",
+  "Loan_Value": 0,
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 5
+ }
+],
+      "ruleId": "4e72849c-4fe6-4de6-952f-8ea3dc262484",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "fad5ab54-3a65-487f-afde-b5bc7101dca5",
+     "pluginName": "",
+     "status": "",
+     "name": "Credit_Limit_Age",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lyskmwe8p57z78sp03k",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 485
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywte96rcy5xgbdkmgm",
+    "type": "dbNode",
+    "data": {
+     "input": {
+      "action": {
+ "value": 0,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "query": {
+ "value": "SELECT * FROM financial_and_loans.loan_details WHERE id = {{.Trigger.Customer_ID}}",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": [
+ {
+  "credit_score": 774,
+  "existing_loans": true,
+  "id": 1,
+  "loan_amount": 28685
+ }
+]
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "durationUnit": "m",
+      "durationValue": 5,
+      "errorContinue": false,
+      "rowLimit": 1000,
+      "timeout": 30
+     },
+     "nodeType": "dbNode",
+     "entity": "connector",
+     "entityId": "6c788e20-ddc3-4be3-94c6-7af0befffd43",
+     "pluginName": "",
+     "status": "",
+     "name": "NewDemoDB",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywte96rgs8fm7ktk2i",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 1510
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywtr2rpqga15nfvn7b",
+    "type": "switchNode",
+    "data": {
+     "input": {
+      "defaultPath": {
+ "value": false,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "path": "Tier 1"
+}
+     },
+     "settings": {
+      "timeout": 30
+     },
+     "nodeType": "switchNode",
+     "entity": "switch",
+     "entityId": "node_lywtr2rpqga15nfvn7b",
+     "pluginName": "",
+     "status": "",
+     "name": "SwitchBlock",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": [
+      {
+       "name": "Tier 1",
+       "pathId": "group_lywtr2rp42f846270hw"
+      },
+      {
+       "name": "Tier 2",
+       "pathId": "group_lywttarka47xkhexjfd"
+      },
+      {
+       "name": "Tier 3",
+       "pathId": "group_lz9pd42dyv6dbw1k2dl"
+      },
+      {
+       "name": "Tier 4",
+       "pathId": "group_lz9rtxq8mmobkafek3q"
+      }
+     ],
+     "conditions": {
+      "nodes": {
+ "condition_lywtr2rpwfzqtv62ui8": {
+ "dataType": "numeric",
+ "leftNode": [
+ "lhs_lywtr2rp5jdxmetkca3"
+],
+ "nodeType": "condition",
+ "operator": "gt",
+ "parent": "group_lywtr2rp42f846270hw",
+ "rightNode": [
+ "rhs_lywtsd662lv59mavwns"
+]
+},
+ "condition_lywtsj28druc18c791k": {
+ "dataType": "boolean",
+ "leftNode": [
+ "lhs_lywtsj28uonxccixjic"
+],
+ "nodeType": "condition",
+ "operator": "ex",
+ "parent": "group_lywtr2rp42f846270hw",
+ "rightNode": []
+},
+ "condition_lywttarkja4mqwrzxs": {
+ "dataType": "numeric",
+ "leftNode": [
+ "lhs_lywttarkvhhi9g4n3z"
+],
+ "nodeType": "condition",
+ "operator": "gt",
+ "parent": "group_lywttarka47xkhexjfd",
+ "rightNode": [
+ "rhs_lz9pdkkflbt162ybtzk"
+]
+},
+ "condition_lywttq9azrb6i7td5dm": {
+ "dataType": "numeric",
+ "leftNode": [
+ "lhs_lywttq9aldok8m67bpg"
+],
+ "nodeType": "condition",
+ "operator": "any",
+ "parent": "group_lywttarka47xkhexjfd",
+ "rightNode": []
+},
+ "condition_lz9pd42dau5l91u5llo": {
+ "dataType": "numeric",
+ "leftNode": [
+ "lhs_lz9pd42dk4wjgd873em"
+],
+ "nodeType": "condition",
+ "operator": "lt",
+ "parent": "group_lz9pd42dyv6dbw1k2dl",
+ "rightNode": [
+ "rhs_lz9peiw3b726qbjyj29"
+]
+},
+ "condition_lz9rtxq8brbok3yprnd": {
+ "dataType": "numeric",
+ "leftNode": [
+ "lhs_lz9rtxq86bzati1xefx"
+],
+ "nodeType": "condition",
+ "operator": "bet",
+ "parent": "group_lz9rtxq8mmobkafek3q",
+ "rightNode": [
+ "rhs_lz9rudz78na11s7clsn",
+ "rhs_lz9rudz7u4rllt26c2b"
+]
+},
+ "condition_lz9rum7y7lon34cvj9r": {
+ "dataType": "numeric",
+ "leftNode": [
+ "lhs_lz9rum7ykse4mtkj1z"
+],
+ "nodeType": "condition",
+ "operator": "bet",
+ "parent": "group_lz9rtxq8mmobkafek3q",
+ "rightNode": [
+ "rhs_lz9rutsfh0oafrxww6n",
+ "rhs_lz9rutsf28t2s65rika"
+]
+},
+ "group_lywtr2rp42f846270hw": {
+ "children": [
+ "condition_lywtr2rpwfzqtv62ui8",
+ "condition_lywtsj28druc18c791k"
+],
+ "name": "Tier 1",
+ "nodeType": "group",
+ "operator": "or"
+},
+ "group_lywttarka47xkhexjfd": {
+ "children": [
+ "condition_lywttarkja4mqwrzxs",
+ "condition_lywttq9azrb6i7td5dm"
+],
+ "name": "Tier 2",
+ "nodeType": "group",
+ "operator": "and"
+},
+ "group_lz9pd42dyv6dbw1k2dl": {
+ "children": [
+ "condition_lz9pd42dau5l91u5llo"
+],
+ "name": "Tier 3",
+ "nodeType": "group",
+ "operator": ""
+},
+ "group_lz9rtxq8mmobkafek3q": {
+ "children": [
+ "condition_lz9rtxq8brbok3yprnd",
+ "condition_lz9rum7y7lon34cvj9r"
+],
+ "name": "Tier 4",
+ "nodeType": "group",
+ "operator": "and"
+},
+ "lhs_lywtr2rp5jdxmetkca3": {
+ "attribute": "output.Body.property_value",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "parent": "condition_lywtr2rpwfzqtv62ui8",
+ "sourceType": "MockUpdateAPI",
+ "value": null
+},
+ "lhs_lywtsj28uonxccixjic": {
+ "attribute": "output[0].existing_loans",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "parent": "condition_lywtsj28druc18c791k",
+ "sourceType": "NewDemoDB",
+ "value": null
+},
+ "lhs_lywttarkvhhi9g4n3z": {
+ "attribute": "output.Body.credit_score",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "parent": "condition_lywttarkja4mqwrzxs",
+ "sourceType": "MockUpdateAPI",
+ "value": null
+},
+ "lhs_lywttq9aldok8m67bpg": {
+ "attribute": "output.Body.credit_score",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "parent": "condition_lywttq9azrb6i7td5dm",
+ "sourceType": "MockUpdateAPI",
+ "value": null
+},
+ "lhs_lz9pd42dk4wjgd873em": {
+ "attribute": "output.Body.credit_score",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "parent": "condition_lz9pd42dau5l91u5llo",
+ "sourceType": "MockUpdateAPI",
+ "value": null
+},
+ "lhs_lz9rtxq86bzati1xefx": {
+ "attribute": "output.Body.credit_score",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "parent": "condition_lz9rtxq8brbok3yprnd",
+ "sourceType": "MockUpdateAPI",
+ "value": null
+},
+ "lhs_lz9rum7ykse4mtkj1z": {
+ "attribute": "output.Body.property_value",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "parent": "condition_lz9rum7y7lon34cvj9r",
+ "sourceType": "MockUpdateAPI",
+ "value": null
+},
+ "rhs_lywtsd662lv59mavwns": {
+ "attribute": null,
+ "dataType": "numeric",
+ "executedValue": 250000,
+ "nodeType": "constant",
+ "parent": "condition_lywtr2rpwfzqtv62ui8",
+ "source": null,
+ "sourceType": "",
+ "value": 250000
+},
+ "rhs_lz9pdkkflbt162ybtzk": {
+ "attribute": null,
+ "dataType": "numeric",
+ "executedValue": 50,
+ "nodeType": "constant",
+ "parent": "condition_lywttarkja4mqwrzxs",
+ "source": null,
+ "sourceType": "",
+ "value": 50
+},
+ "rhs_lz9peiw3b726qbjyj29": {
+ "attribute": null,
+ "dataType": "numeric",
+ "executedValue": 50,
+ "nodeType": "constant",
+ "parent": "condition_lz9pd42dau5l91u5llo",
+ "source": null,
+ "sourceType": "",
+ "value": 50
+},
+ "rhs_lz9rudz78na11s7clsn": {
+ "attribute": null,
+ "dataType": "numeric",
+ "executedValue": 50,
+ "nodeType": "constant",
+ "parent": "condition_lz9rtxq8brbok3yprnd",
+ "source": null,
+ "sourceType": "",
+ "value": 50
+},
+ "rhs_lz9rudz7u4rllt26c2b": {
+ "attribute": null,
+ "dataType": "numeric",
+ "executedValue": 80,
+ "nodeType": "constant",
+ "parent": "condition_lz9rtxq8brbok3yprnd",
+ "source": null,
+ "sourceType": "",
+ "value": 80
+},
+ "rhs_lz9rutsf28t2s65rika": {
+ "attribute": null,
+ "dataType": "numeric",
+ "executedValue": 2000,
+ "nodeType": "constant",
+ "parent": "condition_lz9rum7y7lon34cvj9r",
+ "source": null,
+ "sourceType": "",
+ "value": 2000
+},
+ "rhs_lz9rutsfh0oafrxww6n": {
+ "attribute": null,
+ "dataType": "numeric",
+ "executedValue": 1500,
+ "nodeType": "constant",
+ "parent": "condition_lz9rum7y7lon34cvj9r",
+ "source": null,
+ "sourceType": "",
+ "value": 1500
+}
+}
+     },
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 351.9678955078125,
+     "y": 1640
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywtr2rpjhsl44m8pw",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 121.9678955078125,
+     "y": 2050
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywtr2rp8vg35h4cj0k",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 2125
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywtr2rpb3jutykejlf",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 1845
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywtu4agn5jmk7s0979",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 351.9678955078125,
+     "y": 1920
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywtw1o1ttxy0hglmvg",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "Existing_Loan": {
+ "value": null,
+ "executedValue": "Value",
+ "name": "Existing_Loan",
+ "dataType": "string",
+ "source": "SwitchBlock",
+ "attribute": "output.path",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Loan_Value": {
+ "value": null,
+ "executedValue": 0,
+ "name": "Loan_Value",
+ "dataType": "numeric",
+ "source": "Credit_Limit_Age",
+ "attribute": "output[0].Loan_Value",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Property_Value": {
+ "value": null,
+ "executedValue": 0,
+ "name": "Property_Value",
+ "dataType": "numeric",
+ "source": "MockUpdateAPI",
+ "attribute": "output.Body.property_value",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "Existing_Loan": "Tier 1",
+ "Loan_Value": 0,
+ "Property_Value": 14492
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_lywtw1o1ttxy0hglmvg",
+     "pluginName": "",
+     "status": "",
+     "name": "Response",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 351.9678955078125,
+     "y": 2050
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywtw1o1qt4l2sdr01r",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 1920
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywtwtnj1u2yrquswtrj",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "Loan_Value": {
+ "value": null,
+ "executedValue": 0,
+ "name": "Loan_Value",
+ "dataType": "numeric",
+ "source": "NewDemoDB",
+ "attribute": "output[0].loan_amount",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "Loan_Value": 28685
+}
+     },
+     "settings": {
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_lywtwtnj1u2yrquswtrj",
+     "pluginName": "",
+     "status": "",
+     "name": "Response1",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 2050
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywtwtnj7ibfmf794xo",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 351.9678955078125,
+     "y": 1715
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywu62gat4adt92xuh",
+    "type": "codeNode",
+    "data": {
+     "input": {
+      "language": {
+ "value": "JS",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "snippet": {
+ "value": "{{.NewDemoDB.output[0].credit_score}}*0.80",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": 619.2
+     },
+     "settings": {
+      "timeout": 10
+     },
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "node_lywu62gat4adt92xuh",
+     "pluginName": "",
+     "status": "",
+     "name": "Code",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 351.9678955078125,
+     "y": 1845
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lywu62gal35cbr1cqb8",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 895
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lz1mck1kih0mk776hsk",
+    "type": "restApiNode",
+    "data": {
+     "input": {
+      "authentication": {
+ "value": "None",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "baseUrl": {
+ "value": "https://64d3e99167b2662bf3dcdcd6.mockapi.io/api/v1/",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "contentType": {
+ "value": "",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "headers": {
+ "value": [],
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "method": {
+ "value": "GET",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "path": {
+ "value": "users/{{.Trigger.Customer_ID}}",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "queryParams": {
+ "value": [],
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "Body": {
+ "createdAt": "2024-01-16T03:37:31.132Z",
+ "credit_score": 842,
+ "current_loans": {
+ 
+},
+ "email_id": "Bernita.Konopelski91@hotmail.com",
+ "id": "1",
+ "name": "Brittany Davis",
+ "payroll_13m": 44,
+ "property_value": 14492,
+ "taxable_income_last_year": 18
+},
+ "Headers": {
+ "Access-Control-Allow-Headers": "X-Requested-With,Content-Type,Cache-Control,access_token",
+ "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,OPTIONS",
+ "Access-Control-Allow-Origin": "*",
+ "Connection": "keep-alive",
+ "Content-Length": "227",
+ "Content-Type": "application/json",
+ "Date": "Fri, 20 Sep 2024 11:21:00 GMT",
+ "Etag": "\"-1005687201\"",
+ "Nel": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}",
+ "Report-To": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1726831260&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=n7qYDNv%2B0JdD88EAsoGb3gRZBJlAoDHjMq3DJpl117s%3D\"}]}",
+ "Reporting-Endpoints": "heroku-nel=https://nel.heroku.com/reports?ts=1726831260&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=n7qYDNv%2B0JdD88EAsoGb3gRZBJlAoDHjMq3DJpl117s%3D",
+ "Server": "Cowboy",
+ "Via": "1.1 vegur",
+ "X-Powered-By": "Express"
+},
+ "StatusCode": 200
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "restApiNode",
+     "entity": "connector",
+     "entityId": "42c79847-8a1a-43e5-888e-bf66b6c7f040",
+     "pluginName": "",
+     "status": "",
+     "name": "MockUpdateAPI",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lz1mck1k4q0ufnpnmyj",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 1100
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lz1mdgcqfm37zg476qk",
+    "type": "codeNode",
+    "data": {
+     "input": {
+      "language": {
+ "value": "excelFormula",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "snippet": {
+ "value": "DATEDIFF('26-07-2024', '{{.MockUpdateAPI.output.Body.createdAt}}', 'day')",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": 191
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10
+     },
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "node_lz1mdgcqfm37zg476qk",
+     "pluginName": "",
+     "status": "",
+     "name": "Month_createddate",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 1230
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lz1mdgcqkb6xb6d0wpj",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 1305
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lz1mravia8vai01t6th",
+    "type": "rule",
+    "data": {
+     "input": {
+      "Age": {
+ "value": null,
+ "executedValue": null,
+ "name": "Age",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "Age",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "CIBIL_Score": {
+ "value": null,
+ "executedValue": null,
+ "name": "CIBIL_Score",
+ "dataType": "numeric",
+ "source": "NewDemoDB",
+ "attribute": "output[0].credit_score",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Month": {
+ "value": null,
+ "executedValue": null,
+ "name": "Month",
+ "dataType": "numeric",
+ "source": "Month_createddate",
+ "attribute": "output",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Property_Value": {
+ "value": null,
+ "executedValue": null,
+ "name": "Property_Value",
+ "dataType": "numeric",
+ "source": "Credit_Limit_Age",
+ "attribute": "output[0].Loan_Value",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "output": [
+ {
+  "Status": "Approved",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1
+ }
+],
+      "ruleId": "f166e2ad-9d05-4002-a2b2-36a588bbddff",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "8dd6efb4-cad4-4d0e-9bf8-91a0f1a983ae",
+     "pluginName": "",
+     "status": "",
+     "name": "Rule_validate_WF",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 1435
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lz1mraviw9kq8hfx2td",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1041.9678955078125,
+     "y": 1845
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lz9peqikp2a1tgj1ctq",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 811.9678955078125,
+     "y": 2050
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lz9rvidv3ql203naaco",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1041.9678955078125,
+     "y": 1920
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lz9rvwtvf1skyg9do4t",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "City": {
+ "value": null,
+ "executedValue": "Value",
+ "name": "City",
+ "dataType": "string",
+ "source": "SwitchBlock",
+ "attribute": "output.path",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "Loan": {
+ "value": null,
+ "executedValue": 0,
+ "name": "Loan",
+ "dataType": "numeric",
+ "source": "Credit_Limit_Age",
+ "attribute": "output[0].Loan_Value",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "City": "Tier 1",
+ "Loan": 0
+}
+     },
+     "settings": {
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_lz9rvwtvf1skyg9do4t",
+     "pluginName": "",
+     "status": "",
+     "name": "Response2",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1041.9678955078125,
+     "y": 2050
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lz9rvwtvlk3axp7g4ij",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lywtr2rpqga15nfvn7b",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lzi9ic3hsax5upsouap",
+    "type": "switchNode",
+    "data": {
+     "input": {
+      "defaultPath": {
+ "value": true,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "path": "sfo_path"
+}
+     },
+     "settings": {
+      "timeout": 30
+     },
+     "nodeType": "switchNode",
+     "entity": "switch",
+     "entityId": "node_lzi9ic3hsax5upsouap",
+     "pluginName": "",
+     "status": "",
+     "name": "SwitchBlock1",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": [
+      {
+       "name": "sfo_path",
+       "pathId": "group_lzi9ic3hpp9hbrkdsg9"
+      },
+      {
+       "name": "llp",
+       "pathId": "group_lzi9iuxt2psqzog2uoa"
+      },
+      {
+       "name": "Path",
+       "pathId": "group_m03u3ahsqbox0tpt04s"
+      }
+     ],
+     "conditions": {
+      "nodes": {
+ "condition_lzi9ic3hu7llesxxis": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_lzi9ic3hxtjfmimxzu"
+],
+ "nodeType": "condition",
+ "operator": "eq",
+ "parent": "group_lzi9ic3hpp9hbrkdsg9",
+ "rightNode": [
+ "rhs_lzi9iokff7zvi8l1reh"
+]
+},
+ "condition_lzi9iuxt9ae56ieelv": {
+ "dataType": "numeric",
+ "leftNode": [
+ "lhs_lzi9iuxt5g3ij9jbxvl"
+],
+ "nodeType": "condition",
+ "operator": "any",
+ "parent": "group_lzi9iuxt2psqzog2uoa",
+ "rightNode": []
+},
+ "condition_m03u3ahs6yy92zzp3d5": {
+ "dataType": "numeric",
+ "leftNode": [
+ "lhs_m03u3ahsksac7nff3i"
+],
+ "nodeType": "condition",
+ "operator": "gt",
+ "parent": "group_m03u3ahsqbox0tpt04s",
+ "rightNode": [
+ "rhs_m03u3i4hipk1wrc20d"
+]
+},
+ "group_lzi9ic3hpp9hbrkdsg9": {
+ "children": [
+ "condition_lzi9ic3hu7llesxxis"
+],
+ "name": "sfo_path",
+ "nodeType": "group",
+ "operator": ""
+},
+ "group_lzi9iuxt2psqzog2uoa": {
+ "children": [
+ "condition_lzi9iuxt9ae56ieelv"
+],
+ "name": "llp",
+ "nodeType": "group",
+ "operator": ""
+},
+ "group_m03u3ahsqbox0tpt04s": {
+ "children": [
+ "condition_m03u3ahs6yy92zzp3d5"
+],
+ "name": "Path",
+ "nodeType": "group",
+ "operator": ""
+},
+ "lhs_lzi9ic3hxtjfmimxzu": {
+ "attribute": "type",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "condition_lzi9ic3hu7llesxxis",
+ "sourceType": "Trigger",
+ "value": null
+},
+ "lhs_lzi9iuxt5g3ij9jbxvl": {
+ "attribute": "Existing_Loan",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "parent": "condition_lzi9iuxt9ae56ieelv",
+ "sourceType": "Trigger",
+ "value": null
+},
+ "lhs_m03u3ahsksac7nff3i": {
+ "attribute": "Annual_income",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "parent": "condition_m03u3ahs6yy92zzp3d5",
+ "sourceType": "Trigger",
+ "value": null
+},
+ "rhs_lzi9iokff7zvi8l1reh": {
+ "attribute": null,
+ "dataType": "string",
+ "executedValue": "sfo",
+ "nodeType": "constant",
+ "parent": "condition_lzi9ic3hu7llesxxis",
+ "source": null,
+ "sourceType": "",
+ "value": "sfo"
+},
+ "rhs_m03u3i4hipk1wrc20d": {
+ "attribute": null,
+ "dataType": "numeric",
+ "executedValue": 20000,
+ "nodeType": "constant",
+ "parent": "condition_m03u3ahs6yy92zzp3d5",
+ "source": null,
+ "sourceType": "",
+ "value": 20000
+}
+}
+     },
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 236.9678955078125,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lzi9ic3ha1unvjqynnp",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lzi9ic3hsax5upsouap",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 466.9678955078125,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lzi9ic3hsqtd2kbgowq",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lzi9ic3hsax5upsouap",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 581.9678955078125,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lzi9ic3hawk1rlpft4",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lzi9ic3hsax5upsouap",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 696.9678955078125,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_lzi9j6hza99v1obu5cu",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lzi9ic3hsax5upsouap",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 926.9678955078125,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_m03u3p6zdgclsrfu7s",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_lzi9ic3hsax5upsouap",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lyskixxe2usula74ghs",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "node_lyskixxdwpct89jp17n",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lyskmwe8df46jodcr49",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lyskmwe8jgxj9p0puy8",
+    "target": "node_lyskmwe8p57z78sp03k",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lywte96svgrc02ou7r",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywte96rcy5xgbdkmgm",
+    "target": "node_lywte96rgs8fm7ktk2i",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lywtr2rph9tkn1u8cgf",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywtr2rpqga15nfvn7b",
+    "target": "node_lywtr2rpjhsl44m8pw",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_lywtr2rp42f846270hw"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lywtr2rpi2hr51vbocg",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywtr2rpqga15nfvn7b",
+    "target": "node_lywtr2rp8vg35h4cj0k",
+    "data": {
+     "edgeType": "defaultCase",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lywtu4ag42yrvowdcs3",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywtr2rpqga15nfvn7b",
+    "target": "node_lywtu4agn5jmk7s0979",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_lywttarka47xkhexjfd"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lywtunr2a8dgxj8gto",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywtr2rp8vg35h4cj0k",
+    "target": "node_lywtr2rpb3jutykejlf",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lywtw1o1ej0mk1qr98p",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywtw1o1qt4l2sdr01r",
+    "target": "node_lywtr2rpb3jutykejlf",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lywtw1o1i59j2ooqz2",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywtw1o1ttxy0hglmvg",
+    "target": "node_lywtw1o1qt4l2sdr01r",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lywtwtnjm5ay8t7dbvm",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywtwtnj7ibfmf794xo",
+    "target": "node_lywtr2rpb3jutykejlf",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lywtwtnjlonl1fc0zml",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywtwtnj1u2yrquswtrj",
+    "target": "node_lywtwtnj7ibfmf794xo",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lywtwtnj0kaw4gqzutq",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywtu4agn5jmk7s0979",
+    "target": "node_lywtwtnj1u2yrquswtrj",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lywu62gag33dxksl5j",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywu62gat4adt92xuh",
+    "target": "node_lywu62gal35cbr1cqb8",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lywu62gamswsxyw0o9r",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywtr2rpjhsl44m8pw",
+    "target": "node_lywu62gat4adt92xuh",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz1mck1k7vsz3czknxu",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lz1mck1kih0mk776hsk",
+    "target": "node_lz1mck1k4q0ufnpnmyj",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz1mck1k54sat8e3kg5",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lyskmwe8p57z78sp03k",
+    "target": "node_lz1mck1kih0mk776hsk",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz1mdgcqxko2f1t2n9",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lz1mdgcqfm37zg476qk",
+    "target": "node_lz1mdgcqkb6xb6d0wpj",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz1mdgcq4zzvvn8myw7",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lz1mck1k4q0ufnpnmyj",
+    "target": "node_lz1mdgcqfm37zg476qk",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz1mravisui6ck9s53q",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lz1mraviw9kq8hfx2td",
+    "target": "node_lywtr2rpqga15nfvn7b",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz1mraviv0yd6ubbrpd",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lz1mravia8vai01t6th",
+    "target": "node_lz1mraviw9kq8hfx2td",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz9peqikwkk04ogta3",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywtr2rpqga15nfvn7b",
+    "target": "node_lz9peqikp2a1tgj1ctq",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_lz9pd42dyv6dbw1k2dl"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz9pqnbpw1vw8y0ste",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywu62gal35cbr1cqb8",
+    "target": "node_lywtw1o1ttxy0hglmvg",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz9rvidw1m8zfi7ipgj",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywtr2rpqga15nfvn7b",
+    "target": "node_lz9rvidv3ql203naaco",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_lz9rtxq8mmobkafek3q"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz9rvidw0pzx0mi7pgp",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lz9rvidv3ql203naaco",
+    "target": "node_lywtr2rpb3jutykejlf",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz9rvwtvnv4sesqrm7",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lz9rvwtvlk3axp7g4ij",
+    "target": "node_lywtr2rpb3jutykejlf",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz9rvwtvi6bweog8usr",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lz9rvwtvf1skyg9do4t",
+    "target": "node_lz9rvwtvlk3axp7g4ij",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lz9rvwtvv4gg1gaqbx",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lz9peqikp2a1tgj1ctq",
+    "target": "node_lz9rvwtvf1skyg9do4t",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lzb1hz3men2rsu3wf4u",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lz1mdgcqkb6xb6d0wpj",
+    "target": "node_lz1mravia8vai01t6th",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lzi9ic3ia3b2cc6g9n",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lzi9ic3hsax5upsouap",
+    "target": "node_lzi9ic3ha1unvjqynnp",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_lzi9ic3hpp9hbrkdsg9"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lzi9ic3ipjphlm1jcx",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lzi9ic3hsax5upsouap",
+    "target": "node_lzi9ic3hsqtd2kbgowq",
+    "data": {
+     "edgeType": "defaultCase",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lzi9ic3i53vhxxmdweu",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lzi9ic3ha1unvjqynnp",
+    "target": "node_lzi9ic3hawk1rlpft4",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lzi9ic3igwjwbkl9554",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lzi9ic3hsqtd2kbgowq",
+    "target": "node_lzi9ic3hawk1rlpft4",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lzi9j6hzdk0tvmoq2ml",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lzi9ic3hsax5upsouap",
+    "target": "node_lzi9j6hza99v1obu5cu",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_lzi9iuxt2psqzog2uoa"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lzi9j6hz1jisdup4cl5",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lzi9j6hza99v1obu5cu",
+    "target": "node_lzi9ic3hawk1rlpft4",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_lzi9uypdwzuaz7egpj",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lywte96rgs8fm7ktk2i",
+    "target": "node_lyskmwe8jgxj9p0puy8",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m03twe84oa0jrw21lmc",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lzi9ic3hawk1rlpft4",
+    "target": "node_lywte96rcy5xgbdkmgm",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m03u3p6zgwpksefr1k",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lzi9ic3hsax5upsouap",
+    "target": "node_m03u3p6zdgclsrfu7s",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_m03u3ahsqbox0tpt04s"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m03u3p6zivb43a6v1dq",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_m03u3p6zdgclsrfu7s",
+    "target": "node_lzi9ic3hawk1rlpft4",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_m0m0zzvyx04c62jwjn",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_lyskixxdwpct89jp17n",
+    "target": "node_lzi9ic3hsax5upsouap",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": false,
+   "timezone": "",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ }
+}

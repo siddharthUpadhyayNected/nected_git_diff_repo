@@ -1,0 +1,283 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-04-04T10:13:52.724Z",
+  "updatedAt": "2025-04-04T10:28:31.941302Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-04T10:28:31.94Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "32750d4e-b451-4362-a5bc-1b40c8c7a0e6",
+  "version": "draft",
+  "name": "attendanceBasedScholarshipEligibility",
+  "commitId": "commit-8fd24a3c-b777-4c81-bad2-21589c72e850",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-04-04 10:13:52",
+   "timeStamp": "2025-04-04T10:13:52.724656809Z"
+  },
+  "customInput": {
+   "attendancePercentage": {
+ "name": "attendancePercentage",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": null,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m92mv6l02inv8al8udd",
+ "prevId": "",
+ "firstOutputData": "output_m92muuwy94jm977gh8",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m92mv6l02inv8al8udd": {
+ "nextId": "",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m92mv6l0ylhqb5l76p",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m92muuwyl95q3i8gn3a": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "eligibility",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m92muuwyl95q3i8gn3a",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m92muuwy94jm977gh8": {
+ "name": "eligibility",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Eligible",
+ "next": "",
+ "executedValue": "Eligible",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m92mv6l0ylhqb5l76p": {
+ "name": "eligibility",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Not eligible",
+ "next": "",
+ "executedValue": "Not eligible",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92mulac3qzpa0n2y7t"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "attendancePercentage",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92mulac3qzpa0n2y7t": {
+ "value": 85,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92mv6l02inv8al8udd": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92mv6l034l4vim7efe"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92mv6l034l4vim7efe": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "lt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92mv6l02inv8al8udd",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92mv9sqpvb4kyitr9b"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92mv9sqpvb4kyitr9b": {
+ "value": 85,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92mv6l034l4vim7efe",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "attendancePercentage",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "This DT decides the eligibility of the student for scholarship on the basis of the attendance percentage. The policy used here is evaluate all.",
+  "policy": "evaluteAll",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

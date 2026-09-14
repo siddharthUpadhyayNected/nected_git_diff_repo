@@ -1,0 +1,42 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-08-05T17:17:58.509Z",
+  "updatedAt": "2026-08-05T17:17:58.509Z",
+  "isDeleted": false,
+  "entityId": "5026ceb5-81d1-42fb-ad50-b85767771699",
+  "name": "payment_type",
+  "moduleId": "07c4291d-dcab-4cba-82a9-8efcda01f125",
+  "dataType": "string",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": "regular"
+   },
+   {
+    "value": "principal_paydown"
+   },
+   {
+    "value": "fee_only"
+   },
+   {
+    "value": "suspense"
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-05T17:17:58.515509Z",
+   "updatedAt": "2026-08-05T17:17:58.515509Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "5026ceb5-81d1-42fb-ad50-b85767771699",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "07c4291d-dcab-4cba-82a9-8efcda01f125",
+   "dependencyVersion": "live"
+  }
+ ]
+}

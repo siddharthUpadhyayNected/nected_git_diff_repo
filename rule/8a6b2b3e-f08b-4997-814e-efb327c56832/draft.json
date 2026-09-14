@@ -1,0 +1,283 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-04-04T11:44:16.988Z",
+  "updatedAt": "2025-04-04T11:48:09.239893Z",
+  "isDeleted": false,
+  "testedAt": "2025-04-04T11:48:09.239Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "8a6b2b3e-f08b-4997-814e-efb327c56832",
+  "version": "draft",
+  "name": "geoBasedTwoFactorAuthentication",
+  "commitId": "commit-9411dbd6-7788-4530-8ab7-4a65207a4bef",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-04-04 11:44:16",
+   "timeStamp": "2025-04-04T11:44:16.988247549Z"
+  },
+  "customInput": {
+   "location": {
+ "name": "location",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "rule_m92pywyabqt2x8gxv5p",
+ "prevId": "",
+ "firstOutputData": "output_m92pyd9f81m4dmt55r",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_m92pywyabqt2x8gxv5p": {
+ "nextId": "",
+ "prevId": "rule_01",
+ "firstOutputData": "output_m92pywya95xx2gvuvbm",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_m92pyd9f5cka6fc97va": {
+ "nextId": "",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "twoFactorRequired",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_m92pyd9f5cka6fc97va",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_m92pyd9f81m4dmt55r": {
+ "name": "twoFactorRequired",
+ "dataType": "string",
+ "returnType": "",
+ "value": "yes",
+ "next": "",
+ "executedValue": "yes",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_m92pywya95xx2gvuvbm": {
+ "name": "twoFactorRequired",
+ "dataType": "string",
+ "returnType": "",
+ "value": "no",
+ "next": "",
+ "executedValue": "no",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "neq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92q02jevyomyk4vohg"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "location",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92pywyabqt2x8gxv5p": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_m92pywyazc7c1c9g52s"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92pywyazc7c1c9g52s": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92pywyabqt2x8gxv5p",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rule_m92pz4lhyg9xfyovz7o"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92pz4lhyg9xfyovz7o": {
+ "value": "India",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_m92pywyazc7c1c9g52s",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_m92q02jevyomyk4vohg": {
+ "value": "India",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "location",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "This decision table informs that the 2 factor authentication is necessary or not on the basis of the fact that country is India or not. The policy used here is first.",
+  "policy": "collect",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}
