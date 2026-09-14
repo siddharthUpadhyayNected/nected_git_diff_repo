@@ -1,0 +1,22 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2026-08-07T06:30:07.848Z",
+  "updatedAt": "2026-08-07T06:30:07.848Z",
+  "isDeleted": false,
+  "entityId": "b267c8cd-4a1c-41e2-81db-8e7b30e646cb",
+  "name": "TC_INTEREST_SET",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "list",
+  "value": {
+   "data": [
+    "INT01"
+   ],
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

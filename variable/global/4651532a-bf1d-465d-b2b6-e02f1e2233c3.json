@@ -1,0 +1,20 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2026-08-07T06:33:40.498Z",
+  "updatedAt": "2026-08-10T20:42:31.096223Z",
+  "isDeleted": false,
+  "entityId": "4651532a-bf1d-465d-b2b6-e02f1e2233c3",
+  "name": "RECON_TOLERANCE",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "numeric",
+  "value": {
+   "data": 0.05,
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

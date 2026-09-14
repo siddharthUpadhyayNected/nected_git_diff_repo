@@ -1,0 +1,16 @@
+{
+ "entityType": "connector",
+ "category": "anthropic",
+ "data": {
+  "createdAt": "2026-05-01T09:30:13.546Z",
+  "updatedAt": "2026-05-01T09:30:39.083782Z",
+  "isDeleted": false,
+  "entityId": "7f09a28d-4bbe-49a3-9681-0a5e08808bf6",
+  "name": "Siddharth's  Claude",
+  "isDemo": false,
+  "category": "ai-provider",
+  "isSource": false,
+  "isAction": true,
+  "isTrigger": true
+ }
+}

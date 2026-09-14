@@ -1,0 +1,22 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2026-08-07T06:30:07.847Z",
+  "updatedAt": "2026-08-07T06:30:07.847Z",
+  "isDeleted": false,
+  "entityId": "1d6148e7-ac9d-43ff-af14-64df5afa4c06",
+  "name": "TC_PRINCIPAL_PAYDOWN",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "list",
+  "value": {
+   "data": [
+    "PPD01"
+   ],
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

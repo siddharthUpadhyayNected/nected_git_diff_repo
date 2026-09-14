@@ -1,0 +1,254 @@
+{
+ "entityType": "rule",
+ "category": "ruleSet",
+ "data": {
+  "createdAt": "2026-05-11T08:53:20.117Z",
+  "updatedAt": "2026-05-11T08:53:20.117Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "e869701a-4944-4976-b4c6-45111bfefaf9",
+  "version": "draft",
+  "name": "multRS",
+  "commitId": "commit-058e6480-04cf-4cb9-b31d-3e1743181e55",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-05-11 08:53:20",
+   "timeStamp": "2026-05-11T08:53:20.117900305Z"
+  },
+  "customInput": {
+   "capPct": {
+ "name": "capPct",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 40,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "dailySales",
+ "schemaId": ""
+},
+   "country": {
+ "name": "country",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "AU",
+ "config": null,
+ "value": null,
+ "next": "monthsToDeadline",
+ "previous": "salesRatio",
+ "schemaId": ""
+},
+   "dailySales": {
+ "name": "dailySales",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 5,
+ "config": null,
+ "value": null,
+ "next": "capPct",
+ "previous": "monthsToDeadline",
+ "schemaId": ""
+},
+   "monthsToDeadline": {
+ "name": "monthsToDeadline",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 3,
+ "config": null,
+ "value": null,
+ "next": "dailySales",
+ "previous": "country",
+ "schemaId": ""
+},
+   "salesRatio": {
+ "name": "salesRatio",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 1,
+ "config": null,
+ "value": null,
+ "next": "country",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": {
+   "0c2a2a3d-e597-4661-85e1-ff0ac08beca0": {
+ "prevRuleId": "7c72a2ee-8692-41f0-b390-18476a644f18",
+ "nextRuleId": "b6fc97c7-25c9-417b-ac79-0cd2cb24ebc7",
+ "isEnabled": true
+},
+   "7c72a2ee-8692-41f0-b390-18476a644f18": {
+ "prevRuleId": "eb373cd9-ac1d-4001-a408-fd66076221a9",
+ "nextRuleId": "0c2a2a3d-e597-4661-85e1-ff0ac08beca0",
+ "isEnabled": true
+},
+   "b6fc97c7-25c9-417b-ac79-0cd2cb24ebc7": {
+ "prevRuleId": "0c2a2a3d-e597-4661-85e1-ff0ac08beca0",
+ "nextRuleId": "",
+ "isEnabled": true
+},
+   "eb373cd9-ac1d-4001-a408-fd66076221a9": {
+ "prevRuleId": "",
+ "nextRuleId": "7c72a2ee-8692-41f0-b390-18476a644f18",
+ "isEnabled": true
+}
+  },
+  "decisionTable": {
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": null,
+   "startNode": ""
+  },
+  "firstCustomInput": "salesRatio",
+  "firstRuleChain": "eb373cd9-ac1d-4001-a408-fd66076221a9",
+  "ruleSetPolicy": "evaluteAll",
+  "description": "",
+  "policy": "",
+  "comment": "",
+  "type": "ruleSet",
+  "dataSetId": null,
+  "ruleSet": [
+   "eb373cd9-ac1d-4001-a408-fd66076221a9",
+   "7c72a2ee-8692-41f0-b390-18476a644f18",
+   "0c2a2a3d-e597-4661-85e1-ff0ac08beca0",
+   "b6fc97c7-25c9-417b-ac79-0cd2cb24ebc7"
+  ],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": ""
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-11T08:53:20.135794Z",
+   "updatedAt": "2026-05-11T08:53:20.135794Z",
+   "entityCommitId": "commit-058e6480-04cf-4cb9-b31d-3e1743181e55",
+   "entityType": "rule",
+   "entityId": "e869701a-4944-4976-b4c6-45111bfefaf9",
+   "entityVersion": "draft",
+   "entityNodeId": "b6fc97c7-25c9-417b-ac79-0cd2cb24ebc7",
+   "dependencyType": "rule",
+   "dependencyId": "b6fc97c7-25c9-417b-ac79-0cd2cb24ebc7",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-11T08:53:20.133781Z",
+   "updatedAt": "2026-05-11T08:53:20.133781Z",
+   "entityCommitId": "commit-058e6480-04cf-4cb9-b31d-3e1743181e55",
+   "entityType": "rule",
+   "entityId": "e869701a-4944-4976-b4c6-45111bfefaf9",
+   "entityVersion": "draft",
+   "entityNodeId": "0c2a2a3d-e597-4661-85e1-ff0ac08beca0",
+   "dependencyType": "rule",
+   "dependencyId": "0c2a2a3d-e597-4661-85e1-ff0ac08beca0",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-11T08:53:20.131805Z",
+   "updatedAt": "2026-05-11T08:53:20.131805Z",
+   "entityCommitId": "commit-058e6480-04cf-4cb9-b31d-3e1743181e55",
+   "entityType": "rule",
+   "entityId": "e869701a-4944-4976-b4c6-45111bfefaf9",
+   "entityVersion": "draft",
+   "entityNodeId": "7c72a2ee-8692-41f0-b390-18476a644f18",
+   "dependencyType": "rule",
+   "dependencyId": "7c72a2ee-8692-41f0-b390-18476a644f18",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-11T08:53:20.128621Z",
+   "updatedAt": "2026-05-11T08:53:20.128621Z",
+   "entityCommitId": "commit-058e6480-04cf-4cb9-b31d-3e1743181e55",
+   "entityType": "rule",
+   "entityId": "e869701a-4944-4976-b4c6-45111bfefaf9",
+   "entityVersion": "draft",
+   "entityNodeId": "eb373cd9-ac1d-4001-a408-fd66076221a9",
+   "dependencyType": "rule",
+   "dependencyId": "eb373cd9-ac1d-4001-a408-fd66076221a9",
+   "dependencyVersion": "draft"
+  }
+ ],
+ "entityTags": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-11T08:55:00.211051Z",
+   "updatedAt": "2026-05-11T08:55:00.211051Z",
+   "entityType": "rule",
+   "entityId": "e869701a-4944-4976-b4c6-45111bfefaf9",
+   "tagId": "da188d1a-1371-4cd2-af51-461f8a162000"
+  }
+ ]
+}

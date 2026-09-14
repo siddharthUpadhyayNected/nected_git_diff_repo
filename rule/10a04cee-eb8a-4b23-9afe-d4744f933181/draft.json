@@ -1,0 +1,186 @@
+{
+ "entityType": "rule",
+ "category": "ruleSet",
+ "data": {
+  "createdAt": "2026-05-01T10:38:54.935Z",
+  "updatedAt": "2026-05-01T10:38:54.935Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "10a04cee-eb8a-4b23-9afe-d4744f933181",
+  "version": "draft",
+  "name": "cmiRuleSet",
+  "commitId": "commit-4da20902-3023-42ac-8b98-930ce7dee2f1",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-05-01 10:38:54",
+   "timeStamp": "2026-05-01T10:38:54.935737575Z"
+  },
+  "customInput": {
+   "credScore": {
+ "name": "credScore",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 499,
+ "config": null,
+ "value": null,
+ "next": "mktRating",
+ "previous": "mktScore",
+ "schemaId": ""
+},
+   "mktRating": {
+ "name": "mktRating",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "B-",
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "credScore",
+ "schemaId": ""
+},
+   "mktScore": {
+ "name": "mktScore",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 2.5,
+ "config": null,
+ "value": null,
+ "next": "credScore",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": {
+   "35d715fd-3d1f-4e72-a037-9e0d421c73a3": {
+ "prevRuleId": "",
+ "nextRuleId": "46fa4250-8cf0-4bb1-b7dc-445923aea03a",
+ "isEnabled": true
+},
+   "46fa4250-8cf0-4bb1-b7dc-445923aea03a": {
+ "prevRuleId": "35d715fd-3d1f-4e72-a037-9e0d421c73a3",
+ "nextRuleId": "",
+ "isEnabled": true
+}
+  },
+  "decisionTable": {
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": null,
+   "startNode": ""
+  },
+  "firstCustomInput": "mktScore",
+  "firstRuleChain": "35d715fd-3d1f-4e72-a037-9e0d421c73a3",
+  "ruleSetPolicy": "collect",
+  "description": "",
+  "policy": "",
+  "comment": "",
+  "type": "ruleSet",
+  "dataSetId": null,
+  "ruleSet": [
+   "35d715fd-3d1f-4e72-a037-9e0d421c73a3",
+   "46fa4250-8cf0-4bb1-b7dc-445923aea03a"
+  ],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": ""
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-01T10:38:54.948619Z",
+   "updatedAt": "2026-05-01T10:38:54.948619Z",
+   "entityCommitId": "commit-4da20902-3023-42ac-8b98-930ce7dee2f1",
+   "entityType": "rule",
+   "entityId": "10a04cee-eb8a-4b23-9afe-d4744f933181",
+   "entityVersion": "draft",
+   "entityNodeId": "46fa4250-8cf0-4bb1-b7dc-445923aea03a",
+   "dependencyType": "rule",
+   "dependencyId": "46fa4250-8cf0-4bb1-b7dc-445923aea03a",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-01T10:38:54.945431Z",
+   "updatedAt": "2026-05-01T10:38:54.945431Z",
+   "entityCommitId": "commit-4da20902-3023-42ac-8b98-930ce7dee2f1",
+   "entityType": "rule",
+   "entityId": "10a04cee-eb8a-4b23-9afe-d4744f933181",
+   "entityVersion": "draft",
+   "entityNodeId": "35d715fd-3d1f-4e72-a037-9e0d421c73a3",
+   "dependencyType": "rule",
+   "dependencyId": "35d715fd-3d1f-4e72-a037-9e0d421c73a3",
+   "dependencyVersion": "draft"
+  }
+ ],
+ "entityTags": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-01T10:40:10.142232Z",
+   "updatedAt": "2026-05-01T10:40:10.142232Z",
+   "entityType": "rule",
+   "entityId": "10a04cee-eb8a-4b23-9afe-d4744f933181",
+   "tagId": "ac709878-5f14-4bdb-873b-de916b681e04"
+  }
+ ]
+}

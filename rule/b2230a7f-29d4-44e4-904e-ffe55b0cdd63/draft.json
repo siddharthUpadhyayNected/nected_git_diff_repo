@@ -1,0 +1,303 @@
+{
+ "entityType": "rule",
+ "category": "ruleSet",
+ "data": {
+  "createdAt": "2026-07-01T10:12:38.283Z",
+  "updatedAt": "2026-07-01T10:13:50.815536Z",
+  "isDeleted": false,
+  "testedAt": "2026-07-01T10:13:50.813Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "b2230a7f-29d4-44e4-904e-ffe55b0cdd63",
+  "version": "draft",
+  "name": "sonata_test",
+  "commitId": "commit-21ecfd98-1085-4682-989c-d16efb7d3a49",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-07-01 10:12:38",
+   "timeStamp": "2026-07-01T10:12:38.283675718Z"
+  },
+  "customInput": {
+   "campaignSku": {
+ "name": "campaignSku",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": true,
+ "config": {
+  
+ },
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+},
+   "cartQty": {
+ "name": "cartQty",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 2,
+ "config": {
+  
+ },
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+},
+   "country": {
+ "name": "country",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "RU",
+ "config": {
+  
+ },
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+},
+   "maxMthlyQty": {
+ "name": "maxMthlyQty",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 10,
+ "config": {
+  
+ },
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+},
+   "memberType": {
+ "name": "memberType",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "Member",
+ "config": {
+  
+ },
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+},
+   "mthlyPurchased": {
+ "name": "mthlyPurchased",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 3,
+ "config": {
+  
+ },
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+},
+   "orderIntent": {
+ "name": "orderIntent",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "RETAIL",
+ "config": {
+  
+ },
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+},
+   "purchasedInThisMonth": {
+ "name": "purchasedInThisMonth",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "jsFormula",
+ "executedValue": 5,
+ "config": {
+  
+ },
+ "value": "{{.customInput.cartQty}} + {{.customInput.mthlyPurchased}}",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+},
+   "sku_id": {
+ "name": "sku_id",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "sku001",
+ "config": {
+  
+ },
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": {
+   "372857f0-170b-4f3a-99a6-8185dd33c3ae": {
+ "prevRuleId": "d9666384-5313-41ba-830c-b514e326677c",
+ "nextRuleId": "b6a0a66e-edfc-46b0-a743-7a3de0ee9cb0",
+ "isEnabled": true
+},
+   "b6a0a66e-edfc-46b0-a743-7a3de0ee9cb0": {
+ "prevRuleId": "372857f0-170b-4f3a-99a6-8185dd33c3ae",
+ "nextRuleId": "",
+ "isEnabled": true
+},
+   "d9666384-5313-41ba-830c-b514e326677c": {
+ "prevRuleId": "",
+ "nextRuleId": "372857f0-170b-4f3a-99a6-8185dd33c3ae",
+ "isEnabled": true
+}
+  },
+  "decisionTable": {
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": null,
+   "startNode": ""
+  },
+  "firstCustomInput": "",
+  "firstRuleChain": "d9666384-5313-41ba-830c-b514e326677c",
+  "ruleSetPolicy": "first",
+  "description": "",
+  "policy": "",
+  "comment": "",
+  "type": "ruleSet",
+  "dataSetId": null,
+  "ruleSet": [
+   "d9666384-5313-41ba-830c-b514e326677c",
+   "372857f0-170b-4f3a-99a6-8185dd33c3ae",
+   "b6a0a66e-edfc-46b0-a743-7a3de0ee9cb0"
+  ],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": null
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-07-01T10:13:05.594918Z",
+   "updatedAt": "2026-07-01T10:13:05.594918Z",
+   "entityCommitId": "commit-21ecfd98-1085-4682-989c-d16efb7d3a49",
+   "entityType": "rule",
+   "entityId": "b2230a7f-29d4-44e4-904e-ffe55b0cdd63",
+   "entityVersion": "draft",
+   "entityNodeId": "b6a0a66e-edfc-46b0-a743-7a3de0ee9cb0",
+   "dependencyType": "rule",
+   "dependencyId": "b6a0a66e-edfc-46b0-a743-7a3de0ee9cb0",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-07-01T10:13:01.238762Z",
+   "updatedAt": "2026-07-01T10:13:05.592949Z",
+   "entityCommitId": "commit-21ecfd98-1085-4682-989c-d16efb7d3a49",
+   "entityType": "rule",
+   "entityId": "b2230a7f-29d4-44e4-904e-ffe55b0cdd63",
+   "entityVersion": "draft",
+   "entityNodeId": "372857f0-170b-4f3a-99a6-8185dd33c3ae",
+   "dependencyType": "rule",
+   "dependencyId": "372857f0-170b-4f3a-99a6-8185dd33c3ae",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-07-01T10:12:57.657554Z",
+   "updatedAt": "2026-07-01T10:13:05.590895Z",
+   "entityCommitId": "commit-21ecfd98-1085-4682-989c-d16efb7d3a49",
+   "entityType": "rule",
+   "entityId": "b2230a7f-29d4-44e4-904e-ffe55b0cdd63",
+   "entityVersion": "draft",
+   "entityNodeId": "d9666384-5313-41ba-830c-b514e326677c",
+   "dependencyType": "rule",
+   "dependencyId": "d9666384-5313-41ba-830c-b514e326677c",
+   "dependencyVersion": "draft"
+  }
+ ]
+}

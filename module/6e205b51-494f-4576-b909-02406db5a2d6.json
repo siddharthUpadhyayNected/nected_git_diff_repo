@@ -1,0 +1,11 @@
+{
+ "entityType": "module",
+ "data": {
+  "createdAt": "2026-05-23T06:50:18.084Z",
+  "updatedAt": "2026-05-23T06:50:18.084Z",
+  "isDeleted": false,
+  "entityId": "6e205b51-494f-4576-b909-02406db5a2d6",
+  "name": "Measured_AL_",
+  "description": "I am creating this for testing purposes"
+ }
+}

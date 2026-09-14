@@ -1,0 +1,45 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-05-23T07:06:02.121Z",
+  "updatedAt": "2026-05-23T07:06:02.121Z",
+  "isDeleted": false,
+  "entityId": "42ae7341-37e3-4cf3-a59c-a78a75324794",
+  "name": "TestStrings_Council",
+  "moduleId": "4417fbc2-e424-4ebb-9659-222c0d493626",
+  "dataType": "String",
+  "usageType": "",
+  "options": [
+   {
+    "value": "Chairman's Council"
+   },
+   {
+    "value": "President's Council"
+   },
+   {
+    "value": "Executive Council"
+   },
+   {
+    "value": "Quality Council"
+   },
+   {
+    "value": "No Council"
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-23T07:06:02.126013Z",
+   "updatedAt": "2026-05-23T07:06:02.126013Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "42ae7341-37e3-4cf3-a59c-a78a75324794",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "4417fbc2-e424-4ebb-9659-222c0d493626",
+   "dependencyVersion": "live"
+  }
+ ]
+}

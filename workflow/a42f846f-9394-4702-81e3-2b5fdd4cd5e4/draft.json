@@ -1,0 +1,3717 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2026-08-10T08:28:35.687Z",
+  "updatedAt": "2026-08-10T10:06:09.859284Z",
+  "isDeleted": false,
+  "testedAt": "2026-08-10T10:06:09.857Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "a42f846f-9394-4702-81e3-2b5fdd4cd5e4",
+  "version": "draft",
+  "name": "Axos Bank Payment Evidence Packet Handling Newest",
+  "commitId": "commit-4429c582-f790-4d54-acc4-e7130239f74c",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-08-10 08:28:35",
+   "timeStamp": "2026-08-10T08:28:35.687808117Z"
+  },
+  "startNode": "n_6d9zzf",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 807,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "payment_packet": {
+ "value": null,
+ "executedValue": {
+  "attestations": [],
+  "bill": {
+ "due_date": "2026-04-01",
+ "exists": true,
+ "total_billed": 250000,
+ "total_remaining": 0
+},
+  "effective_date": "2026-03-10",
+  "funds_tied_to_bill": true,
+  "gl_totals": {
+ "credits": 250000,
+ "debits": 250000
+},
+  "interest_worksheet": {
+ "amount": 12480,
+ "capture_mode": "auto_captured"
+},
+  "justifications": [],
+  "loan": {
+ "due_date_after": "2026-05-01",
+ "due_date_before": "2026-04-01",
+ "loan_id": "LN-4471902",
+ "rate_after": 7.25,
+ "rate_before": 7.25,
+ "rate_proactively_updated": false
+},
+  "notice": {
+ "capture_mode": "system_sourced",
+ "fee_amount": null,
+ "present": true,
+ "rate": null,
+ "total_remittance": 250000
+},
+  "payment_amount": 250000,
+  "payment_event_id": "PE-2026-03-10-0001",
+  "payment_type": "regular",
+  "posted_date": "2026-03-10",
+  "postings": [
+ {
+  "amount": 250000,
+  "capture_mode": "auto_captured",
+  "effective_date": "2026-03-10",
+  "gl_account_key": "GL_WIRE_CLEARING",
+  "posted_date": "2026-03-10",
+  "transaction_code": "DEP01"
+ },
+ {
+  "amount": 250000,
+  "capture_mode": "auto_captured",
+  "effective_date": "2026-03-10",
+  "gl_account_key": "GL_LOAN_RECEIVABLE",
+  "posted_date": "2026-03-10",
+  "transaction_code": "PMT01"
+ },
+ {
+  "amount": 12480,
+  "capture_mode": "auto_captured",
+  "effective_date": "2026-03-10",
+  "gl_account_key": "GL_LOAN_RECEIVABLE",
+  "is_component_of": "PMT01",
+  "posted_date": "2026-03-10",
+  "transaction_code": "INT01"
+ }
+],
+  "program_variant": "Agented",
+  "wire": {
+ "amount": 250000,
+ "capture_mode": "system_sourced",
+ "reference": "FED-88213004"
+}
+ },
+ "name": "payment_packet",
+ "dataType": "json",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "cbc9af90-7007-48c2-9067-b2049c1cae0f"
+},
+      "payment_type": {
+ "value": null,
+ "executedValue": "regular",
+ "name": "payment_type",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "5026ceb5-81d1-42fb-ad50-b85767771699"
+},
+      "program_variant": {
+ "value": null,
+ "executedValue": "Agented",
+ "name": "program_variant",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "e70b64ce-cee9-4b6b-b449-06c4cf0dff1d"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "payment_packet": {
+ "attestations": [],
+ "bill": {
+ "due_date": "2026-04-01",
+ "exists": true,
+ "total_billed": 250000,
+ "total_remaining": 0
+},
+ "effective_date": "2026-03-10",
+ "funds_tied_to_bill": true,
+ "gl_totals": {
+ "credits": 250000,
+ "debits": 250000
+},
+ "interest_worksheet": {
+ "amount": 12480,
+ "capture_mode": "auto_captured"
+},
+ "justifications": [],
+ "loan": {
+ "due_date_after": "2026-05-01",
+ "due_date_before": "2026-04-01",
+ "loan_id": "LN-4471902",
+ "rate_after": 7.25,
+ "rate_before": 7.25,
+ "rate_proactively_updated": false
+},
+ "notice": {
+ "capture_mode": "system_sourced",
+ "fee_amount": null,
+ "present": true,
+ "rate": null,
+ "total_remittance": 250000
+},
+ "payment_amount": 250000,
+ "payment_event_id": "PE-2026-03-10-0001",
+ "payment_type": "regular",
+ "posted_date": "2026-03-10",
+ "postings": [
+ {
+  "amount": 250000,
+  "capture_mode": "auto_captured",
+  "effective_date": "2026-03-10",
+  "gl_account_key": "GL_WIRE_CLEARING",
+  "posted_date": "2026-03-10",
+  "transaction_code": "DEP01"
+ },
+ {
+  "amount": 250000,
+  "capture_mode": "auto_captured",
+  "effective_date": "2026-03-10",
+  "gl_account_key": "GL_LOAN_RECEIVABLE",
+  "posted_date": "2026-03-10",
+  "transaction_code": "PMT01"
+ },
+ {
+  "amount": 12480,
+  "capture_mode": "auto_captured",
+  "effective_date": "2026-03-10",
+  "gl_account_key": "GL_LOAN_RECEIVABLE",
+  "is_component_of": "PMT01",
+  "posted_date": "2026-03-10",
+  "transaction_code": "INT01"
+ }
+],
+ "program_variant": "Agented",
+ "wire": {
+ "amount": 250000,
+ "capture_mode": "system_sourced",
+ "reference": "FED-88213004"
+}
+},
+      "payment_type": "regular",
+      "program_variant": "Agented"
+     },
+     "settings": {
+      "authType": "private",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_gthTP6",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_6d9zzf",
+    "type": "rule",
+    "data": {
+     "input": {
+      "payment_type": {
+ "value": "",
+ "executedValue": null,
+ "name": "payment_type",
+ "dataType": "string",
+ "source": "Trigger",
+ "attribute": "payment_type",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "5026ceb5-81d1-42fb-ad50-b85767771699"
+},
+      "program_variant": {
+ "value": "",
+ "executedValue": null,
+ "name": "program_variant",
+ "dataType": "string",
+ "source": "Trigger",
+ "attribute": "program_variant",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "e70b64ce-cee9-4b6b-b449-06c4cf0dff1d"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "executionTime": "1ms",
+      "name": "BR-EVD-001",
+      "output": [
+ {
+  "Bill_payment_notice": "required",
+  "Deposit_credit_wire_clearing_entry": "required",
+  "Fee_posting": "Conditional",
+  "GL_journal_cross_application_movement": "required",
+  "Interest_calculation_worksheet": "required",
+  "Loan_history_posting_confirmation": "required",
+  "Loan_posting_credit_entry_to_the_loan": "required",
+  "Rate_adjustment_evidence": "Conditional",
+  "Suspense_posting_evidence": "Conditional",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1
+ }
+],
+      "ruleId": "063b8089-b75f-47f0-a9ea-d16d82292e2f",
+      "version": "draft",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "063b8089-b75f-47f0-a9ea-d16d82292e2f",
+     "pluginName": "",
+     "status": "success",
+     "name": "Initial_Applicable_Items_Rule",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "mcpServers": null,
+     "testedAt": "2026-08-10T10:06:09.857Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_dfpgZA",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_b8xtPf",
+    "type": "rule",
+    "data": {
+     "input": {
+      "payment_packet": {
+ "value": {
+  
+ },
+ "executedValue": null,
+ "name": "payment_packet",
+ "dataType": "json",
+ "source": "Trigger",
+ "attribute": "payment_packet",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "cbc9af90-7007-48c2-9067-b2049c1cae0f"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "2ms",
+      "name": "BR-EVD-002",
+      "output": [
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "name": "BR-EVD-002_rate_adjustment",
+  "output": [
+ {
+  "defaultOutputData": true,
+  "item": "rate_adjustment",
+  "requirement": "Not applicable",
+  "rowError": null,
+  "rowId": 3
+ }
+],
+  "ruleId": "6ee1950e-fd22-4185-887d-79a1729abf15",
+  "version": "draft",
+  "warnings": []
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "name": "BR-EVD-002_fee_posting",
+  "output": [
+ {
+  "defaultOutputData": true,
+  "item": "fee_posting",
+  "requirement": "Not applicable",
+  "rowError": null,
+  "rowId": 2
+ }
+],
+  "ruleId": "42c23099-7b2c-4fe4-889b-8452dd08519f",
+  "version": "draft",
+  "warnings": []
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "name": "BR-EVD-002_lh_bon_se",
+  "output": [
+ {
+  "defaultOutputData": true,
+  "item": "suspense_evidence",
+  "requirement": "Not applicable",
+  "rowError": null,
+  "rowId": 3
+ }
+],
+  "ruleId": "7cf28186-cd26-4e45-a955-e0cbeafe8023",
+  "version": "draft",
+  "warnings": []
+ }
+],
+      "version": "draft"
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "ruleSetNode",
+     "entity": "rule",
+     "entityId": "b60a720d-3e21-4cab-aaff-f7b8868f1a0a",
+     "pluginName": "",
+     "status": "success",
+     "name": "Conditional_Applicable_Items_Resolution_Rule",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "ruleSet",
+     "mcpServers": null,
+     "testedAt": "2026-08-10T10:06:09.857Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 540
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_qQstAi",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_i5UTUu",
+    "type": "rule",
+    "data": {
+     "input": {
+      "payment_packet": {
+ "value": {
+  
+ },
+ "executedValue": null,
+ "name": "payment_packet",
+ "dataType": "json",
+ "source": "Trigger",
+ "attribute": "payment_packet",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "cbc9af90-7007-48c2-9067-b2049c1cae0f"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "3ms",
+      "name": "BR-EVD-003",
+      "output": [
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "name": "BR-EVD-003_payments",
+  "output": [
+ {
+  "defaultOutputData": true,
+  "result": "match",
+  "rowError": null,
+  "rowId": 5,
+  "type": "payment applied",
+  "variance": 0
+ },
+ {
+  "defaultOutputData": true,
+  "result": "match",
+  "rowError": null,
+  "rowId": 1,
+  "type": "payment amount",
+  "variance": 0
+ }
+],
+  "ruleId": "f1030e7a-a529-4e81-9d73-4ca245baae00",
+  "version": "draft",
+  "warnings": []
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "name": "BR-EVD-003_I_RC_B_DD",
+  "output": [
+ {
+  "defaultOutputData": true,
+  "result": "not applicable",
+  "rowError": null,
+  "rowId": 4,
+  "type": "rate change",
+  "variance": 0
+ },
+ {
+  "defaultOutputData": true,
+  "result": "match",
+  "rowError": null,
+  "rowId": 1,
+  "type": "interest",
+  "variance": 0
+ },
+ {
+  "defaultOutputData": true,
+  "result": "match",
+  "rowError": null,
+  "rowId": 7,
+  "type": "balance",
+  "variance": 0
+ },
+ {
+  "defaultOutputData": true,
+  "result": "violation",
+  "rowError": null,
+  "rowId": 9,
+  "type": "due date",
+  "variance": 0
+ }
+],
+  "ruleId": "453212de-9ec5-4cfa-b9c1-68b6481fa25c",
+  "version": "draft",
+  "warnings": []
+ }
+],
+      "version": "draft"
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "ruleSetNode",
+     "entity": "rule",
+     "entityId": "894e7dc4-3462-4fbd-afd8-6c0a7a09e71f",
+     "pluginName": "",
+     "status": "success",
+     "name": "Source_VS_System_Check_Rule",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "ruleSet",
+     "mcpServers": null,
+     "testedAt": "2026-08-10T10:06:09.857Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_P037kx",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_I5mSm8",
+    "type": "rule",
+    "data": {
+     "input": {
+      "payment_packet": {
+ "value": {
+  
+ },
+ "executedValue": null,
+ "name": "payment_packet",
+ "dataType": "json",
+ "source": "Trigger",
+ "attribute": "payment_packet",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "cbc9af90-7007-48c2-9067-b2049c1cae0f"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "2ms",
+      "name": "BR-EVD-004",
+      "output": [
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "name": "BR-EVD-004_fee",
+  "output": [
+ {
+  "defaultOutputData": true,
+  "reason_code": "",
+  "result": "not applicable",
+  "rowError": null,
+  "rowId": 4,
+  "type": "fee",
+  "variance": 0
+ }
+],
+  "ruleId": "0fec0e79-4bfb-4e66-8dcd-888ab0d23ff6",
+  "version": "draft",
+  "warnings": []
+ }
+],
+      "version": "draft"
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "ruleSetNode",
+     "entity": "rule",
+     "entityId": "4679c91f-55f0-400d-beeb-7ae59f42a736",
+     "pluginName": "",
+     "status": "success",
+     "name": "Omission_Detection_Rule",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "ruleSet",
+     "mcpServers": null,
+     "testedAt": "2026-08-10T10:06:09.857Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 950
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_fqdogz",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_Dolzr5",
+    "type": "rule",
+    "data": {
+     "input": {
+      "notice_capture_mode": {
+ "value": "",
+ "executedValue": null,
+ "name": "notice_capture_mode",
+ "dataType": "string",
+ "source": "Trigger",
+ "attribute": "payment_packet.notice.capture_mode",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "payment_packet": {
+ "value": {
+  
+ },
+ "executedValue": null,
+ "name": "payment_packet",
+ "dataType": "json",
+ "source": "Trigger",
+ "attribute": "payment_packet",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "cbc9af90-7007-48c2-9067-b2049c1cae0f"
+},
+      "worksheet_capture_mode": {
+ "value": "",
+ "executedValue": null,
+ "name": "worksheet_capture_mode",
+ "dataType": "string",
+ "source": "Trigger",
+ "attribute": "payment_packet.interest_worksheet.capture_mode",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "2ms",
+      "name": "BR-EVD-005",
+      "output": [
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "name": "BR-EVD-005_notice",
+  "output": [
+ {
+  "action_required": "",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 2,
+  "trust": "high",
+  "type": "notice"
+ }
+],
+  "ruleId": "71f879be-04f6-4c84-a387-5700d91195b7",
+  "version": "draft",
+  "warnings": []
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "name": "BR-EVD-005_worksheet",
+  "output": [
+ {
+  "action_required": "",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1,
+  "trust": "high",
+  "type": "worksheet"
+ }
+],
+  "ruleId": "10cc78ba-6689-48f8-a5f7-bac3c929ff0c",
+  "version": "draft",
+  "warnings": []
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "name": "BR-EVD-005_postings",
+  "output": [
+ {
+  "action_required": "",
+  "defaultOutputData": true,
+  "matched_items": [
+ {
+  "amount": 100000,
+  "capture_mode": "auto_captured",
+  "effective_date": "2026-03-10",
+  "gl_account_key": "GL_WIRE_CLEARING",
+  "posted_date": "2026-03-10",
+  "transaction_code": "DEP01"
+ },
+ {
+  "amount": 100000,
+  "capture_mode": "auto_captured",
+  "effective_date": "2026-03-10",
+  "gl_account_key": "GL_LOAN_RECEIVABLE",
+  "posted_date": "2026-05-01",
+  "transaction_code": "PPD01"
+ }
+],
+  "rowError": null,
+  "rowId": 1,
+  "trust": "high",
+  "type": "postings"
+ }
+],
+  "ruleId": "bde5f6d1-dc4e-4239-82be-aac6889d53bf",
+  "version": "draft",
+  "warnings": []
+ }
+],
+      "version": "draft"
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "ruleSetNode",
+     "entity": "rule",
+     "entityId": "ec726785-4457-4274-950a-e0c2eac05465",
+     "pluginName": "",
+     "status": "success",
+     "name": "Provenance_And_Trust_Deriving_Rule",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "ruleSet",
+     "mcpServers": null,
+     "testedAt": "2026-08-10T10:06:09.857Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 1155
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_eESYlF",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 1230
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_wZZsz1",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "applicable_items": {
+ "value": "let n1 = {{.Initial_Applicable_Items_Rule.output[0]}}\nlet n2 = {{.Conditional_Applicable_Items_Resolution_Rule.output}}\n\nlet cond = {}\nn2.forEach(r => {\n  let row = r.output[0]\n  let v = String(row.requirement).toLowerCase()\n  cond[row.item] = v.indexOf(\"required\") === 0 ? \"required\" : v\n})\n\nlet MAP = {\n  \"Loan_posting_credit_entry_to_the_loan\": null,\n  \"Bill_payment_notice\": \"bill_notice\",\n  \"Interest_calculation_worksheet\": null,\n  \"Deposit_credit_wire_clearing_entry\": null,\n  \"Fee_posting\": \"fee_posting\",\n  \"Loan_history_posting_confirmation\": \"loan_history\",\n  \"Rate_adjustment_evidence\": \"rate_adjustment\",\n  \"GL_journal_cross_application_movement\": null,\n  \"Suspense_posting_evidence\": \"suspense_evidence\"\n}\n\nlet applicable = []\nObject.keys(MAP).forEach(k => {\n  let base = String(n1[k]).toLowerCase()\n  let status = base === \"conditional\" && cond[MAP[k]] != null ? cond[MAP[k]] : base\n  if (status === \"required\") { applicable.push(k) }\n})\n\napplicable",
+ "executedValue": [
+  "Loan_posting_credit_entry_to_the_loan",
+  "Bill_payment_notice",
+  "Interest_calculation_worksheet",
+  "Deposit_credit_wire_clearing_entry",
+  "Fee_posting",
+  "Loan_history_posting_confirmation",
+  "GL_journal_cross_application_movement"
+ ],
+ "name": "applicable_items",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 6,
+ "schemaId": ""
+},
+      "due_date_advanced": {
+ "value": "a = FILTER({{.Source_VS_System_Check_Rule.output}},`$item.$name == \"BR-EVD-003_I_RC_B_DD\"`)\nlet b;\nif(a.length>0){ b = FILTER(a[0].output,`$item.$type== \"due date\" && $item.$result == \"violation\"`, \"\")}\nb",
+ "executedValue": [],
+ "name": "due_date_advanced",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 3,
+ "schemaId": ""
+},
+      "omitted_items_list": {
+ "value": "FILTER({{.Omission_Detection_Rule.output}},`$item.$output[0].$result == \"omission\"`,\"ouptut[0].type\",\"output[0].reason_code\")",
+ "executedValue": [],
+ "name": "omitted_items_list",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "out_of_balance_items": {
+ "value": "a = FILTER({{.Source_VS_System_Check_Rule.output}},`$item.$name == \"BR-EVD-003_I_RC_B_DD\"`)\nlet b;\nif(a.length>0){ b = FILTER(a[0].output,`$item.$type== \"balance\" && $item.$result == \"variance\"`, \"\")}\nb",
+ "executedValue": [],
+ "name": "out_of_balance_items",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 2,
+ "schemaId": ""
+},
+      "trust_flag_list": {
+ "value": "a  = FILTER({{.Provenance_And_Trust_Deriving_Rule.output}},\"\",\"output[0].trust\",\"output[0].type\")\nb = FILTER({{.Provenance_And_Trust_Deriving_Rule.output}},`$item.$name == \"BR-EVD-005_postings\"`,\"\")\nlet c =[];\nif(b.length>0){\nc =  FILTER(b[0].output,\"\",\"trust\",\"type\")}\nd=[...a,...c]\nDISTINCT(d)",
+ "executedValue": [],
+ "name": "trust_flag_list",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 5,
+ "schemaId": ""
+},
+      "unexpected_items_list": {
+ "value": "FILTER({{.Omission_Detection_Rule.output}},`$item.$output[0].$result == \"justification required\"`,\"output[0].reason_code\",\"output[0].type\")",
+ "executedValue": [
+  {
+   "reason_code": "R-UNEXPECTED-FEE",
+   "type": "fee"
+  }
+ ],
+ "name": "unexpected_items_list",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 4,
+ "schemaId": ""
+},
+      "universal_list": {
+ "value": "a = FILTER({{.Source_VS_System_Check_Rule.output}},\"\",\"output\").flat();\nb =  FILTER({{.Omission_Detection_Rule.output}},\"\",\"output\").flat();\nc = [...a,...b];\nc",
+ "executedValue": [
+  {
+   "defaultOutputData": true,
+   "result": "match",
+   "rowError": null,
+   "rowId": 5,
+   "type": "payment applied",
+   "variance": 0
+  },
+  {
+   "defaultOutputData": true,
+   "result": "match",
+   "rowError": null,
+   "rowId": 1,
+   "type": "payment amount",
+   "variance": 0
+  },
+  {
+   "defaultOutputData": true,
+   "result": "match",
+   "rowError": null,
+   "rowId": 7,
+   "type": "balance",
+   "variance": 0
+  },
+  {
+   "defaultOutputData": true,
+   "result": "variance",
+   "rowError": null,
+   "rowId": 2,
+   "type": "interest",
+   "variance": 50
+  },
+  {
+   "defaultOutputData": true,
+   "result": "not applicable",
+   "rowError": null,
+   "rowId": 4,
+   "type": "rate change",
+   "variance": 0
+  },
+  {
+   "defaultOutputData": true,
+   "reason_code": "R-VAR-INTEREST",
+   "result": "variance",
+   "rowError": null,
+   "rowId": 2,
+   "type": "interest",
+   "variance": 50
+  },
+  {
+   "defaultOutputData": true,
+   "reason_code": "",
+   "result": "not applicable",
+   "rowError": null,
+   "rowId": 4,
+   "type": "fee",
+   "variance": 0
+  }
+ ],
+ "name": "universal_list",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 7,
+ "schemaId": ""
+},
+      "varying_item_list": {
+ "value": "a = FILTER({{.Source_VS_System_Check_Rule.output}},`$item.$output[0].$result == \"variance\"`,\"output[0].type\",\"output[0].variance\")\nb = FILTER({{.Omission_Detection_Rule.output}},`$item.$output[0].$result == \"variance\"`,\"output[0].type\",\"output[0].variance\")\n\nc = [...a,...b]\nc",
+ "executedValue": [
+  {
+   "type": "payment amount",
+   "variance": 400
+  }
+ ],
+ "name": "varying_item_list",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "0ns",
+      "output": {
+ "applicable_items": [
+ "Loan_posting_credit_entry_to_the_loan",
+ "Bill_payment_notice",
+ "Interest_calculation_worksheet",
+ "Deposit_credit_wire_clearing_entry",
+ "Loan_history_posting_confirmation",
+ "GL_journal_cross_application_movement"
+],
+ "due_date_advanced": [
+ {
+  "defaultOutputData": true,
+  "result": "violation",
+  "rowError": null,
+  "rowId": 9,
+  "type": "due date",
+  "variance": 0
+ }
+],
+ "omitted_items_list": [],
+ "out_of_balance_items": [],
+ "trust_flag_list": [
+ {
+  "trust": "high",
+  "type": "notice"
+ },
+ {
+  "trust": "high",
+  "type": "worksheet"
+ },
+ {
+  "trust": "high",
+  "type": "postings"
+ }
+],
+ "unexpected_items_list": [],
+ "universal_list": [
+ {
+  "defaultOutputData": true,
+  "result": "match",
+  "rowError": null,
+  "rowId": 5,
+  "type": "payment applied",
+  "variance": 0
+ },
+ {
+  "defaultOutputData": true,
+  "result": "match",
+  "rowError": null,
+  "rowId": 1,
+  "type": "payment amount",
+  "variance": 0
+ },
+ {
+  "defaultOutputData": true,
+  "result": "not applicable",
+  "rowError": null,
+  "rowId": 4,
+  "type": "rate change",
+  "variance": 0
+ },
+ {
+  "defaultOutputData": true,
+  "result": "match",
+  "rowError": null,
+  "rowId": 1,
+  "type": "interest",
+  "variance": 0
+ },
+ {
+  "defaultOutputData": true,
+  "result": "match",
+  "rowError": null,
+  "rowId": 7,
+  "type": "balance",
+  "variance": 0
+ },
+ {
+  "defaultOutputData": true,
+  "result": "violation",
+  "rowError": null,
+  "rowId": 9,
+  "type": "due date",
+  "variance": 0
+ },
+ {
+  "defaultOutputData": true,
+  "reason_code": "",
+  "result": "not applicable",
+  "rowError": null,
+  "rowId": 4,
+  "type": "fee",
+  "variance": 0
+ }
+],
+ "varying_item_list": []
+},
+      "resetOutput": {
+ 
+}
+     },
+     "settings": {
+      "errorContinue": false
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "n_wZZsz1",
+     "pluginName": "",
+     "status": "success",
+     "name": "AggregationNode",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "mcpServers": null,
+     "testedAt": "2026-08-10T10:06:09.857Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 1360
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_jQ2apb",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 1845
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_yOzLQA",
+    "type": "switchNode",
+    "data": {
+     "input": {
+      "defaultPath": {
+ "value": false,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "0ns",
+      "output": {
+ "path": "auto_pass"
+}
+     },
+     "settings": null,
+     "nodeType": "switchNode",
+     "entity": "switch",
+     "entityId": "n_yOzLQA",
+     "pluginName": "",
+     "status": "success",
+     "name": "DispositionBasedRouting",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": [
+      {
+       "name": "auto_pass",
+       "pathId": "g_3az6B9"
+      },
+      {
+       "name": "blocked",
+       "pathId": "g_MDfFRO"
+      },
+      {
+       "name": "review",
+       "pathId": "g_Rqxtc9"
+      }
+     ],
+     "conditions": {
+      "nodes": {
+ "c_C2S33j": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_fdaCq2"
+],
+ "nodeType": "condition",
+ "operator": "eq",
+ "parent": "g_3az6B9",
+ "rightNode": [
+ "rhs_KAGosB"
+]
+},
+ "c_RjHUBP": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_UbeqsI"
+],
+ "nodeType": "condition",
+ "operator": "eq",
+ "parent": "g_MDfFRO",
+ "rightNode": [
+ "rhs_rhpr4i"
+]
+},
+ "c_WsiKeO": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_hkQgRV"
+],
+ "nodeType": "condition",
+ "operator": "eq",
+ "parent": "g_Rqxtc9",
+ "rightNode": [
+ "rhs_8QIbUI"
+]
+},
+ "cc_k16Wxo": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_GubRJY"
+],
+ "nodeType": "condition",
+ "operator": "eq",
+ "parent": "g_Rqxtc9",
+ "rightNode": [
+ "rhs_2UFDjz"
+]
+},
+ "g_3az6B9": {
+ "children": [
+ "c_C2S33j"
+],
+ "name": "auto_pass",
+ "nodeType": "group",
+ "operator": ""
+},
+ "g_MDfFRO": {
+ "children": [
+ "c_RjHUBP"
+],
+ "name": "blocked",
+ "nodeType": "group",
+ "operator": ""
+},
+ "g_Rqxtc9": {
+ "children": [
+ "c_WsiKeO",
+ "cc_k16Wxo"
+],
+ "name": "review",
+ "nodeType": "group",
+ "operator": "or"
+},
+ "lhs_GubRJY": {
+ "attribute": "output[0].disposition",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "cc_k16Wxo",
+ "sourceType": "disposition_rule",
+ "value": null
+},
+ "lhs_UbeqsI": {
+ "attribute": "output[0].disposition",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "c_RjHUBP",
+ "sourceType": "disposition_rule",
+ "value": null
+},
+ "lhs_fdaCq2": {
+ "attribute": "output[0].disposition",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "c_C2S33j",
+ "sourceType": "disposition_rule",
+ "value": null
+},
+ "lhs_hkQgRV": {
+ "attribute": "output[0].disposition",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "c_WsiKeO",
+ "sourceType": "disposition_rule",
+ "value": null
+},
+ "rhs_2UFDjz": {
+ "attribute": null,
+ "dataType": "string",
+ "executedValue": "Complete pending attestation",
+ "nodeType": "constant",
+ "otherFields": {
+ 
+},
+ "parent": "cc_k16Wxo",
+ "sourceType": null,
+ "value": "Complete pending attestation"
+},
+ "rhs_8QIbUI": {
+ "attribute": null,
+ "dataType": "string",
+ "executedValue": "Exception",
+ "nodeType": "constant",
+ "otherFields": {
+ 
+},
+ "parent": "c_WsiKeO",
+ "sourceType": null,
+ "value": "Exception"
+},
+ "rhs_KAGosB": {
+ "attribute": null,
+ "dataType": "string",
+ "executedValue": "Complete",
+ "nodeType": "constant",
+ "otherFields": {
+ 
+},
+ "parent": "c_C2S33j",
+ "sourceType": null,
+ "value": "Complete"
+},
+ "rhs_rhpr4i": {
+ "attribute": null,
+ "dataType": "string",
+ "executedValue": "Incomplete",
+ "nodeType": "constant",
+ "otherFields": {
+ 
+},
+ "parent": "c_RjHUBP",
+ "sourceType": null,
+ "value": "Incomplete"
+}
+}
+     },
+     "blockName": "switchBlock",
+     "mcpServers": null,
+     "testedAt": "2026-08-10T10:06:09.857Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 462,
+     "y": 1975
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_C4hBRq",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_yOzLQA",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 692,
+     "y": 2180
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_zvHQxA",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_yOzLQA",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 2255
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_Q6yODA",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_yOzLQA",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 922,
+     "y": 1975
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_NLj60L",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_yOzLQA",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1152,
+     "y": 1975
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_WWYlbX",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_yOzLQA",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 462,
+     "y": 2050
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_73TDh4",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "applicable_items": {
+ "value": null,
+ "executedValue": [
+  "Loan_posting_credit_entry_to_the_loan",
+  "Bill_payment_notice",
+  "Interest_calculation_worksheet",
+  "Deposit_credit_wire_clearing_entry",
+  "Fee_posting",
+  "Loan_history_posting_confirmation",
+  "GL_journal_cross_application_movement"
+ ],
+ "name": "applicable_items",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.applicable_items",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 4,
+ "schemaId": ""
+},
+      "disposition": {
+ "value": null,
+ "executedValue": "Complete",
+ "name": "disposition",
+ "dataType": "string",
+ "source": "disposition_rule",
+ "attribute": "output[0].disposition",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "omission": {
+ "value": null,
+ "executedValue": [],
+ "name": "omission",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.omitted_items_list",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+},
+      "trust_flags": {
+ "value": null,
+ "executedValue": [
+  {
+   "trust": "high",
+   "type": "notice"
+  },
+  {
+   "trust": "high",
+   "type": "worksheet"
+  },
+  {
+   "trust": "high",
+   "type": "postings"
+  }
+ ],
+ "name": "trust_flags",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.trust_flag_list",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 3,
+ "schemaId": ""
+},
+      "unexpected_items": {
+ "value": null,
+ "executedValue": [],
+ "name": "unexpected_items",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.unexpected_items_list",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 2,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "applicable_items": [
+ "Loan_posting_credit_entry_to_the_loan",
+ "Bill_payment_notice",
+ "Interest_calculation_worksheet",
+ "Deposit_credit_wire_clearing_entry",
+ "Loan_history_posting_confirmation",
+ "GL_journal_cross_application_movement"
+],
+ "disposition": "Complete",
+ "omission": [],
+ "trust_flags": [
+ {
+  "trust": "high",
+  "type": "notice"
+ },
+ {
+  "trust": "high",
+  "type": "worksheet"
+ },
+ {
+  "trust": "high",
+  "type": "postings"
+ }
+],
+ "unexpected_items": []
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "n_73TDh4",
+     "pluginName": "",
+     "status": "success",
+     "name": "Response",
+     "rootId": "n_yOzLQA",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "mcpServers": null,
+     "testedAt": "2026-08-10T10:06:09.857Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 462,
+     "y": 2180
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_1iwQ2t",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_yOzLQA",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 922,
+     "y": 2050
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_ySYhrn",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "applicable_items": {
+ "value": null,
+ "executedValue": [
+  "Loan_posting_credit_entry_to_the_loan",
+  "Bill_payment_notice",
+  "Interest_calculation_worksheet",
+  "Deposit_credit_wire_clearing_entry",
+  "Fee_posting",
+  "Loan_history_posting_confirmation",
+  "GL_journal_cross_application_movement"
+ ],
+ "name": "applicable_items",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.applicable_items",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 4,
+ "schemaId": ""
+},
+      "disposition": {
+ "value": null,
+ "executedValue": "Complete",
+ "name": "disposition",
+ "dataType": "string",
+ "source": "disposition_rule",
+ "attribute": "output[0].disposition",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "omission": {
+ "value": null,
+ "executedValue": [],
+ "name": "omission",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.omitted_items_list",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+},
+      "trust_flags": {
+ "value": null,
+ "executedValue": [
+  {
+   "trust": "high",
+   "type": "notice"
+  },
+  {
+   "trust": "high",
+   "type": "worksheet"
+  },
+  {
+   "trust": "high",
+   "type": "postings"
+  }
+ ],
+ "name": "trust_flags",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.trust_flag_list",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 2,
+ "schemaId": ""
+},
+      "unexpected_items": {
+ "value": null,
+ "executedValue": [],
+ "name": "unexpected_items",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.unexpected_items_list",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 3,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "applicable_items": [
+ "Loan_posting_credit_entry_to_the_loan",
+ "Bill_payment_notice",
+ "Interest_calculation_worksheet",
+ "Deposit_credit_wire_clearing_entry",
+ "Fee_posting",
+ "Loan_history_posting_confirmation",
+ "GL_journal_cross_application_movement"
+],
+ "disposition": "Incomplete",
+ "omission": [],
+ "trust_flags": [
+ {
+  "trust": "high",
+  "type": "notice"
+ },
+ {
+  "trust": "high",
+  "type": "worksheet"
+ },
+ {
+  "trust": "high",
+  "type": "postings"
+ }
+],
+ "unexpected_items": []
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "n_ySYhrn",
+     "pluginName": "",
+     "status": "success",
+     "name": "Response1",
+     "rootId": "n_yOzLQA",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "mcpServers": null,
+     "testedAt": "2026-08-10T10:01:13.889Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 922,
+     "y": 2180
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_yWtFV6",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_yOzLQA",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 1435
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_OsWJhI",
+    "type": "rule",
+    "data": {
+     "input": {
+      "payment_packet": {
+ "value": {
+  
+ },
+ "executedValue": null,
+ "name": "payment_packet",
+ "dataType": "json",
+ "source": "Trigger",
+ "attribute": "payment_packet",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "cbc9af90-7007-48c2-9067-b2049c1cae0f"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ "present_items": [
+ "Deposit_credit_wire_clearing_entry",
+ "Loan_history_posting_confirmation",
+ "Bill_payment_notice",
+ "Interest_calculation_worksheet",
+ "GL_journal_cross_application_movement",
+ "Loan_posting_credit_entry_to_the_loan"
+]
+},
+      "error": "",
+      "executionTime": "2ms",
+      "name": "Axos_present_items",
+      "output": [
+ {
+  "defaultOutputData": true,
+  "item": "Deposit_credit_wire_clearing_entry",
+  "rowError": null,
+  "rowId": 3
+ },
+ {
+  "defaultOutputData": true,
+  "item": "Loan_history_posting_confirmation",
+  "rowError": null,
+  "rowId": 10
+ },
+ {
+  "defaultOutputData": true,
+  "item": "Bill_payment_notice",
+  "rowError": null,
+  "rowId": 1
+ },
+ {
+  "defaultOutputData": true,
+  "item": "Interest_calculation_worksheet",
+  "rowError": null,
+  "rowId": 2
+ },
+ {
+  "defaultOutputData": true,
+  "item": "GL_journal_cross_application_movement",
+  "rowError": null,
+  "rowId": 7
+ },
+ {
+  "defaultOutputData": true,
+  "item": "Loan_posting_credit_entry_to_the_loan",
+  "rowError": null,
+  "rowId": 9
+ }
+],
+      "ruleId": "bc14279a-2aa5-494d-afae-925080169f0d",
+      "version": "draft",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "bc14279a-2aa5-494d-afae-925080169f0d",
+     "pluginName": "",
+     "status": "success",
+     "name": "Axos_present_items_in_payload",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "mcpServers": null,
+     "testedAt": "2026-08-10T10:06:09.857Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 1565
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_aPONAD",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1152,
+     "y": 2050
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_ZF8MIj",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "applicable_items": {
+ "value": null,
+ "executedValue": [
+  "Loan_posting_credit_entry_to_the_loan",
+  "Bill_payment_notice",
+  "Interest_calculation_worksheet",
+  "Deposit_credit_wire_clearing_entry",
+  "Fee_posting",
+  "Loan_history_posting_confirmation",
+  "GL_journal_cross_application_movement"
+ ],
+ "name": "applicable_items",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.applicable_items",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 4,
+ "schemaId": ""
+},
+      "disposition": {
+ "value": null,
+ "executedValue": "Complete",
+ "name": "disposition",
+ "dataType": "string",
+ "source": "disposition_rule",
+ "attribute": "output[0].disposition",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "omission": {
+ "value": null,
+ "executedValue": [],
+ "name": "omission",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.omitted_items_list",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+},
+      "trust_flags": {
+ "value": null,
+ "executedValue": [
+  {
+   "trust": "high",
+   "type": "notice"
+  },
+  {
+   "trust": "high",
+   "type": "worksheet"
+  },
+  {
+   "trust": "high",
+   "type": "postings"
+  }
+ ],
+ "name": "trust_flags",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.trust_flag_list",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 3,
+ "schemaId": ""
+},
+      "unexpected_items": {
+ "value": null,
+ "executedValue": [],
+ "name": "unexpected_items",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.unexpected_items_list",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 2,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "applicable_items": [
+ "Loan_posting_credit_entry_to_the_loan",
+ "Bill_payment_notice",
+ "Interest_calculation_worksheet",
+ "Deposit_credit_wire_clearing_entry",
+ "Fee_posting",
+ "Loan_history_posting_confirmation",
+ "GL_journal_cross_application_movement"
+],
+ "disposition": "Exception",
+ "omission": [],
+ "trust_flags": [
+ {
+  "trust": "high",
+  "type": "notice"
+ },
+ {
+  "trust": "high",
+  "type": "worksheet"
+ },
+ {
+  "trust": "high",
+  "type": "postings"
+ }
+],
+ "unexpected_items": []
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "n_ZF8MIj",
+     "pluginName": "",
+     "status": "success",
+     "name": "Response2",
+     "rootId": "n_yOzLQA",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "mcpServers": null,
+     "testedAt": "2026-08-10T08:33:55.531Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 1152,
+     "y": 2180
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_Y1pnJc",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_yOzLQA",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 1640
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_FpmmrY",
+    "type": "rule",
+    "data": {
+     "input": {
+      "applicable_item_list": {
+ "value": null,
+ "executedValue": null,
+ "name": "applicable_item_list",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.applicable_items",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "present_item_list": {
+ "value": null,
+ "executedValue": null,
+ "name": "present_item_list",
+ "dataType": "list",
+ "source": "Axos_present_items_in_payload",
+ "attribute": "additionalOutput.present_items",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "trust_flag": {
+ "value": null,
+ "executedValue": null,
+ "name": "trust_flag",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.trust_flag_list",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "universal_list": {
+ "value": null,
+ "executedValue": null,
+ "name": "universal_list",
+ "dataType": "list",
+ "source": "AggregationNode",
+ "attribute": "output.universal_list",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "executionTime": "3ms",
+      "name": "BR-EVD-006_disposition",
+      "output": [
+ {
+  "action": "proceed",
+  "defaultOutputData": true,
+  "disposition": "Complete",
+  "reason": "auto_pass",
+  "rowError": null,
+  "rowId": 1
+ }
+],
+      "ruleId": "8b6089a0-dec8-4f01-b377-b9c962b34d58",
+      "version": "draft",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "8b6089a0-dec8-4f01-b377-b9c962b34d58",
+     "pluginName": "",
+     "status": "success",
+     "name": "disposition_rule",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "mcpServers": null,
+     "testedAt": "2026-08-10T10:06:09.857Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 807,
+     "y": 1770
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_rr146O",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_55uZaS",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "n_gthTP6",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_p6qIE2",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_6d9zzf",
+    "target": "n_dfpgZA",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_3FMPk5",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_gthTP6",
+    "target": "n_6d9zzf",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_OnT6lw",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_b8xtPf",
+    "target": "n_qQstAi",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_J6uPM5",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_dfpgZA",
+    "target": "n_b8xtPf",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_CTP9g0",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_i5UTUu",
+    "target": "n_P037kx",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_euSzDm",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_I5mSm8",
+    "target": "n_fqdogz",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_3Oulw9",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_P037kx",
+    "target": "n_I5mSm8",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_CsorX1",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_Dolzr5",
+    "target": "n_eESYlF",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_0TX7mL",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_fqdogz",
+    "target": "n_Dolzr5",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_45KHQr",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_qQstAi",
+    "target": "n_i5UTUu",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_zm1PFc",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_wZZsz1",
+    "target": "n_jQ2apb",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_Osa7vL",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_eESYlF",
+    "target": "n_wZZsz1",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_QQSwat",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_yOzLQA",
+    "target": "n_C4hBRq",
+    "data": {
+     "edgeType": "case",
+     "pathId": "g_3az6B9"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_Kn8OMA",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_yOzLQA",
+    "target": "n_zvHQxA",
+    "data": {
+     "edgeType": "defaultCase",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_CU9J1d",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_zvHQxA",
+    "target": "n_Q6yODA",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_56TufM",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_yOzLQA",
+    "target": "n_NLj60L",
+    "data": {
+     "edgeType": "case",
+     "pathId": "g_MDfFRO"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_IyozWo",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_yOzLQA",
+    "target": "n_WWYlbX",
+    "data": {
+     "edgeType": "case",
+     "pathId": "g_Rqxtc9"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_4JwPHF",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_1iwQ2t",
+    "target": "n_Q6yODA",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_9AaKrb",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_73TDh4",
+    "target": "n_1iwQ2t",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_igrMSe",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_C4hBRq",
+    "target": "n_73TDh4",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_SWOApT",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_yWtFV6",
+    "target": "n_Q6yODA",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_4Wx71l",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_ySYhrn",
+    "target": "n_yWtFV6",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_kik6Vy",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_NLj60L",
+    "target": "n_ySYhrn",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_RmeAFz",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_OsWJhI",
+    "target": "n_aPONAD",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_q4MD1p",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_jQ2apb",
+    "target": "n_OsWJhI",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_wssIcV",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_Y1pnJc",
+    "target": "n_Q6yODA",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_91Q5fP",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_ZF8MIj",
+    "target": "n_Y1pnJc",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_BWm7IX",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_WWYlbX",
+    "target": "n_ZF8MIj",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_iLR2Gh",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_rr146O",
+    "target": "n_yOzLQA",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_ppFDO5",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_FpmmrY",
+    "target": "n_rr146O",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_VOVxj4",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_aPONAD",
+    "target": "n_FpmmrY",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": null,
+   "timezone": "",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-10T08:28:35.713301Z",
+   "updatedAt": "2026-08-10T08:29:27.598084Z",
+   "entityCommitId": "commit-4429c582-f790-4d54-acc4-e7130239f74c",
+   "entityType": "workflow",
+   "entityId": "a42f846f-9394-4702-81e3-2b5fdd4cd5e4",
+   "entityVersion": "draft",
+   "entityNodeId": "e70b64ce-cee9-4b6b-b449-06c4cf0dff1d",
+   "dependencyType": "module_schema",
+   "dependencyId": "e70b64ce-cee9-4b6b-b449-06c4cf0dff1d",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-10T08:28:35.715234Z",
+   "updatedAt": "2026-08-10T08:29:27.596152Z",
+   "entityCommitId": "commit-4429c582-f790-4d54-acc4-e7130239f74c",
+   "entityType": "workflow",
+   "entityId": "a42f846f-9394-4702-81e3-2b5fdd4cd5e4",
+   "entityVersion": "draft",
+   "entityNodeId": "cbc9af90-7007-48c2-9067-b2049c1cae0f",
+   "dependencyType": "module_schema",
+   "dependencyId": "cbc9af90-7007-48c2-9067-b2049c1cae0f",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-10T08:28:35.710073Z",
+   "updatedAt": "2026-08-10T08:29:27.594401Z",
+   "entityCommitId": "commit-4429c582-f790-4d54-acc4-e7130239f74c",
+   "entityType": "workflow",
+   "entityId": "a42f846f-9394-4702-81e3-2b5fdd4cd5e4",
+   "entityVersion": "draft",
+   "entityNodeId": "5026ceb5-81d1-42fb-ad50-b85767771699",
+   "dependencyType": "module_schema",
+   "dependencyId": "5026ceb5-81d1-42fb-ad50-b85767771699",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-10T08:28:35.717422Z",
+   "updatedAt": "2026-08-10T08:29:27.592576Z",
+   "entityCommitId": "commit-4429c582-f790-4d54-acc4-e7130239f74c",
+   "entityType": "workflow",
+   "entityId": "a42f846f-9394-4702-81e3-2b5fdd4cd5e4",
+   "entityVersion": "draft",
+   "entityNodeId": "n_OsWJhI",
+   "dependencyType": "rule",
+   "dependencyId": "bc14279a-2aa5-494d-afae-925080169f0d",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-10T08:28:35.719308Z",
+   "updatedAt": "2026-08-10T08:29:27.590806Z",
+   "entityCommitId": "commit-4429c582-f790-4d54-acc4-e7130239f74c",
+   "entityType": "workflow",
+   "entityId": "a42f846f-9394-4702-81e3-2b5fdd4cd5e4",
+   "entityVersion": "draft",
+   "entityNodeId": "n_6d9zzf",
+   "dependencyType": "rule",
+   "dependencyId": "063b8089-b75f-47f0-a9ea-d16d82292e2f",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-10T08:28:35.721386Z",
+   "updatedAt": "2026-08-10T08:29:27.588967Z",
+   "entityCommitId": "commit-4429c582-f790-4d54-acc4-e7130239f74c",
+   "entityType": "workflow",
+   "entityId": "a42f846f-9394-4702-81e3-2b5fdd4cd5e4",
+   "entityVersion": "draft",
+   "entityNodeId": "n_b8xtPf",
+   "dependencyType": "rule",
+   "dependencyId": "b60a720d-3e21-4cab-aaff-f7b8868f1a0a",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-10T08:28:35.723298Z",
+   "updatedAt": "2026-08-10T08:29:27.586997Z",
+   "entityCommitId": "commit-4429c582-f790-4d54-acc4-e7130239f74c",
+   "entityType": "workflow",
+   "entityId": "a42f846f-9394-4702-81e3-2b5fdd4cd5e4",
+   "entityVersion": "draft",
+   "entityNodeId": "n_i5UTUu",
+   "dependencyType": "rule",
+   "dependencyId": "894e7dc4-3462-4fbd-afd8-6c0a7a09e71f",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-10T08:28:35.725178Z",
+   "updatedAt": "2026-08-10T08:29:27.584448Z",
+   "entityCommitId": "commit-4429c582-f790-4d54-acc4-e7130239f74c",
+   "entityType": "workflow",
+   "entityId": "a42f846f-9394-4702-81e3-2b5fdd4cd5e4",
+   "entityVersion": "draft",
+   "entityNodeId": "n_I5mSm8",
+   "dependencyType": "rule",
+   "dependencyId": "4679c91f-55f0-400d-beeb-7ae59f42a736",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-10T08:28:35.72705Z",
+   "updatedAt": "2026-08-10T08:29:27.582682Z",
+   "entityCommitId": "commit-4429c582-f790-4d54-acc4-e7130239f74c",
+   "entityType": "workflow",
+   "entityId": "a42f846f-9394-4702-81e3-2b5fdd4cd5e4",
+   "entityVersion": "draft",
+   "entityNodeId": "n_Dolzr5",
+   "dependencyType": "rule",
+   "dependencyId": "ec726785-4457-4274-950a-e0c2eac05465",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-10T08:28:51.966818Z",
+   "updatedAt": "2026-08-10T08:29:27.578369Z",
+   "entityCommitId": "commit-4429c582-f790-4d54-acc4-e7130239f74c",
+   "entityType": "workflow",
+   "entityId": "a42f846f-9394-4702-81e3-2b5fdd4cd5e4",
+   "entityVersion": "draft",
+   "entityNodeId": "n_FpmmrY",
+   "dependencyType": "rule",
+   "dependencyId": "8b6089a0-dec8-4f01-b377-b9c962b34d58",
+   "dependencyVersion": "draft"
+  }
+ ]
+}

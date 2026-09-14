@@ -1,0 +1,22 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2026-08-07T06:30:07.852Z",
+  "updatedAt": "2026-08-07T06:30:07.852Z",
+  "isDeleted": false,
+  "entityId": "207b2762-4417-4717-846a-f8f5401f410d",
+  "name": "TC_PAYMENT",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "list",
+  "value": {
+   "data": [
+    "PMT01"
+   ],
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

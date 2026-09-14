@@ -1,0 +1,45 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-05-23T06:58:38.858Z",
+  "updatedAt": "2026-05-23T06:58:38.858Z",
+  "isDeleted": false,
+  "entityId": "72d506c1-f94f-4d08-8efb-426fa7c43a9a",
+  "name": "TestStrings_Colors",
+  "moduleId": "34a00ec7-2905-4434-8a75-d23a8a436ce4",
+  "dataType": "String",
+  "usageType": "",
+  "options": [
+   {
+    "value": "red"
+   },
+   {
+    "value": "green"
+   },
+   {
+    "value": "blue"
+   },
+   {
+    "value": "yellow"
+   },
+   {
+    "value": "orange"
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-23T06:58:38.864265Z",
+   "updatedAt": "2026-05-23T06:58:38.864265Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "72d506c1-f94f-4d08-8efb-426fa7c43a9a",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "34a00ec7-2905-4434-8a75-d23a8a436ce4",
+   "dependencyVersion": "live"
+  }
+ ]
+}

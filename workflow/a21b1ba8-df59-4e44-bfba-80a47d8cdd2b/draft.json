@@ -1,0 +1,1379 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2026-05-11T09:43:52.314Z",
+  "updatedAt": "2026-05-11T09:43:52.314Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "a21b1ba8-df59-4e44-bfba-80a47d8cdd2b",
+  "version": "draft",
+  "name": "agentEnrl",
+  "commitId": "commit-8486f733-b792-49af-b4cf-b607a0919201",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-05-11 09:43:52",
+   "timeStamp": "2026-05-11T09:43:52.314236322Z"
+  },
+  "startNode": "3",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     
+    },
+    "style": null,
+    "sourcePosition": "",
+    "targetPosition": "",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "agentId": {
+ "value": null,
+ "executedValue": "A1",
+ "name": "",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "consRedMo": {
+ "value": null,
+ "executedValue": 1,
+ "name": "",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "enrolled": {
+ "value": null,
+ "executedValue": false,
+ "name": "",
+ "dataType": "boolean",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "licenseType": {
+ "value": null,
+ "executedValue": "certified",
+ "name": "",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "perfScore": {
+ "value": null,
+ "executedValue": 75,
+ "name": "",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "redMonths": {
+ "value": null,
+ "executedValue": 1,
+ "name": "",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "region": {
+ "value": null,
+ "executedValue": "north",
+ "name": "",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "status": {
+ "value": null,
+ "executedValue": "active",
+ "name": "",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "tenure": {
+ "value": null,
+ "executedValue": 7,
+ "name": "",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "agentId": "A1",
+      "consRedMo": 1,
+      "enrolled": false,
+      "licenseType": "certified",
+      "perfScore": 75,
+      "redMonths": 1,
+      "region": "north",
+      "status": "active",
+      "tenure": 7
+     },
+     "settings": {
+      "authType": "private",
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     
+    },
+    "style": null,
+    "sourcePosition": "",
+    "targetPosition": "",
+    "id": "2",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     
+    },
+    "style": null,
+    "sourcePosition": "",
+    "targetPosition": "",
+    "id": "3",
+    "type": "rule",
+    "data": {
+     "input": {
+      "licenseType": {
+ "value": null,
+ "executedValue": null,
+ "name": "licenseType",
+ "dataType": "string",
+ "source": "Trigger",
+ "attribute": "licenseType",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "perfScore": {
+ "value": null,
+ "executedValue": null,
+ "name": "perfScore",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "perfScore",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "redMonths": {
+ "value": null,
+ "executedValue": null,
+ "name": "redMonths",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "redMonths",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "region": {
+ "value": null,
+ "executedValue": null,
+ "name": "region",
+ "dataType": "string",
+ "source": "Trigger",
+ "attribute": "region",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "status": {
+ "value": null,
+ "executedValue": null,
+ "name": "status",
+ "dataType": "string",
+ "source": "Trigger",
+ "attribute": "status",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "tenure": {
+ "value": null,
+ "executedValue": null,
+ "name": "tenure",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "tenure",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": [
+ {
+  "set1Pass": true,
+  "set1Rsn": "ok"
+ },
+ {
+  "set2Pass": true,
+  "set2Rsn": "ok"
+ },
+ {
+  "set3Pass": true,
+  "set3Rsn": "ok"
+ }
+]
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsyc": 20
+     },
+     "nodeType": "ruleSetNode",
+     "entity": "rule",
+     "entityId": "46055938-477d-4122-b567-bd082197f70e",
+     "pluginName": "",
+     "status": "",
+     "name": "eligRSNode",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "ruleSet",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     
+    },
+    "style": null,
+    "sourcePosition": "",
+    "targetPosition": "",
+    "id": "4",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     
+    },
+    "style": null,
+    "sourcePosition": "",
+    "targetPosition": "",
+    "id": "5",
+    "type": "rule",
+    "data": {
+     "input": {
+      "set1Pass": {
+ "value": null,
+ "executedValue": null,
+ "name": "set1Pass",
+ "dataType": "boolean",
+ "source": "eligRSNode",
+ "attribute": "output[0].set1Pass",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "set2Pass": {
+ "value": null,
+ "executedValue": null,
+ "name": "set2Pass",
+ "dataType": "boolean",
+ "source": "eligRSNode",
+ "attribute": "output[1].set2Pass",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "set3Pass": {
+ "value": null,
+ "executedValue": null,
+ "name": "set3Pass",
+ "dataType": "boolean",
+ "source": "eligRSNode",
+ "attribute": "output[2].set3Pass",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": [
+ {
+  "approvalType": "auto",
+  "decision": "auto_approve",
+  "decisionRsn": "all sets pass"
+ }
+]
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsyc": 20
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "bae40404-5927-41db-87cf-196291f43b9d",
+     "pluginName": "",
+     "status": "",
+     "name": "enrlDecNode",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     
+    },
+    "style": null,
+    "sourcePosition": "",
+    "targetPosition": "",
+    "id": "6",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     
+    },
+    "style": null,
+    "sourcePosition": "",
+    "targetPosition": "",
+    "id": "9",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     
+    },
+    "style": null,
+    "sourcePosition": "",
+    "targetPosition": "",
+    "id": "10",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     
+    },
+    "style": null,
+    "sourcePosition": "",
+    "targetPosition": "",
+    "id": "7",
+    "type": "rule",
+    "data": {
+     "input": {
+      "consRedMo": {
+ "value": null,
+ "executedValue": null,
+ "name": "consRedMo",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "consRedMo",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "enrolled": {
+ "value": null,
+ "executedValue": null,
+ "name": "enrolled",
+ "dataType": "boolean",
+ "source": "Trigger",
+ "attribute": "enrolled",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "perfScore": {
+ "value": null,
+ "executedValue": null,
+ "name": "perfScore",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "perfScore",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": [
+ {
+  "unenroll": false,
+  "unenrollRsn": "ok"
+ }
+]
+     },
+     "settings": {
+      "errorContinue": false
+     },
+     "nodeType": "srNode",
+     "entity": "rule",
+     "entityId": "05eef50a-af03-4630-908e-f07a44e7bb84",
+     "pluginName": "",
+     "status": "",
+     "name": "unenrlNode",
+     "rootId": "",
+     "sourceId": [
+      "1",
+      "2"
+     ],
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "simpleRule",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     
+    },
+    "style": null,
+    "sourcePosition": "",
+    "targetPosition": "",
+    "id": "8",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "7",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     
+    },
+    "style": null,
+    "sourcePosition": "",
+    "targetPosition": "",
+    "id": "11",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "approvalType": {
+ "value": null,
+ "executedValue": null,
+ "name": "approvalType",
+ "dataType": "string",
+ "source": "enrlDecNode",
+ "attribute": "output[0].approvalType",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "decision": {
+ "value": null,
+ "executedValue": null,
+ "name": "decision",
+ "dataType": "string",
+ "source": "enrlDecNode",
+ "attribute": "output[0].decision",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "decisionRsn": {
+ "value": null,
+ "executedValue": null,
+ "name": "decisionRsn",
+ "dataType": "string",
+ "source": "enrlDecNode",
+ "attribute": "output[0].decisionRsn",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "set1Pass": {
+ "value": null,
+ "executedValue": null,
+ "name": "set1Pass",
+ "dataType": "boolean",
+ "source": "eligRSNode",
+ "attribute": "output[0].set1Pass",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "set1Rsn": {
+ "value": null,
+ "executedValue": null,
+ "name": "set1Rsn",
+ "dataType": "string",
+ "source": "eligRSNode",
+ "attribute": "output[0].set1Rsn",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "set2Pass": {
+ "value": null,
+ "executedValue": null,
+ "name": "set2Pass",
+ "dataType": "boolean",
+ "source": "eligRSNode",
+ "attribute": "output[1].set2Pass",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "set2Rsn": {
+ "value": null,
+ "executedValue": null,
+ "name": "set2Rsn",
+ "dataType": "string",
+ "source": "eligRSNode",
+ "attribute": "output[1].set2Rsn",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "set3Pass": {
+ "value": null,
+ "executedValue": null,
+ "name": "set3Pass",
+ "dataType": "boolean",
+ "source": "eligRSNode",
+ "attribute": "output[2].set3Pass",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "set3Rsn": {
+ "value": null,
+ "executedValue": null,
+ "name": "set3Rsn",
+ "dataType": "string",
+ "source": "eligRSNode",
+ "attribute": "output[2].set3Rsn",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "unenroll": {
+ "value": null,
+ "executedValue": null,
+ "name": "unenroll",
+ "dataType": "boolean",
+ "source": "unenrlNode",
+ "attribute": "output[0].unenroll",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "unenrollRsn": {
+ "value": null,
+ "executedValue": null,
+ "name": "unenrollRsn",
+ "dataType": "string",
+ "source": "unenrlNode",
+ "attribute": "output[0].unenrollRsn",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "approvalType": "auto",
+ "decision": "auto_approve",
+ "decisionRsn": "all sets pass",
+ "set1Pass": true,
+ "set1Rsn": "ok",
+ "set2Pass": true,
+ "set2Rsn": "ok",
+ "set3Pass": true,
+ "set3Rsn": "ok",
+ "unenroll": false,
+ "unenrollRsn": "ok"
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10,
+      "timeoutAsyc": 20
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "respNode",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     
+    },
+    "style": null,
+    "sourcePosition": "",
+    "targetPosition": "",
+    "id": "12",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "mcpServers": null,
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": null,
+    "id": "1",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "2",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": null,
+    "id": "2",
+    "markerEnd": "",
+    "label": "",
+    "source": "2",
+    "target": "3",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": null,
+    "id": "3",
+    "markerEnd": "",
+    "label": "",
+    "source": "3",
+    "target": "4",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": null,
+    "id": "4",
+    "markerEnd": "",
+    "label": "",
+    "source": "4",
+    "target": "5",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": null,
+    "id": "5",
+    "markerEnd": "",
+    "label": "",
+    "source": "5",
+    "target": "6",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": null,
+    "id": "6",
+    "markerEnd": "",
+    "label": "",
+    "source": "6",
+    "target": "7",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": null,
+    "id": "7",
+    "markerEnd": "",
+    "label": "True",
+    "source": "7",
+    "target": "9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "1",
+    "animated": false
+   },
+   {
+    "style": null,
+    "id": "8",
+    "markerEnd": "",
+    "label": "",
+    "source": "9",
+    "target": "8",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": null,
+    "id": "10",
+    "markerEnd": "",
+    "label": "False",
+    "source": "7",
+    "target": "10",
+    "data": {
+     "edgeType": "else",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "2",
+    "animated": false
+   },
+   {
+    "style": null,
+    "id": "11",
+    "markerEnd": "",
+    "label": "",
+    "source": "10",
+    "target": "8",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": null,
+    "id": "12",
+    "markerEnd": "",
+    "label": "",
+    "source": "8",
+    "target": "11",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": null,
+    "id": "13",
+    "markerEnd": "",
+    "label": "",
+    "source": "11",
+    "target": "12",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": false,
+   "timezone": "UTC",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-11T09:43:52.323559Z",
+   "updatedAt": "2026-05-11T09:43:52.323559Z",
+   "entityCommitId": "commit-8486f733-b792-49af-b4cf-b607a0919201",
+   "entityType": "workflow",
+   "entityId": "a21b1ba8-df59-4e44-bfba-80a47d8cdd2b",
+   "entityVersion": "draft",
+   "entityNodeId": "7",
+   "dependencyType": "rule",
+   "dependencyId": "05eef50a-af03-4630-908e-f07a44e7bb84",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-11T09:43:52.322558Z",
+   "updatedAt": "2026-05-11T09:43:52.322558Z",
+   "entityCommitId": "commit-8486f733-b792-49af-b4cf-b607a0919201",
+   "entityType": "workflow",
+   "entityId": "a21b1ba8-df59-4e44-bfba-80a47d8cdd2b",
+   "entityVersion": "draft",
+   "entityNodeId": "5",
+   "dependencyType": "rule",
+   "dependencyId": "bae40404-5927-41db-87cf-196291f43b9d",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-11T09:43:52.321387Z",
+   "updatedAt": "2026-05-11T09:43:52.321387Z",
+   "entityCommitId": "commit-8486f733-b792-49af-b4cf-b607a0919201",
+   "entityType": "workflow",
+   "entityId": "a21b1ba8-df59-4e44-bfba-80a47d8cdd2b",
+   "entityVersion": "draft",
+   "entityNodeId": "3",
+   "dependencyType": "rule",
+   "dependencyId": "46055938-477d-4122-b567-bd082197f70e",
+   "dependencyVersion": "draft"
+  }
+ ],
+ "entityTags": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-22T12:32:36.861051Z",
+   "updatedAt": "2026-05-22T12:32:36.861051Z",
+   "entityType": "workflow",
+   "entityId": "a21b1ba8-df59-4e44-bfba-80a47d8cdd2b",
+   "tagId": "708153d4-96cf-40f3-8caa-ee4755a0da82"
+  }
+ ]
+}

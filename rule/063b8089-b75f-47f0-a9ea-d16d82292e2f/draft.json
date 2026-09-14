@@ -1,0 +1,1872 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2026-08-05T16:38:53.258Z",
+  "updatedAt": "2026-08-10T20:21:09.315085Z",
+  "isDeleted": false,
+  "testedAt": "2026-08-05T17:57:00.469Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "063b8089-b75f-47f0-a9ea-d16d82292e2f",
+  "version": "draft",
+  "name": "BR-EVD-001",
+  "commitId": "commit-54c7e1b8-339a-4891-aba1-d777f006df29",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-08-05 16:38:53",
+   "timeStamp": "2026-08-05T16:38:53.258306822Z"
+  },
+  "customInput": {
+   "item": {
+ "name": "item",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "rate_adjustment",
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "payment_type",
+ "schemaId": "36f3b8b5-9a64-4f23-9216-579139806d79"
+},
+   "payment_type": {
+ "name": "payment_type",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "regular",
+ "config": {
+  
+ },
+ "value": "",
+ "next": "item",
+ "previous": "program_variant",
+ "schemaId": "5026ceb5-81d1-42fb-ad50-b85767771699"
+},
+   "program_variant": {
+ "name": "program_variant",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "Agented",
+ "config": {
+  
+ },
+ "value": "",
+ "next": "payment_type",
+ "previous": "",
+ "schemaId": "e70b64ce-cee9-4b6b-b449-06c4cf0dff1d"
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "g_DHfsfv": {
+ "nextId": "g_o3X10M",
+ "prevId": "g_sFSWIq",
+ "firstOutputData": "output_1mCsIt",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "g_Ej42Ww": {
+ "nextId": "g_UdhMw5",
+ "prevId": "g_o3X10M",
+ "firstOutputData": "output_89Eu6S",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "g_IEsi9m": {
+ "nextId": "g_S4ARQh",
+ "prevId": "g_UdhMw5",
+ "firstOutputData": "output_dcO8t5",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "g_S4ARQh": {
+ "nextId": "",
+ "prevId": "g_IEsi9m",
+ "firstOutputData": "output_VX1NYP",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "g_UdhMw5": {
+ "nextId": "g_IEsi9m",
+ "prevId": "g_Ej42Ww",
+ "firstOutputData": "output_gPbCGg",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "g_o3X10M": {
+ "nextId": "g_Ej42Ww",
+ "prevId": "g_DHfsfv",
+ "firstOutputData": "output_qHmgs1",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "g_sFSWIq": {
+ "nextId": "g_DHfsfv",
+ "prevId": "rule_01",
+ "firstOutputData": "output_zvRHuZ",
+ "isEnabled": true,
+ "annotation": ""
+},
+    "rule_01": {
+ "nextId": "g_sFSWIq",
+ "prevId": "",
+ "firstOutputData": "output_8k1J84",
+ "isEnabled": true,
+ "annotation": ""
+}
+   },
+   "properties": {
+    "param_XIUNsO": {
+ "nextId": "",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_03": {
+ "nextId": "param_XIUNsO",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_03Km6M": {
+ "nextId": "result_MBGds0",
+ "prevId": "result_Aq7vZ8",
+ "dataType": "string",
+ "keyName": "Bill_payment_notice",
+ "schemaId": ""
+},
+    "result_Aq7vZ8": {
+ "nextId": "result_03Km6M",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "Loan_posting_credit_entry_to_the_loan",
+ "schemaId": ""
+},
+    "result_MBGds0": {
+ "nextId": "result_cA3FLr",
+ "prevId": "result_03Km6M",
+ "dataType": "string",
+ "keyName": "Interest_calculation_worksheet",
+ "schemaId": ""
+},
+    "result_PBPuXe": {
+ "nextId": "",
+ "prevId": "result_n9W8ae",
+ "dataType": "string",
+ "keyName": "Suspense_posting_evidence",
+ "schemaId": ""
+},
+    "result_Z1PgkM": {
+ "nextId": "result_Zw1hbv",
+ "prevId": "result_fFLYlL",
+ "dataType": "string",
+ "keyName": "Loan_history_posting_confirmation",
+ "schemaId": ""
+},
+    "result_Zw1hbv": {
+ "nextId": "result_n9W8ae",
+ "prevId": "result_Z1PgkM",
+ "dataType": "string",
+ "keyName": "Rate_adjustment_evidence",
+ "schemaId": ""
+},
+    "result_cA3FLr": {
+ "nextId": "result_fFLYlL",
+ "prevId": "result_MBGds0",
+ "dataType": "string",
+ "keyName": "Deposit_credit_wire_clearing_entry",
+ "schemaId": ""
+},
+    "result_fFLYlL": {
+ "nextId": "result_Z1PgkM",
+ "prevId": "result_cA3FLr",
+ "dataType": "string",
+ "keyName": "Fee_posting",
+ "schemaId": ""
+},
+    "result_n9W8ae": {
+ "nextId": "result_PBPuXe",
+ "prevId": "result_Zw1hbv",
+ "dataType": "string",
+ "keyName": "GL_journal_cross_application_movement",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_Aq7vZ8",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_0ZFG6y": {
+ "name": "Interest_calculation_worksheet",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_13Nq5I",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_13Nq5I": {
+ "name": "Deposit_credit_wire_clearing_entry",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_H3iMe4",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_1mCsIt": {
+ "name": "Loan_posting_credit_entry_to_the_loan",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_KaI9jd",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_2ReFum": {
+ "name": "Bill_payment_notice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_pGINVF",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_3cOzny": {
+ "name": "Interest_calculation_worksheet",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_weQKEB",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_3vGu41": {
+ "name": "Rate_adjustment_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_Z8aHmn",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_451CEP": {
+ "name": "Fee_posting",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_4h42PO",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_4h42PO": {
+ "name": "Loan_history_posting_confirmation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Not Applicable",
+ "next": "output_HaQiQe",
+ "executedValue": "Not Applicable",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_50Z2Cb": {
+ "name": "GL_journal_cross_application_movement",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_GW56ku",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_5tRWhg": {
+ "name": "Bill_payment_notice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_3cOzny",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_6HO3ad": {
+ "name": "Fee_posting",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_kplGQM",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_7tUNsV": {
+ "name": "Fee_posting",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_HRtAkH",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_89Eu6S": {
+ "name": "Loan_posting_credit_entry_to_the_loan",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_5tRWhg",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_8k1J84": {
+ "name": "Loan_posting_credit_entry_to_the_loan",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_fhx8Gb",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_8zyYBn": {
+ "name": "Loan_history_posting_confirmation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_EcqKFZ",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_DE4a0s": {
+ "name": "Deposit_credit_wire_clearing_entry",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_Nxpt5j",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_DvAb1p": {
+ "name": "Interest_calculation_worksheet",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_rO44Wn",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_EcqKFZ": {
+ "name": "Rate_adjustment_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_Q2YPrE",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_FhVCA3": {
+ "name": "Suspense_posting_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_GM7bmz": {
+ "name": "Rate_adjustment_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_VXdYGR",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_GW56ku": {
+ "name": "Suspense_posting_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_H3iMe4": {
+ "name": "Fee_posting",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_kMuzMt",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_HRtAkH": {
+ "name": "Loan_history_posting_confirmation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_3vGu41",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_HaQiQe": {
+ "name": "Rate_adjustment_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_Qj3WsI",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_JdhULU": {
+ "name": "Interest_calculation_worksheet",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_QTsXBY",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_Jf1xwS": {
+ "name": "Interest_calculation_worksheet",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_DE4a0s",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_KaI9jd": {
+ "name": "Bill_payment_notice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_DvAb1p",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_MU1p28": {
+ "name": "GL_journal_cross_application_movement",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_gArfIw",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_MYVImL": {
+ "name": "Loan_history_posting_confirmation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_xOjRcY",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_NScLyF": {
+ "name": "Fee_posting",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_RsttYf",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_Nxpt5j": {
+ "name": "Fee_posting",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_MYVImL",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_OHf8Ur": {
+ "name": "Bill_payment_notice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_XsumkJ",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_Q2YPrE": {
+ "name": "GL_journal_cross_application_movement",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_FhVCA3",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_QTsXBY": {
+ "name": "Deposit_credit_wire_clearing_entry",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_6HO3ad",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_Qj3WsI": {
+ "name": "GL_journal_cross_application_movement",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_XSMKrF",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_RsttYf": {
+ "name": "Loan_history_posting_confirmation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Not Applicable",
+ "next": "output_maZfLr",
+ "executedValue": "Not Applicable",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_Sw35Jy": {
+ "name": "Deposit_credit_wire_clearing_entry",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_7tUNsV",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_Tiy6ba": {
+ "name": "GL_journal_cross_application_movement",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_ZHx9Yk",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_UPiWe4": {
+ "name": "Suspense_posting_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_VX1NYP": {
+ "name": "Loan_posting_credit_entry_to_the_loan",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_sd0hXa",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_VXdYGR": {
+ "name": "GL_journal_cross_application_movement",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_vBHOwq",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_XSMKrF": {
+ "name": "Suspense_posting_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_XZH2kN": {
+ "name": "Deposit_credit_wire_clearing_entry",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_451CEP",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_XsumkJ": {
+ "name": "Interest_calculation_worksheet",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_Sw35Jy",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_Z8aHmn": {
+ "name": "GL_journal_cross_application_movement",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_v2Xteq",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_ZHx9Yk": {
+ "name": "Suspense_posting_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_dcO8t5": {
+ "name": "Loan_posting_credit_entry_to_the_loan",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_2ReFum",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_ePHVC8": {
+ "name": "Rate_adjustment_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_50Z2Cb",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_fLliws": {
+ "name": "Bill_payment_notice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_0ZFG6y",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_fhx8Gb": {
+ "name": "Bill_payment_notice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_grjQIS",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_gArfIw": {
+ "name": "Suspense_posting_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_gPbCGg": {
+ "name": "Loan_posting_credit_entry_to_the_loan",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_OHf8Ur",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_grjQIS": {
+ "name": "Interest_calculation_worksheet",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_l30mxj",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_iIXfoa": {
+ "name": "GL_journal_cross_application_movement",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_UPiWe4",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_kMuzMt": {
+ "name": "Loan_history_posting_confirmation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_oViW5h",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_kplGQM": {
+ "name": "Loan_history_posting_confirmation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_ePHVC8",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_l30mxj": {
+ "name": "Deposit_credit_wire_clearing_entry",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_xWe3b3",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_maZfLr": {
+ "name": "Rate_adjustment_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_Tiy6ba",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_oViW5h": {
+ "name": "Rate_adjustment_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_iIXfoa",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_pGINVF": {
+ "name": "Interest_calculation_worksheet",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_XZH2kN",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_qHmgs1": {
+ "name": "Loan_posting_credit_entry_to_the_loan",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_fLliws",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_qvwh7O": {
+ "name": "Loan_history_posting_confirmation",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_GM7bmz",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_rO44Wn": {
+ "name": "Deposit_credit_wire_clearing_entry",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_NScLyF",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_sKf4De": {
+ "name": "Fee_posting",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_8zyYBn",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_sd0hXa": {
+ "name": "Bill_payment_notice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_JdhULU",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_v2Xteq": {
+ "name": "Suspense_posting_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_vAuh1v": {
+ "name": "Bill_payment_notice",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_Jf1xwS",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_vBHOwq": {
+ "name": "Suspense_posting_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_weQKEB": {
+ "name": "Deposit_credit_wire_clearing_entry",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_sKf4De",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_xOjRcY": {
+ "name": "Rate_adjustment_evidence",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_MU1p28",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_xWe3b3": {
+ "name": "Fee_posting",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Conditional",
+ "next": "output_qvwh7O",
+ "executedValue": "Conditional",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_zvRHuZ": {
+ "name": "Loan_posting_credit_entry_to_the_loan",
+ "dataType": "string",
+ "returnType": "",
+ "value": "required",
+ "next": "output_vAuh1v",
+ "executedValue": "required",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "c_4YxpkV": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_IEsi9m",
+ "children": null,
+ "leftNode": [
+  "param_XIUNsO"
+ ],
+ "rightNode": [
+  "rhs_iO97G1"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_6hgZty": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_sFSWIq",
+ "children": null,
+ "leftNode": [
+  "param_XIUNsO"
+ ],
+ "rightNode": [
+  "rhs_zxW4qM"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_7AmZWa": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_DHfsfv",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_uhj5wI"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_LZuvve": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_IEsi9m",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_cnUewd"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_NIcqq7": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_Ej42Ww",
+ "children": null,
+ "leftNode": [
+  "param_XIUNsO"
+ ],
+ "rightNode": [
+  "rhs_RzihvR"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_PBrQoX": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_DHfsfv",
+ "children": null,
+ "leftNode": [
+  "param_XIUNsO"
+ ],
+ "rightNode": [
+  "rhs_8UnzL8"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_PD9YXY": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_sFSWIq",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_ZIDNjI"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_Z8qxsZ": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_UdhMw5",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_LbXDjr"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_ds627P": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_Ej42Ww",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_WeytTj"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_evptwj": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_o3X10M",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_Suo5h6"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_jnp9Nn": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_S4ARQh",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_MpuH23"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_k6oksb": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_UdhMw5",
+ "children": null,
+ "leftNode": [
+  "param_XIUNsO"
+ ],
+ "rightNode": [
+  "rhs_h0tYk7"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_kD85NO": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "param_XIUNsO"
+ ],
+ "rightNode": [
+  "rhs_ezvSBL"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_tCIGjn": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_S4ARQh",
+ "children": null,
+ "leftNode": [
+  "param_XIUNsO"
+ ],
+ "rightNode": [
+  "rhs_YUC2Ux"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "c_wB3HVs": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_o3X10M",
+ "children": null,
+ "leftNode": [
+  "param_XIUNsO"
+ ],
+ "rightNode": [
+  "rhs_nyRh3R"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_DHfsfv": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_7AmZWa",
+  "c_PBrQoX"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_Ej42Ww": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_ds627P",
+  "c_NIcqq7"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_IEsi9m": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_LZuvve",
+  "c_4YxpkV"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_S4ARQh": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_jnp9Nn",
+  "c_tCIGjn"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_UdhMw5": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_Z8qxsZ",
+  "c_k6oksb"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_o3X10M": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_evptwj",
+  "c_wB3HVs"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_sFSWIq": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_PD9YXY",
+  "c_6hgZty"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "param_XIUNsO": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "payment_type",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_8UnzL8": {
+ "value": "fee_only",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_PBrQoX",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_LbXDjr": {
+ "value": "Directly-Held",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_Z8qxsZ",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_MpuH23": {
+ "value": "Directly-Held",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_jnp9Nn",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_RzihvR": {
+ "value": "regular",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_NIcqq7",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_Suo5h6": {
+ "value": "Agented",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_evptwj",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_WeytTj": {
+ "value": "Directly-Held",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_ds627P",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_YUC2Ux": {
+ "value": "suspense",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_tCIGjn",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_ZIDNjI": {
+ "value": "Agented",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_PD9YXY",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_cnUewd": {
+ "value": "Directly-Held",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_LZuvve",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_ezvSBL": {
+ "value": "regular",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_kD85NO",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_h0tYk7": {
+ "value": "principal_paydown",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_k6oksb",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_iO97G1": {
+ "value": "fee_only",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_4YxpkV",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_nyRh3R": {
+ "value": "suspense",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_wB3HVs",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_uhj5wI": {
+ "value": "Agented",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_7AmZWa",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_uttQps": {
+ "value": "Agented",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_zxW4qM": {
+ "value": "principal_paydown",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_6hgZty",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "c_kD85NO"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_uttQps"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "program_variant",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "program_variant",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "collect",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": [],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": "d"
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0,
+   "styles": {
+    "columnWidths": {
+ "0": 30,
+ "1": 43.5
+}
+   }
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-05T17:07:35.956108Z",
+   "updatedAt": "2026-08-10T20:21:09.326839Z",
+   "entityCommitId": "commit-54c7e1b8-339a-4891-aba1-d777f006df29",
+   "entityType": "rule",
+   "entityId": "063b8089-b75f-47f0-a9ea-d16d82292e2f",
+   "entityVersion": "draft",
+   "entityNodeId": "ci-program_variant",
+   "dependencyType": "module_schema",
+   "dependencyId": "e70b64ce-cee9-4b6b-b449-06c4cf0dff1d",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-05T17:18:22.42438Z",
+   "updatedAt": "2026-08-10T20:21:09.325085Z",
+   "entityCommitId": "commit-54c7e1b8-339a-4891-aba1-d777f006df29",
+   "entityType": "rule",
+   "entityId": "063b8089-b75f-47f0-a9ea-d16d82292e2f",
+   "entityVersion": "draft",
+   "entityNodeId": "ci-payment_type",
+   "dependencyType": "module_schema",
+   "dependencyId": "5026ceb5-81d1-42fb-ad50-b85767771699",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-10T20:17:36.191767Z",
+   "updatedAt": "2026-08-10T20:21:09.323332Z",
+   "entityCommitId": "commit-54c7e1b8-339a-4891-aba1-d777f006df29",
+   "entityType": "rule",
+   "entityId": "063b8089-b75f-47f0-a9ea-d16d82292e2f",
+   "entityVersion": "draft",
+   "entityNodeId": "ci-item",
+   "dependencyType": "module_schema",
+   "dependencyId": "36f3b8b5-9a64-4f23-9216-579139806d79",
+   "dependencyVersion": "live"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2026-08-07T06:33:40.488Z",
+  "updatedAt": "2026-08-07T06:33:40.488Z",
+  "isDeleted": false,
+  "entityId": "1407b3c3-b2a8-44eb-8c10-71dd2ef017b4",
+  "name": "GL_LOAN_RECEIVABLE",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "string",
+  "value": {
+   "data": "GL-14100",
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-09-09T13:34:56.732Z",
+  "updatedAt": "2026-09-09T13:34:56.732Z",
+  "isDeleted": false,
+  "entityId": "03205eac-ac8d-4971-9252-27ab396f3741",
+  "name": "panNotAvailable",
+  "moduleId": "ba363459-fb74-4b9f-ac36-910611385970",
+  "dataType": "boolean",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": true
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-09-09T13:34:56.737462Z",
+   "updatedAt": "2026-09-09T13:34:56.737462Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "03205eac-ac8d-4971-9252-27ab396f3741",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "ba363459-fb74-4b9f-ac36-910611385970",
+   "dependencyVersion": "live"
+  }
+ ]
+}

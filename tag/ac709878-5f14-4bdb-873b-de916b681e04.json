@@ -1,0 +1,12 @@
+{
+ "entityType": "tag",
+ "data": {
+  "createdAt": "2026-05-01T10:38:59.614Z",
+  "updatedAt": "2026-05-01T10:38:59.614Z",
+  "isDeleted": false,
+  "entityId": "ac709878-5f14-4bdb-873b-de916b681e04",
+  "name": "prd 4",
+  "color": "#D3C0FF",
+  "type": "Copilot"
+ }
+}

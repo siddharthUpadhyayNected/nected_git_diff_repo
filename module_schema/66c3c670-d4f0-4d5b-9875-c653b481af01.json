@@ -1,0 +1,42 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-05-23T06:59:09.533Z",
+  "updatedAt": "2026-05-23T06:59:09.533Z",
+  "isDeleted": false,
+  "entityId": "66c3c670-d4f0-4d5b-9875-c653b481af01",
+  "name": "TestNumbers_Prices",
+  "moduleId": "51d07afb-5cbc-4830-97ec-67d654881ad0",
+  "dataType": "Numeric",
+  "usageType": "",
+  "options": [
+   {
+    "value": 9.99
+   },
+   {
+    "value": 19.99
+   },
+   {
+    "value": 49.99
+   },
+   {
+    "value": 99.99
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-23T06:59:09.537919Z",
+   "updatedAt": "2026-05-23T06:59:09.537919Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "66c3c670-d4f0-4d5b-9875-c653b481af01",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "51d07afb-5cbc-4830-97ec-67d654881ad0",
+   "dependencyVersion": "live"
+  }
+ ]
+}

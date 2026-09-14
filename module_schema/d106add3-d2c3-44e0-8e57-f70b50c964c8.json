@@ -1,0 +1,45 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-08-06T10:12:50.606Z",
+  "updatedAt": "2026-08-06T10:12:50.606Z",
+  "isDeleted": false,
+  "entityId": "d106add3-d2c3-44e0-8e57-f70b50c964c8",
+  "name": "capture_mode",
+  "moduleId": "07c4291d-dcab-4cba-82a9-8efcda01f125",
+  "dataType": "string",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": "auto_captured"
+   },
+   {
+    "value": "system_sourced"
+   },
+   {
+    "value": "uploaded_document"
+   },
+   {
+    "value": "manually_keyed"
+   },
+   {
+    "value": "judgement_no_source"
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-08-06T10:12:50.61459Z",
+   "updatedAt": "2026-08-06T10:12:50.61459Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "d106add3-d2c3-44e0-8e57-f70b50c964c8",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "07c4291d-dcab-4cba-82a9-8efcda01f125",
+   "dependencyVersion": "live"
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-05-21T12:14:15.844Z",
+  "updatedAt": "2026-05-21T12:17:12.216839Z",
+  "isDeleted": false,
+  "entityId": "d39f1526-a36a-43b4-96c8-3fadd987284b",
+  "name": "emp_name_in_nected",
+  "moduleId": "6b4e531f-2c90-494a-85c2-2b48da5317c1",
+  "dataType": "string",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": "Mukul"
+   },
+   {
+    "value": "Prabhat"
+   },
+   {
+    "value": "Subhanshu"
+   },
+   {
+    "value": "Satya"
+   },
+   {
+    "value": "Aastha"
+   }
+  ]
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-05-21T12:14:15.852251Z",
+   "updatedAt": "2026-05-21T12:14:15.852251Z",
+   "entityCommitId": "",
+   "entityType": "module_schema",
+   "entityId": "d39f1526-a36a-43b4-96c8-3fadd987284b",
+   "entityVersion": "live",
+   "entityNodeId": "module",
+   "dependencyType": "module",
+   "dependencyId": "6b4e531f-2c90-494a-85c2-2b48da5317c1",
+   "dependencyVersion": "live"
+  }
+ ]
+}
